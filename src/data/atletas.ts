@@ -22,7 +22,7 @@ export function toSlug(nombre: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
-export const atletas: Atleta[] = [
+const _atletas: Atleta[] = [
   {
     nombre: "Agustina Pérez",
     genero: "Femenino",
@@ -377,4 +377,6 @@ export const atletas: Atleta[] = [
     internacionales: 1,
     logros: ["Campeona Argentina Sub-23 2024"],
   },
-].sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
+];
+
+export const atletas: Atleta[] = _atletas.sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));

@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { atletas, toSlug } from '../../data/atletas';
+import { clubes, toSlug as clubSlug } from '../../data/clubes';
 
 export function getStaticPaths() {
   return atletas.map(atleta => ({
@@ -20,6 +21,9 @@ const categoriaBadge: Record<string, string> = {
 };
 
 const initials = atleta.nombre.split(' ').filter(Boolean).slice(0, 2).map((n: string) => n[0].toUpperCase()).join('');
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const clubExiste = clubes.some(c => c.nombre === atleta.club);
+const clubHref = `${base}/clubes/${clubSlug(atleta.club)}`;
 ---
 
 <Layout title={`${atleta.nombre} — AARA`}>
@@ -49,7 +53,10 @@ const initials = atleta.nombre.split(' ').filter(Boolean).slice(0, 2).map((n: st
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
             </svg>
-            {atleta.club} — {atleta.provincia}
+            {clubExiste
+              ? <a href={clubHref} class="hover:text-[#EFC050] transition-colors underline underline-offset-2">{atleta.club}</a>
+              : atleta.club
+            } — {atleta.provincia}
           </div>
         </div>
       </div>
