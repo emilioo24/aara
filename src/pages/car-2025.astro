@@ -1,370 +1,68 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ResultTable from '../components/ResultTable.astro';
+import rawDataJson from '../data/car2025_full.json';
 
-type R = { pos: number; club: string; atletas: string; tiempo: string };
-type P = { nombre: string; final: boolean; gen: 'F'|'M'|'X'; rs: R[] };
-type G = { titulo: string; pruebas: P[] };
+type Resultado = { pos: number; club: string; atletas: string; tiempo: string };
+type Fase      = { label: string; esFinal: boolean; resultados: Resultado[] };
+type Prueba    = { nombre: string; tipo: string; cat: string; gen: string; fases: Fase[] };
 
-const grupos: G[] = [
-  { titulo: "Single", pruebas: [
-    { nombre:"Single Menor Femenino",              final:true,  gen:'F', rs:[
-      {pos:1,club:"Club Náutico Zárate",             atletas:"Weber Fuentes, Michelle",              tiempo:"08:22.38"},
-      {pos:2,club:"Club Náutico Zárate",             atletas:"Mongelot, Luna Nicole",                tiempo:"08:28.33"},
-      {pos:3,club:"Club de Regatas Rosario",         atletas:"Aguirre, Abigail Irina",               tiempo:"08:33.25"},
-      {pos:4,club:"Club de Regatas América",         atletas:"Berisso, Mikaela",                     tiempo:"08:50.37"},
-      {pos:5,club:"Club de Regatas Rosario",         atletas:"Novello Winderholler, Ghislaine",      tiempo:"08:58.00"},
-      {pos:6,club:"Buenos Aires Rowing Club",        atletas:"Bustos, Mercedes",                     tiempo:"09:33.94"},
-    ]},
-    { nombre:"Single Peso Ligero Femenino",        final:false, gen:'F', rs:[
-      {pos:1,club:"Club Náutico Mar Del Plata",      atletas:"Galfre, Clara",                        tiempo:"07:45.76"},
-      {pos:2,club:"Club Canottieri Italiani",        atletas:"Colombo, Carmela",                     tiempo:"08:02.63"},
-      {pos:3,club:"Campana Boat Club",               atletas:"González Ricciuti, Julieta",           tiempo:"08:07.60"},
-    ]},
-    { nombre:"Single Sub 23 PL Femenino",          final:false, gen:'F', rs:[
-      {pos:1,club:"Buenos Aires Rowing Club",        atletas:"Fucile, Anika",                        tiempo:"08:21.83"},
-      {pos:2,club:"Paraná Rowing Club",              atletas:"Zarate Bosco, Carmen",                 tiempo:"08:26.11"},
-      {pos:3,club:"Campana Boat Club",               atletas:"González Ricciuti, Julieta",           tiempo:"08:41.33"},
-      {pos:4,club:"Club San Fernando",               atletas:"Echeverria Marchessi, Lola",           tiempo:"09:10.09"},
-      {pos:5,club:"Club Canottieri Italiani",        atletas:"Scheffer, María Giuliana",             tiempo:"09:39.28"},
-    ]},
-    { nombre:"Single Sub 23 Femenino",             final:false, gen:'F', rs:[
-      {pos:1,club:"Club de Regatas América",         atletas:"Simonitti, Iara",                      tiempo:"08:17.35"},
-      {pos:2,club:"Campana Boat Club",               atletas:"González Ricciuti, Julieta",           tiempo:"08:27.29"},
-      {pos:3,club:"Rosario Rowing Club",             atletas:"Linaro, Valentina",                    tiempo:"08:30.07"},
-      {pos:4,club:"Club de Remo Teutonia",           atletas:"Garcia Valdivieso, Maya Eleni",        tiempo:"08:30.75"},
-      {pos:5,club:"Club de Regatas La Plata",        atletas:"Fernandez, Abigail",                   tiempo:"08:45.77"},
-      {pos:6,club:"As. Civil Tupa Remo y Triatlón",  atletas:"Noseda, Guillermina",                  tiempo:"08:51.90"},
-    ]},
-    { nombre:"Single Junior Femenino",             final:true,  gen:'F', rs:[
-      {pos:1,club:"Club Canottieri Italiani",        atletas:"Prados, Felicitas",                    tiempo:"08:22.41"},
-      {pos:2,club:"Rosario Rowing Club",             atletas:"Partenni, Giovanna",                   tiempo:"08:22.86"},
-      {pos:3,club:"Paraná Rowing Club",              atletas:"Farias, Lisa",                         tiempo:"08:26.42"},
-      {pos:4,club:"Buenos Aires Rowing Club",        atletas:"Varela, Juliana",                      tiempo:"08:33.43"},
-      {pos:5,club:"Tigre Boat Club",                 atletas:"Fernandez, Ana",                       tiempo:"08:48.24"},
-    ]},
-    { nombre:"Single Intermedia Femenino",         final:true,  gen:'F', rs:[
-      {pos:1,club:"Club Remeros Escandinavos",       atletas:"Castelli, Martina",                    tiempo:"08:49.65"},
-      {pos:2,club:"Nahuel Rowing Club",              atletas:"Moran, Victoria",                      tiempo:"09:03.63"},
-      {pos:3,club:"Club Náutico Hacoaj",             atletas:"Fainstein, Uma",                       tiempo:"09:04.83"},
-      {pos:4,club:"Club de Regatas Corrientes",      atletas:"Zibelman, Sabrina",                    tiempo:"09:07.01"},
-      {pos:5,club:"Club Náutico Mar Del Plata",      atletas:"Erriquenz Berardi, María Rosario",     tiempo:"09:18.30"},
-    ]},
-    { nombre:"Single Senior Femenino",             final:false, gen:'F', rs:[
-      {pos:1,club:"Club Náutico Mar Del Plata",      atletas:"Galfre, Clara",                        tiempo:"07:55.29"},
-      {pos:2,club:"Tigre Boat Club",                 atletas:"Orlandini, Delfina",                   tiempo:"08:01.52"},
-      {pos:3,club:"Club Náutico Zárate",             atletas:"Silvestro, Evelyn Maricel",            tiempo:"08:04.24"},
-      {pos:4,club:"Club De Regatas Lima",            atletas:"Sanguinetti Velasco, Adriana María",   tiempo:"08:11.72"},
-      {pos:5,club:"Bigornia Club",                   atletas:"Carballo, Ilén Micaela",               tiempo:"08:53.26"},
-    ]},
-    { nombre:"Single Menor Masculino",             final:true,  gen:'M', rs:[
-      {pos:1,club:"Club Canottieri Italiani",        atletas:"Lupo, Nicolas Valentin",               tiempo:"07:24.77"},
-      {pos:2,club:"Club de Regatas América",         atletas:"Curti, Nicolás Ignacio",               tiempo:"07:27.89"},
-      {pos:3,club:"Club Náutico Zárate",             atletas:"Guerrero, Ramiro Marcos",              tiempo:"07:28.75"},
-      {pos:4,club:"Club San Fernando",               atletas:"Massa Andreotti, Máximo",              tiempo:"07:29.72"},
-      {pos:5,club:"Buenos Aires Rowing Club",        atletas:"Salice Mc Lean, Joaquin",              tiempo:"07:38.24"},
-      {pos:6,club:"Club de Regatas La Marina",       atletas:"Palomar, Gonzalo",                     tiempo:"07:48.80"},
-    ]},
-    { nombre:"Single Peso Ligero Masculino",       final:true,  gen:'M', rs:[
-      {pos:1,club:"Buenos Aires Rowing Club",        atletas:"Dickson, Pedro",                       tiempo:"07:15.29"},
-      {pos:2,club:"Club Náutico Hacoaj",             atletas:"Menin, Santino",                       tiempo:"07:23.89"},
-      {pos:3,club:"Club Náutico Mar Del Plata",      atletas:"Fernandez, Eugenio",                   tiempo:"07:31.14"},
-      {pos:4,club:"Club de Regatas Rosario",         atletas:"Rosa, Paulo Máximo",                   tiempo:"07:35.62"},
-      {pos:5,club:"Club de Regatas La Marina",       atletas:"Galarza, Mateo",                       tiempo:"07:43.36"},
-      {pos:6,club:"Paraná Rowing Club",              atletas:"Moreyra, Luciano",                     tiempo:"07:54.70"},
-    ]},
-    { nombre:"Single Sub 23 PL Masculino",         final:true,  gen:'M', rs:[
-      {pos:1,club:"Club Náutico Hacoaj",             atletas:"Menin, Santino",                       tiempo:"06:51.01"},
-      {pos:2,club:"Club de Regatas Santa Fe",        atletas:"Amer, Germán",                         tiempo:"06:56.06"},
-      {pos:3,club:"Club Náutico Mar Del Plata",      atletas:"Fernandez, Eugenio",                   tiempo:"06:57.82"},
-      {pos:4,club:"Club de Regatas Bariloche",       atletas:"Navarro, Ignacio",                     tiempo:"06:59.48"},
-      {pos:5,club:"Club de Regatas La Plata",        atletas:"Loayza, Camilo",                       tiempo:"07:12.17"},
-      {pos:6,club:"Club Náutico Zárate",             atletas:"Donamari, Juan Bautista",              tiempo:"07:15.55"},
-    ]},
-    { nombre:"Single Sub 23 Masculino",            final:true,  gen:'M', rs:[
-      {pos:1,club:"Club Náutico Hacoaj",             atletas:"Menin, Santino",                       tiempo:"06:53.58"},
-      {pos:2,club:"Rosario Rowing Club",             atletas:"Jijon, Juan Ignacio",                  tiempo:"06:59.55"},
-      {pos:3,club:"Club de Regatas Rosario",         atletas:"Battilana, Emilio Genaro",             tiempo:"07:01.68"},
-      {pos:4,club:"Club de Remo Teutonia",           atletas:"Lanusse Tunstall, Joaquin",            tiempo:"07:22.43"},
-      {pos:5,club:"As. Civil Tupa Remo y Triatlón",  atletas:"Romero, Tomás Daniel",                 tiempo:"07:25.79"},
-      {pos:6,club:"Buenos Aires Rowing Club",        atletas:"Papazian, Juan Ignacio",               tiempo:"07:30.83"},
-    ]},
-    { nombre:"Single Junior Masculino",            final:true,  gen:'M', rs:[
-      {pos:1,club:"Campana Boat Club",               atletas:"Bazan, Ignacio",                       tiempo:"06:46.27"},
-      {pos:2,club:"Club Náutico Mar Del Plata",      atletas:"Ferrer Ferrero, Santiago",             tiempo:"06:53.78"},
-      {pos:3,club:"Club de Regatas América",         atletas:"Leguizamon, Ignacio",                  tiempo:"07:03.69"},
-      {pos:4,club:"Club de Remo Teutonia",           atletas:"Martin, Estanislao Alec",              tiempo:"07:05.63"},
-      {pos:5,club:"Club Canottieri Italiano",        atletas:"Peña Solar, Ronald Alexis",            tiempo:"07:06.09"},
-      {pos:6,club:"Club de Regatas Rosario",         atletas:"Cota Da Costa, Marcos",                tiempo:"07:06.64"},
-    ]},
-    { nombre:"Single Intermedia Masculino",        final:true,  gen:'M', rs:[
-      {pos:1,club:"Asociación Cordobesa de Remo",    atletas:"Zapata, Liam Joaquin",                 tiempo:"07:15.42"},
-      {pos:2,club:"Club de Regatas San Nicolás",     atletas:"Guerrina, Lautaro",                    tiempo:"07:15.68"},
-      {pos:3,club:"Tigre Boat Club",                 atletas:"Lacava, Lautaro Luis",                 tiempo:"07:26.88"},
-      {pos:4,club:"Club de Regatas Concordia",       atletas:"Delzart, Juan Cruz",                   tiempo:"07:35.30"},
-      {pos:5,club:"Tigre Boat Club",                 atletas:"Tomas Falcon, Jesús Nahuel",           tiempo:"07:42.18"},
-      {pos:6,club:"Club Náutico El Timón",           atletas:"Hawryczszuk, Michel",                  tiempo:"08:00.65"},
-    ]},
-    { nombre:"Single Senior Masculino",            final:false, gen:'M', rs:[
-      {pos:1,club:"Club Náutico Zárate",             atletas:"Scenna, Agustín Matías",               tiempo:"06:28.35"},
-      {pos:2,club:"Buenos Aires Rowing Club",        atletas:"Deandrea, Santiago",                   tiempo:"06:32.36"},
-      {pos:3,club:"Club de Regatas Rosario",         atletas:"Pacheco, Ignacio",                     tiempo:"06:42.78"},
-      {pos:4,club:"Club de Regatas La Plata",        atletas:"Aciar, Alejandro",                     tiempo:"07:14.99"},
-      {pos:5,club:"Club de Regatas América",         atletas:"Kraitman, Martín",                     tiempo:"07:25.73"},
-    ]},
-  ]},
+const todas = Object.values(rawDataJson) as unknown as Prueba[];
 
-  { titulo: "Dos Sin", pruebas: [
-    { nombre:"Dos Sin Sub 23 Femenino",            final:false, gen:'F', rs:[
-      {pos:1,club:"Buenos Aires Rowing Club",        atletas:"La Torre, Martina / Molina, Carmela Pilar",             tiempo:"07:54.38"},
-      {pos:2,club:"Club de Regatas La Plata",        atletas:"Cadaa Lalinde, Lola / Fernandez, Abigail",             tiempo:"08:32.02"},
-    ]},
-    { nombre:"Dos Sin Junior Femenino",            final:false, gen:'F', rs:[
-      {pos:1,club:"Buenos Aires Rowing Club",        atletas:"Molina, Carola / Fucile, Anika",                        tiempo:"07:31.13"},
-      {pos:2,club:"Club Náutico Zárate",             atletas:"Surueta, Valentina Luján / Mongelot, Luna Nicole / Palavecino, Jazmín Alejandra", tiempo:"07:54.58"},
-    ]},
-    { nombre:"Dos Sin Peso Ligero Masculino",      final:false, gen:'M', rs:[
-      {pos:1,club:"Buenos Aires Rowing Club",        atletas:"Enriquez Andresson, Rodrigo / Wingord, Mateo",          tiempo:"06:39.12"},
-      {pos:2,club:"Club Náutico Zárate",             atletas:"Moreira Rosas, Francisco Miguel / Mancino, Juan Martín / Peralta, Nicolás", tiempo:"06:40.02"},
-    ]},
-    { nombre:"Dos Sin Sub 23 Masculino",           final:false, gen:'M', rs:[
-      {pos:1,club:"Club de Regatas La Plata",        atletas:"Annese, Agustín Elías / Alvarez, Fernando Gabriel",     tiempo:"06:49.74"},
-      {pos:2,club:"Club de Regatas Santa Fe",        atletas:"Amer, Germán / Marcipar, Agustin",                      tiempo:"06:54.69"},
-    ]},
-    { nombre:"Dos Sin Junior Masculino",           final:false, gen:'M', rs:[
-      {pos:1,club:"Club Náutico Zárate",             atletas:"De Luz, Santino / Peralta, Nicolás / Weber Fuentes, Anthony",                  tiempo:"06:46.85"},
-      {pos:2,club:"Rosario Rowing Club",             atletas:"Isach, Bautista / Isach, Juan Cruz / Galloni, Guido",                          tiempo:"06:48.70"},
-      {pos:3,club:"Tigre Boat Club",                 atletas:"Mamani, Nestor Ignacio / Paré, Joaquín Ezequiel / Carrasco, Thiago Leonel",    tiempo:"06:52.11"},
-      {pos:4,club:"Club San Fernando",               atletas:"Ledesma, Ulises / Lirussi Brandan, Thiago",                                    tiempo:"06:55.00"},
-      {pos:5,club:"Club Remeros Alberdi",            atletas:"Orellano, Santino / García, Juan Ignacio",                                     tiempo:"07:44.69"},
-    ]},
-    { nombre:"Dos Sin Senior Masculino",           final:false, gen:'M', rs:[
-      {pos:1,club:"Club de Regatas La Plata",        atletas:"Annese, Agustín Elías / Alvarez, Fernando Gabriel",     tiempo:"06:33.58"},
-      {pos:2,club:"Tigre Boat Club",                 atletas:"Riveros, Joaquin / Romero, Joel Alejandro / Haack, Axel", tiempo:"06:36.11"},
-      {pos:3,club:"Club Peña Nautica Bajada España", atletas:"Pastorino, Joan / Pastorino, Alex",                      tiempo:"06:48.41"},
-    ]},
-  ]},
+const tipoOrder = ['Single','Dos Sin','Doble par','Cuatro Sin','Cuádruple par','Ocho'];
+const catOrder  = ['Menor','Sub 23 PL','Sub 23','PL','Junior','Intermedia','Senior','Adaptados'];
+const genOrder  = ['F','M','X'];
 
-  { titulo: "Doble par", pruebas: [
-    { nombre:"Doble par Menor Femenino",           final:true,  gen:'F', rs:[
-      {pos:1,club:"Buenos Aires Rowing Club",        atletas:"Gallo Mahler, María Felicitas / Santolaria, Martina / Bustos, Mercedes",                tiempo:"07:23.13"},
-      {pos:2,club:"Club de Regatas Rosario",         atletas:"Aguirre, Abigail Irina / Novello Winderholler, Ghislaine / Lingenfelder, Erica",       tiempo:"07:25.91"},
-      {pos:3,club:"Club Náutico Zárate",             atletas:"Vera, Virginia / Paredes, Julieta / Gomez, Victoria",                                  tiempo:"07:28.51"},
-      {pos:4,club:"Club Náutico Zárate",             atletas:"Palavecino, Jazmín Alejandra / Mongelot, Luna Nicole / Surueta, Valentina Luján",      tiempo:"07:31.74"},
-      {pos:5,club:"Club Náutico Mar Del Plata",      atletas:"Bethular, Luisina / Delucchi, Juana",                                                  tiempo:"07:37.31"},
-      {pos:6,club:"Club de Regatas América",         atletas:"Bilbao, Charo / Tolosana, Lucila",                                                     tiempo:"07:46.20"},
-    ]},
-    { nombre:"Doble par PL Femenino",              final:false, gen:'F', rs:[
-      {pos:1,club:"Club de Regatas América",         atletas:"Arango, Francesca / Maia, Lola",                                tiempo:"07:44.10"},
-      {pos:2,club:"Club Canottieri Italiani",        atletas:"Scheffer, María Sol / Colombo, Carmela",                        tiempo:"07:52.80"},
-      {pos:3,club:"Club Náutico Zárate",             atletas:"Mancino, Camila / Pinardi, Delfina / Weber Fuentes, Michelle",  tiempo:"07:55.81"},
-      {pos:4,club:"Tigre Boat Club",                 atletas:"Fois, Catterina Simona / Altamirano, Azul Mariel / Fernandez, Ana", tiempo:"08:12.38"},
-      {pos:5,club:"Club Peña Nautica Bajada España", atletas:"Radyna, Noelia / Maguna, Maria Sol",                            tiempo:"08:14.12"},
-    ]},
-    { nombre:"Doble par Sub 23 PL Femenino",       final:false, gen:'F', rs:[
-      {pos:1,club:"Paraná Rowing Club",              atletas:"Farias, Lisa / Zarate Bosco, Carmen",                           tiempo:"07:10.02"},
-      {pos:2,club:"Club de Regatas América",         atletas:"Arango, Francesca / Maia, Lola",                                tiempo:"07:21.33"},
-      {pos:3,club:"Club Náutico Zárate",             atletas:"Pinardi, Delfina / Weber Fuentes, Michelle / Mancino, Camila",  tiempo:"07:25.57"},
-      {pos:4,club:"Tigre Boat Club",                 atletas:"Albert, Úrsula / Fernandez, Ana / Vineis Trippel, Azul",        tiempo:"07:27.98"},
-      {pos:5,club:"Club Mendoza de Regatas",         atletas:"Escalante, Maria Belen / Moralez, Evangelina",                  tiempo:"07:35.04"},
-      {pos:6,club:"Tigre Boat Club",                 atletas:"Fois, Catterina Simona / Altamirano, Azul Mariel / Van Lacke Campesi, Ghalia", tiempo:"07:47.97"},
-    ]},
-    { nombre:"Doble par Sub 23 Femenino",          final:false, gen:'F', rs:[
-      {pos:1,club:"Tigre Boat Club",                 atletas:"Riveros, Victoria / Duarte, Florencia / Albert, Úrsula",                            tiempo:"07:07.56"},
-      {pos:2,club:"Buenos Aires Rowing Club",        atletas:"Molina, Carmela Pilar / Deandrea, Catalina",                                        tiempo:"07:19.30"},
-      {pos:3,club:"Club de Regatas América",         atletas:"Baluzzo Chiaruzzo, Katia / Simonitti, Iara / Glasberg, Emma",                       tiempo:"07:23.84"},
-      {pos:4,club:"Club Náutico Mar Del Plata",      atletas:"Aquino, Josefina / Salas, Maria Guadalupe",                                         tiempo:"07:34.21"},
-      {pos:5,club:"Club de Remo Teutonia",           atletas:"Garcia Valdivieso, Maya Eleni / Alberico, Luciana Francesca / Gianakis, Olimpia",   tiempo:"07:42.40"},
-    ]},
-    { nombre:"Doble par Junior Femenino",          final:false, gen:'F', rs:[
-      {pos:1,club:"Buenos Aires Rowing Club",        atletas:"Molina, Carola / Mazzoni, Lara / Fucile, Anika",                       tiempo:"07:41.12"},
-      {pos:2,club:"Club de Regatas América",         atletas:"Glasberg, Emma / Baluzzo Chiaruzzo, Katia",                            tiempo:"07:57.53"},
-      {pos:3,club:"Club de Regatas Corrientes",      atletas:"Mendez, Fiorella / Ayala, Angeles",                                    tiempo:"08:00.46"},
-      {pos:4,club:"Club Náutico Zárate",             atletas:"Gomez, Victoria / Weber Fuentes, Michelle / Mongelot, Luna Nicole",    tiempo:"08:05.33"},
-      {pos:5,club:"Tigre Boat Club",                 atletas:"Van Lacke Campesi, Ghalia / Vineis Trippel, Azul / Fernandez, Ana",    tiempo:"08:14.89"},
-    ]},
-    { nombre:"Doble par Intermedia Femenino",      final:false, gen:'F', rs:[
-      {pos:1,club:"Tigre Boat Club",                 atletas:"Moreno Andreoni, Amy Nerea / Romera, Paula Sofía",                              tiempo:"07:44.70"},
-      {pos:2,club:"Club de Regatas Corrientes",      atletas:"Zibelman, Irina / Zibelman, Sabrina / Falzetti, Maria Florencia",              tiempo:"07:51.02"},
-      {pos:3,club:"Club de Regatas Rosario",         atletas:"Botto, Victoria / Farragut, Martina / Balzaretti, Giorgina Maria",             tiempo:"08:07.91"},
-      {pos:4,club:"Club Remeros Escandinavos",       atletas:"Dolberg, Ana Selene / Carmona Fredes, Lola / Castelli, Martina",              tiempo:"08:18.78"},
-    ]},
-    { nombre:"Doble par Senior Femenino",          final:false, gen:'F', rs:[
-      {pos:1,club:"Tigre Boat Club",                 atletas:"Riveros, Victoria / Duarte, Florencia / Orlandini, Delfina",                   tiempo:"07:31.18"},
-      {pos:2,club:"Buenos Aires Rowing Club",        atletas:"Manzotti, Agostina / Peralta Martinez, Olivia",                                tiempo:"07:42.20"},
-      {pos:3,club:"Club Náutico Mar Del Plata",      atletas:"Aquino, Josefina / Galfre, Clara",                                             tiempo:"07:58.13"},
-      {pos:4,club:"Club de Regatas Hispano Argentino",atletas:"De La Cruz Gutierrez, Lucero Ariadna / Pedrini, María Lucila",               tiempo:"08:23.59"},
-    ]},
-    { nombre:"Doble par Menor Masculino",          final:true,  gen:'M', rs:[
-      {pos:1,club:"Club San Fernando",               atletas:"Gatti Moreira, Bautista / Massa Andreotti, Máximo",                            tiempo:"06:57.64"},
-      {pos:2,club:"Tigre Boat Club",                 atletas:"Paré, Joaquín Ezequiel / Doldán, Franco Bautista / Otero Delbue, Martín Emiliano", tiempo:"07:01.26"},
-      {pos:3,club:"Buenos Aires Rowing Club",        atletas:"Loitegui, Benjamin / Parodi, Facundo",                                         tiempo:"07:02.17"},
-      {pos:4,club:"Club Canottieri Italiani",        atletas:"Gomez, Sebastián / Benitez, Tiziano Tomás",                                    tiempo:"07:09.46"},
-      {pos:5,club:"Club Náutico Mar Del Plata",      atletas:"Manzo Majirena, Ignacio / Arriola, Ignacio",                                   tiempo:"07:16.48"},
-      {pos:6,club:"Club Náutico Zárate",             atletas:"Monetta, Santino / Pomilio, Joan Francisco / Galeano, Lisandro Benjamin",      tiempo:"07:27.91"},
-    ]},
-    { nombre:"Doble par PL Masculino",             final:false, gen:'M', rs:[
-      {pos:1,club:"Buenos Aires Rowing Club",        atletas:"Enriquez Andresson, Rodrigo / Wingord, Mateo / Dickson, Pedro",    tiempo:"06:35.43"},
-      {pos:2,club:"Paraná Rowing Club",              atletas:"Brasesco, Hipólito / Moreyra, Luciano",                            tiempo:"06:41.10"},
-      {pos:3,club:"Club Náutico Mar Del Plata",      atletas:"Gonzalez, Facundo / Lopez, Agustín",                               tiempo:"06:54.25"},
-    ]},
-    { nombre:"Doble par Sub 23 PL Masculino",      final:true,  gen:'M', rs:[
-      {pos:1,club:"Club Náutico Zárate",             atletas:"Moreira Rosas, Francisco Miguel / Mancino, Juan Martín / Donamari, Juan Bautista", tiempo:"06:46.29"},
-      {pos:2,club:"Club de Regatas Santa Fe",        atletas:"Amer, Germán / Amer, Bruno Gabriel",                               tiempo:"06:50.64"},
-      {pos:3,club:"Buenos Aires Rowing Club",        atletas:"Broda, Marcos / Galdeano, Lautaro",                                tiempo:"06:54.38"},
-      {pos:4,club:"Tigre Boat Club",                 atletas:"Fusco, Gregorio / Quevedo, Mateo Valentín / Maquiavelo, Salvador", tiempo:"06:57.21"},
-      {pos:5,club:"Rosario Rowing Club",             atletas:"Galloni, Guido / Gallina, Renato Andres",                          tiempo:"06:58.67"},
-      {pos:6,club:"Club Náutico Mar Del Plata",      atletas:"Gonzalez, Facundo / Lopez, Agustín",                               tiempo:"07:01.41"},
-    ]},
-    { nombre:"Doble par Sub 23 Masculino",         final:false, gen:'M', rs:[
-      {pos:1,club:"Club de Regatas Rosario",         atletas:"Pacheco, Maximo / Battilana, Emilio Genaro / Pacheco, Patricio",   tiempo:"06:38.53"},
-      {pos:2,club:"Tigre Boat Club",                 atletas:"Holler, Andres / Sans Muñoz, Nicolás Joaquín / Trejo, Felipe Tomas",tiempo:"06:45.59"},
-      {pos:3,club:"Club de Regatas La Marina",       atletas:"Regolta, Gastón Francisco / Hammar, Marcos / Gulluni, Agustin Santino", tiempo:"06:45.95"},
-      {pos:4,club:"Club de Regatas Santa Fe",        atletas:"Tiburzi, Tobías Leonardo / Marcipar, Agustin",                     tiempo:"06:59.46"},
-      {pos:5,club:"Club Náutico Zárate",             atletas:"Santórsola, Joaquín Sebastián / Sousa, Bautista",                  tiempo:"07:14.47"},
-    ]},
-    { nombre:"Doble par Junior Masculino",         final:true,  gen:'M', rs:[
-      {pos:1,club:"Club Canottieri Italiani",        atletas:"Aversso, Valentino / Paredes, Tomás / Migueles, Joaquin",          tiempo:"06:37.72"},
-      {pos:2,club:"Club Náutico Mar Del Plata",      atletas:"Fernandez, Emilio / Ferrer Ferrero, Santiago",                     tiempo:"06:41.83"},
-      {pos:3,club:"Club de Remo Teutonia",           atletas:"Arrecegor, Mateo / Neuwirt, Ramiro Valentín",                      tiempo:"06:52.15"},
-      {pos:4,club:"Rosario Rowing Club",             atletas:"Isach, Bautista / Isach, Juan Cruz / Galloni, Guido",              tiempo:"06:56.84"},
-      {pos:5,club:"Campana Boat Club",               atletas:"Guzman, Pedro Antonio / Guzman, Juan José",                        tiempo:"07:02.92"},
-      {pos:6,club:"Club Náutico El Timón",           atletas:"Monzón, Piuque Nahuel / Arrausi, Felipe Manuel",                   tiempo:"07:07.89"},
-    ]},
-    { nombre:"Doble par Intermedia Masculino",     final:true,  gen:'M', rs:[
-      {pos:1,club:"Club de Regatas San Nicolás",     atletas:"Ferrari, Renzo / Llover, Cristian Leonardo / Bogado, Nicolas Andres", tiempo:"07:05.66"},
-      {pos:2,club:"Club Náutico Mar Del Plata",      atletas:"De La Gama, Agustín / Pablovich, Nahuel",                            tiempo:"07:09.52"},
-      {pos:3,club:"Tigre Boat Club",                 atletas:"Lacava, Lautaro Luis / Galiana, Ramón / Tomas Falcon, Jesús Nahuel", tiempo:"07:11.86"},
-      {pos:4,club:"Club de Regatas Corrientes",      atletas:"Luján, Enzo Julian / Gomez Enriquez, Alejandro / Gomez Enriquez, Gaston", tiempo:"07:17.11"},
-      {pos:5,club:"Buenos Aires Rowing Club",        atletas:"Gonzalez Videla, Tomás / Bonelli, Salvador",                         tiempo:"07:22.46"},
-      {pos:6,club:"Bigornia Club",                   atletas:"Merkel, Máximo Germán / Kaless, Gabriel",                            tiempo:"07:29.29"},
-    ]},
-    { nombre:"Doble par Senior Masculino",         final:false, gen:'M', rs:[
-      {pos:1,club:"Club de Regatas Rosario",         atletas:"Calderon, Emiliano Oscar / Pacheco, Ignacio / Pacheco, Maximo",  tiempo:"06:39.66"},
-      {pos:2,club:"Rosario Rowing Club",             atletas:"Jijon, Juan Ignacio / Romero, Juan Segundo / Gallina, Renato Andres", tiempo:"06:45.66"},
-      {pos:3,club:"Bigornia Club",                   atletas:"Laesprella, Andrés / Carballo, Ramiro Nahuel",                   tiempo:"06:52.02"},
-      {pos:4,club:"Rowing Club Argentino",           atletas:"Cano Murga, Diego / Mata Carmona, José Ramón",                   tiempo:"07:23.26"},
-    ]},
-  ]},
+const grupos = tipoOrder.map(tipo => {
+  const pruebas = todas
+    .filter(p => p.tipo === tipo)
+    .sort((a, b) => {
+      const gi = genOrder.indexOf(a.gen) - genOrder.indexOf(b.gen);
+      return gi !== 0 ? gi : catOrder.indexOf(a.cat) - catOrder.indexOf(b.cat);
+    });
+  return { titulo: tipo, pruebas };
+}).filter(g => g.pruebas.length > 0);
 
-  { titulo: "Cuatro Sin", pruebas: [
-    { nombre:"Cuatro Sin Junior Femenino",         final:false, gen:'F', rs:[
-      {pos:1,club:"Buenos Aires Rowing Club",        atletas:"La Torre, Martina / Mazzoni, Lara / Molina, Carola / Fucile, Anika / Varela, Juliana / Santolaria, Martina", tiempo:"07:03.77"},
-      {pos:2,club:"Club Náutico Zárate",             atletas:"Palavecino, Jazmín Alejandra / Soloaga, Maitena / Surueta, Valentina Luján / Mongelot, Luna Nicole / Paredes, Julieta / Gomez, Victoria", tiempo:"07:25.32"},
-    ]},
-    { nombre:"Cuatro Sin PL Masculino",            final:false, gen:'M', rs:[
-      {pos:1,club:"Buenos Aires Rowing Club",        atletas:"Broda, Marcos / Enriquez Andresson, Rodrigo / Wingord, Mateo / Dickson, Pedro / Videla Nati, Nicolás",    tiempo:"06:28.91"},
-      {pos:2,club:"Club Mendoza de Regatas",         atletas:"Santos, Geronimo / Cusimano, Santiago / Sendra, Juan Cruz / Marques, Danilo",                              tiempo:"06:31.55"},
-    ]},
-    { nombre:"Cuatro Sin Sub 23 Masculino",        final:false, gen:'M', rs:[
-      {pos:1,club:"Club Mendoza de Regatas",         atletas:"Balasch, Franco / Tibaldi, Tomás / Mansilla, Martín / Tersoglio, Facundo",                                  tiempo:"06:17.05"},
-      {pos:2,club:"Club de Regatas Rosario",         atletas:"Pacheco, Patricio / Rossi, Ignacio / Battilana, Emilio Genaro / Zanardi, Ignacio / Rosa, Paulo Máximo / Pacheco, Maximo", tiempo:"06:19.18"},
-      {pos:3,club:"Buenos Aires Rowing Club",        atletas:"Martinez, Gonzalo Nicolás / Ríos, Benjamin Nehuen / Galdeano, Lautaro / Bazan, Thiago / Perez Croce, Andres", tiempo:"06:33.32"},
-    ]},
-    { nombre:"Cuatro Sin Junior Masculino",        final:false, gen:'M', rs:[
-      {pos:1,club:"Club Náutico Zárate",             atletas:"Cabrera, Alexis Misael / Weber Fuentes, Anthony / De Luz, Santino / Peralta, Nicolás / Coali, Marcos / Magalú, Felipe Nicolás", tiempo:"06:50.67"},
-      {pos:2,club:"Tigre Boat Club",                 atletas:"Borches Rosemberg, Luciano / Vineis Trippel, Marcos / Otero Delbue, Martín Emiliano / Fernandez Bustos, Ignacio Lucas / Mamani, Nestor Ignacio / Paré, Joaquín Ezequiel", tiempo:"07:04.65"},
-    ]},
-    { nombre:"Cuatro Sin Senior Masculino",        final:false, gen:'M', rs:[
-      {pos:1,club:"Tigre Boat Club",                 atletas:"Mamani, Nestor Ignacio / Haack, Axel / Romero, Joel Alejandro / Riveros, Joaquin / Leverone, Marcos Federico / Sans Muñoz, Nicolás Joaquín", tiempo:"06:01.55"},
-      {pos:2,club:"Club de Regatas Rosario",         atletas:"Pacheco, Maximo / Rossi, Ignacio / Calderon, Emiliano Oscar / Pacheco, Ignacio / Merlo, Caetano / Battilana, Emilio Genaro", tiempo:"06:04.05"},
-      {pos:3,club:"Club de Regatas La Plata",        atletas:"Aciar, Alejandro / Alvarez, Fernando Gabriel / Lasserre, Martín / Annese, Agustín Elías / Loayza, Camilo", tiempo:"06:19.44"},
-    ]},
-  ]},
-
-  { titulo: "Cuádruple par", pruebas: [
-    { nombre:"Cuádruple par Menor Femenino",       final:false, gen:'F', rs:[
-      {pos:1,club:"Club Náutico Zárate",             atletas:"Mancino, Camila / Roggi, Zaira Nicole / Vera, Virginia / Gomez, Victoria / Weber Fuentes, Michelle",                 tiempo:"07:05.41"},
-      {pos:2,club:"Club Mendoza de Regatas",         atletas:"Canals, Delfina / Olmedo, Martina / Kohn, Sofía / Gulin, Alma",                                                     tiempo:"07:11.44"},
-      {pos:3,club:"Club Náutico Zárate",             atletas:"Palavecino, Jazmín Alejandra / Surueta, Valentina Luján / Soloaga, Maitena / Paredes, Julieta / Mongelot, Luna Nicole", tiempo:"07:12.52"},
-      {pos:4,club:"Club de Regatas América",         atletas:"Veiga, Emilia / Gonzalo, Morena / Torrilla, Paloma / Tolosana, Lucila / Bilbao, Charo",                             tiempo:"07:21.28"},
-      {pos:5,club:"Club Canottieri Italiani",        atletas:"Cabanay, Candelaria / Scheffer, María Sofía / Cuenca, Lara Julieta / Prados, Lila",                                 tiempo:"07:28.62"},
-    ]},
-    { nombre:"Cuádruple par Junior Femenino",      final:false, gen:'F', rs:[
-      {pos:1,club:"Buenos Aires Rowing Club",        atletas:"Varela, Juliana / Fucile, Anika / Molina, Carola / Mazzoni, Lara / Bustos, Mercedes / La Torre, Martina",              tiempo:"06:48.80"},
-      {pos:2,club:"Club Náutico Zárate",             atletas:"Palavecino, Jazmín Alejandra / Surueta, Valentina Luján / Soloaga, Maitena / Mongelot, Luna Nicole / Gomez, Victoria / Paredes, Julieta", tiempo:"07:23.14"},
-    ]},
-    { nombre:"Cuádruple par Senior Femenino",      final:false, gen:'F', rs:[
-      {pos:1,club:"Buenos Aires Rowing Club",        atletas:"Molina, Carmela Pilar / Manzotti, Agostina / Peralta Martinez, Olivia / Deandrea, Catalina / Mazzoni, Lara / La Torre, Martina", tiempo:"06:52.51"},
-      {pos:2,club:"Club Náutico Mar Del Plata",      atletas:"Aquino, Josefina / Abade, Lola / Salas, Maria Guadalupe / Galfre, Clara",                                                       tiempo:"07:06.50"},
-      {pos:3,club:"Club Canottieri Italiani",        atletas:"Cabanay, Candelaria / Scheffer, María Sol / Prados, Felicitas / Colombo, Carmela / Vega, Valentina",                            tiempo:"07:24.86"},
-    ]},
-    { nombre:"Cuádruple par Menor Masculino",      final:false, gen:'M', rs:[
-      {pos:1,club:"Buenos Aires Rowing Club",        atletas:"Galisteo, Franco / Fernandez, Matheo / Dal Vecchio, Lucas Agustin / Peisker, Pedro / Parodi, Facundo / Loitegui, Benjamin",   tiempo:"06:07.74"},
-      {pos:2,club:"Club Náutico Zárate",             atletas:"Magalú, Felipe Nicolás / Coali, Marcos / Mc Nally, José Ignacio / Sosa, Pedro / Guerrero, Ramiro Marcos / Pomilio, Joan Francisco", tiempo:"06:11.93"},
-      {pos:3,club:"Club Mendoza de Regatas",         atletas:"Villa, Federico / Caviasso, Santino / Gomez, Matías / Berrios, Leandro",                                                      tiempo:"06:14.94"},
-      {pos:4,club:"Tigre Boat Club",                 atletas:"Doldán, Franco Bautista / Borches Rosemberg, Luciano / Otero Delbue, Martín Emiliano / Fernandez Bustos, Ignacio Lucas / Medina, Vicente / Paré, Joaquín Ezequiel", tiempo:"06:26.61"},
-      {pos:5,club:"As. Civil Tupa Remo y Triatlón",  atletas:"Bessonart, Joaquin / Albornoz, Santiago / Drewmiak, Amadeo / Dodorico, Galo",                                                 tiempo:"07:03.54"},
-      {pos:6,club:"Club de Regatas La Plata",        atletas:"Tobes, Demian / Apuzzo Ortiz, Domingo Felipe / Maull, Lorenzo / Gallini, Francisco",                                          tiempo:"07:09.53"},
-    ]},
-    { nombre:"Cuádruple par Sub 23 Masculino",     final:false, gen:'M', rs:[
-      {pos:1,club:"Buenos Aires Rowing Club",        atletas:"Ríos, Benjamin Nehuen / Broda, Marcos / Galdeano, Lautaro / Bazan, Thiago / Martinez, Gonzalo Nicolás / Papazian, Juan Ignacio", tiempo:"06:02.52"},
-      {pos:1,club:"Tigre Boat Club",                 atletas:"Fusco, Gregorio / Holler, Andres / Maquiavelo, Salvador / Quevedo, Mateo Valentín / Segui, Manuel / Sans Muñoz, Nicolás Joaquín", tiempo:"06:02.52"},
-      {pos:3,club:"Club de Regatas Rosario",         atletas:"Rosa, Paulo Máximo / Zanardi, Ignacio / Pacheco, Patricio / Rossi, Ignacio / Battilana, Emilio Genaro / Cota Da Costa, Marcos", tiempo:"06:09.36"},
-      {pos:4,club:"Club Canottieri Italiani",        atletas:"Scheffer, Agustín / Bustos Segabache, Antonio / Avero, Santiago Leonel / Ravera, Francisco Ravacio / Pereira, Juan Ignacio",    tiempo:"06:15.09"},
-    ]},
-    { nombre:"Cuádruple par Junior Masculino",     final:false, gen:'M', rs:[
-      {pos:1,club:"Club Canottieri Italiani",        atletas:"Marsili, Santiago / Paredes, Tomás / Aversso, Valentino / Migueles, Joaquin / Scheffer, Agustín / Avero, Santiago Leonel",     tiempo:"06:01.87"},
-      {pos:2,club:"Buenos Aires Rowing Club",        atletas:"Alvarez, Bautista / Perez Croce, Andres / Schell, Francisco / Videla Nati, Nicolás / Galisteo, Franco / Peisker, Pedro",       tiempo:"06:07.49"},
-      {pos:3,club:"Club de Regatas La Marina",       atletas:"Escudero, Santino / Maureira, Tobías Lautaro / Palomar, Gonzalo / Toscanini, Luca",                                            tiempo:"06:11.76"},
-      {pos:4,club:"Club Náutico Mar Del Plata",      atletas:"Fernandez, Emilio / Muñiz, Teo / Arriola, Agustín / Ferrer Ferrero, Santiago",                                                 tiempo:"06:12.08"},
-      {pos:5,club:"Club de Regatas La Plata",        atletas:"Almeyda, Ulises / Cantú, Alejo / Aguiar Mallio, Matías / Venza, Ramiro / Lopez Galastro, Augusto",                             tiempo:"06:30.29"},
-      {pos:6,club:"Tigre Boat Club",                 atletas:"Carrasco, Thiago Leonel / Medina, Vicente / Vineis Trippel, Marcos / Garzón Vaccarezza, Santino Raúl / Fernandez Bustos, Ignacio Lucas / Borches Rosemberg, Luciano", tiempo:"06:45.18"},
-    ]},
-    { nombre:"Cuádruple par Senior Masculino",     final:false, gen:'M', rs:[
-      {pos:1,club:"Club de Regatas Rosario",         atletas:"Merlo, Caetano / Pacheco, Ignacio / Calderon, Emiliano Oscar / Pacheco, Maximo / Battilana, Emilio Genaro / Pacheco, Patricio", tiempo:"06:01.23"},
-      {pos:2,club:"Rowing Club Argentino",           atletas:"Cano Murga, Diego / Mata Carmona, José Ramón / Orellana, Marco Gonzalo / Patorniti, Franco Esteban",                            tiempo:"06:15.74"},
-    ]},
-  ]},
-
-  { titulo: "Ocho", pruebas: [
-    { nombre:"Ocho Senior Mixto",                  final:false, gen:'X', rs:[
-      {pos:1,club:"Tigre Boat Club",                 atletas:"Albert, Úrsula / Orlandini, Delfina / Trejo, Felipe Tomas / Segui, Manuel / Leverone, Marcos Federico / Sans Muñoz, Nicolás Joaquín / Riveros, Victoria / Duarte, Florencia / Riveros, Joaquin / Haack, Axel / Fernandez, Ana / Romero, Joel Alejandro / Bustelo, Cristian Nahuel / Viola De Negri, Francisco", tiempo:"06:05.36"},
-      {pos:2,club:"Buenos Aires Rowing Club",        atletas:"La Torre, Martina / Peralta Martinez, Olivia / Martinez, Gonzalo Nicolás / Perez Croce, Andres / Dickson, Pedro / Deandrea, Santiago / Deandrea, Catalina / Molina, Carmela Pilar / Broda, Marcos / Ríos, Benjamin Nehuen / Manzotti, Agostina / Fischer, Lucía / Gallo Mahler, María Felicitas", tiempo:"06:11.29"},
-    ]},
-    { nombre:"Ocho Junior Masculino",              final:false, gen:'M', rs:[
-      {pos:1,club:"Club Náutico Zárate",             atletas:"Magalú, Felipe Nicolás / Coali, Marcos / Weber Fuentes, Anthony / Cabrera, Alexis Misael / Guerrero, Ramiro Marcos / De Luz, Santino / Peralta, Nicolás / Sosa, Pedro / Mc Nally, José Ignacio / Pomilio, Joan Francisco / Monetta, Santino / Galeano, Lisandro Benjamin / Mancino, Camila / Pellicer, Martina", tiempo:"05:48.65"},
-      {pos:2,club:"Club Mendoza de Regatas",         atletas:"Gomez, Matías / Marques, Danilo / Hidalgo, Germán Imanol / Pena, Valentín / Vitar, Benjamín / Tibaldi, Tomás / Escalante, Marco / Ghiretti, Franco / Berrios, Leandro / Fornoni, Lucio / Kohn, Joaquin", tiempo:"05:49.45"},
-      {pos:3,club:"Club Canottieri Italiani",        atletas:"Pereira, Juan Ignacio / Scheffer, Agustín / Avero, Santiago Leonel / Bustos Segabache, Antonio / Marsili, Santiago / Paredes, Tomás / Aversso, Valentino / Migueles, Joaquin / Benitez, Tiziano Tomás / Lupo, Nicolas Valentin / Cabeleira, Pedro / Cortenova, Santino / Lupo, Bruno Francisco", tiempo:"05:55.06"},
-      {pos:4,club:"Club de Regatas La Plata",        atletas:"Tobes, Demian / Cantú, Alejo / Lopez Galastro, Augusto / Maull, Lorenzo / Almeyda, Ulises / Venza, Ramiro / Aguiar Mallio, Matías / Gallini, Francisco / Apuzzo Ortiz, Domingo Felipe / Apuzzo Ortiz, Cipriano", tiempo:"06:21.04"},
-    ]},
-    { nombre:"Ocho Senior Masculino",              final:false, gen:'M', rs:[
-      {pos:1,club:"Club Mendoza de Regatas",         atletas:"Balasch, Franco / Tibaldi, Tomás / Zanghi, Francisco / Buso, Gonzalo Armando / Bonadé, Maximiliano / Nadal, Juan Cruz / Mansilla, Martín / Tersoglio, Facundo / Ghiretti, Franco / Escalante, Marco / Infante, Joel", tiempo:"05:53.25"},
-      {pos:2,club:"Tigre Boat Club",                 atletas:"Trejo, Felipe Tomas / Segui, Manuel / Leverone, Marcos Federico / Sans Muñoz, Nicolás Joaquín / Mamani, Nestor Ignacio / Haack, Axel / Romero, Joel Alejandro / Riveros, Joaquin / Holler, Andres / Maquiavelo, Salvador / Quevedo, Mateo Valentín / Paré, Joaquín Ezequiel / Bustelo, Cristian Nahuel / Viola De Negri, Francisco", tiempo:"06:00.35"},
-      {pos:3,club:"Club de Regatas La Marina",       atletas:"Villar, Gonzalo / Navarro, Nicolas Alberto / Gulluni, Agustin Santino / Navarro, Franco / Regolta, Gastón Francisco / Galarza, Mateo / Balzarini Jara, Valentino / Hammar, Marcos / Navarro, Walter Damián / Maureira, Tobías Lautaro / Toscanini, Luca / Louzao, Guadalupe / Amar, Malena", tiempo:"06:02.44"},
-      {pos:4,club:"Club Náutico Zárate",             atletas:"Butuz, Gabriel Martín / Moreira Rosas, Francisco Miguel / Peralta, Nicolás / Donamari, Juan Bautista / Scenna, Agustín Matías / De Luz, Santino / Mancino, Juan Martín / Rojas, Marcos Ivan / Guerrero, Ramiro Marcos / Weber Fuentes, Anthony / Cabrera, Alexis Misael / Coali, Marcos / Mancino, Camila / Pellicer, Martina", tiempo:"06:04.32"},
-      {pos:5,club:"Club Canottieri Italiani",        atletas:"Pereira, Juan Ignacio / Scheffer, Agustín / Avero, Santiago Leonel / Bustos Segabache, Antonio / Marsili, Santiago / Paredes, Tomás / Aversso, Valentino / Migueles, Joaquin / Lupo, Nicolas Valentin / Ravera, Francisco Ravacio / Lupo, Bruno Francisco", tiempo:"06:24.66"},
-    ]},
-  ]},
-];
-
-const medalMap = new Map<string, { oros: number; platas: number; bronces: number }>();
-for (const grupo of grupos) {
-  for (const prueba of grupo.pruebas) {
-    for (const r of prueba.rs) {
-      if (r.pos === 1 || r.pos === 2 || r.pos === 3) {
-        if (!medalMap.has(r.club)) medalMap.set(r.club, { oros: 0, platas: 0, bronces: 0 });
-        const m = medalMap.get(r.club)!;
-        if (r.pos === 1) m.oros++;
-        else if (r.pos === 2) m.platas++;
-        else m.bronces++;
-      }
-    }
+// Medals from best race (Final if exists, else first race)
+const medallasMap = new Map<string, { oros: number; platas: number; bronces: number }>();
+for (const p of todas) {
+  const best = p.fases.find(f => f.esFinal) ?? p.fases[0];
+  for (const r of best?.resultados ?? []) {
+    if (r.pos > 3) continue;
+    if (!medallasMap.has(r.club)) medallasMap.set(r.club, { oros: 0, platas: 0, bronces: 0 });
+    const m = medallasMap.get(r.club)!;
+    if (r.pos === 1) m.oros++;
+    else if (r.pos === 2) m.platas++;
+    else m.bronces++;
   }
 }
-const rankingClubes = [...medalMap.entries()]
+const rankingClubes = [...medallasMap.entries()]
   .map(([club, m]) => ({ club, ...m }))
   .sort((a, b) => b.oros - a.oros || b.platas - a.platas || b.bronces - a.bronces)
   .map((r, i) => ({ posicion: i + 1, ...r }));
 
 const programa = [
-  { dia:"Miér", fecha:"29 Oct", actividad:"Series clasificatorias — todas las categorías" },
-  { dia:"Jue",  fecha:"30 Oct", actividad:"Series clasificatorias y Semifinales" },
-  { dia:"Vie",  fecha:"31 Oct", actividad:"Primeras finales — 8 pruebas" },
-  { dia:"Sáb",  fecha:"1 Nov",  actividad:"Finales — Menor Masculino y Sub 23" },
-  { dia:"Dom",  fecha:"2 Nov",  actividad:"Finales — Junior, Sub 23 PL, Menor Fem., Intermedia Masc." },
+  { dia: 'Miér', fecha: '29 Oct', actividad: 'Series clasificatorias — todas las categorías' },
+  { dia: 'Jue',  fecha: '30 Oct', actividad: 'Series clasificatorias y Semifinales' },
+  { dia: 'Vie',  fecha: '31 Oct', actividad: 'Primeras finales — 8 pruebas' },
+  { dia: 'Sáb',  fecha: '1 Nov',  actividad: 'Finales — Menor Masculino y Sub 23' },
+  { dia: 'Dom',  fecha: '2 Nov',  actividad: 'Finales — Junior, Sub 23 PL, Menor Fem., Intermedia Masc.' },
 ];
 
-const genLabel: Record<string, string> = { F: "Femenino", M: "Masculino", X: "Mixto" };
+const genLabel: Record<string, string> = { F: 'Femenino', M: 'Masculino', X: 'Mixto' };
+const catLabel: Record<string, string> = { 'PL': 'Peso Ligero', 'Sub 23 PL': 'Sub 23 Peso Ligero' };
+
+function displayLabel(label: string, isOnly: boolean) {
+  if (isOnly && label.startsWith('Eliminatoria')) return 'Final directa';
+  return label;
+}
+
+function phaseStyle(label: string) {
+  if (label === 'Final A' || label === 'Final directa') return 'bg-[#EFC050] text-[#0B2545] font-bold';
+  if (label.startsWith('Final'))                        return 'bg-amber-100 text-amber-700 font-semibold';
+  if (label.startsWith('Semifinal'))                  return 'bg-blue-100 text-blue-700 font-semibold';
+  return 'bg-gray-100 text-gray-500';
+}
 ---
 
 <Layout title="CAR 2025 — Campeonato Argentino de Remo">
@@ -380,7 +78,7 @@ const genLabel: Record<string, string> = { F: "Femenino", M: "Masculino", X: "Mi
           <div class="text-xs text-gray-300 mt-0.5">Días de competencia</div>
         </div>
         <div class="bg-white/10 rounded-lg px-4 py-3 text-center">
-          <div class="text-2xl font-bold text-[#EFC050]">49</div>
+          <div class="text-2xl font-bold text-[#EFC050]">{todas.length}</div>
           <div class="text-xs text-gray-300 mt-0.5">Pruebas disputadas</div>
         </div>
         <div class="bg-white/10 rounded-lg px-4 py-3 text-center">
@@ -400,9 +98,14 @@ const genLabel: Record<string, string> = { F: "Femenino", M: "Masculino", X: "Mi
       <div class="lg:col-span-2 space-y-8">
 
         <!-- Programa -->
-        <section class="bg-white rounded-xl shadow p-8">
-          <h2 class="text-xl font-bold text-[#0B2545] mb-6">Programa de competencia</h2>
-          <div class="space-y-4">
+        <details class="group/programa bg-white rounded-xl shadow overflow-hidden">
+          <summary class="flex items-center justify-between px-8 py-5 cursor-pointer list-none hover:bg-gray-50 transition-colors">
+            <h2 class="text-xl font-bold text-[#0B2545]">Programa de competencia</h2>
+            <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open/programa:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="px-8 pb-8 pt-2 space-y-4">
             {programa.map(p => (
               <div class="flex gap-5 items-start">
                 <div class="w-24 shrink-0 text-center bg-[#0B2545] text-white rounded-lg py-2 px-3">
@@ -415,15 +118,17 @@ const genLabel: Record<string, string> = { F: "Femenino", M: "Masculino", X: "Mi
               </div>
             ))}
           </div>
-        </section>
+        </details>
 
-        <!-- Resultados por tipo de bote -->
-        <section class="space-y-6">
-          <h2 class="text-xl font-bold text-[#0B2545]">Resultados por prueba</h2>
-          <p class="text-sm text-gray-500 -mt-4">Desplegá cada prueba para ver posiciones, clubes, atletas y tiempos. Las marcadas como <span class="font-semibold text-[#0B2545]">Final</span> tuvieron múltiples series clasificatorias.</p>
+        <!-- Resultados -->
+        <section class="space-y-4">
+          <div>
+            <h2 class="text-xl font-bold text-[#0B2545]">Resultados por prueba</h2>
+            <p class="text-sm text-gray-500 mt-1">Todas las series, semifinales y finales. Desplegá cada sección para ver los resultados.</p>
+          </div>
 
           {grupos.map(grupo => {
-            const gens = [...new Set(grupo.pruebas.map(p => p.gen))];
+            const gens = genOrder.filter(g => grupo.pruebas.some(p => p.gen === g));
             return (
               <details class="group/grupo bg-white rounded-xl shadow overflow-hidden">
                 <summary class="flex items-center justify-between bg-[#0B2545] px-6 py-4 cursor-pointer list-none hover:bg-[#134074] transition-colors">
@@ -435,74 +140,80 @@ const genLabel: Record<string, string> = { F: "Femenino", M: "Masculino", X: "Mi
                     </svg>
                   </div>
                 </summary>
+
                 <div class="divide-y divide-gray-100">
                   {gens.map(gen => {
                     const pruebas = grupo.pruebas.filter(p => p.gen === gen);
                     return (
-                      <div>
-                        <div class="px-6 py-2 bg-gray-50 border-b border-gray-200">
+                      <details class="group/gen border-b border-gray-100 last:border-0">
+                        <summary class="flex items-center justify-between px-6 py-3 bg-gray-50 cursor-pointer list-none hover:bg-gray-100 transition-colors">
                           <span class="text-xs font-bold uppercase tracking-wider text-gray-500">{genLabel[gen]}</span>
-                        </div>
+                          <div class="flex items-center gap-2">
+                            <span class="text-xs text-gray-400">{pruebas.length} {pruebas.length === 1 ? 'prueba' : 'pruebas'}</span>
+                            <svg class="w-3.5 h-3.5 text-gray-400 shrink-0 transition-transform group-open/gen:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                          </div>
+                        </summary>
+
                         {pruebas.map(prueba => {
-                          const ganador = prueba.rs.find(r => r.pos === 1);
+                          const bestFase = prueba.fases.find(f => f.esFinal) ?? prueba.fases[0];
+                          const winner = bestFase?.resultados[0];
+                          const hasMultiple = prueba.fases.length > 1;
                           return (
-                            <details class="group">
+                            <details class="group/prueba border-b border-gray-100 last:border-0">
                               <summary class="flex items-center gap-3 px-6 py-4 cursor-pointer hover:bg-blue-50 transition-colors list-none">
-                                <svg class="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open/prueba:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                 </svg>
                                 <div class="flex-1 min-w-0">
                                   <div class="flex items-center gap-2 flex-wrap">
-                                    <span class="font-semibold text-[#0B2545] text-sm">{prueba.nombre}</span>
-                                    {prueba.final && (
-                                      <span class="text-xs bg-[#EFC050] text-[#0B2545] font-bold px-2 py-0.5 rounded">Final</span>
-                                    )}
+                                    <span class="font-semibold text-[#0B2545] text-sm">{catLabel[prueba.cat] ?? prueba.cat}</span>
                                   </div>
-                                  {ganador && (
+                                  {winner && (
                                     <div class="text-xs text-gray-500 mt-0.5 truncate">
-                                      🥇 {ganador.club} &mdash; {ganador.tiempo}
+                                      <span style="background:#EFC050" class="inline-flex items-center justify-center w-4 h-4 rounded-full text-white text-[9px] font-bold mr-1">1</span>{winner.club} &mdash; {winner.tiempo}
                                     </div>
                                   )}
                                 </div>
-                                <span class="text-xs text-gray-400 shrink-0">{prueba.rs.length} botes</span>
+                                <span class="text-xs text-gray-400 shrink-0">
+                                  {prueba.fases.length} {prueba.fases.length === 1 ? 'carrera' : 'carreras'}
+                                </span>
                               </summary>
-                              <div class="px-6 pb-5 pt-1">
-                                <div class="rounded-lg overflow-hidden border border-gray-200">
-                                  <table class="w-full text-sm">
-                                    <thead class="bg-gray-50 text-xs font-semibold text-gray-500 uppercase">
-                                      <tr>
-                                        <th class="px-3 py-2 text-center w-10">#</th>
-                                        <th class="px-3 py-2 text-left">Club</th>
-                                        <th class="px-3 py-2 text-left">Atletas</th>
-                                        <th class="px-3 py-2 text-right">Tiempo</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody class="divide-y divide-gray-100">
-                                      {prueba.rs.map(r => (
-                                        <tr class={
-                                          r.pos === 1 ? 'bg-yellow-50' :
-                                          r.pos === 2 ? 'bg-gray-50' :
-                                          r.pos === 3 ? 'bg-amber-50' : ''
-                                        }>
-                                          <td class="px-3 py-2.5 text-center">
-                                            {r.pos === 1 && <span class="inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold text-white" style="background:#EFC050">1</span>}
-                                            {r.pos === 2 && <span class="inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold text-white bg-gray-400">2</span>}
-                                            {r.pos === 3 && <span class="inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold text-white bg-amber-700">3</span>}
-                                            {r.pos > 3 && <span class="text-gray-400 text-xs font-medium">{r.pos}</span>}
-                                          </td>
-                                          <td class="px-3 py-2.5 font-semibold text-[#0B2545] text-xs">{r.club}</td>
-                                          <td class="px-3 py-2.5 text-gray-600 text-xs leading-snug max-w-xs">{r.atletas}</td>
-                                          <td class="px-3 py-2.5 text-right font-mono text-sm font-semibold text-[#134074]">{r.tiempo}</td>
-                                        </tr>
-                                      ))}
-                                    </tbody>
-                                  </table>
-                                </div>
+
+                              <div class="px-6 pb-5 pt-2 space-y-3">
+                                {hasMultiple ? (
+                                  prueba.fases.map(fase => (
+                                    <details class="group/fase rounded-lg border border-gray-200 overflow-hidden">
+                                      <summary class="flex items-center justify-between px-4 py-2.5 cursor-pointer hover:bg-gray-50 transition-colors list-none bg-white">
+                                        <span class={`text-xs px-2.5 py-1 rounded-full ${phaseStyle(fase.label)}`}>
+                                          {fase.label}
+                                        </span>
+                                        <div class="flex items-center gap-3">
+                                          <span class="text-xs text-gray-400">{fase.resultados.length} botes</span>
+                                          <svg class="w-3.5 h-3.5 text-gray-400 shrink-0 transition-transform group-open/fase:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                          </svg>
+                                        </div>
+                                      </summary>
+                                      <div class="border-t border-gray-100">
+                                        <ResultTable results={fase.resultados} />
+                                      </div>
+                                    </details>
+                                  ))
+                                ) : (
+                                  <div>
+                                    <span class={`inline-block text-xs px-2.5 py-1 rounded-full mb-3 ${phaseStyle(displayLabel(prueba.fases[0].label, true))}`}>
+                                      {displayLabel(prueba.fases[0].label, true)}
+                                    </span>
+                                    <ResultTable results={prueba.fases[0].resultados} />
+                                  </div>
+                                )}
                               </div>
                             </details>
                           );
                         })}
-                      </div>
+                      </details>
                     );
                   })}
                 </div>
@@ -512,11 +223,16 @@ const genLabel: Record<string, string> = { F: "Femenino", M: "Masculino", X: "Mi
         </section>
 
         <!-- Medallas de cada club -->
-        <section class="bg-white rounded-xl shadow overflow-hidden">
-          <div class="px-8 py-5 border-b border-gray-100 flex items-center justify-between">
+        <details class="group/medallas bg-white rounded-xl shadow overflow-hidden">
+          <summary class="flex items-center justify-between px-8 py-5 border-b border-gray-100 cursor-pointer list-none hover:bg-gray-50 transition-colors">
             <h2 class="text-xl font-bold text-[#0B2545]">Medallas de cada club</h2>
-            <span class="text-xs text-gray-400">Todas las pruebas · {rankingClubes.length} clubes</span>
-          </div>
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-gray-400">Finales · {rankingClubes.length} clubes</span>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open/medallas:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+          </summary>
           <div class="overflow-x-auto">
             <table class="w-full text-sm">
               <thead class="bg-gray-50 text-xs font-semibold text-gray-500 uppercase tracking-wider">
@@ -535,21 +251,21 @@ const genLabel: Record<string, string> = { F: "Femenino", M: "Masculino", X: "Mi
                       {r.posicion === 1 && <span class="inline-flex items-center justify-center w-7 h-7 rounded-full text-white text-xs font-bold shadow-sm" style="background:#EFC050">1</span>}
                       {r.posicion === 2 && <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gray-400 text-white text-xs font-bold shadow-sm">2</span>}
                       {r.posicion === 3 && <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-700 text-white text-xs font-bold shadow-sm">3</span>}
-                      {r.posicion > 3 && <span class="text-gray-400 font-medium">{r.posicion}</span>}
+                      {r.posicion > 3 && <span class="text-gray-400 text-sm pl-2">{r.posicion}</span>}
                     </td>
                     <td class="px-6 py-4 font-semibold text-[#0B2545]">{r.club}</td>
-                    <td class="px-4 py-4 text-center font-bold text-yellow-600">{r.oros > 0 ? r.oros : '—'}</td>
-                    <td class="px-4 py-4 text-center font-bold text-gray-500">{r.platas > 0 ? r.platas : '—'}</td>
-                    <td class="px-4 py-4 text-center font-bold text-amber-700">{r.bronces > 0 ? r.bronces : '—'}</td>
+                    <td class="px-4 py-4 text-center font-bold text-yellow-500">{r.oros || '—'}</td>
+                    <td class="px-4 py-4 text-center font-bold text-gray-400">{r.platas || '—'}</td>
+                    <td class="px-4 py-4 text-center font-bold text-amber-700">{r.bronces || '—'}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
           <div class="px-8 py-4 bg-gray-50 border-t border-gray-100">
-            <p class="text-xs text-gray-400">Ordenado por medallas de oro. Incluye únicamente las pruebas con Final oficial.</p>
+            <p class="text-xs text-gray-400">Contabiliza la carrera definitiva por prueba (Final si hubo, Serie única si no).</p>
           </div>
-        </section>
+        </details>
 
       </div>
 
@@ -559,9 +275,9 @@ const genLabel: Record<string, string> = { F: "Femenino", M: "Masculino", X: "Mi
           <h3 class="font-bold text-[#0B2545] mb-4">Documentos CAR 2025</h3>
           <ul class="space-y-3">
             {[
-              { label:"Resultados oficiales completos", href:"http://resultados.remoargentina.org/#/results/393" },
-              { label:"Reglamento de competencia", href:"/biblioteca/reglamentos" },
-              { label:"Formulario de inscripción", href:"/biblioteca/formularios" },
+              { label: "Resultados oficiales completos", href: "http://resultados.remoargentina.org/#/results/393" },
+              { label: "Reglamento de competencia",      href: "/biblioteca/reglamentos" },
+              { label: "Formulario de inscripción",      href: "/biblioteca/formularios" },
             ].map(d => (
               <li>
                 <a href={d.href} target="_blank" rel="noopener" class="flex items-center gap-2 text-sm text-[#134074] hover:text-[#0B2545] transition-colors font-medium">
@@ -605,14 +321,6 @@ const genLabel: Record<string, string> = { F: "Femenino", M: "Masculino", X: "Mi
             <div class="border-l-4 border-yellow-400 pl-3">
               <div class="font-semibold text-[#0B2545]">Prados, Felicitas</div>
               <div class="text-xs text-gray-500">Club Canottieri Italiani · Oro Single Junior Femenino — 08:22.41</div>
-            </div>
-            <div class="border-l-4 border-yellow-400 pl-3">
-              <div class="font-semibold text-[#0B2545]">Castelli, Martina</div>
-              <div class="text-xs text-gray-500">Club Remeros Escandinavos · Oro Single Intermedia Femenino — 08:49.65</div>
-            </div>
-            <div class="border-l-4 border-yellow-400 pl-3">
-              <div class="font-semibold text-[#0B2545]">Zapata, Liam Joaquin</div>
-              <div class="text-xs text-gray-500">Asoc. Cordobesa de Remo · Oro Single Intermedia Masculino — 07:15.42</div>
             </div>
           </div>
         </div>

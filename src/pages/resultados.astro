@@ -5,38 +5,9 @@ const resultados = [
   {
     evento: "Campeonato Argentino de Remo — CAR 2025",
     fecha: "Nov 2025",
-    sede: "Tigre, Buenos Aires",
+    sede: "Pista Nacional de Remo, Tigre",
     href: "/car-2025",
-  },
-  {
-    evento: "Copa AARA 2025 — Etapa Final",
-    fecha: "Oct 2025",
-    sede: "Rosario, Santa Fe",
-    href: "#",
-  },
-  {
-    evento: "Campeonato Argentino Juvenil 2025",
-    fecha: "Sep 2025",
-    sede: "Corrientes",
-    href: "#",
-  },
-  {
-    evento: "Copa AARA 2025 — Etapa 3",
-    fecha: "Ago 2025",
-    sede: "Mendoza",
-    href: "#",
-  },
-  {
-    evento: "Copa AARA 2025 — Etapa 2",
-    fecha: "Jun 2025",
-    sede: "Paraná, Entre Ríos",
-    href: "#",
-  },
-  {
-    evento: "Copa AARA 2025 — Etapa 1",
-    fecha: "Mar 2025",
-    sede: "Tigre, Buenos Aires",
-    href: "#",
+    disponible: true,
   },
 ];
 ---
@@ -45,15 +16,36 @@ const resultados = [
   <div class="bg-[#0B2545] text-white py-12">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-[#EFC050] text-sm font-medium mb-2">AARA</div>
-      <h1 class="text-3xl md:text-4xl font-bold">Resultados</h1>
-      <p class="text-gray-300 mt-2">Resultados oficiales de competencias AARA</p>
+      <h1 class="text-3xl md:text-4xl font-bold">Resultados de regatas</h1>
+      <p class="text-gray-300 mt-2">Resultados oficiales de competencias organizadas por AARA</p>
     </div>
   </div>
 
-  <div class="max-w-4xl mx-auto px-4 py-12">
-    <div class="space-y-3">
+  <div class="max-w-4xl mx-auto px-4 py-12 space-y-6">
+
+    <!-- Buscador -->
+    <div class="relative">
+      <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 0 5 11a6 6 0 0 0 12 0z"/>
+      </svg>
+      <input
+        id="buscador"
+        type="search"
+        placeholder="Buscar por competencia, sede o año…"
+        class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 bg-white shadow-sm text-sm focus:outline-none focus:ring-2 focus:ring-[#134074] focus:border-transparent"
+      />
+    </div>
+
+    <!-- Lista -->
+    <div id="lista-resultados" class="space-y-3">
       {resultados.map(r => (
-        <a href={r.href} class="flex items-center justify-between bg-white rounded-xl shadow hover:shadow-md transition-shadow p-5 group">
+        <a
+          href={r.disponible ? r.href : undefined}
+          data-evento={r.evento.toLowerCase()}
+          data-sede={r.sede.toLowerCase()}
+          data-fecha={r.fecha.toLowerCase()}
+          class={`resultado-item flex items-center justify-between bg-white rounded-xl shadow p-5 transition-shadow ${r.disponible ? 'hover:shadow-md group cursor-pointer' : 'opacity-60 cursor-default'}`}
+        >
           <div class="flex items-center gap-4">
             <div class="w-10 h-10 bg-[#0B2545]/10 rounded-full flex items-center justify-center shrink-0">
               <svg class="w-5 h-5 text-[#0B2545]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,11 +65,38 @@ const resultados = [
               </div>
             </div>
           </div>
-          <div class="text-[#13A8D4] text-sm font-medium group-hover:text-[#0B2545] transition-colors shrink-0 ml-4">
-            Ver resultados →
-          </div>
+          {r.disponible && (
+            <div class="text-[#134074] text-sm font-medium group-hover:text-[#0B2545] transition-colors shrink-0 ml-4">
+              Ver resultados →
+            </div>
+          )}
         </a>
       ))}
     </div>
+
+    <!-- Sin resultados -->
+    <p id="sin-resultados" class="hidden text-center text-gray-400 text-sm py-8">
+      No se encontraron competencias para esa búsqueda.
+    </p>
   </div>
 </Layout>
+
+<script>
+  const input = document.getElementById('buscador') as HTMLInputElement;
+  const items = document.querySelectorAll<HTMLElement>('.resultado-item');
+  const sinResultados = document.getElementById('sin-resultados')!;
+
+  input.addEventListener('input', () => {
+    const q = input.value.toLowerCase().trim();
+    let visible = 0;
+    items.forEach(el => {
+      const match = !q ||
+        el.dataset.evento?.includes(q) ||
+        el.dataset.sede?.includes(q) ||
+        el.dataset.fecha?.includes(q);
+      el.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    sinResultados.classList.toggle('hidden', visible > 0);
+  });
+</script>

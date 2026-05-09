@@ -1,0 +1,4060 @@
+{
+  "1": {
+    "nombre": "Single Menor Femenino",
+    "tipo": "Single",
+    "cat": "Menor",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Final A",
+        "esFinal": true,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Zárate",
+            "atletas": "Weber Fuentes, Michelle",
+            "tiempo": "08:22.38"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Zárate",
+            "atletas": "Mongelot, Luna Nicole",
+            "tiempo": "08:28.33"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Aguirre, Abigail Irina",
+            "tiempo": "08:33.25"
+          },
+          {
+            "pos": 4,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Bustos, Mercedes",
+            "tiempo": "09:33.94"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas América",
+            "atletas": "Berisso, Mikaela",
+            "tiempo": "08:50.37"
+          },
+          {
+            "pos": 6,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Novello Winderholler, Ghislaine",
+            "tiempo": "08:58.00"
+          }
+        ]
+      },
+      {
+        "label": "Final B",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Ferrer Ferrero, Lucía",
+            "tiempo": "08:33.87"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas San Nicolás",
+            "atletas": "Ciutto, Candela",
+            "tiempo": "08:38.67"
+          },
+          {
+            "pos": 3,
+            "club": "Paraná Rowing Club",
+            "atletas": "Biaggini, Valentina",
+            "tiempo": "08;45.44"
+          },
+          {
+            "pos": 4,
+            "club": "Campana Boat Club",
+            "atletas": "Nani, Carla",
+            "tiempo": "08;56.02"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Zárate",
+            "atletas": "Weber Fuentes, Michelle",
+            "tiempo": "07:56.92"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Aguirre, Abigail Irina",
+            "tiempo": "08:00.46"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas América",
+            "atletas": "Berisso, Mikaela",
+            "tiempo": "08:19.79"
+          },
+          {
+            "pos": 4,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Ferrer Ferrero, Lucía",
+            "tiempo": "08:33.11"
+          },
+          {
+            "pos": 5,
+            "club": "Campana Boat Club",
+            "atletas": "Nani, Carla",
+            "tiempo": "08:37.92"
+          },
+          {
+            "pos": 6,
+            "club": "Paraná Rowing Club",
+            "atletas": "Biaggini, Valentina",
+            "tiempo": "08:48.16"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Zárate",
+            "atletas": "Mongelot, Luna Nicole",
+            "tiempo": "08:10.00"
+          },
+          {
+            "pos": 2,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Bustos, Mercedes",
+            "tiempo": "08:14.08"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Novello Winderholler, Ghislaine",
+            "tiempo": "08:22.60"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas San Nicolás",
+            "atletas": "Ciutto, Candela",
+            "tiempo": "08:54.83"
+          },
+          {
+            "pos": 5,
+            "club": "Bigornia Club",
+            "atletas": "Viel, Xiomara Jazmin",
+            "tiempo": "09:02.23"
+          },
+          {
+            "pos": 6,
+            "club": "Club de Regatas Concordia",
+            "atletas": "Alarcón, Sabrina",
+            "tiempo": "09:09.00"
+          }
+        ]
+      }
+    ]
+  },
+  "2": {
+    "nombre": "Doble par Junior Masculino",
+    "tipo": "Doble par",
+    "cat": "Junior",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Final A",
+        "esFinal": true,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Aversso, Valentino / Paredes, Tomás / Migueles, Joaquin",
+            "tiempo": "06:37.72"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Fernandez, Emilio / Ferrer Ferrero, Santiago",
+            "tiempo": "06:41.83"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Arrecegor, Mateo / Neuwirt, Ramiro Valentín",
+            "tiempo": "06:52.15"
+          },
+          {
+            "pos": 4,
+            "club": "Rosario Rowing Club",
+            "atletas": "Isach, Bautista / Isach, Juan Cruz / Galloni, Guido",
+            "tiempo": "06:56.84"
+          },
+          {
+            "pos": 5,
+            "club": "Campana Boat Club",
+            "atletas": "Guzman, Pedro Antonio / Guzman, Juan José",
+            "tiempo": "07:02.92"
+          },
+          {
+            "pos": 6,
+            "club": "Club Náutico El Timón",
+            "atletas": "Monzón, Piuque Nahuel / Arrausi, Felipe Manuel",
+            "tiempo": "07:07.89"
+          }
+        ]
+      },
+      {
+        "label": "Final B",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club San Fernando",
+            "atletas": "Ledesma, Ulises / Lirussi Brandan, Thiago",
+            "tiempo": "06:44.44"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico El Timón",
+            "atletas": "De Armas, Augusto / Trolli, Ignacio Agustín",
+            "tiempo": "06:58.86"
+          },
+          {
+            "pos": 3,
+            "club": "Club Remeros Escandinavos",
+            "atletas": "Ochoa Sperle, Joaquin / Carmona Fredes, Andrés",
+            "tiempo": "07:19.48"
+          }
+        ]
+      },
+      {
+        "label": "Final C",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Bariloche",
+            "atletas": "Nuñez, Milo Iván / Goudeau, Sebastián",
+            "tiempo": "06:55.16"
+          },
+          {
+            "pos": 2,
+            "club": "Tigre Boat Club",
+            "atletas": "Vineis Trippel, Marcos / Garzón Vaccarezza, Santino Raúl / Carrasco, Thiago Leonel",
+            "tiempo": "07:04.08"
+          }
+        ]
+      },
+      {
+        "label": "Semifinal 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Arrecegor, Mateo / Neuwirt, Ramiro Valentín",
+            "tiempo": "06:35.32"
+          },
+          {
+            "pos": 2,
+            "club": "Rosario Rowing Club",
+            "atletas": "Isach, Bautista / Isach, Juan Cruz / Galloni, Guido",
+            "tiempo": "06:36.03"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico El Timón",
+            "atletas": "Monzón, Piuque Nahuel / Arrausi, Felipe Manuel",
+            "tiempo": "06:42.59"
+          },
+          {
+            "pos": 4,
+            "club": "Club San Fernando",
+            "atletas": "Ledesma, Ulises / Lirussi Brandan, Thiago",
+            "tiempo": "06:49.44"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas La Marina",
+            "atletas": "Maureira, Tobías Lautaro / Toscanini, Luca / Escudero, Santino",
+            "tiempo": "07:06.48"
+          },
+          {
+            "pos": 6,
+            "club": "Club Remeros Escandinavos",
+            "atletas": "Ochoa Sperle, Joaquin / Carmona Fredes, Andrés",
+            "tiempo": "07:43.89"
+          }
+        ]
+      },
+      {
+        "label": "Semifinal 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Fernandez, Emilio / Ferrer Ferrero, Santiago",
+            "tiempo": "06:30.10"
+          },
+          {
+            "pos": 2,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Aversso, Valentino / Paredes, Tomás / Migueles, Joaquin",
+            "tiempo": "06:37.29"
+          },
+          {
+            "pos": 3,
+            "club": "Campana Boat Club",
+            "atletas": "Guzman, Pedro Antonio / Guzman, Juan José",
+            "tiempo": "06:44.88"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Rivero, Alex Uriel / Cota Da Costa, Marcos",
+            "tiempo": "06:46.29"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Aguiar Mallio, Matías / Venza, Ramiro / Almeyda, Ulises",
+            "tiempo": "07:02.13"
+          },
+          {
+            "pos": 6,
+            "club": "Club Náutico El Timón",
+            "atletas": "De Armas, Augusto / Trolli, Ignacio Agustín",
+            "tiempo": "07:09.53"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Rosario Rowing Club",
+            "atletas": "Isach, Bautista / Isach, Juan Cruz / Galloni, Guido",
+            "tiempo": "06:37.35"
+          },
+          {
+            "pos": 2,
+            "club": "Club San Fernando",
+            "atletas": "Ledesma, Ulises / Lirussi Brandan, Thiago",
+            "tiempo": "06:39:03"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico El Timón",
+            "atletas": "Monzón, Piuque Nahuel / Arrausi, Felipe Manuel",
+            "tiempo": "06:47.22"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Aguiar Mallio, Matías / Venza, Ramiro / Almeyda, Ulises",
+            "tiempo": "06:54.81"
+          },
+          {
+            "pos": 5,
+            "club": "Club Náutico El Timón",
+            "atletas": "De Armas, Augusto / Trolli, Ignacio Agustín",
+            "tiempo": "06:56.28"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Fernandez, Emilio / Ferrer Ferrero, Santiago",
+            "tiempo": "6:23.22"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Arrecegor, Mateo / Neuwirt, Ramiro Valentín",
+            "tiempo": "06:27.99"
+          },
+          {
+            "pos": 3,
+            "club": "Campana Boat Club",
+            "atletas": "Guzman, Pedro Antonio / Guzman, Juan José",
+            "tiempo": "06:31.29"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas La Marina",
+            "atletas": "Maureira, Tobías Lautaro / Toscanini, Luca / Escudero, Santino",
+            "tiempo": "06:43.85"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas Bariloche",
+            "atletas": "Nuñez, Milo Iván / Goudeau, Sebastián",
+            "tiempo": "07:36.69"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 3",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Aversso, Valentino / Paredes, Tomás / Migueles, Joaquin",
+            "tiempo": "06:32.58"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Rivero, Alex Uriel / Cota Da Costa, Marcos",
+            "tiempo": "06:35.58"
+          },
+          {
+            "pos": 3,
+            "club": "Club Remeros Escandinavos",
+            "atletas": "Ochoa Sperle, Joaquin / Carmona Fredes, Andrés",
+            "tiempo": "07:06.13"
+          },
+          {
+            "pos": 4,
+            "club": "Tigre Boat Club",
+            "atletas": "Vineis Trippel, Marcos / Garzón Vaccarezza, Santino Raúl / Carrasco, Thiago Leonel",
+            "tiempo": "07:11.95"
+          }
+        ]
+      }
+    ]
+  },
+  "3": {
+    "nombre": "Single Junior Femenino",
+    "tipo": "Single",
+    "cat": "Junior",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Final A",
+        "esFinal": true,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Prados, Felicitas",
+            "tiempo": "08:22.41"
+          },
+          {
+            "pos": 2,
+            "club": "Rosario Rowing Club",
+            "atletas": "Partenni, Giovanna",
+            "tiempo": "08:22.86"
+          },
+          {
+            "pos": 3,
+            "club": "Paraná Rowing Club",
+            "atletas": "Farias, Lisa",
+            "tiempo": "08:26.42"
+          },
+          {
+            "pos": 4,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Varela, Juliana",
+            "tiempo": "08:33.43"
+          },
+          {
+            "pos": 5,
+            "club": "Tigre Boat Club",
+            "atletas": "Fernandez, Ana",
+            "tiempo": "08:48.24"
+          }
+        ]
+      },
+      {
+        "label": "Final B",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Ayala, Angeles",
+            "tiempo": "08:04.48"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Marchet, Eva",
+            "tiempo": "08:15.62"
+          },
+          {
+            "pos": 3,
+            "club": "Club San Fernando",
+            "atletas": "Echeverria Marchessi, Lola",
+            "tiempo": "08:24.12"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Gianakis, Olimpia",
+            "tiempo": "08:27.07"
+          },
+          {
+            "pos": 5,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Schwidt Delucchi, Sofía",
+            "tiempo": "08:31.85"
+          },
+          {
+            "pos": 6,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Vega, Valentina",
+            "tiempo": "08:49.16"
+          }
+        ]
+      },
+      {
+        "label": "Final C",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Asociación Civil Tupa Remo y Triatlón",
+            "atletas": "Borovachi, Paula",
+            "tiempo": "08:52.37"
+          }
+        ]
+      },
+      {
+        "label": "Semifinal 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Varela, Juliana",
+            "tiempo": "08:05.74"
+          },
+          {
+            "pos": 2,
+            "club": "Rosario Rowing Club",
+            "atletas": "Partenni, Giovanna",
+            "tiempo": "08:07.72"
+          },
+          {
+            "pos": 3,
+            "club": "Tigre Boat Club",
+            "atletas": "Fernandez, Ana",
+            "tiempo": "08:20.66"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Marchet, Eva",
+            "tiempo": "08:26.41"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Gianakis, Olimpia",
+            "tiempo": "08:39.00"
+          },
+          {
+            "pos": 6,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Schwidt Delucchi, Sofía",
+            "tiempo": "08:55.78"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Prados, Felicitas",
+            "tiempo": "08:04.72"
+          },
+          {
+            "pos": 2,
+            "club": "Paraná Rowing Club",
+            "atletas": "Farias, Lisa",
+            "tiempo": "08:03.00"
+          },
+          {
+            "pos": 3,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Vega, Valentina",
+            "tiempo": "08:38.41"
+          },
+          {
+            "pos": 4,
+            "club": "Asociación Civil Tupa Remo y Triatlón",
+            "atletas": "Borovachi, Paula",
+            "tiempo": "08:49.29"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Rosario Rowing Club",
+            "atletas": "Partenni, Giovanna",
+            "tiempo": "08:03.47"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Ayala, Angeles",
+            "tiempo": "08:05.22"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Marchet, Eva",
+            "tiempo": "08:07.52"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Gianakis, Olimpia",
+            "tiempo": "08:26.44"
+          },
+          {
+            "pos": 5,
+            "club": "Asociación Cordobesa de Remo",
+            "atletas": "Konstantinides, Athina",
+            "tiempo": "08:51.94"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 3",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Varela, Juliana",
+            "tiempo": "08:02.88"
+          },
+          {
+            "pos": 2,
+            "club": "Tigre Boat Club",
+            "atletas": "Fernandez, Ana",
+            "tiempo": "08:07.89"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "DeLucci, Catalina",
+            "tiempo": "08:09.88"
+          },
+          {
+            "pos": 4,
+            "club": "Club San Fernando",
+            "atletas": "Echeverria Marchessi, Lola",
+            "tiempo": "08:21.18"
+          },
+          {
+            "pos": 5,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Schwidt Delucchi, Sofía",
+            "tiempo": "08:36.85"
+          }
+        ]
+      }
+    ]
+  },
+  "4": {
+    "nombre": "Cuatro Sin Sub 23 Masculino",
+    "tipo": "Cuatro Sin",
+    "cat": "Sub 23",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Mendoza de Regatas",
+            "atletas": "Balasch, Franco / Tibaldi, Tomás / Mansilla, Martín / Tersoglio, Facundo",
+            "tiempo": "06:17.05"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Pacheco, Patricio / Rossi, Ignacio / Battilana, Emilio Genaro / Zanardi, Ignacio / Rosa, Paulo Máximo / Pacheco, Maximo",
+            "tiempo": "06:19.18"
+          },
+          {
+            "pos": 3,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Martinez, Gonzalo Nicolás / Ríos, Benjamin Nehuen / Galdeano, Lautaro / Bazan, Thiago / Perez Croce, Andres",
+            "tiempo": "06:33.32"
+          }
+        ]
+      }
+    ]
+  },
+  "5": {
+    "nombre": "Cuatro Sin PL Masculino",
+    "tipo": "Cuatro Sin",
+    "cat": "PL",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Broda, Marcos / Enriquez Andresson, Rodrigo / Wingord, Mateo / Dickson, Pedro / Videla Nati, Nicolás",
+            "tiempo": "06:28.91"
+          },
+          {
+            "pos": 2,
+            "club": "Club Mendoza de Regatas",
+            "atletas": "Santos, Geronimo / Cusimano, Santiago / Sendra, Juan Cruz / Marques, Danilo",
+            "tiempo": "06:31.55"
+          }
+        ]
+      }
+    ]
+  },
+  "6": {
+    "nombre": "Single Senior Femenino",
+    "tipo": "Single",
+    "cat": "Senior",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Galfre, Clara",
+            "tiempo": "07:55.29"
+          },
+          {
+            "pos": 2,
+            "club": "Tigre Boat Club",
+            "atletas": "Orlandini, Delfina",
+            "tiempo": "08:01.52"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Zárate",
+            "atletas": "Silvestro, Evelyn Maricel",
+            "tiempo": "08:04.24"
+          },
+          {
+            "pos": 4,
+            "club": "Club De Regatas Lima",
+            "atletas": "Sanguinetti Velasco, Adriana María",
+            "tiempo": "08:11.72"
+          },
+          {
+            "pos": 5,
+            "club": "Bigornia Club",
+            "atletas": "Carballo, Ilén Micaela",
+            "tiempo": "08:53.26"
+          }
+        ]
+      }
+    ]
+  },
+  "7": {
+    "nombre": "Doble par PL Femenino",
+    "tipo": "Doble par",
+    "cat": "PL",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas América",
+            "atletas": "Arango, Francesca / Maia, Lola",
+            "tiempo": "07:44.10"
+          },
+          {
+            "pos": 2,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Scheffer, María Sol / Colombo, Carmela",
+            "tiempo": "07:52.80"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Zárate",
+            "atletas": "Mancino, Camila / Pinardi, Delfina / Weber Fuentes, Michelle",
+            "tiempo": "07:55.81"
+          },
+          {
+            "pos": 4,
+            "club": "Tigre Boat Club",
+            "atletas": "Fois, Catterina SImona / Altamirano, Azul Mariel / Fernandez, Ana",
+            "tiempo": "08:12.38"
+          },
+          {
+            "pos": 5,
+            "club": "Club Peña Nautica Bajada España",
+            "atletas": "Radyna, Noelia / Maguna, Maria Sol",
+            "tiempo": "08:14.12"
+          }
+        ]
+      }
+    ]
+  },
+  "8": {
+    "nombre": "Doble par Menor Masculino",
+    "tipo": "Doble par",
+    "cat": "Menor",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Final A",
+        "esFinal": true,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club San Fernando",
+            "atletas": "Gatti Moreira, Bautista / Massa Andreotti, Máximo",
+            "tiempo": "06:57.64"
+          },
+          {
+            "pos": 2,
+            "club": "Tigre Boat Club",
+            "atletas": "Paré, Joaquín Ezequiel / Doldán, Franco Bautista / Otero Delbue, Martín Emiliano",
+            "tiempo": "07:01.26"
+          },
+          {
+            "pos": 3,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Loitegui, Benjamin / Parodi, Facundo",
+            "tiempo": "07:02.17"
+          },
+          {
+            "pos": 4,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Gomez, Sebastián / Benitez, Tiziano Tomás",
+            "tiempo": "07:09.46"
+          },
+          {
+            "pos": 5,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Manzo Majirena, Ignacio / Arriola, Ignacio",
+            "tiempo": "07:16.48"
+          },
+          {
+            "pos": 6,
+            "club": "Club Náutico Zárate",
+            "atletas": "Monetta, Santino / Pomilio, Joan Francisco / Galeano, Lisandro Benjamin",
+            "tiempo": "07:27.91"
+          }
+        ]
+      },
+      {
+        "label": "Final B",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Peña Pracht, Thiago / Trotta, Bautista",
+            "tiempo": "06:49.25"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas San Nicolás",
+            "atletas": "Enneuy, Astor / Guereta, Geremias",
+            "tiempo": "06:54.20"
+          },
+          {
+            "pos": 3,
+            "club": "Campana Boat Club",
+            "atletas": "Pinardi, Dionel / Masino, Enzo Lisandro",
+            "tiempo": "07:02.50"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Galarza, Julián / Sandoval Alarcon, Juan Cruz / Lopez Rivadeneira, Lorenzo",
+            "tiempo": "07:05.64"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas América",
+            "atletas": "Escurra Escobar, Felipe Mateo / Piccini Lopez, Juan José",
+            "tiempo": "07;10.08"
+          }
+        ]
+      },
+      {
+        "label": "Semifinal 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club San Fernando",
+            "atletas": "Gatti Moreira, Bautista / Massa Andreotti, Máximo",
+            "tiempo": "06:44.36"
+          },
+          {
+            "pos": 2,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Loitegui, Benjamin / Parodi, Facundo",
+            "tiempo": "06:50.75"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Zárate",
+            "atletas": "Monetta, Santino / Pomilio, Joan Francisco / Galeano, Lisandro Benjamin",
+            "tiempo": "06:52.09"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Peña Pracht, Thiago / Trotta, Bautista",
+            "tiempo": "07:01.04"
+          },
+          {
+            "pos": 5,
+            "club": "Campana Boat Club",
+            "atletas": "Pinardi, Dionel / Masino, Enzo Lisandro",
+            "tiempo": "07:13.78"
+          }
+        ]
+      },
+      {
+        "label": "Semifinal 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Tigre Boat Club",
+            "atletas": "Paré, Joaquín Ezequiel / Doldán, Franco Bautista / Otero Delbue, Martín Emiliano",
+            "tiempo": "06:55.94"
+          },
+          {
+            "pos": 2,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Gomez, Sebastián / Benitez, Tiziano Tomás",
+            "tiempo": "07:03.10"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Manzo Majirena, Ignacio / Arriola, Ignacio",
+            "tiempo": "07:05.10"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas San Nicolás",
+            "atletas": "Enneuy, Astor / Guereta, Geremias",
+            "tiempo": "08:13.57"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Galarza, Julián / Sandoval Alarcon, Juan Cruz / Lopez Rivadeneira, Lorenzo",
+            "tiempo": "07:26.07"
+          },
+          {
+            "pos": 6,
+            "club": "Club de Regatas América",
+            "atletas": "Escurra Escobar, Felipe Mateo / Piccini Lopez, Juan José",
+            "tiempo": "07:32.63"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club San Fernando",
+            "atletas": "Gatti Moreira, Bautista / Massa Andreotti, Máximo",
+            "tiempo": "06:45.77"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Peña Pracht, Thiago / Trotta, Bautista",
+            "tiempo": "06:51.65"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Galarza, Julián / Sandoval Alarcon, Juan Cruz / Lopez Rivadeneira, Lorenzo",
+            "tiempo": "07:02.62"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas América",
+            "atletas": "Escurra Escobar, Felipe Mateo / Piccini Lopez, Juan José",
+            "tiempo": "07:06.16"
+          },
+          {
+            "pos": 5,
+            "club": "Club Remeros Alberdi",
+            "atletas": "Monteferrante, Manuel / Simón, Lucas",
+            "tiempo": "07:40.64"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Tigre Boat Club",
+            "atletas": "Paré, Joaquín Ezequiel / Doldán, Franco Bautista / Otero Delbue, Martín Emiliano",
+            "tiempo": "06:44.32"
+          },
+          {
+            "pos": 2,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Loitegui, Benjamin / Parodi, Facundo",
+            "tiempo": "06:47.32"
+          },
+          {
+            "pos": 3,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Gomez, Sebastián / Benitez, Tiziano Tomás",
+            "tiempo": "06:55.93"
+          },
+          {
+            "pos": 4,
+            "club": "Club Náutico Zárate",
+            "atletas": "Monetta, Santino / Pomilio, Joan Francisco / Galeano, Lisandro Benjamin",
+            "tiempo": "06:56.33"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 3",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Manzo Majirena, Ignacio / Arriola, Ignacio",
+            "tiempo": "06:53.07"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas San Nicolás",
+            "atletas": "Enneuy, Astor / Guereta, Geremias",
+            "tiempo": "06:54.75"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Maull, Lorenzo / Gallini, Francisco",
+            "tiempo": "06:57.61"
+          },
+          {
+            "pos": 4,
+            "club": "Campana Boat Club",
+            "atletas": "Pinardi, Dionel / Masino, Enzo Lisandro",
+            "tiempo": "07:08.16"
+          }
+        ]
+      }
+    ]
+  },
+  "9": {
+    "nombre": "Doble par Senior Masculino",
+    "tipo": "Doble par",
+    "cat": "Senior",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Calderon, Emiliano Oscar / Pacheco, Ignacio / Pacheco, Maximo",
+            "tiempo": "06:39.66"
+          },
+          {
+            "pos": 2,
+            "club": "Rosario Rowing Club",
+            "atletas": "Jijon, Juan Ignacio / Romero, Juan Segundo / Gallina, Renato Andres",
+            "tiempo": "06:45.66"
+          },
+          {
+            "pos": 3,
+            "club": "Bigornia Club",
+            "atletas": "Laesprella, Andrés / Carballo, Ramiro Nahuel",
+            "tiempo": "06:52.02"
+          },
+          {
+            "pos": 4,
+            "club": "Rowing Club Argentino",
+            "atletas": "Cano Murga, Diego / Mata Carmona, José Ramón",
+            "tiempo": "07:23.26"
+          }
+        ]
+      }
+    ]
+  },
+  "10": {
+    "nombre": "Single Sub 23 PL Femenino",
+    "tipo": "Single",
+    "cat": "Sub 23 PL",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Fucile, Anika",
+            "tiempo": "08:21.83"
+          },
+          {
+            "pos": 2,
+            "club": "Paraná Rowing Club",
+            "atletas": "Zarate Bosco, Carmen",
+            "tiempo": "08:26.11"
+          },
+          {
+            "pos": 3,
+            "club": "Campana Boat Club",
+            "atletas": "González Ricciuti, Julieta",
+            "tiempo": "08:41.33"
+          },
+          {
+            "pos": 4,
+            "club": "Club San Fernando",
+            "atletas": "Echeverria Marchessi, Lola",
+            "tiempo": "09:10.09"
+          },
+          {
+            "pos": 5,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Scheffer, María Giuliana",
+            "tiempo": "09:39.28"
+          }
+        ]
+      }
+    ]
+  },
+  "11": {
+    "nombre": "Dos Sin Sub 23 Femenino",
+    "tipo": "Dos Sin",
+    "cat": "Sub 23",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "La Torre, Martina / Molina, Carmela Pilar",
+            "tiempo": "07:54.38"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Cadaa Lalinde, Lola / Fernandez, Abigail",
+            "tiempo": "08:32.02"
+          }
+        ]
+      }
+    ]
+  },
+  "12": {
+    "nombre": "Cuatro Sin Junior Masculino",
+    "tipo": "Cuatro Sin",
+    "cat": "Junior",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Zárate",
+            "atletas": "Cabrera, Alexis Misael / Weber Fuentes, Anthony / De Luz, Santino / Peralta, Nicolás / Coali, Marcos / Magalú, Felipe Nicolás",
+            "tiempo": "06:50.67"
+          },
+          {
+            "pos": 2,
+            "club": "Tigre Boat Club",
+            "atletas": "Borches Rosemberg, Luciano / Vineis Trippel, Marcos / Otero Delbue, Martín Emiliano / Fernandez Bustos, Ignacio Lucas / Mamani, Nestor Ignacio / Paré, Joaquín Ezequiel",
+            "tiempo": "07:04.65"
+          }
+        ]
+      }
+    ]
+  },
+  "13": {
+    "nombre": "Doble par Sub 23 Masculino",
+    "tipo": "Doble par",
+    "cat": "Sub 23",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Pacheco, Maximo / Battilana, Emilio Genaro / Pacheco, Patricio",
+            "tiempo": "06:38.53"
+          },
+          {
+            "pos": 2,
+            "club": "Tigre Boat Club",
+            "atletas": "Holler, Andres / Sans Muñoz, Nicolás Joaquín / Trejo, Felipe Tomas",
+            "tiempo": "06:45.59"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas La Marina",
+            "atletas": "Regolta, Gastón Francisco / Hammar, Marcos / Gulluni, Agustin Santino",
+            "tiempo": "06:45.95"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Santa Fe",
+            "atletas": "Tiburzi, Tobías Leonardo / Marcipar, Agustin",
+            "tiempo": "06:59.46"
+          },
+          {
+            "pos": 5,
+            "club": "Club Náutico Zárate",
+            "atletas": "Santórsola, Joaquín Sebastián / Sousa, Bautista",
+            "tiempo": "07:14.47"
+          }
+        ]
+      }
+    ]
+  },
+  "14": {
+    "nombre": "Doble par Sub 23 PL Masculino",
+    "tipo": "Doble par",
+    "cat": "Sub 23 PL",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Final A",
+        "esFinal": true,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Zárate",
+            "atletas": "Moreira Rosas, Francisco Miguel / Mancino, Juan Martín / Donamari, Juan Bautista",
+            "tiempo": "06:46.29"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Santa Fe",
+            "atletas": "Amer, Germán / Amer, Bruno Gabriel",
+            "tiempo": "06:50.64"
+          },
+          {
+            "pos": 3,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Broda, Marcos / Galdeano, Lautaro",
+            "tiempo": "06:54.38"
+          },
+          {
+            "pos": 4,
+            "club": "Tigre Boat Club",
+            "atletas": "Fusco, Gregorio / Quevedo, Mateo  Valentín / Maquiavelo, Salvador",
+            "tiempo": "06:57.21"
+          },
+          {
+            "pos": 5,
+            "club": "Rosario Rowing Club",
+            "atletas": "Galloni, Guido / Gallina, Renato Andres",
+            "tiempo": "06:58.67"
+          },
+          {
+            "pos": 6,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Gonzalez, Facundo / Lopez, Agustín",
+            "tiempo": "07:01.41"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Broda, Marcos / Galdeano, Lautaro",
+            "tiempo": "06:31.76"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Gonzalez, Facundo / Lopez, Agustín",
+            "tiempo": "06:35.59"
+          },
+          {
+            "pos": 3,
+            "club": "Tigre Boat Club",
+            "atletas": "Fusco, Gregorio / Quevedo, Mateo  Valentín / Maquiavelo, Salvador",
+            "tiempo": "06:47.63"
+          },
+          {
+            "pos": 4,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Cortenova, Santino / Cabeleira, Pedro",
+            "tiempo": "96:50.23"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Zárate",
+            "atletas": "Moreira Rosas, Francisco Miguel / Mancino, Juan Martín / Donamari, Juan Bautista",
+            "tiempo": "06:30.99"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Santa Fe",
+            "atletas": "Amer, Germán / Amer, Bruno Gabriel",
+            "tiempo": "06:34.17"
+          },
+          {
+            "pos": 3,
+            "club": "Rosario Rowing Club",
+            "atletas": "Galloni, Guido / Gallina, Renato Andres",
+            "tiempo": "06:36.09"
+          }
+        ]
+      }
+    ]
+  },
+  "15": {
+    "nombre": "Single Sub 23 Femenino",
+    "tipo": "Single",
+    "cat": "Sub 23",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas América",
+            "atletas": "Simonitti, Iara",
+            "tiempo": "08:17.35"
+          },
+          {
+            "pos": 2,
+            "club": "Campana Boat Club",
+            "atletas": "González Ricciuti, Julieta",
+            "tiempo": "08:27.29"
+          },
+          {
+            "pos": 3,
+            "club": "Rosario Rowing Club",
+            "atletas": "Linaro, Valentina",
+            "tiempo": "08:30.07"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Garcia Valdivieso, Maya Eleni",
+            "tiempo": "08:30,75"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Fernandez, Abigail",
+            "tiempo": "08:45.77"
+          },
+          {
+            "pos": 6,
+            "club": "Asociación Civil Tupa Remo y Triatlón",
+            "atletas": "Noseda, Guillermina",
+            "tiempo": "08:51.90"
+          }
+        ]
+      }
+    ]
+  },
+  "16": {
+    "nombre": "Doble par Intermedia Masculino",
+    "tipo": "Doble par",
+    "cat": "Intermedia",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Final A",
+        "esFinal": true,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas San Nicolás",
+            "atletas": "Ferrari, Renzo / Llover, Cristian Leonardo / Bogado, Nicolas Andres",
+            "tiempo": "07:05.66"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "De La Gama, Agustín / Pablovich, Nahuel",
+            "tiempo": "07:09.52"
+          },
+          {
+            "pos": 3,
+            "club": "Tigre Boat Club",
+            "atletas": "Lacava, Lautaro Luis / Galiana, Ramón / Tomas Falcon, Jesús Nahuel",
+            "tiempo": "07:11.86"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Luján, Enzo Julian / Gomez Enriquez, Alejandro / Gomez Enriquez, Gaston",
+            "tiempo": "07:17.11"
+          },
+          {
+            "pos": 5,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Gonzalez Videla, Tomás / Bonelli, Salvador",
+            "tiempo": "07:22.46"
+          },
+          {
+            "pos": 6,
+            "club": "Bigornia Club",
+            "atletas": "Merkel, Máximo Germán / Kaless, Gabriel",
+            "tiempo": "07:29.29"
+          }
+        ]
+      },
+      {
+        "label": "Final B",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Asociación Cordobesa de Remo",
+            "atletas": "Zapata, Liam Joaquin / Mamani, Leandro Nicolas",
+            "tiempo": "08:24.40"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas San Nicolás",
+            "atletas": "Ferrari, Renzo / Llover, Cristian Leonardo / Bogado, Nicolas Andres",
+            "tiempo": "06:50.14"
+          },
+          {
+            "pos": 2,
+            "club": "Bigornia Club",
+            "atletas": "Merkel, Máximo Germán / Kaless, Gabriel",
+            "tiempo": "07:00.87"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Concordia",
+            "atletas": "Gularte, Federico Agustín / Rodriguez, Facundo",
+            "tiempo": "07:12.66"
+          },
+          {
+            "pos": 4,
+            "club": "Asociación Cordobesa de Remo",
+            "atletas": "Zapata, Liam Joaquin / Mamani, Leandro Nicolas",
+            "tiempo": "07:13.61"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Gonzalez Videla, Tomás / Bonelli, Salvador",
+            "tiempo": "06:52.09"
+          },
+          {
+            "pos": 2,
+            "club": "Tigre Boat Club",
+            "atletas": "Lacava, Lautaro Luis / Galiana, Ramón / Tomas Falcon, Jesús Nahuel",
+            "tiempo": "06:53.99"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Luján, Enzo Julian / Gomez Enriquez, Alejandro / Gomez Enriquez, Gaston",
+            "tiempo": "06:56.47"
+          },
+          {
+            "pos": 4,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "De La Gama, Agustín / Pablovich, Nahuel",
+            "tiempo": "06:57.77"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas La Marina",
+            "atletas": "Fritz, Ignacio / Ruberto Fernandez, Santino Exequiel / Villar, Gonzalo",
+            "tiempo": "07:09.30"
+          }
+        ]
+      }
+    ]
+  },
+  "17": {
+    "nombre": "Single Intermedia Femenino",
+    "tipo": "Single",
+    "cat": "Intermedia",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Final A",
+        "esFinal": true,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Remeros Escandinavos",
+            "atletas": "Castelli, Martina",
+            "tiempo": "08:49.65"
+          },
+          {
+            "pos": 2,
+            "club": "Nahuel Rowing Club",
+            "atletas": "Moran, Victoria",
+            "tiempo": "09:03.63"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Hacoaj",
+            "atletas": "Fainstein, Uma",
+            "tiempo": "09:04.83"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Zibelman, Sabrina",
+            "tiempo": "09:07.01"
+          },
+          {
+            "pos": 5,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Erriquenz Berardi, María Rosario",
+            "tiempo": "09:18.30"
+          }
+        ]
+      },
+      {
+        "label": "Final B",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Bariloche",
+            "atletas": "Catacora, Rocío",
+            "tiempo": "08:26.92"
+          },
+          {
+            "pos": 2,
+            "club": "Tigre Boat Club",
+            "atletas": "Moreno Andreoni, Amy Nerea",
+            "tiempo": "08:39.70"
+          },
+          {
+            "pos": 3,
+            "club": "Asociación Cordobesa de Remo",
+            "atletas": "Montemurro, Guadalupe Celeste",
+            "tiempo": "08:48.48"
+          }
+        ]
+      },
+      {
+        "label": "Semifinal 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Erriquenz Berardi, María Rosario",
+            "tiempo": "09:01.98"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Hacoaj",
+            "atletas": "Fainstein, Uma",
+            "tiempo": "08:40.15"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Zibelman, Sabrina",
+            "tiempo": "08:44.01"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Bariloche",
+            "atletas": "Catacora, Rocío",
+            "tiempo": "08:45.61"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Balzaretti, Giorgina Maria",
+            "tiempo": "08:58.91"
+          },
+          {
+            "pos": 6,
+            "club": "Tigre Boat Club",
+            "atletas": "Moreno Andreoni, Amy Nerea",
+            "tiempo": "09:01.98"
+          }
+        ]
+      },
+      {
+        "label": "Semifinal 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Tigre Boat Club",
+            "atletas": "Romera, Paula Sofía",
+            "tiempo": "08:29.41"
+          },
+          {
+            "pos": 2,
+            "club": "Club Remeros Escandinavos",
+            "atletas": "Castelli, Martina",
+            "tiempo": "08:34.05"
+          },
+          {
+            "pos": 3,
+            "club": "Nahuel Rowing Club",
+            "atletas": "Moran, Victoria",
+            "tiempo": "08:42.65"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Bellingeri, Oriana Vanina",
+            "tiempo": "08:46.39"
+          },
+          {
+            "pos": 5,
+            "club": "Paraná Rowing Club",
+            "atletas": "Mac Yntire, Yuliana Belén",
+            "tiempo": "09:10.57"
+          },
+          {
+            "pos": 6,
+            "club": "Asociación Cordobesa de Remo",
+            "atletas": "Montemurro, Guadalupe Celeste",
+            "tiempo": "09:18.82"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Zibelman, Sabrina",
+            "tiempo": "08:32.52"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Balzaretti, Giorgina Maria",
+            "tiempo": "08:33.46"
+          },
+          {
+            "pos": 3,
+            "club": "Tigre Boat Club",
+            "atletas": "Moreno Andreoni, Amy Nerea",
+            "tiempo": "08:43.11"
+          },
+          {
+            "pos": 4,
+            "club": "Asociación Cordobesa de Remo",
+            "atletas": "Montemurro, Guadalupe Celeste",
+            "tiempo": "08:45.32"
+          },
+          {
+            "pos": 5,
+            "club": "Paraná Rowing Club",
+            "atletas": "Mac Yntire, Yuliana Belén",
+            "tiempo": "08:47.19"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Tigre Boat Club",
+            "atletas": "Romera, Paula Sofía",
+            "tiempo": "08:22.61"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Hacoaj",
+            "atletas": "Fainstein, Uma",
+            "tiempo": "08:38.48"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Bariloche",
+            "atletas": "Catacora, Rocío",
+            "tiempo": "08:44.24"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Farragut, Martina",
+            "tiempo": "09.03.12"
+          },
+          {
+            "pos": 5,
+            "club": "Bigornia Club",
+            "atletas": "Gomez, Natalia Lucia",
+            "tiempo": "09:25.75"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 3",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Remeros Escandinavos",
+            "atletas": "Castelli, Martina",
+            "tiempo": "08:28.60"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Bellingeri, Oriana Vanina",
+            "tiempo": "08:35.09"
+          },
+          {
+            "pos": 3,
+            "club": "Nahuel Rowing Club",
+            "atletas": "Moran, Victoria",
+            "tiempo": "08:39.07"
+          },
+          {
+            "pos": 4,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Erriquenz Berardi, María Rosario",
+            "tiempo": "08:41.36"
+          }
+        ]
+      }
+    ]
+  },
+  "18": {
+    "nombre": "Doble par Junior Femenino",
+    "tipo": "Doble par",
+    "cat": "Junior",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Molina, Carola / Mazzoni, Lara / Fucile, Anika",
+            "tiempo": "07:41.12"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas América",
+            "atletas": "Glasberg, Emma / Baluzzo Chiaruzzo, Katia",
+            "tiempo": "07:57.53"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Mendez, Fiorella / Ayala, Angeles",
+            "tiempo": "08:00.46"
+          },
+          {
+            "pos": 4,
+            "club": "Club Náutico Zárate",
+            "atletas": "Gomez, Victoria / Weber Fuentes, Michelle / Mongelot, Luna Nicole",
+            "tiempo": "08:05.33"
+          },
+          {
+            "pos": 5,
+            "club": "Tigre Boat Club",
+            "atletas": "Van Lacke Campesi, Ghalia / Vineis Trippel, Azul / Fernandez, Ana",
+            "tiempo": "08:14.89"
+          }
+        ]
+      }
+    ]
+  },
+  "19": {
+    "nombre": "Doble par Senior Femenino",
+    "tipo": "Doble par",
+    "cat": "Senior",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Tigre Boat Club",
+            "atletas": "Riveros, Victoria / Duarte, Florencia / Orlandini, Delfina",
+            "tiempo": "07:31.18"
+          },
+          {
+            "pos": 2,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Manzotti, Agostina / Peralta Martinez, Olivia",
+            "tiempo": "07:42.20"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Aquino, Josefina / Galfre, Clara",
+            "tiempo": "07:58.13"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Hispano Argentino",
+            "atletas": "De La Cruz Gutierrez, Lucero Ariadna / Pedrini, María Lucila",
+            "tiempo": "08:23.59"
+          }
+        ]
+      }
+    ]
+  },
+  "20": {
+    "nombre": "Single Peso Ligero Masculino",
+    "tipo": "Single",
+    "cat": "PL",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Final A",
+        "esFinal": true,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Dickson, Pedro",
+            "tiempo": "07:15.29"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Hacoaj",
+            "atletas": "Menin, Santino",
+            "tiempo": "07:23.89"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Fernandez, Eugenio",
+            "tiempo": "07:31.14"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Rosa, Paulo Máximo",
+            "tiempo": "07:35.62"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas La Marina",
+            "atletas": "Galarza, Mateo",
+            "tiempo": "07:43.36"
+          },
+          {
+            "pos": 6,
+            "club": "Paraná Rowing Club",
+            "atletas": "Moreyra, Luciano",
+            "tiempo": "07:54.70"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Paraná Rowing Club",
+            "atletas": "Moreyra, Luciano",
+            "tiempo": "07:12.90"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Fernandez, Eugenio",
+            "tiempo": "07:17.84"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas La Marina",
+            "atletas": "Galarza, Mateo",
+            "tiempo": "07:24.46"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Rosa, Paulo Máximo",
+            "tiempo": "07:30.53"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Hacoaj",
+            "atletas": "Menin, Santino",
+            "tiempo": "07:36.82"
+          },
+          {
+            "pos": 2,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Dickson, Pedro",
+            "tiempo": "07:39.52"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas San Nicolás",
+            "atletas": "De Santis, Rómulo Alejandro",
+            "tiempo": "07:46.10"
+          }
+        ]
+      }
+    ]
+  },
+  "21": {
+    "nombre": "Cuatro Sin Senior Masculino",
+    "tipo": "Cuatro Sin",
+    "cat": "Senior",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Tigre Boat Club",
+            "atletas": "Mamani, Nestor Ignacio / Haack, Axel / Romero, Joel Alejandro / Riveros, Joaquin / Leverone, Marcos Federico / Sans Muñoz, Nicolás Joaquín",
+            "tiempo": "06:01.55"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Pacheco, Maximo / Rossi, Ignacio / Calderon, Emiliano Oscar / Pacheco, Ignacio / Merlo, Caetano / Battilana, Emilio Genaro",
+            "tiempo": "0604.05"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Aciar, Alejandro / Alvarez, Fernando Gabriel / Lasserre, Martín / Annese, Agustín Elías / Loayza, Camilo",
+            "tiempo": "06:19.44"
+          }
+        ]
+      }
+    ]
+  },
+  "22": {
+    "nombre": "Cuádruple par Menor Femenino",
+    "tipo": "Cuádruple par",
+    "cat": "Menor",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Zárate",
+            "atletas": "Mancino, Camila / Roggi, Zaira Nicole / Vera, Virginia / Gomez, Victoria / Weber Fuentes, Michelle",
+            "tiempo": "07:05.41"
+          },
+          {
+            "pos": 2,
+            "club": "Club Mendoza de Regatas",
+            "atletas": "Canals, Delfina / Olmedo, Martina / Kohn, Sofía / Gulin, Alma",
+            "tiempo": "07:11.44"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Zárate",
+            "atletas": "Palavecino, Jazmín Alejandra / Surueta, Valentina Luján / Soloaga, Maitena / Paredes, Julieta / Mongelot, Luna Nicole",
+            "tiempo": "07:12.52"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas América",
+            "atletas": "Veiga, Emilia / Gonzalo, Morena / Torrilla, Paloma / Tolosana, Lucila / Bilbao, Charo",
+            "tiempo": "07:21.28"
+          },
+          {
+            "pos": 5,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Cabanay, Candelaria / Scheffer, María Sofía / Cuenca, Lara Julieta / Prados, Lila",
+            "tiempo": "07:28.62"
+          }
+        ]
+      }
+    ]
+  },
+  "23": {
+    "nombre": "Dos Sin PL Masculino",
+    "tipo": "Dos Sin",
+    "cat": "PL",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Enriquez Andresson, Rodrigo / Wingord, Mateo",
+            "tiempo": "06;39.12"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Zárate",
+            "atletas": "Moreira Rosas, Francisco Miguel / Mancino, Juan Martín / Peralta, Nicolás",
+            "tiempo": "06:40.02"
+          }
+        ]
+      }
+    ]
+  },
+  "24": {
+    "nombre": "Ocho Senior Mixto",
+    "tipo": "Ocho",
+    "cat": "Senior",
+    "gen": "X",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Tigre Boat Club",
+            "atletas": "Albert, Úrsula / Orlandini, Delfina / Trejo, Felipe Tomas / Segui, Manuel / Leverone, Marcos Federico / Sans Muñoz, Nicolás Joaquín / Riveros, Victoria / Duarte, Florencia / Riveros, Joaquin / Haack, Axel / Fernandez, Ana / Romero, Joel Alejandro / Bustelo, Cristian Nahuel / Viola De Negri, Francisco",
+            "tiempo": "06:05.36"
+          },
+          {
+            "pos": 2,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "La Torre, Martina / Peralta Martinez, Olivia / Martinez, Gonzalo Nicolás / Perez Croce, Andres / Dickson, Pedro / Deandrea, Santiago / Deandrea, Catalina / Molina, Carmela Pilar / Broda, Marcos / Ríos, Benjamin Nehuen / Manzotti, Agostina / Fischer, Lucía / Gallo Mahler, María Felicitas",
+            "tiempo": "06:11.29"
+          }
+        ]
+      }
+    ]
+  },
+  "27": {
+    "nombre": "Cuádruple par Junior Femenino",
+    "tipo": "Cuádruple par",
+    "cat": "Junior",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Varela, Juliana / Fucile, Anika / Molina, Carola / Mazzoni, Lara / Bustos, Mercedes / La Torre, Martina",
+            "tiempo": "06:48.80"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Zárate",
+            "atletas": "Palavecino, Jazmín Alejandra / Surueta, Valentina Luján / Soloaga, Maitena / Mongelot, Luna Nicole / Gomez, Victoria / Paredes, Julieta",
+            "tiempo": "07:23.14"
+          }
+        ]
+      }
+    ]
+  },
+  "28": {
+    "nombre": "Ocho Junior Masculino",
+    "tipo": "Ocho",
+    "cat": "Junior",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Zárate",
+            "atletas": "Magalú, Felipe Nicolás / Coali, Marcos / Weber Fuentes, Anthony / Cabrera, Alexis Misael / Guerrero, Ramiro Marcos / De Luz, Santino / Peralta, Nicolás / Sosa, Pedro / Mc Nally, José Ignacio / Pomilio, Joan Francisco / Monetta, Santino / Galeano, Lisandro Benjamin / Mancino, Camila / Pellicer, Martina",
+            "tiempo": "05:48.65"
+          },
+          {
+            "pos": 2,
+            "club": "Club Mendoza de Regatas",
+            "atletas": "Gomez, Matías / Marques, Danilo / Hidalgo, Germán Imanol / Pena, Valentín / Vitar, Benjamín / Tibaldi, Tomás / Escalante, Marco / Ghiretti, Franco / Berrios, Leandro / Fornoni, Lucio / Kohn, Joaquin",
+            "tiempo": "05:49,45"
+          },
+          {
+            "pos": 3,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Pereira, Juan Ignacio / Scheffer, Agustín / Avero, Santiago Leonel / Bustos Segabache, Antonio / Marsili, Santiago / Paredes, Tomás / Aversso, Valentino / Migueles, Joaquin / Benitez, Tiziano Tomás / Lupo, Nicolas Valentin / Cabeleira, Pedro / Cortenova, Santino / Lupo, Bruno Francisco",
+            "tiempo": "05:55.06"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Tobes, Demian / Cantú, Alejo / Lopez Galastro, Augusto / Maull, Lorenzo / Almeyda, Ulises / Venza, Ramiro / Aguiar Mallio, Matías / Gallini, Francisco / Apuzzo Ortiz, Domingo Felipe / Apuzzo Ortiz, Cipriano",
+            "tiempo": "06:21.04"
+          }
+        ]
+      }
+    ]
+  },
+  "29": {
+    "nombre": "Cuádruple par Senior Femenino",
+    "tipo": "Cuádruple par",
+    "cat": "Senior",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Molina, Carmela Pilar / Manzotti, Agostina / Peralta Martinez, Olivia / Deandrea, Catalina / Mazzoni, Lara / La Torre, Martina",
+            "tiempo": "06:52.51"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Aquino, Josefina / Abade, Lola / Salas, Maria Guadalupe / Galfre, Clara",
+            "tiempo": "07:06.50"
+          },
+          {
+            "pos": 3,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Cabanay, Candelaria / Scheffer, María Sol / Prados, Felicitas / Colombo, Carmela / Vega, Valentina",
+            "tiempo": "07:24.86"
+          }
+        ]
+      }
+    ]
+  },
+  "30": {
+    "nombre": "Single Junior Masculino",
+    "tipo": "Single",
+    "cat": "Junior",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Final A",
+        "esFinal": true,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Campana Boat Club",
+            "atletas": "Bazan, Ignacio",
+            "tiempo": "06:46.27"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Ferrer Ferrero, Santiago",
+            "tiempo": "06:53.78"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas América",
+            "atletas": "Leguizamon, Ignacio",
+            "tiempo": "07:03:69"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Martin, Estanislao Alec",
+            "tiempo": "07:05.63"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Remo Canottieri Italiano",
+            "atletas": "Peña Solar, Ronald Alexis",
+            "tiempo": "07;06.09"
+          },
+          {
+            "pos": 6,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Cota Da Costa, Marcos",
+            "tiempo": "07:06.64"
+          }
+        ]
+      },
+      {
+        "label": "Final B",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Rosario Rowing Club",
+            "atletas": "Galloni, Guido",
+            "tiempo": "07:06.75"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas La Marina",
+            "atletas": "Escudero, Santino",
+            "tiempo": "07:14.04"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Rivero, Alex Uriel",
+            "tiempo": "07:16.05"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Santa Fe",
+            "atletas": "Tiburzi, Tobías Leonardo",
+            "tiempo": "07;17.60"
+          },
+          {
+            "pos": 5,
+            "club": "Club Remeros Alberdi",
+            "atletas": "García, Juan Ignacio",
+            "tiempo": "07:22.67"
+          },
+          {
+            "pos": 6,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Grillo, Bautista",
+            "tiempo": "07:30.08"
+          }
+        ]
+      },
+      {
+        "label": "Semifinal 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Remo Canottieri Italiano",
+            "atletas": "Peña Solar, Ronald Alexis",
+            "tiempo": "07:10.63"
+          },
+          {
+            "pos": 2,
+            "club": "Campana Boat Club",
+            "atletas": "Bazan, Ignacio",
+            "tiempo": "07:16.70"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Martin, Estanislao Alec",
+            "tiempo": "07:23.42"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas La Marina",
+            "atletas": "Escudero, Santino",
+            "tiempo": "07:25.83"
+          },
+          {
+            "pos": 5,
+            "club": "Rosario Rowing Club",
+            "atletas": "Galloni, Guido",
+            "tiempo": "07:31.47"
+          },
+          {
+            "pos": 6,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Grillo, Bautista",
+            "tiempo": "07:45.64"
+          }
+        ]
+      },
+      {
+        "label": "Semifinal 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Ferrer Ferrero, Santiago",
+            "tiempo": "07:16.81"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas América",
+            "atletas": "Leguizamon, Ignacio",
+            "tiempo": "07:20.22"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Cota Da Costa, Marcos",
+            "tiempo": "07:33.30"
+          },
+          {
+            "pos": 4,
+            "club": "Club Remeros Alberdi",
+            "atletas": "García, Juan Ignacio",
+            "tiempo": "07:34.02"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas Santa Fe",
+            "atletas": "Tiburzi, Tobías Leonardo",
+            "tiempo": "07:43.10"
+          },
+          {
+            "pos": 6,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Rivero, Alex Uriel",
+            "tiempo": "07:45.77"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Remo Canottieri Italiano",
+            "atletas": "Peña Solar, Ronald Alexis",
+            "tiempo": "07:12.86"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Martin, Estanislao Alec",
+            "tiempo": "07:19.48"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas América",
+            "atletas": "Leguizamon, Ignacio",
+            "tiempo": "07:21.21"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas La Marina",
+            "atletas": "Escudero, Santino",
+            "tiempo": "07:27.96"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas Concordia",
+            "atletas": "Salud, Valentino Maximo",
+            "tiempo": "08:57.88"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Ferrer Ferrero, Santiago",
+            "tiempo": "07:20.30"
+          },
+          {
+            "pos": 2,
+            "club": "Campana Boat Club",
+            "atletas": "Bazan, Ignacio",
+            "tiempo": "07:25.78"
+          },
+          {
+            "pos": 3,
+            "club": "Rosario Rowing Club",
+            "atletas": "Galloni, Guido",
+            "tiempo": "07:29.23"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Santa Fe",
+            "atletas": "Tiburzi, Tobías Leonardo",
+            "tiempo": "07:42.26"
+          },
+          {
+            "pos": 5,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Grillo, Bautista",
+            "tiempo": "07:52.28"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 3",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Cota Da Costa, Marcos",
+            "tiempo": "07:00.10"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Rivero, Alex Uriel",
+            "tiempo": "07:35.31"
+          },
+          {
+            "pos": 3,
+            "club": "Club Remeros Alberdi",
+            "atletas": "García, Juan Ignacio",
+            "tiempo": "07:37,56"
+          },
+          {
+            "pos": 4,
+            "club": "Nahuel Rowing Club",
+            "atletas": "Turri, Santiago",
+            "tiempo": "07:57.72"
+          }
+        ]
+      }
+    ]
+  },
+  "31": {
+    "nombre": "Single Sub 23 PL Masculino",
+    "tipo": "Single",
+    "cat": "Sub 23 PL",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Final A",
+        "esFinal": true,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Hacoaj",
+            "atletas": "Menin, Santino",
+            "tiempo": "06:51.01"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Santa Fe",
+            "atletas": "Amer, Germán",
+            "tiempo": "06:56.06"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Fernandez, Eugenio",
+            "tiempo": "06:57.82"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Bariloche",
+            "atletas": "Navarro, Ignacio",
+            "tiempo": "06:59.48"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Loayza, Camilo",
+            "tiempo": "07:12.17"
+          },
+          {
+            "pos": 6,
+            "club": "Club Náutico Zárate",
+            "atletas": "Donamari, Juan Bautista",
+            "tiempo": "07:15.55"
+          }
+        ]
+      },
+      {
+        "label": "Final B",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Rosario Rowing Club",
+            "atletas": "Gallina, Renato Andres",
+            "tiempo": "07:12.76"
+          },
+          {
+            "pos": 2,
+            "club": "Tigre Boat Club",
+            "atletas": "Carrasco, Thiago Leonel",
+            "tiempo": "07:27.71"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas América",
+            "atletas": "Baluzzo, Alan",
+            "tiempo": "07:42.73"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Hacoaj",
+            "atletas": "Menin, Santino",
+            "tiempo": "07;06.65"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Fernandez, Eugenio",
+            "tiempo": "07;14.23"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Zárate",
+            "atletas": "Donamari, Juan Bautista",
+            "tiempo": "07:19.53"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Loayza, Camilo",
+            "tiempo": "07:25.08"
+          },
+          {
+            "pos": 5,
+            "club": "Rosario Rowing Club",
+            "atletas": "Gallina, Renato Andres",
+            "tiempo": "07:28.99"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Santa Fe",
+            "atletas": "Amer, Germán",
+            "tiempo": "07:23.27"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Bariloche",
+            "atletas": "Navarro, Ignacio",
+            "tiempo": "07:32.56"
+          },
+          {
+            "pos": 3,
+            "club": "Tigre Boat Club",
+            "atletas": "Carrasco, Thiago Leonel",
+            "tiempo": "07:42.27"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas América",
+            "atletas": "Baluzzo, Alan",
+            "tiempo": "07:53.91"
+          },
+          {
+            "pos": 5,
+            "club": "Tigre Boat Club",
+            "atletas": "Paz, Franco",
+            "tiempo": "08:15.04"
+          }
+        ]
+      }
+    ]
+  },
+  "32": {
+    "nombre": "Single Senior Masculino",
+    "tipo": "Single",
+    "cat": "Senior",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Zárate",
+            "atletas": "Scenna, Agustín Matías",
+            "tiempo": "06:28.35"
+          },
+          {
+            "pos": 2,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Deandrea, Santiago",
+            "tiempo": "06:32.36"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Pacheco, Ignacio",
+            "tiempo": "06:42.78"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Aciar, Alejandro",
+            "tiempo": "07:14.99"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas América",
+            "atletas": "Kraitman, Martín",
+            "tiempo": "07:25.73"
+          }
+        ]
+      }
+    ]
+  },
+  "33": {
+    "nombre": "Doble par Menor Femenino",
+    "tipo": "Doble par",
+    "cat": "Menor",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Final A",
+        "esFinal": true,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Gallo Mahler, María Felicitas / Santolaria, Martina / Bustos, Mercedes",
+            "tiempo": "07:23.13"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Aguirre, Abigail Irina / Novello Winderholler, Ghislaine / Lingenfelder, Erica",
+            "tiempo": "07:25.91"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Zárate",
+            "atletas": "Vera, Virginia / Paredes, Julieta / Gomez, Victoria",
+            "tiempo": "07:28.51"
+          },
+          {
+            "pos": 4,
+            "club": "Club Náutico Zárate",
+            "atletas": "Palavecino, Jazmín Alejandra / Mongelot, Luna Nicole / Surueta, Valentina Luján",
+            "tiempo": "07:31.74"
+          },
+          {
+            "pos": 5,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Bethular, Luisina / Delucchi, Juana",
+            "tiempo": "07:37.31"
+          },
+          {
+            "pos": 6,
+            "club": "Club de Regatas América",
+            "atletas": "Bilbao, Charo / Tolosana, Lucila",
+            "tiempo": "07:46.20"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Zárate",
+            "atletas": "Vera, Virginia / Paredes, Julieta / Gomez, Victoria",
+            "tiempo": "07:42.62"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Zárate",
+            "atletas": "Palavecino, Jazmín Alejandra / Mongelot, Luna Nicole / Surueta, Valentina Luján",
+            "tiempo": "07:52.73"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Bethular, Luisina / Delucchi, Juana",
+            "tiempo": "07:56.37"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas América",
+            "atletas": "Bilbao, Charo / Tolosana, Lucila",
+            "tiempo": "08:09.77"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Aguirre, Abigail Irina / Novello Winderholler, Ghislaine / Lingenfelder, Erica",
+            "tiempo": "07:52.86"
+          },
+          {
+            "pos": 2,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Gallo Mahler, María Felicitas / Santolaria, Martina / Bustos, Mercedes",
+            "tiempo": "07:57.19"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Locino, Julieta / Gonzalia, Tiziana",
+            "tiempo": "08:11.04"
+          }
+        ]
+      }
+    ]
+  },
+  "35": {
+    "nombre": "Doble par Sub 23 PL Femenino",
+    "tipo": "Doble par",
+    "cat": "Sub 23 PL",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Paraná Rowing Club",
+            "atletas": "Farias, Lisa / Zarate Bosco, Carmen",
+            "tiempo": "07:10.02"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas América",
+            "atletas": "Arango, Francesca / Maia, Lola",
+            "tiempo": "07:21.33"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Zárate",
+            "atletas": "Pinardi, Delfina / Weber Fuentes, Michelle / Mancino, Camila",
+            "tiempo": "07:25.57"
+          },
+          {
+            "pos": 4,
+            "club": "Tigre Boat Club",
+            "atletas": "Albert, Úrsula / Fernandez, Ana / Vineis Trippel, Azul",
+            "tiempo": "07;27.98"
+          },
+          {
+            "pos": 5,
+            "club": "Club Mendoza de Regatas",
+            "atletas": "Escalante, Maria Belen / Moralez, Evangelina",
+            "tiempo": "07:35.04"
+          },
+          {
+            "pos": 6,
+            "club": "Tigre Boat Club",
+            "atletas": "Fois, Catterina SImona / Altamirano, Azul Mariel / Van Lacke Campesi, Ghalia",
+            "tiempo": "07:47.97"
+          }
+        ]
+      }
+    ]
+  },
+  "36": {
+    "nombre": "Cuádruple par Menor Masculino",
+    "tipo": "Cuádruple par",
+    "cat": "Menor",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Galisteo, Franco / Fernandez, Matheo / Dal Vecchio, Lucas Agustin / Peisker, Pedro / Parodi, Facundo / Loitegui, Benjamin",
+            "tiempo": "06:07.74"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Zárate",
+            "atletas": "Magalú, Felipe Nicolás / Coali, Marcos / Mc Nally, José Ignacio / Sosa, Pedro / Guerrero, Ramiro Marcos / Pomilio, Joan Francisco",
+            "tiempo": "06:11,93"
+          },
+          {
+            "pos": 3,
+            "club": "Club Mendoza de Regatas",
+            "atletas": "Villa, Federico / Caviasso, Santino / Gomez, Matías / Berrios, Leandro",
+            "tiempo": "06:14.94"
+          },
+          {
+            "pos": 4,
+            "club": "Tigre Boat Club",
+            "atletas": "Doldán, Franco Bautista / Borches Rosemberg, Luciano / Otero Delbue, Martín Emiliano / Fernandez Bustos, Ignacio Lucas / Medina, Vicente / Paré, Joaquín Ezequiel",
+            "tiempo": "06:26.61"
+          },
+          {
+            "pos": 5,
+            "club": "Asociación Civil Tupa Remo y Triatlón",
+            "atletas": "Bessonart, Joaquin / Albornoz, Santiago / Drewmiak, Amadeo / Dodorico, Galo",
+            "tiempo": "07:03.54"
+          },
+          {
+            "pos": 6,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Tobes, Demian / Apuzzo Ortiz, Domingo Felipe / Maull, Lorenzo / Gallini, Francisco",
+            "tiempo": "07:09.53"
+          }
+        ]
+      }
+    ]
+  },
+  "37": {
+    "nombre": "Cuádruple par Sub 23 Masculino",
+    "tipo": "Cuádruple par",
+    "cat": "Sub 23",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Ríos, Benjamin Nehuen / Broda, Marcos / Galdeano, Lautaro / Bazan, Thiago / Martinez, Gonzalo Nicolás / Papazian, Juan Ignacio",
+            "tiempo": "06:02:52"
+          },
+          {
+            "pos": 1,
+            "club": "Tigre Boat Club",
+            "atletas": "Fusco, Gregorio / Holler, Andres / Maquiavelo, Salvador / Quevedo, Mateo  Valentín / Segui, Manuel / Sans Muñoz, Nicolás Joaquín",
+            "tiempo": "06:02.52"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Rosa, Paulo Máximo / Zanardi, Ignacio / Pacheco, Patricio / Rossi, Ignacio / Battilana, Emilio Genaro / Cota Da Costa, Marcos",
+            "tiempo": "06:09.36"
+          },
+          {
+            "pos": 4,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Scheffer, Agustín / Bustos Segabache, Antonio / Avero, Santiago Leonel / Ravera, Francisco Ravacio / Pereira, Juan Ignacio",
+            "tiempo": "06:15.09"
+          }
+        ]
+      }
+    ]
+  },
+  "38": {
+    "nombre": "Dos Sin Junior Femenino",
+    "tipo": "Dos Sin",
+    "cat": "Junior",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Molina, Carola / Fucile, Anika",
+            "tiempo": "07:31.13"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Zárate",
+            "atletas": "Surueta, Valentina Luján / Mongelot, Luna Nicole / Palavecino, Jazmín Alejandra",
+            "tiempo": "07:54.58"
+          }
+        ]
+      }
+    ]
+  },
+  "39": {
+    "nombre": "Dos Sin Senior Masculino",
+    "tipo": "Dos Sin",
+    "cat": "Senior",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Annese, Agustín Elías / Alvarez, Fernando Gabriel",
+            "tiempo": "06:33.58"
+          },
+          {
+            "pos": 2,
+            "club": "Tigre Boat Club",
+            "atletas": "Riveros, Joaquin / Romero, Joel Alejandro / Haack, Axel",
+            "tiempo": "06:36.11"
+          },
+          {
+            "pos": 3,
+            "club": "Club Peña Nautica Bajada España",
+            "atletas": "Pastorino, Joan / Pastorino, Alex",
+            "tiempo": "06:48.41"
+          }
+        ]
+      }
+    ]
+  },
+  "40": {
+    "nombre": "Doble par PL Masculino",
+    "tipo": "Doble par",
+    "cat": "PL",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Enriquez Andresson, Rodrigo / Wingord, Mateo / Dickson, Pedro",
+            "tiempo": "06:35.43"
+          },
+          {
+            "pos": 2,
+            "club": "Paraná Rowing Club",
+            "atletas": "Brasesco, Hipólito / Moreyra, Luciano",
+            "tiempo": "06:41.10"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Gonzalez, Facundo / Lopez, Agustín",
+            "tiempo": "06:54.25"
+          }
+        ]
+      }
+    ]
+  },
+  "41": {
+    "nombre": "Doble par Sub 23 Femenino",
+    "tipo": "Doble par",
+    "cat": "Sub 23",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Tigre Boat Club",
+            "atletas": "Riveros, Victoria / Duarte, Florencia / Albert, Úrsula",
+            "tiempo": "07:07.56"
+          },
+          {
+            "pos": 2,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Molina, Carmela Pilar / Deandrea, Catalina",
+            "tiempo": "07:19.30"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas América",
+            "atletas": "Baluzzo Chiaruzzo, Katia / Simonitti, Iara / Glasberg, Emma",
+            "tiempo": "07:23.84"
+          },
+          {
+            "pos": 4,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Aquino, Josefina / Salas, Maria Guadalupe",
+            "tiempo": "07:34.21"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Garcia Valdivieso, Maya Eleni / Alberico, Luciana Francesca / Gianakis, Olimpia",
+            "tiempo": "07:42.40"
+          }
+        ]
+      }
+    ]
+  },
+  "42": {
+    "nombre": "Single Peso Ligero Femenino",
+    "tipo": "Single",
+    "cat": "PL",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Galfre, Clara",
+            "tiempo": "07:45.76"
+          },
+          {
+            "pos": 2,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Colombo, Carmela",
+            "tiempo": "08:02.63"
+          },
+          {
+            "pos": 3,
+            "club": "Campana Boat Club",
+            "atletas": "González Ricciuti, Julieta",
+            "tiempo": "08:07.60"
+          }
+        ]
+      }
+    ]
+  },
+  "43": {
+    "nombre": "Cuádruple par Junior Masculino",
+    "tipo": "Cuádruple par",
+    "cat": "Junior",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Marsili, Santiago / Paredes, Tomás / Aversso, Valentino / Migueles, Joaquin / Scheffer, Agustín / Avero, Santiago Leonel",
+            "tiempo": "06:01.87"
+          },
+          {
+            "pos": 2,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Alvarez, Bautista / Perez Croce, Andres / Schell, Francisco / Videla Nati, Nicolás / Galisteo, Franco / Peisker, Pedro",
+            "tiempo": "06:07.49"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas La Marina",
+            "atletas": "Escudero, Santino / Maureira, Tobías Lautaro / Palomar, Gonzalo / Toscanini, Luca",
+            "tiempo": "06:11.76"
+          },
+          {
+            "pos": 4,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Fernandez, Emilio / Muñiz, Teo / Arriola, Agustín / Ferrer Ferrero, Santiago",
+            "tiempo": "06:12.08"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Almeyda, Ulises / Cantú, Alejo / Aguiar Mallio, Matías / Venza, Ramiro / Lopez Galastro, Augusto",
+            "tiempo": "06:30.29"
+          },
+          {
+            "pos": 6,
+            "club": "Tigre Boat Club",
+            "atletas": "Carrasco, Thiago Leonel / Medina, Vicente / Vineis Trippel, Marcos / Garzón Vaccarezza, Santino Raúl / Fernandez Bustos, Ignacio Lucas / Borches Rosemberg, Luciano",
+            "tiempo": "06;45.18"
+          }
+        ]
+      }
+    ]
+  },
+  "44": {
+    "nombre": "Cuádruple par Senior Masculino",
+    "tipo": "Cuádruple par",
+    "cat": "Senior",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Merlo, Caetano / Pacheco, Ignacio / Calderon, Emiliano Oscar / Pacheco, Maximo / Battilana, Emilio Genaro / Pacheco, Patricio",
+            "tiempo": "06:01.23"
+          },
+          {
+            "pos": 2,
+            "club": "Rowing Club Argentino",
+            "atletas": "Cano Murga, Diego / Mata Carmona, José Ramón / Orellana, Marco Gonzalo / Patorniti, Franco Esteban",
+            "tiempo": "06:15.74"
+          }
+        ]
+      }
+    ]
+  },
+  "45": {
+    "nombre": "Dos Sin Sub 23 Masculino",
+    "tipo": "Dos Sin",
+    "cat": "Sub 23",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas La Plata",
+            "atletas": "Annese, Agustín Elías / Alvarez, Fernando Gabriel",
+            "tiempo": "06:49.74"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Santa Fe",
+            "atletas": "Amer, Germán / Marcipar, Agustin",
+            "tiempo": "06:54.69"
+          }
+        ]
+      }
+    ]
+  },
+  "46": {
+    "nombre": "Dos Sin Junior Masculino",
+    "tipo": "Dos Sin",
+    "cat": "Junior",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Zárate",
+            "atletas": "De Luz, Santino / Peralta, Nicolás / Weber Fuentes, Anthony",
+            "tiempo": "06:46.85"
+          },
+          {
+            "pos": 2,
+            "club": "Rosario Rowing Club",
+            "atletas": "Isach, Bautista / Isach, Juan Cruz / Galloni, Guido",
+            "tiempo": "06:48.70"
+          },
+          {
+            "pos": 3,
+            "club": "Tigre Boat Club",
+            "atletas": "Mamani, Nestor Ignacio / Paré, Joaquín Ezequiel / Carrasco, Thiago Leonel",
+            "tiempo": "06:52.11"
+          },
+          {
+            "pos": 4,
+            "club": "Club San Fernando",
+            "atletas": "Ledesma, Ulises / Lirussi Brandan, Thiago",
+            "tiempo": "06:55.00"
+          },
+          {
+            "pos": 5,
+            "club": "Club Remeros Alberdi",
+            "atletas": "Orellano, Santino / García, Juan Ignacio",
+            "tiempo": "07:44.69"
+          }
+        ]
+      }
+    ]
+  },
+  "47": {
+    "nombre": "Single Intermedia Masculino",
+    "tipo": "Single",
+    "cat": "Intermedia",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Final A",
+        "esFinal": true,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Asociación Cordobesa de Remo",
+            "atletas": "Zapata, Liam Joaquin",
+            "tiempo": "07:15.42"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas San Nicolás",
+            "atletas": "Guerrina, Lautaro",
+            "tiempo": "07:15.68"
+          },
+          {
+            "pos": 3,
+            "club": "Tigre Boat Club",
+            "atletas": "Lacava, Lautaro Luis",
+            "tiempo": "07:26.88"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Concordia",
+            "atletas": "Delzart, Juan Cruz",
+            "tiempo": "07:35.30"
+          },
+          {
+            "pos": 5,
+            "club": "Tigre Boat Club",
+            "atletas": "Tomas Falcon, Jesús Nahuel",
+            "tiempo": "07:42.18"
+          },
+          {
+            "pos": 6,
+            "club": "Club Náutico El Timón",
+            "atletas": "Hawryczszuk, Michel",
+            "tiempo": "08:00.65"
+          }
+        ]
+      },
+      {
+        "label": "Final B",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Luján, Enzo Julian",
+            "tiempo": "07:32.91"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Gomez Enriquez, Alejandro",
+            "tiempo": "07:46.29"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Acosta, Valentin",
+            "tiempo": "07:53.09"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas San Nicolás",
+            "atletas": "Bogado, Nicolas Andres",
+            "tiempo": "07:53.72"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas América",
+            "atletas": "Micheletto, Mateo",
+            "tiempo": "08:14.03"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Asociación Cordobesa de Remo",
+            "atletas": "Zapata, Liam Joaquin",
+            "tiempo": "07:20.82"
+          },
+          {
+            "pos": 2,
+            "club": "Tigre Boat Club",
+            "atletas": "Lacava, Lautaro Luis",
+            "tiempo": "07:35.06"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Concordia",
+            "atletas": "Delzart, Juan Cruz",
+            "tiempo": "07:44.52"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas América",
+            "atletas": "Micheletto, Mateo",
+            "tiempo": "08:00.67"
+          },
+          {
+            "pos": 5,
+            "club": "Club Náutico Mar Del Plata",
+            "atletas": "Acosta, Valentin",
+            "tiempo": "08:01.14"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas San Nicolás",
+            "atletas": "Guerrina, Lautaro",
+            "tiempo": "07:25.04"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico El Timón",
+            "atletas": "Hawryczszuk, Michel",
+            "tiempo": "07:30.68"
+          },
+          {
+            "pos": 3,
+            "club": "Tigre Boat Club",
+            "atletas": "Tomas Falcon, Jesús Nahuel",
+            "tiempo": "07:33.10"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Luján, Enzo Julian",
+            "tiempo": "07:49.63"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas San Nicolás",
+            "atletas": "Bogado, Nicolas Andres",
+            "tiempo": "07:56.82"
+          },
+          {
+            "pos": 6,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Gomez Enriquez, Alejandro",
+            "tiempo": "08:00.05"
+          }
+        ]
+      }
+    ]
+  },
+  "48": {
+    "nombre": "Doble par Intermedia Femenino",
+    "tipo": "Doble par",
+    "cat": "Intermedia",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Tigre Boat Club",
+            "atletas": "Moreno Andreoni, Amy Nerea / Romera, Paula Sofía",
+            "tiempo": "07:44.70"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Zibelman, Irina / Zibelman, Sabrina / Falzetti, Maria Florencia",
+            "tiempo": "07:51.02"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Botto, Victoria / Farragut, Martina / Balzaretti, Giorgina Maria",
+            "tiempo": "08:07.91"
+          },
+          {
+            "pos": 4,
+            "club": "Club Remeros Escandinavos",
+            "atletas": "Dolberg, Ana Selene / Carmona Fredes, Lola / Castelli, Martina",
+            "tiempo": "08:18.78"
+          }
+        ]
+      }
+    ]
+  },
+  "49": {
+    "nombre": "Cuatro Sin Junior Femenino",
+    "tipo": "Cuatro Sin",
+    "cat": "Junior",
+    "gen": "F",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "La Torre, Martina / Mazzoni, Lara / Molina, Carola / Fucile, Anika / Varela, Juliana / Santolaria, Martina",
+            "tiempo": "07:03.77"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Zárate",
+            "atletas": "Palavecino, Jazmín Alejandra / Soloaga, Maitena / Surueta, Valentina Luján / Mongelot, Luna Nicole / Paredes, Julieta / Gomez, Victoria",
+            "tiempo": "07:25.32"
+          }
+        ]
+      }
+    ]
+  },
+  "50": {
+    "nombre": "Single Sub 23 Masculino",
+    "tipo": "Single",
+    "cat": "Sub 23",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Final A",
+        "esFinal": true,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Hacoaj",
+            "atletas": "Menin, Santino",
+            "tiempo": "06:53.58"
+          },
+          {
+            "pos": 2,
+            "club": "Rosario Rowing Club",
+            "atletas": "Jijon, Juan Ignacio",
+            "tiempo": "06:59.55"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Battilana, Emilio Genaro",
+            "tiempo": "07:01.68"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Lanusse Tunstall, Joaquin",
+            "tiempo": "07:22.43"
+          },
+          {
+            "pos": 5,
+            "club": "Asociación Civil Tupa Remo y Triatlón",
+            "atletas": "Romero, Tomás Daniel",
+            "tiempo": "07:25.79"
+          },
+          {
+            "pos": 6,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Papazian, Juan Ignacio",
+            "tiempo": "07:30.83"
+          }
+        ]
+      },
+      {
+        "label": "Final B",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas América",
+            "atletas": "Sanchez, Emanuel Gonzalo",
+            "tiempo": "07:19.32"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Boismoreau, Marcos",
+            "tiempo": "07:37.98"
+          },
+          {
+            "pos": 3,
+            "club": "Rowing Club Argentino",
+            "atletas": "Orellana, Marco Gonzalo",
+            "tiempo": "07:42.87"
+          }
+        ]
+      },
+      {
+        "label": "Semifinal 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Battilana, Emilio Genaro",
+            "tiempo": "07:06.95"
+          },
+          {
+            "pos": 2,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Papazian, Juan Ignacio",
+            "tiempo": "07:16.88"
+          },
+          {
+            "pos": 3,
+            "club": "Asociación Civil Tupa Remo y Triatlón",
+            "atletas": "Romero, Tomás Daniel",
+            "tiempo": "07:17.55"
+          },
+          {
+            "pos": 4,
+            "club": "Bigornia Club",
+            "atletas": "Carballo, Ramiro Nahuel",
+            "tiempo": "07:20.94"
+          }
+        ]
+      },
+      {
+        "label": "Semifinal 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Hacoaj",
+            "atletas": "Menin, Santino",
+            "tiempo": "07:05.51"
+          },
+          {
+            "pos": 2,
+            "club": "Rosario Rowing Club",
+            "atletas": "Jijon, Juan Ignacio",
+            "tiempo": "07:09.38"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Lanusse Tunstall, Joaquin",
+            "tiempo": "07:14.88"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas América",
+            "atletas": "Sanchez, Emanuel Gonzalo",
+            "tiempo": "07:21.21"
+          },
+          {
+            "pos": 5,
+            "club": "Rowing Club Argentino",
+            "atletas": "Orellana, Marco Gonzalo",
+            "tiempo": "07:30.38"
+          },
+          {
+            "pos": 6,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Boismoreau, Marcos",
+            "tiempo": "07:42.37"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Battilana, Emilio Genaro",
+            "tiempo": "07:03.79"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Remo Canottieri Italiano",
+            "atletas": "Peña Solar, Ronald Alexis",
+            "tiempo": "07:06.13"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Lanusse Tunstall, Joaquin",
+            "tiempo": "07:16.21"
+          },
+          {
+            "pos": 4,
+            "club": "Asociación Civil Tupa Remo y Triatlón",
+            "atletas": "Romero, Tomás Daniel",
+            "tiempo": "07:19.62"
+          },
+          {
+            "pos": 5,
+            "club": "Rowing Club Argentino",
+            "atletas": "Orellana, Marco Gonzalo",
+            "tiempo": "07:22.92"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Rosario Rowing Club",
+            "atletas": "Jijon, Juan Ignacio",
+            "tiempo": "07:17.54"
+          },
+          {
+            "pos": 2,
+            "club": "Campana Boat Club",
+            "atletas": "Bazan, Ignacio",
+            "tiempo": "07:24.18"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Remo Teutonia",
+            "atletas": "Boismoreau, Marcos",
+            "tiempo": "07:33.37"
+          },
+          {
+            "pos": 4,
+            "club": "Bigornia Club",
+            "atletas": "Carballo, Ramiro Nahuel",
+            "tiempo": "07:34.92"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 3",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Náutico Hacoaj",
+            "atletas": "Menin, Santino",
+            "tiempo": "07:10.85"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas América",
+            "atletas": "Sanchez, Emanuel Gonzalo",
+            "tiempo": "07:17.86"
+          },
+          {
+            "pos": 3,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Papazian, Juan Ignacio",
+            "tiempo": "07:22.49"
+          },
+          {
+            "pos": 4,
+            "club": "Asociación Cordobesa de Remo",
+            "atletas": "Monzon, Lucas",
+            "tiempo": "07:56.34"
+          }
+        ]
+      }
+    ]
+  },
+  "51": {
+    "nombre": "Single Menor Masculino",
+    "tipo": "Single",
+    "cat": "Menor",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Final A",
+        "esFinal": true,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Lupo, Nicolas Valentin",
+            "tiempo": "07:24.77"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas América",
+            "atletas": "Curti, Nicolás Ignacio",
+            "tiempo": "07:27.89"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Zárate",
+            "atletas": "Guerrero, Ramiro Marcos",
+            "tiempo": "07:28.75"
+          },
+          {
+            "pos": 4,
+            "club": "Club San Fernando",
+            "atletas": "Massa Andreotti, Máximo",
+            "tiempo": "07:29.72"
+          },
+          {
+            "pos": 5,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Salice Mc Lean, Joaquin",
+            "tiempo": "07:38.24"
+          },
+          {
+            "pos": 6,
+            "club": "Club de Regatas La Marina",
+            "atletas": "Palomar, Gonzalo",
+            "tiempo": "07:48.80"
+          }
+        ]
+      },
+      {
+        "label": "Final B",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Trotta, Bautista",
+            "tiempo": "07:33.57"
+          },
+          {
+            "pos": 2,
+            "club": "Nahuel Rowing Club",
+            "atletas": "Maisterra, Juan María",
+            "tiempo": "07:35.43"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Sandoval Alarcon, Juan Cruz",
+            "tiempo": "07:45.85"
+          },
+          {
+            "pos": 4,
+            "club": "Asociación Cordobesa de Remo",
+            "atletas": "Fornara, Lorenzo",
+            "tiempo": "07:49.56"
+          },
+          {
+            "pos": 5,
+            "club": "Rosario Rowing Club",
+            "atletas": "Partenni, Gregorio Gunther",
+            "tiempo": "07:51.34"
+          }
+        ]
+      },
+      {
+        "label": "Final C",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Campana Boat Club",
+            "atletas": "Ponce De León, Nicolás",
+            "tiempo": "07:47.60"
+          },
+          {
+            "pos": 2,
+            "club": "Club Remeros Alberdi",
+            "atletas": "Simón, Lucas",
+            "tiempo": "08:01.73"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Galarza, Julián",
+            "tiempo": "08:09.39"
+          }
+        ]
+      },
+      {
+        "label": "Semifinal 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club San Fernando",
+            "atletas": "Massa Andreotti, Máximo",
+            "tiempo": "07:26.10"
+          },
+          {
+            "pos": 2,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Salice Mc Lean, Joaquin",
+            "tiempo": "07:28.20"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas La Marina",
+            "atletas": "Palomar, Gonzalo",
+            "tiempo": "7:28.91"
+          },
+          {
+            "pos": 4,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Sandoval Alarcon, Juan Cruz",
+            "tiempo": "07:29.55"
+          },
+          {
+            "pos": 5,
+            "club": "Asociación Cordobesa de Remo",
+            "atletas": "Fornara, Lorenzo",
+            "tiempo": "07:45.01"
+          },
+          {
+            "pos": 6,
+            "club": "Paraná Rowing Club",
+            "atletas": "Zavalla, Federico Martín",
+            "tiempo": "07:45.44"
+          }
+        ]
+      },
+      {
+        "label": "Semifinal 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Lupo, Nicolas Valentin",
+            "tiempo": "07:21.34"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas América",
+            "atletas": "Curti, Nicolás Ignacio",
+            "tiempo": "07:21.94"
+          },
+          {
+            "pos": 3,
+            "club": "Club Náutico Zárate",
+            "atletas": "Guerrero, Ramiro Marcos",
+            "tiempo": "07:26.01"
+          },
+          {
+            "pos": 4,
+            "club": "Nahuel Rowing Club",
+            "atletas": "Maisterra, Juan María",
+            "tiempo": "07:37.37"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Trotta, Bautista",
+            "tiempo": "07:46.32"
+          },
+          {
+            "pos": 6,
+            "club": "Rosario Rowing Club",
+            "atletas": "Partenni, Gregorio Gunther",
+            "tiempo": "08:00.77"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club San Fernando",
+            "atletas": "Massa Andreotti, Máximo",
+            "tiempo": "07:25.07"
+          },
+          {
+            "pos": 2,
+            "club": "Club de Regatas La Marina",
+            "atletas": "Palomar, Gonzalo",
+            "tiempo": "07:35.21"
+          },
+          {
+            "pos": 3,
+            "club": "Nahuel Rowing Club",
+            "atletas": "Maisterra, Juan María",
+            "tiempo": "07:43.64"
+          },
+          {
+            "pos": 4,
+            "club": "Club Remeros Alberdi",
+            "atletas": "Simón, Lucas",
+            "tiempo": "08:07.42"
+          },
+          {
+            "pos": 5,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Galarza, Julián",
+            "tiempo": "08:12.89"
+          },
+          {
+            "pos": 6,
+            "club": "Club de Regatas Concordia",
+            "atletas": "Pavon, Lautaro",
+            "tiempo": "09:47.96"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 2",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Lupo, Nicolas Valentin",
+            "tiempo": "97:24.39"
+          },
+          {
+            "pos": 2,
+            "club": "Buenos Aires Rowing Club",
+            "atletas": "Salice Mc Lean, Joaquin",
+            "tiempo": "07:25.01"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Rosario",
+            "atletas": "Trotta, Bautista",
+            "tiempo": "07:31.95"
+          },
+          {
+            "pos": 4,
+            "club": "Paraná Rowing Club",
+            "atletas": "Zavalla, Federico Martín",
+            "tiempo": "07:34.46"
+          },
+          {
+            "pos": 5,
+            "club": "Rosario Rowing Club",
+            "atletas": "Partenni, Gregorio Gunther",
+            "tiempo": "07:34.76"
+          }
+        ]
+      },
+      {
+        "label": "Eliminatoria 3",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club de Regatas América",
+            "atletas": "Curti, Nicolás Ignacio",
+            "tiempo": "07:21.26"
+          },
+          {
+            "pos": 2,
+            "club": "Club Náutico Zárate",
+            "atletas": "Guerrero, Ramiro Marcos",
+            "tiempo": "07:24.83"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas Corrientes",
+            "atletas": "Sandoval Alarcon, Juan Cruz",
+            "tiempo": "07:32.49"
+          },
+          {
+            "pos": 4,
+            "club": "Asociación Cordobesa de Remo",
+            "atletas": "Fornara, Lorenzo",
+            "tiempo": "07:44.49"
+          },
+          {
+            "pos": 5,
+            "club": "Campana Boat Club",
+            "atletas": "Ponce De León, Nicolás",
+            "tiempo": "07:45.46"
+          }
+        ]
+      }
+    ]
+  },
+  "55": {
+    "nombre": "Ocho Senior Masculino",
+    "tipo": "Ocho",
+    "cat": "Senior",
+    "gen": "M",
+    "fases": [
+      {
+        "label": "Eliminatoria 1",
+        "esFinal": false,
+        "resultados": [
+          {
+            "pos": 1,
+            "club": "Club Mendoza de Regatas",
+            "atletas": "Balasch, Franco / Tibaldi, Tomás / Zanghi, Francisco / Buso, Gonzalo Armando / Bonadé, Maximiliano / Nadal, Juan Cruz / Mansilla, Martín / Tersoglio, Facundo / Ghiretti, Franco / Escalante, Marco / Infante, Joel",
+            "tiempo": "05:53.25"
+          },
+          {
+            "pos": 2,
+            "club": "Tigre Boat Club",
+            "atletas": "Trejo, Felipe Tomas / Segui, Manuel / Leverone, Marcos Federico / Sans Muñoz, Nicolás Joaquín / Mamani, Nestor Ignacio / Haack, Axel / Romero, Joel Alejandro / Riveros, Joaquin / Holler, Andres / Maquiavelo, Salvador / Quevedo, Mateo  Valentín / Paré, Joaquín Ezequiel / Bustelo, Cristian Nahuel / Viola De Negri, Francisco",
+            "tiempo": "06:00.35"
+          },
+          {
+            "pos": 3,
+            "club": "Club de Regatas La Marina",
+            "atletas": "Villar, Gonzalo / Navarro, Nicolas Alberto / Gulluni, Agustin Santino / Navarro, Franco / Regolta, Gastón Francisco / Galarza, Mateo / Balzarini Jara, Valentino / Hammar, Marcos / Navarro, Walter Damián / Maureira, Tobías Lautaro / Toscanini, Luca / Louzao, Guadalupe / Amar, Malena",
+            "tiempo": "06:02.44"
+          },
+          {
+            "pos": 4,
+            "club": "Club Náutico Zárate",
+            "atletas": "Butuz, Gabriel Martín / Moreira Rosas, Francisco Miguel / Peralta, Nicolás / Donamari, Juan Bautista / Scenna, Agustín Matías / De Luz, Santino / Mancino, Juan Martín / Rojas, Marcos Ivan / Guerrero, Ramiro Marcos / Weber Fuentes, Anthony / Cabrera, Alexis Misael / Coali, Marcos / Mancino, Camila / Pellicer, Martina",
+            "tiempo": "06:04.32"
+          },
+          {
+            "pos": 5,
+            "club": "Club Canottieri Italiani",
+            "atletas": "Pereira, Juan Ignacio / Scheffer, Agustín / Avero, Santiago Leonel / Bustos Segabache, Antonio / Marsili, Santiago / Paredes, Tomás / Aversso, Valentino / Migueles, Joaquin / Lupo, Nicolas Valentin / Ravera, Francisco Ravacio / Lupo, Bruno Francisco",
+            "tiempo": "06:24.66"
+          }
+        ]
+      }
+    ]
+  }
+}
