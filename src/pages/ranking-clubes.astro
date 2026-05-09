@@ -28,11 +28,6 @@ const ranking: ClubRanking[] = [
   { posicion: 10, club: "Club Náutico Zárate",           provincia: "Buenos Aires", puntos: 0, oros: 0, platas: 0, bronces: 0 },
 ];
 
-const medalColor = (pos: number) =>
-  pos === 1 ? "text-[#EFC050] font-bold" :
-  pos === 2 ? "text-gray-400 font-bold"  :
-  pos === 3 ? "text-amber-700 font-bold" :
-  "text-gray-500";
 ---
 
 <Layout title="Ranking de Clubes — AARA">
@@ -79,11 +74,19 @@ const medalColor = (pos: number) =>
           <tbody class="divide-y divide-gray-50">
             {ranking.map(r => (
               <tr class="hover:bg-gray-50 transition-colors">
-                <td class={`px-6 py-4 text-base ${medalColor(r.posicion)}`}>
-                  {r.posicion <= 3
-                    ? <span>{r.posicion === 1 ? '🥇' : r.posicion === 2 ? '🥈' : '🥉'}</span>
-                    : <span class="text-gray-400 font-medium">{r.posicion}</span>
-                  }
+                <td class="px-6 py-4">
+                  {r.posicion === 1 && (
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#EFC050] text-white text-xs font-bold shadow-sm">1</span>
+                  )}
+                  {r.posicion === 2 && (
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gray-400 text-white text-xs font-bold shadow-sm">2</span>
+                  )}
+                  {r.posicion === 3 && (
+                    <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-700 text-white text-xs font-bold shadow-sm">3</span>
+                  )}
+                  {r.posicion > 3 && (
+                    <span class="text-gray-400 font-medium text-sm">{r.posicion}</span>
+                  )}
                 </td>
                 <td class="px-6 py-4 font-semibold text-[#0B2545]">{r.club}</td>
                 <td class="px-4 py-4 text-gray-500 hidden sm:table-cell">{r.provincia}</td>

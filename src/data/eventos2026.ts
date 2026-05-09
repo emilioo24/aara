@@ -1,3 +1,12 @@
+export type ClubRankingEntry = {
+  posicion: number;
+  club: string;
+  puntos: number;
+  oros: number;
+  platas: number;
+  bronces: number;
+};
+
 export type EventoInput = {
   fecha: string;
   nombre: string;
@@ -7,9 +16,10 @@ export type EventoInput = {
   obs?: string;
   tag?: 'aara' | 'int' | 'nota';
   estado?: 'suspendido' | 'pospuesto';
-  url?: string;            // URL externa (eventos internacionales)
-  urlResultados?: string;  // Link a resultados
-  urlInscriptos?: string;  // Link a botes inscriptos
+  url?: string;
+  urlResultados?: string;
+  urlInscriptos?: string;
+  rankingClubes?: ClubRankingEntry[];
 };
 
 export type MesData = { nombre: string; id: string; eventos: EventoInput[] };

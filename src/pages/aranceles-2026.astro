@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const B = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const aranceles = [
+  { concepto: "Categoría A",         monto: "$166.000" },
+  { concepto: "Categoría B",         monto: "$83.000"  },
+  { concepto: "UDP",                  monto: "$20.000"  },
+  { concepto: "Cama 1X",             monto: "$20.000"  },
+  { concepto: "Cama 2X/2-",          monto: "$31.000"  },
+  { concepto: "Cama 4X/4-",          monto: "$48.000"  },
+  { concepto: "Cama 8+",             monto: "$72.000"  },
+  { concepto: "Derecho Uso Trailer", monto: "$222.000" },
+  { concepto: "Matrícula Federativa",monto: "$25.000"  },
+];
+---
+
+<Layout title="Aranceles 2026 — AARA">
+  <div class="bg-[#0B2545] text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-[#EFC050] text-sm font-medium mb-2">AARA</div>
+      <h1 class="text-3xl md:text-4xl font-bold">Aranceles 2026</h1>
+      <p class="text-gray-300 mt-2">Última actualización: enero 2026 · Vigente desde el 1° de enero de 2026</p>
+    </div>
+  </div>
+
+  <div class="max-w-2xl mx-auto px-4 py-12">
+
+    <div class="bg-white rounded-xl shadow overflow-hidden">
+      <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
+        <h2 class="font-bold text-[#0B2545] text-sm uppercase tracking-wider">Cuadro de aranceles</h2>
+        <span class="text-xs text-gray-400">Temporada 2026</span>
+      </div>
+
+      <table class="w-full text-sm">
+        <thead class="bg-gray-50 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+          <tr>
+            <th class="px-6 py-3 text-left">Concepto</th>
+            <th class="px-6 py-3 text-right">Arancel</th>
+          </tr>
+        </thead>
+        <tbody>
+          {aranceles.map((a, i) => (
+            <tr class={i % 2 === 0 ? "bg-[#0B2545]/5" : "bg-white"}>
+              <td class="px-6 py-4 font-medium text-[#0B2545]">{a.concepto}</td>
+              <td class="px-6 py-4 text-right font-bold text-[#0B2545]">{a.monto}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <div class="px-6 py-4 bg-gray-50 border-t border-gray-100">
+        <p class="text-xs text-gray-400">
+          Todos los valores expresados en pesos argentinos (ARS).
+          Sujeto a modificaciones por resolución de la Comisión Directiva de la AARA.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-6">
+      <a href={`${B}/`}
+        class="inline-flex items-center gap-2 text-sm text-[#13A8D4] hover:text-[#0B2545] font-medium transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+        </svg>
+        Volver al inicio
+      </a>
+    </div>
+
+  </div>
+</Layout>
