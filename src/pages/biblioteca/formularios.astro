@@ -1,21 +1,50 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-const formularios = [
-  { categoria: "Atletas", items: [
-    { titulo: "Habilitación de atleta", desc: "Solicitud de habilitación para competir en eventos AARA." },
-    { titulo: "Transferencia de club", desc: "Formulario para transferencia entre clubes afiliados." },
-    { titulo: "Licencia internacional", desc: "Solicitud de licencia para competencias internacionales." },
-  ]},
-  { categoria: "Clubes", items: [
-    { titulo: "Afiliación de club", desc: "Formulario para afiliación de nuevos clubes." },
-    { titulo: "Inscripción a regata", desc: "Planilla de inscripción a competencias oficiales." },
-    { titulo: "Autorización de embarcaciones", desc: "Autorización para uso de embarcaciones en competencia." },
-  ]},
-  { categoria: "Árbitros y Técnicos", items: [
-    { titulo: "Habilitación de árbitro", desc: "Solicitud de habilitación o renovación arbitral." },
-    { titulo: "Habilitación de técnico", desc: "Solicitud de habilitación de técnico nacional." },
-  ]},
+const secciones = [
+  {
+    titulo: "Federación de remeros para las regatas del calendario oficial",
+    desc: "Para la participación en regatas Oficiales y Promocionales del Calendario anual todos los remeros tendrán que estar federados a la A.A.R.A.",
+    items: [
+      "Formulario de Afiliación",
+      "Procedimiento de Afiliación",
+    ],
+  },
+  {
+    titulo: "Designación de delegados",
+    desc: "La reglamentación completa de las funciones y obligaciones de los delegados están descritas en el Art. 12° del Estatuto.",
+    items: ["Descargar PDF"],
+  },
+  {
+    titulo: "Formulario para el cambio de tripulación en las Regatas de Travesía",
+    items: ["Descargar PDF"],
+  },
+  {
+    titulo: "Pase Federativo",
+    desc: "Para presentar un pase federativo los clubes que solicitan el pase (club entrante) y el club que cede el remero (club saliente) deben completar cada uno los pasos del siguiente formulario.",
+    items: [
+      "Formulario de Pase Federativo",
+      "Procedimiento de Pase Federativo",
+    ],
+  },
+  {
+    titulo: "Apto Médico",
+    desc: "Los aptos médicos serán de presentación anual y tendrán su validez hasta la última regata del año. Las presentaciones son individuales. Cada remero participante debe presentar el suyo certificado por un médico que lo avale.",
+    items: [
+      "Apto Médico +18",
+      "Apto Médico Sub-18",
+    ],
+  },
+  {
+    titulo: "Sistema de Gestión Integral Administrativa Deportiva (GIADE)",
+    desc: "Instructivo de uso de este nuevo Módulo Administrativo de la AARA. Recordamos a todos los clubes que deben designar una persona representativa para que se responsabilice de realizar las gestiones administrativas ante nuestra federación, a través del módulo web ubicado y de acceso en el sitio oficial.",
+    items: ["Descargar PDF"],
+  },
+  {
+    titulo: "Formulario de solicitud de trailers de la AARA",
+    desc: "El presente acuerdo establece las condiciones y responsabilidades de los clubes frente a la utilización de Trailers de la Asociación Argentina de Remeros Aficionados.",
+    items: ["Descargar PDF"],
+  },
 ];
 ---
 <Layout title="Formularios — AARA">
@@ -29,30 +58,39 @@ const formularios = [
       <h1 class="text-3xl md:text-4xl font-bold">Formularios</h1>
     </div>
   </div>
-  <div class="max-w-4xl mx-auto px-4 py-12 space-y-10">
-    {formularios.map(cat => (
-      <section>
-        <h2 class="text-lg font-bold text-[#0B2545] mb-4 flex items-center gap-2">
-          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
-          {cat.categoria}
+
+  <div class="max-w-3xl mx-auto px-4 py-12 space-y-4">
+    {secciones.map(s => (
+      <div class="bg-white rounded-xl shadow p-6">
+        <h2 class="font-bold text-[#0B2545] flex items-center gap-2 leading-snug">
+          <span class="w-1 h-5 bg-[#EFC050] rounded-full shrink-0 inline-block"></span>
+          {s.titulo}
         </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {cat.items.map(f => (
-            <a href="#" class="bg-white rounded-xl shadow hover:shadow-md transition-shadow p-5 flex items-center gap-4 group">
-              <div class="w-9 h-9 rounded-lg bg-[#0B2545]/8 flex items-center justify-center text-[#0B2545] shrink-0">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+        {s.desc && (
+          <p class="text-sm text-gray-500 mt-2 ml-3">{s.desc}</p>
+        )}
+        <div class={`mt-4 ${s.items.length > 1 ? 'space-y-2' : ''}`}>
+          {s.items.map(label => (
+            <a
+              href="#"
+              class="flex items-center justify-between gap-4 rounded-lg border border-gray-100 hover:border-[#13A8D4]/40 hover:bg-blue-50/40 px-4 py-3 transition-colors group"
+            >
+              <div class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-[#0B2545]/50 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                </svg>
+                <span class="text-sm font-medium text-[#0B2545] group-hover:text-[#134074] transition-colors">{label}</span>
               </div>
-              <div class="flex-1">
-                <div class="font-semibold text-[#0B2545] group-hover:text-[#134074] transition-colors text-sm">{f.titulo}</div>
-                <div class="text-xs text-gray-500 mt-0.5">{f.desc}</div>
+              <div class="flex items-center gap-1 text-xs text-[#13A8D4] group-hover:text-[#0B2545] font-medium shrink-0 transition-colors">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                Descargar PDF
               </div>
-              <svg class="w-4 h-4 text-gray-300 group-hover:text-[#EFC050] transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-              </svg>
             </a>
           ))}
         </div>
-      </section>
+      </div>
     ))}
   </div>
 </Layout>

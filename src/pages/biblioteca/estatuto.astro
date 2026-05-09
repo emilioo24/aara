@@ -1,42 +1,691 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const B = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const capitulos = [
+  { id: 'cap-i',    label: 'Cap. I' },
+  { id: 'cap-ii',   label: 'Cap. II' },
+  { id: 'cap-iii',  label: 'Cap. III' },
+  { id: 'cap-iv',   label: 'Cap. IV' },
+  { id: 'cap-v',    label: 'Cap. V' },
+  { id: 'cap-vii',  label: 'Cap. VII' },
+  { id: 'cap-viii', label: 'Cap. VIII' },
+  { id: 'cap-ix',   label: 'Cap. IX' },
+  { id: 'cap-x',    label: 'Cap. X' },
+  { id: 'cap-xi',   label: 'Cap. XI' },
+  { id: 'cap-xii',  label: 'Cap. XII' },
+  { id: 'cap-xiii', label: 'Cap. XIII' },
+  { id: 'cap-xiv',  label: 'Cap. XIV' },
+  { id: 'cap-xv',   label: 'Cap. XV' },
+  { id: 'cap-xvi',  label: 'Cap. XVI' },
+  { id: 'cap-xvii', label: 'Cap. XVII' },
+];
 ---
-<Layout title="Estatuto — AARA">
+
+<Layout title="Estatuto Social — AARA">
   <div class="bg-[#0B2545] text-white py-12">
     <div class="max-w-7xl mx-auto px-4">
       <nav class="text-sm text-gray-400 mb-3">
-        <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/biblioteca`} class="hover:text-[#EFC050] transition-colors">Biblioteca</a>
+        <a href={`${B}/biblioteca`} class="hover:text-[#EFC050] transition-colors">Biblioteca</a>
         <span class="mx-2">/</span>
         <span class="text-white">Estatuto</span>
       </nav>
-      <h1 class="text-3xl md:text-4xl font-bold">Estatuto</h1>
+      <h1 class="text-3xl md:text-4xl font-bold">Estatuto Social</h1>
+      <p class="text-gray-300 mt-2">Asociación Argentina de Remeros Aficionados</p>
     </div>
   </div>
-  <div class="max-w-3xl mx-auto px-4 py-12">
-    <div class="bg-white rounded-xl shadow p-8">
-      <div class="flex items-center justify-between mb-6">
-        <div>
-          <h2 class="font-bold text-[#0B2545] text-lg">Estatuto AARA</h2>
-          <p class="text-sm text-gray-500 mt-1">Vigente — última modificación 2023</p>
-        </div>
-        <a href="#" class="flex items-center gap-2 bg-[#0B2545] hover:bg-[#134074] text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-          </svg>
-          Descargar PDF
+
+  <div class="max-w-4xl mx-auto px-4 py-10">
+
+    <!-- Top bar -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6">
+      <p class="text-sm text-gray-500">Texto vigente del Estatuto Social de la AARA.</p>
+      <a href="#" class="shrink-0 flex items-center gap-2 text-sm bg-[#0B2545] hover:bg-[#134074] text-white font-medium px-4 py-2 rounded-lg transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+        </svg>
+        Descargar PDF
+      </a>
+    </div>
+
+    <!-- Quick chapter nav -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      {capitulos.map(c => (
+        <a
+          href={`#${c.id}`}
+          class="px-3 py-1.5 rounded-lg bg-white shadow text-xs font-semibold text-[#0B2545] hover:bg-[#EFC050] transition-colors"
+        >
+          {c.label}
         </a>
-      </div>
-      <div class="prose prose-sm max-w-none text-gray-600">
-        <p class="text-gray-500 italic">El texto completo del estatuto está disponible para descarga en formato PDF.</p>
-        <div class="mt-6 space-y-4">
-          {["Denominación y sede", "Objeto y fines", "Del patrimonio social", "De los socios", "De las autoridades", "De las asambleas", "Del ejercicio social", "De la disolución"].map((cap, i) => (
-            <div class="flex items-center gap-3 border-b border-gray-100 pb-3">
-              <span class="text-xs font-bold text-[#EFC050] bg-[#0B2545] rounded-full w-6 h-6 flex items-center justify-center shrink-0">{i + 1}</span>
-              <span class="font-medium text-[#0B2545]">{cap}</span>
-            </div>
-          ))}
+      ))}
+    </div>
+
+    <!-- Document -->
+    <div class="bg-white rounded-xl shadow divide-y divide-gray-100">
+
+      <!-- ─── CAPÍTULO I ─── -->
+      <section id="cap-i" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo I
+        </h2>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 1</p>
+            <p>Con el nombre de <strong>Asociación Argentina de Remeros Aficionados</strong> creada el 10 de diciembre de 1901 bajo la denominación de Remeros Aficionados del Río de la Plata se ha constituido una entidad integrada por los Clubes y Asociaciones actualmente afiliadas y que en el futuro entren a formar parte de ella. Tiene su domicilio legal en la ciudad de Buenos Aires y podrá establecer delegaciones y representaciones en cualquier punto de la República y en el exterior.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 2</p>
+            <p class="mb-2">La AARA tiene los siguientes fines:</p>
+            <ul class="list-none space-y-1 pl-4">
+              <li><span class="font-medium">a)</span> Agrupar y reunir a los Clubes y Asociaciones del País que se dediquen a la práctica de Remo.</li>
+              <li><span class="font-medium">b)</span> Ejercer dentro del territorio de la República Argentina el control y la dirección única de las actividades de este deporte.</li>
+              <li><span class="font-medium">c)</span> Fomentar, propulsar y organizar en todos sus aspectos el deporte y la práctica del remo aficionado.</li>
+              <li><span class="font-medium">d)</span> Auspiciar, organizar y controlar con carácter exclusivo las pruebas que consagren a los campeones de la República Argentina, otorgando a tal efecto los títulos correspondientes.</li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!-- ─── CAPÍTULO II ─── -->
+      <section id="cap-ii" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo II — De la capacidad jurídica y del patrimonio
+        </h2>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 3</p>
+            <p class="mb-2">La AARA tendrá la capacidad jurídica necesaria para:</p>
+            <ul class="list-none space-y-2 pl-4">
+              <li><span class="font-medium">a)</span> Adquirir derechos, contraer obligaciones, adquirir bienes inmuebles, muebles y acciones por cualquier título oneroso y gratuito, aceptar donaciones y subsidios, pudiendo enajenarlos, obligarlos, desmembrarlos o comprometerlos en la forma que determina el Art. 1881 del Código Civil.</li>
+              <li><span class="font-medium">b)</span> Para adquirir o enajenar bienes muebles, títulos y acciones, de un valor equivalente a cinco cuotas de afiliación vigentes que abonan los Clubes y Asociaciones categoría "A"; se necesitará la aprobación del Consejo Directivo, por un mínimo de siete votos; debiendo someterse la ratificación de la medida aprobada a la Asamblea General, bastando para ella la simple mayoría de votos.</li>
+              <li><span class="font-medium">c)</span> Para adquirir, vender o gravar bienes inmuebles, se necesitará la autorización previa de la Asamblea General, en una reunión especial en que esté presente la mitad más uno de la totalidad de los Delegados. Si no se obtuviera el quórum requerido, se efectuará una segunda citación procediéndose de acuerdo con lo dispuesto en el Artículo 11.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 4</p>
+            <p class="text-xs text-gray-400 italic mb-2">Modificación aprobada por Asamblea Extraordinaria 05/04/1983 — Aprobada por Inspección de Justicia 02/05/1983.</p>
+            <p class="font-medium mb-2">Inc. 1: El patrimonio de la AARA se formará:</p>
+            <ul class="list-none space-y-2 pl-4 mb-4">
+              <li><span class="font-medium">a)</span> Con las cuotas anuales que fije el Consejo Directivo. A tal fin se establecen dos categorías de clubes a saber "A" y "B". La inclusión en cada categoría corresponde al Consejo, pudiendo las instituciones interesadas apelar la calificación cuando no consideren adecuada su ubicación en la misma. Para su inclusión en las categorías mencionadas el Consejo deberá tener en cuenta su antigüedad, cantidad de socios, práctica de remo de competencia, ubicación y demás elementos que reflejen su contribución al desarrollo del deporte.</li>
+              <li><span class="font-medium">b)</span> Con los derechos de inscripción de regatas que serán abonados de acuerdo con lo dispuesto por el reglamento general.</li>
+              <li><span class="font-medium">c)</span> Las contribuciones extraordinarias que el Consejo Directivo determine o establezca, las que para hacerse efectivas deberán ser sancionadas en reunión del Consejo Directivo con un mínimo de siete votos. Posteriormente deberá someterse a la próxima Asamblea General la ratificación de la medida y el Consejo Directivo fijará el término dentro del cual los clubes abonarán las cuotas extraordinarias.</li>
+              <li><span class="font-medium">d)</span> Las donaciones que se hagan a favor de la Asociación.</li>
+              <li><span class="font-medium">e)</span> Todo otro ingreso no previsto en el Estatuto.</li>
+            </ul>
+            <p class="font-medium mb-2">Inc. 2:</p>
+            <p>Todo Club que deje de abonar la cuota anual de afiliación — que se abonará por trimestre adelantado dentro de los noventa días de iniciado el trimestre respectivo — será invitado a cancelarla y de no efectuarla dentro de los noventa días subsiguientes podrá ser desafiliado, lo que significará no poder participar en regatas oficiales. Si posteriormente solicita su reincorporación deberá abonar la totalidad de las cuotas indexadas por el índice de precio mayorista hasta el momento de su desafiliación.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CAPÍTULO III ─── -->
+      <section id="cap-iii" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo III — Del Gobierno, Dirección y Administración. Asambleas Generales
+        </h2>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 5</p>
+            <p>La Asociación se gobierna, administra y expresa su voluntad por medio de las Asambleas Generales y el Consejo Directivo. Este último tiene a su cargo la permanente dirección, administración y representación legal de la Asociación.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 6</p>
+            <p>Las Asambleas Generales podrán ser Ordinarias y Extraordinarias. La Asamblea General Ordinaria deberá celebrarse en el mes de agosto de cada año y las Asambleas Generales Extraordinarias podrán realizarse en cualquier fecha por decisión del Consejo Directivo y/o ante requerimiento por escrito del 25% de los Delegados, dentro de los sesenta días de formulada la petición.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 7</p>
+            <p class="mb-2">Corresponde a las Asambleas Generales Ordinarias:</p>
+            <ul class="list-none space-y-1 pl-4">
+              <li><span class="font-medium">a)</span> Considerar la Memoria, Balance e Inventario presentado por el Consejo Directivo y correspondiente al ejercicio finalizado.</li>
+              <li><span class="font-medium">b)</span> Considerar el Presupuesto de Gastos y Recursos que debe presentar el Consejo Directivo para el ejercicio a cumplirse.</li>
+              <li><span class="font-medium">c)</span> Elegir a los miembros del Consejo Directivo que corresponda.</li>
+              <li><span class="font-medium">d)</span> Sancionar a sus entidades afiliadas.</li>
+              <li><span class="font-medium">e)</span> Considerar cualquier asunto expresamente indicado en la convocatoria.</li>
+              <li><span class="font-medium">f)</span> Ratificar las nuevas Comisiones de Regatas autorizadas por el Consejo Directivo.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 8</p>
+            <p>Corresponde a las Asambleas Generales Extraordinarias tratar, tan sólo los asuntos para los que expresamente fueron convocadas.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 9</p>
+            <p>Las Asambleas son soberanas en sus decisiones y podrán tratar, considerar, rechazar y resolver cualquier asunto incluido en el orden del día, dentro de los límites y condiciones que por este Estatuto se establecen.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 10</p>
+            <p class="text-xs text-gray-400 italic mb-2">Aprobado por Asamblea 05/04/1983 — Aprobado por Inspección de Justicia 02/05/1983.</p>
+            <p class="mb-2">Los Delegados a la Asociación serán nombrados por las Instituciones afiliadas en la siguiente forma:</p>
+            <ul class="list-none space-y-1 pl-4">
+              <li><span class="font-medium">a)</span> Podrán nombrar tres delegados los Clubes cuya fundación sea anterior al 31 de diciembre de 1890 o cuyo número de socios sea superior a mil.</li>
+              <li><span class="font-medium">b)</span> Podrán nombrar dos delegados los Clubes cuyo número sea superior a quinientos.</li>
+              <li><span class="font-medium">c)</span> Podrán nombrar un delegado los clubes que no reúnan ninguno de los requisitos establecidos en el inciso anterior.</li>
+              <li><span class="font-medium">d)</span> Los Clubes cuyo objeto no sea el remo sólo nombrarán un delegado, si el número de sus socios no fuera mayor de dos mil y dos delegados si pasara dicha cantidad.</li>
+              <li><span class="font-medium">e)</span> El Club que designe más de un delegado deberá señalarle mandato con vencimiento alternado.</li>
+              <li><span class="font-medium">f)</span> Por socio se entenderá la totalidad de estos, sea cual fuere su denominación o sexo en base a la última Memoria.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 11</p>
+            <p>Las Asambleas serán convocadas por el Consejo Directivo por nota remitida a los Delegados de cada una de las entidades afiliadas, en carta certificada con veinte días de anticipación a la fecha de la convocatoria. Se adjuntará copia de la resolución por la que se la convoca y sumario de los temas a tratar en la Asamblea. Sólo podrán participar en las Asambleas los Delegados de Clubes y Asociaciones que se encuentren al día en el pago de las cuotas anuales de afiliación por Delegado y que se hubiesen incorporado antes del 1° de julio del año en que aquella tenga lugar. El quórum se formará con la presencia de un número de asambleístas que represente la mitad más uno de los Delegados con derecho a voto. Pero si media hora después de la fijada en la convocatoria no se hubiese obtenido ese número, podrán sesionar con los asambleístas presentes. Las Asambleas serán presididas por el Presidente del Consejo Directivo, en su defecto por el vicepresidente y en ausencia de ambos, por el Consejero de más edad; con facultades para resolver cualquier cuestión de orden, conceder el uso de la palabra, dirigir el debate y poner a votación los asuntos que figuren en el Orden del Día. Desempeñará la Secretaría de la Asamblea, quien desempeñe idéntica función en el Consejo Directivo. Todas las resoluciones que se adopten en las Asambleas se tomarán por mayoría de los votos presentes, fuera de aquellas que tiene señalada distinta proporcionalidad en este estatuto y salvo lo dispuesto para la elección del Consejo Directivo, la votación será verbal y pública en todos los casos. Los Delegados dejarán constancia de su presencia en un registro de asistencia rubricado que se llevará al efecto. Las deliberaciones y resoluciones de las Asambleas se asentarán en un libro de actas rubricado. Las actas deberán ser firmadas por el Presidente, Secretario y dos delegados designados al efecto por la Asamblea.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 12</p>
+            <p class="text-xs text-gray-400 italic mb-2">Aprobado por Asamblea 28/08/1968 — Aprobado por Inspección de Justicia 06/12/1968.</p>
+            <ul class="list-none space-y-2 pl-4">
+              <li><span class="font-medium">a)</span> Los Delegados serán nombrados por el término de dos períodos, pudiendo ser reelegidos. Se entiende por período el lapso comprendido entre cada Asamblea General Ordinaria. Los Clubes comunicarán a la Asociación los nombres y domicilios de los nombrados, antes del 1° de julio de cada año, quienes entrarán en funciones con posterioridad a la Asamblea General Ordinaria.</li>
+              <li><span class="font-medium">b)</span> Para ser Delegado es necesario ser socio de la Institución que represente, con una antigüedad no menor de cinco años, salvo que el Club que representa tenga menor antigüedad y no encontrarse incluido entre las disposiciones del Art. 13, párrafo 4 y Art. 47 de este Estatuto.</li>
+              <li><span class="font-medium">c)</span> La incorporación de los Delegados se considerará mediante votación secreta. Para su incorporación deberá contar con el voto favorable de por lo menos las dos terceras partes de los Consejeros presentes.</li>
+              <li><span class="font-medium">d)</span> Ningún Delegado podrá representar a más de un Club. Tampoco podrá representar a otra Institución hasta transcurrido dos años de vencido su último período de representación.</li>
+              <li><span class="font-medium">e)</span> Los Clubes sólo podrán sustituir sus delegados durante el término de su mandato cuando medien causas justificadas reconocidas como tales por el Consejo Directivo de la Asociación.</li>
+              <li><span class="font-medium">f)</span> El retiro de un Delegado, por renuncia u otras causas, deberá ser formulada ante la Asociación y ésta informará al Club interesado, para que de inmediato nombre al sustituto, hasta la terminación del período.</li>
+              <li><span class="font-medium">g)</span> Los Delegados podrán asistir a las sesiones del Consejo Directivo, en cuyas deliberaciones tendrán todas las facultades que el presente Estatuto confiere a los Vocales, salvo ejercer el voto. Los Delegados de los Clubes adherentes tendrán voz, pero no podrán ejercer el voto, ni ser elegidos miembros del Consejo Directivo.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 13</p>
+            <p class="mb-2">Los Delegados tienen las siguientes obligaciones:</p>
+            <ul class="list-none space-y-1 pl-4">
+              <li><span class="font-medium">1)</span> Vigilar por los prestigios de la asociación y por los intereses del remo en general.</li>
+              <li><span class="font-medium">2)</span> Asistir a las Asambleas.</li>
+              <li><span class="font-medium">3)</span> Abstenerse de competir en Regatas que organice la Asociación. Podrán actuar como autoridades de ellas salvo mientras ocupen cargos en el Consejo Directivo. Si un Delegado se inscribiera en una regata perderá su calidad de tal y no podrá ser presentado nuevamente hasta después de un año a partir de la fecha de su inscripción. Quedan exceptuadas las pruebas reservadas a remeros veteranos.</li>
+              <li><span class="font-medium">4)</span> Las personas que hubieran actuado como remeros y timoneles, no podrán ingresar como Delegados ante la Asociación hasta después de transcurrido un año de su última intervención, exceptuando las regatas internas.</li>
+              <li><span class="font-medium">5)</span> Los Delegados no deben hacer publicaciones de ninguna especie sobre asuntos o divergencias que se produzcan en el seno de la Asociación.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CAPÍTULO IV ─── -->
+      <section id="cap-iv" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo IV — Del Consejo Directivo
+        </h2>
+        <p class="text-xs text-gray-400 italic mb-4">Reforma aprobada Asamblea 26/08/1966 — Reforma aprobada Inspección de Justicia 09/01/1977.</p>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 14</p>
+            <p>El Consejo Directivo estará formado por doce miembros titulares elegidos por la Asamblea General Ordinaria entre los delegados que la constituyen. Sus integrantes tendrán carácter honorario y durarán tres períodos en sus funciones, pudiendo ser reelectos por igual término y luego de lo cual deberá transcurrir un período, como mínimo, para poder ser elegidos nuevamente. Dentro del Consejo Directivo existirán los cargos de Presidente —cuyo nombre será propuesto directamente en las listas eleccionarias—, Vicepresidente, Secretario, Prosecretario, Tesorero y Protesorero. Estos cinco cargos serán distribuidos entre los restantes once miembros titulares, en la primera reunión que realice el Consejo Directivo, la que se llevará a cabo dentro de los 15 días de efectuada la Asamblea General Ordinaria. Los Titulares de dichos cargos podrán ser modificados o alterados por decisión del mismo Consejo Directivo en cualquier oportunidad. El Presidente y el Vicepresidente deberán ser argentinos. La elección del Presidente no estará sujeta a las limitaciones que fija el párrafo segundo de este artículo, pero éste no podrá ser reelecto transcurridos seis períodos en el cargo.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 15</p>
+            <p>En la Asamblea General Ordinaria anual se elegirán conjuntamente con los miembros del Consejo Directivo, seis miembros suplentes por orden numérico y tres Revisores de Cuentas que cada año se renovarán como tales.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 16</p>
+            <p class="text-xs text-gray-400 italic mb-1">Reforma aprobada Asamblea 26/08/1966 — Reforma aprobada Inspección de Justicia 09/01/1967.</p>
+            <p>Los miembros del Consejo Directivo se renovarán por terceras partes sucesivamente en la Asamblea General Ordinaria Anual. La elección de los miembros del Consejo Directivo se efectuará por votación secreta y por simple mayoría de votos.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 17</p>
+            <p>En caso de quedar acéfalo el cargo de Presidente pasará a desempeñarlo hasta concluir el período el Vicepresidente y se incorporará al Consejo Directivo el Vocal Suplente que corresponda hasta la próxima Asamblea General Ordinaria. Toda vacante que se produzca entre los demás miembros del Consejo Directivo será llenada por los Vocales Suplentes, para completar el período y sólo hasta el vencimiento del término para que fueran elegidos. Si llegaran a cesar más de seis vocales, se llamará a Asamblea General Extraordinaria dentro de los sesenta días, para reemplazarlos.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 18</p>
+            <p class="text-xs text-gray-400 italic mb-1">Reforma aprobada Asamblea 05/04/1983 — Reforma aprobada Inspección de Justicia 02/05/1983.</p>
+            <p>El Consejo Directivo podrá reunirse en la forma periódica que el mismo determine realizando como mínimo una reunión en un lapso no superior a los sesenta días, y además, cada vez que el Presidente lo estime necesario o cuando lo soliciten por escrito cuatro de sus miembros —en cuyo caso el Presidente deberá convocarlos dentro de los ocho días de recibido el pedido, con una anticipación no menor de dos días—. Su quórum se formará con siete miembros. Cada uno de ellos tendrá derecho a un voto y las resoluciones se tomarán por mayoría de los presentes, excepto en los casos en que, por este Estatuto, se exige distinta proporción. En caso de empate, corresponderá al Presidente desempatar. Para las reuniones que no sean las periódicas, sus miembros serán citados previamente por carta certificada y lo mismo cuando deba tratarse algún asunto que exija por este Estatuto para su resolución mayor proporción de votos que la mayoría de los presentes. Los miembros dejarán constancia de su presencia en el registro de asistencia rubricado, con la firma del Presidente y Secretario. Cuando las reuniones deban notificarse por carta certificada, se incluirá en la misma la indicación de los asuntos a tratar que motivan la citación. La inasistencia a tres reuniones seguidas o cinco alternadas de un miembro del Consejo Directivo, sin justificación escrita, dará lugar al reemplazo definitivo de éste en sus funciones, debiendo ser sustituido en la forma establecida por el Art. 17 de este Estatuto.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 19</p>
+            <p class="text-xs text-gray-400 italic mb-1">Aprobado por Asamblea 05/04/1983 — Aprobado Inspección de Justicia 02/05/1983.</p>
+            <p class="mb-2">Son atribuciones y deberes del Consejo Directivo:</p>
+            <ul class="list-none space-y-2 pl-4">
+              <li><span class="font-medium">a)</span> Ejecutar las resoluciones de las Asambleas; cumplir y hacer cumplir este Estatuto y los Reglamentos interpretándolos, en caso de duda con cargo de dar cuenta a la Asamblea más próxima que se celebre.</li>
+              <li><span class="font-medium">b)</span> Dirigir la administración de la Asociación.</li>
+              <li><span class="font-medium">c)</span> Convocar a Asambleas.</li>
+              <li><span class="font-medium">d)</span> Resolver sobre la admisión de las entidades que soliciten ingresar como afiliadas.</li>
+              <li><span class="font-medium">e)</span> Incorporar a los nuevos Delegados.</li>
+              <li><span class="font-medium">f)</span> Controlar con carácter exclusivo las embarcaciones utilizadas en las disputas de regatas en las que los botes deban tener las características que determinan los respectivos Reglamentos.</li>
+              <li><span class="font-medium">g)</span> Establecer los colores y símbolos de la Asociación: bandera, escudo, gallardete y distintivo; sus formas y tamaños.</li>
+              <li><span class="font-medium">h)</span> Amonestar o suspender a las Entidades afiliadas.</li>
+              <li><span class="font-medium">i)</span> Nombrar empleados y todo el personal necesario para el cumplimiento de la finalidad social, fijarle sueldo, determinarle las obligaciones, amonestarlos, suspenderlos y destituirlos.</li>
+              <li><span class="font-medium">j)</span> Presentar a la Asamblea General Ordinaria la Memoria, Balance General, Inventario y Cuenta de Gastos y Recursos e Informe del Organismo de Fiscalización. Todos esos elementos deberán ser remitidos a los Delegados con la anticipación requerida por el Artículo 11 para la convocatoria de la Asamblea General Ordinaria.</li>
+              <li><span class="font-medium">k)</span> Realizar los actos que especifica el Artículo 1881 y concordantes del Código Civil, con cargo de dar cuenta a la primera Asamblea que se celebre, salvo los casos de adquisición, enajenación e hipoteca de bienes inmuebles, en los que será necesaria la aprobación por parte de una Asamblea.</li>
+              <li><span class="font-medium">l)</span> Dictar las reglamentaciones internas necesarias para el cumplimiento de las finalidades.</li>
+              <li><span class="font-medium">m)</span> Confederarse con otras Asociaciones similares del País o del extranjero para formar Federaciones o Confederaciones Nacionales o Internacionales de la misma índole, necesitándose para sancionar esta resolución un mínimo de siete votos y la ratificación de la primera Asamblea a realizarse.</li>
+              <li><span class="font-medium">n)</span> Las cuestiones que se suscitaran entre el Consejo Directivo y los Asociados a las Entidades afiliadas a la AARA serán tratados únicamente por intermedio de las Entidades a las que aquellos pertenezcan.</li>
+              <li><span class="font-medium">o)</span> El Consejo Directivo no podrá resolver sobre las cuestiones que se presenten sin dictamen de la Comisión respectiva, cuando ésta exista y la cuestión esté comprendida entre sus atribuciones, salvo que, sometido el asunto a su estudio, no se expida dentro del término que se le señale, y que no podrá ser menor de diez días. Las Comisiones deberán elevar por escrito al Consejo Directivo sus decisiones en forma de resolución o de moción, según sea el alcance de sus facultades. En casos especiales y de urgencias el Consejo Directivo podrá constituirse en Comisión.</li>
+              <li><span class="font-medium">p)</span> El Consejo Directivo podrá:
+                <ul class="list-none pl-4 mt-1 space-y-1">
+                  <li><span class="font-medium">a.</span> Suspender, descalificar o rehabilitar a todo remero o timonel.</li>
+                  <li><span class="font-medium">b.</span> Exigir la presencia de representantes de Club o de cualquier remero o timonel de cualquier Club afiliado a las reuniones del Consejo. Esta facultad puede ser delegada en las Comisiones Internas o Especiales.</li>
+                  <li><span class="font-medium">c.</span> Intervenir como árbitro cuando fuera solicitado.</li>
+                  <li><span class="font-medium">d.</span> Sancionar a cualquier Delegado que transgreda este Estatuto, debiendo elevarse los antecedentes a la Asamblea General Ordinaria para la pertinente ratificación o revocación.</li>
+                  <li><span class="font-medium">e.</span> Fijar las cuotas anuales o extraordinarias que deban abonar los Clubes afiliados como así también condonar sus deudas cuando concurran circunstancias extraordinarias que así lo aconsejen, mediante el voto de 4/5 del total de sus integrantes.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 20</p>
+            <p class="text-xs text-gray-400 italic mb-1">Aprobado Asamblea 28/08/1968 — Aprobado Inspección de Justicia 06/12/1968.</p>
+            <p class="mb-2"><span class="font-medium">Inc. a)</span> Las resoluciones del Consejo Directivo podrán ser reconsideradas a pedido de alguno de sus miembros con aprobación de la mayoría. Para ser modificadas o dejadas sin efecto se requerirá el voto de las 2/3 partes de los miembros presentes en reunión convocada al efecto, con igual o mayor número de Consejeros que participaren en que la resolución fue adoptada.</p>
+            <p><span class="font-medium">Inc. b)</span> Las resoluciones del Consejo Directivo serán apelables para la primera Asamblea General, debiendo, al efecto interponerse recurso ante aquél dentro de los 30 días de notificada fehacientemente la resolución que se recurra. La apelación no tendrá efecto suspensivo.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CAPÍTULO V ─── -->
+      <section id="cap-v" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo V — De las atribuciones y deberes de los miembros del Consejo Directivo
+        </h2>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 21 — Presidente</p>
+            <ul class="list-none space-y-1 pl-4">
+              <li><span class="font-medium">a)</span> Representar a la Asociación en todos sus actos.</li>
+              <li><span class="font-medium">b)</span> Convocar a las reuniones del Consejo Directivo.</li>
+              <li><span class="font-medium">c)</span> Presidir las Asambleas y sesiones del Consejo Directivo.</li>
+              <li><span class="font-medium">d)</span> Firmar, conjuntamente con el Secretario, las actas y en general la documentación administrativa de la Asociación.</li>
+              <li><span class="font-medium">e)</span> Firmar, conjuntamente con el Tesorero, las órdenes de pago y todos los documentos que se refieren a la marcha económica y financiera de la Asociación.</li>
+              <li><span class="font-medium">f)</span> Resolver los asuntos de urgencia y las dificultades que pudieran suscitarse, siempre que no hubiera tiempo para convocar al Consejo Directivo, debiendo dar cuenta de lo ocurrido en la primera sesión.</li>
+              <li><span class="font-medium">g)</span> Someter nuevamente a discusión por una sola vez en la reunión inmediata a la que hubieren sido adoptadas, las determinaciones o acuerdos que se hubiesen dictado y cuya ejecución ofrezca dificultad.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 22</p>
+            <p>El Presidente será reemplazado en caso de ausencia o impedimento temporario por el Vicepresidente y, en ausencia de éste, por el Vocal de mayor edad.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 23 — Secretario</p>
+            <p class="text-xs text-gray-400 italic mb-1">Aprobado Asambleas 28/08/1957; 31/08/1960; 28/08/1963 — Aprobado Inspección de Justicia 14/04/1965.</p>
+            <ul class="list-none space-y-1 pl-4">
+              <li><span class="font-medium">a)</span> Redactar las Actas de las Asambleas y reuniones del Consejo Directivo.</li>
+              <li><span class="font-medium">b)</span> Redactar y firmar la correspondencia de la Asociación y tener a cargo la conservación de los libros, archivos, registros y, en general, toda la comunicación administrativa de la Asociación.</li>
+              <li><span class="font-medium">c)</span> Firmar con el Presidente las actas y en general toda la documentación administrativa de la Asociación.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 24</p>
+            <p>El Secretario será reemplazado en caso de ausencia o impedimento por el Prosecretario.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 25 — Tesorero</p>
+            <ul class="list-none space-y-1 pl-4">
+              <li><span class="font-medium">a)</span> Percibir las cuotas de las Entidades afiliadas y llevar de acuerdo con el Secretario el Libro de Registro de Asociados.</li>
+              <li><span class="font-medium">b)</span> Depositar todos los fondos percibidos en los bancos que designe el Consejo Directivo en cuenta a nombre de la Asociación y a la orden conjunta de Presidente y Tesorero.</li>
+              <li><span class="font-medium">c)</span> Efectuar los pagos aprobados por el Consejo Directivo o autorizados por el Presidente.</li>
+              <li><span class="font-medium">d)</span> Firmar con el Presidente las órdenes de pago en general y toda la documentación financiera de la Asociación.</li>
+              <li><span class="font-medium">e)</span> Llevar los libros de contabilidad necesarios y preparar los balances correspondientes, debiendo proporcionar al Consejo Directivo en cualquier oportunidad, los informes que requieran con respecto al movimiento financiero de la Asociación.</li>
+              <li><span class="font-medium">f)</span> Informar y dar cuenta al Consejo Directivo de los atrasos en los pagos de cuentas periódicas.</li>
+              <li><span class="font-medium">g)</span> Preparar y someter a consideración del Consejo Directivo en el mes de junio de cada año el presupuesto a que se refiere el inc. j) del Art. 19.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 26</p>
+            <p>El Tesorero será reemplazado en caso de ausencia o impedimento por el Protesorero.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 27 — Vocales Titulares</p>
+            <ul class="list-none space-y-1 pl-4">
+              <li><span class="font-medium">a)</span> Concurrir a las reuniones del Consejo Directivo con voz y voto.</li>
+              <li><span class="font-medium">b)</span> Colaborar con los demás miembros del Consejo Directivo en todas sus funciones y reemplazarlos en los casos previstos por este Estatuto.</li>
+              <li><span class="font-medium">c)</span> Formar parte de las Comisiones para las que fueron designados.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 28</p>
+            <p>Ningún Consejero o Delegado podrá hacer uso de la palabra sin haberla solicitado y obtenido de la Presidencia, quien la concederá siempre por orden de prioridad.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 29</p>
+            <p>Cuando simultánea o alternadamente se haya solicitado uso de la palabra, ésta será acordada con prioridad a aquel que aún no hubiere intervenido en el debate.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 30</p>
+            <p>Lo dispuesto en los artículos anteriores no será de aplicación para el miembro informante del Consejo Directivo o de la Comisión o cuando sea pedida para formular moción de orden o previa, en cuyo caso deberá así expresarse al solicitarla y ceñirse a ello, estrictamente, una vez obtenida.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 31</p>
+            <p>El Presidente llamará a la cuestión al Consejero o Delegado que se atienda en consideraciones ajenas a los asuntos en debate o emplee expresiones irrespetuosas. Si después de dos llamamientos al orden no fuere acatado, dispondrá del retiro del prevenido, pudiendo su decisión ser reconsiderada por el Consejo Directivo o por la Asamblea, por simple mayoría.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 32</p>
+            <p>La votación será por signos, salvo que un Consejero o Delegado con apoyo de otros dos, solicite que sea nominal.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 33</p>
+            <p>Cuando una cuestión esté sometida al Consejo Directivo y/o Asambleas, y mientras no se haya resuelto, no podrá tomarse en consideración otra alguna excepto las relativas a cuestiones de orden o de carácter previo.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 34 — Cuestiones de orden</p>
+            <ul class="list-none space-y-1 pl-4 mb-2">
+              <li><span class="font-medium">a)</span> Las que surjan con respecto a los derechos de la Asamblea y de sus miembros, con motivo de disturbios o interrupciones.</li>
+              <li><span class="font-medium">b)</span> Las personales y/o de privilegio entre sus miembros.</li>
+              <li><span class="font-medium">c)</span> Las tendientes a hacer que el Presidente haga respetar y respete las reglas de la Asamblea.</li>
+            </ul>
+            <p>Estas cuestiones serán tratadas inmediatamente de propuestas; una vez resueltas, continuará la deliberación anterior.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 35 — Cuestiones previas</p>
+            <ul class="list-none space-y-1 pl-4 mb-2">
+              <li><span class="font-medium">a)</span> Que se postergue el asunto en discusión.</li>
+              <li><span class="font-medium">b)</span> Que se declare que no ha lugar a deliberar.</li>
+              <li><span class="font-medium">c)</span> Que se cierre la lista de oradores.</li>
+              <li><span class="font-medium">d)</span> Que se limite, se declare libre o se cierre el debate.</li>
+              <li><span class="font-medium">e)</span> Que se levante la sesión.</li>
+            </ul>
+            <p>Estas cuestiones pueden presentarse a cualquier altura del debate y si obtuvieran el apoyo de dos Consejeros o Delegados, deberán ser sometidos a votación, inmediatamente sin debate alguno.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 36</p>
+            <p>Las disposiciones del presente Capítulo serán de aplicación estricta en las reuniones del Consejo Directivo y Asamblea.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CAPÍTULO VII ─── -->
+      <section id="cap-vii" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo VII — De los revisores de cuentas
+        </h2>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 37</p>
+            <p>Son deberes y atribuciones de los Revisores de Cuentas confrontar trimestralmente, como mínimo, las operaciones de Tesorería, a cuyo fin solicitarán y obtendrán los libros y comprobantes necesarios. Anualmente presentarán dictamen acordando o no su conformidad al respecto, debiendo en el último caso formular por escrito las objeciones pertinentes.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CAPÍTULO VIII ─── -->
+      <section id="cap-viii" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo VIII — De las comisiones
+        </h2>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 38 — Comisiones de Regatas</p>
+            <ul class="list-none space-y-2 pl-4">
+              <li><span class="font-medium">1)</span> <span class="font-medium">Constitución:</span> Las Comisiones de Regatas estarán formadas por los Clubes afiliados, radicados dentro de la zona que demarcará en cada caso la AARA y representados ante las mismas por delegados en número igual por cada Institución.</li>
+              <li><span class="font-medium">2)</span> <span class="font-medium">Atribuciones:</span> Tendrán a su cargo la realización de los programas de Regatas previamente autorizados por la AARA y deben acatar las resoluciones del Consejo Directivo y cumplir y hacer cumplir el Reglamento de Regatas dentro de sus respectivas zonas.</li>
+              <li><span class="font-medium">3)</span> <span class="font-medium">Dependencia:</span> Las Comisiones de Regatas dependerán directamente de la AARA y deben acatar las resoluciones del Consejo Directivo y cumplir y hacer cumplir el reglamento de Regatas, pudiendo ser intervenidas y reorganizadas en caso necesario.</li>
+              <li><span class="font-medium">4)</span> <span class="font-medium">Reglamento Interno y Recursos:</span> Para su gobierno las Comisiones de Regatas adoptarán un Reglamento Interno en el cual se indicará el reglamento para las Regatas eliminatorias, como así las disposiciones para la obtención de recursos necesarios para financiar sus actividades. Dicho Reglamento deberá ser previamente aprobado por la AARA y regirá con las modificaciones que ésta creyera conveniente introducir. Toda modificación que posteriormente se introduzca al citado Reglamento, deberá ser, en todos los casos, aprobado previamente por la AARA.</li>
+              <li><span class="font-medium">5)</span> <span class="font-medium">Memoria y Balance:</span> Las Comisiones de Regatas comunicarán a la AARA antes del 30 de junio de cada año, la Memoria y Balance anual especificando claramente en éste la inversión de los fondos percibidos.</li>
+              <li><span class="font-medium">6)</span> <span class="font-medium">Delegados:</span> Anualmente la AARA nombrará ante y para cada una de las Comisiones de Regatas un Delegado y un suplente, procediendo análogamente cada Comisión de Regatas ante la AARA. Dichos Delegados serán invitados a todas las reuniones que celebren las entidades ante las cuales estén acreditadas. Tendrán voz pero no voto. Las designaciones de Delegados o suplentes ante las Comisiones de Regatas podrán recaer en una persona que ya sea Delegado de un Club de la zona ante la misma Comisión.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 39 — Comisiones Internas</p>
+            <p>El Consejo Directivo podrá nombrar las Comisiones que estime convenientes para el estudio y asesoramiento de las cuestiones que presenten. Las Comisiones estarán compuestas por cinco o más miembros, elegidos entre los Delegados de la Asociación y serán integradas como mínimo por un miembro del Consejo Directivo quien se desempeñará como Presidente. En oportunidad de resolver el nombramiento de la Comisión, el Consejo Directivo reglamentará su esfera de atribuciones y fijará el alcance de sus decisiones. La Comisión deberá nombrar además de entre sus miembros un Secretario, sesionando con las mismas formalidades requeridas al Consejo Directivo en el Artículo 18, salvo que sus libros no serán rubricados y tendrá quórum con tres miembros.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CAPÍTULO IX ─── -->
+      <section id="cap-ix" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo IX — De las entidades afiliadas
+        </h2>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 40 — Afiliación</p>
+            <ul class="list-none space-y-1 pl-4">
+              <li><span class="font-medium">1)</span> Puede ser afiliado todo Club que practique remo con carácter aficionado, con asiento en el País que cuente con personería jurídica y con un año de antigüedad de constituido como mínimo.</li>
+              <li><span class="font-medium">2)</span> No podrá formar parte de la Asociación ningún Club en que se practique remo con carácter profesional.</li>
+              <li><span class="font-medium">3)</span> Todo Club que desee ingresar a la Asociación deberá solicitarlo por escrito, adjuntando un ejemplar del Estatuto y Reglamento General o de Remo, copia de su lista de asociados y cumplir con los requisitos del Reglamento General.</li>
+              <li><span class="font-medium">4)</span> El pedido de afiliación será presentado al Consejo Directivo y considerado por el mismo, dentro de un plazo no mayor de sesenta días, desde la fecha de la presentación y previo dictamen de las Comisiones Internas. Su aceptación requerirá en votación secreta un mínimo de siete votos.</li>
+              <li><span class="font-medium">5)</span> El Club que hubiera pedido su desafiliación o el desafiliado por falta de pago, podrá reincorporarse previa solicitud, trámites y pagos, como si se afiliara por primera vez, y de conformidad con lo establecido en el Artículo 41 Inc. 2 del Presente Estatuto.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 41 — Rechazo de Afiliación</p>
+            <ul class="list-none space-y-1 pl-4">
+              <li><span class="font-medium">1)</span> En caso de rechazo, el nuevo pedido de afiliación del mismo Club, no será considerado hasta que haya transcurrido un año de la resolución denegatoria.</li>
+              <li><span class="font-medium">2)</span> Rechazado por segunda vez, el nuevo pedido de afiliación no será considerado hasta transcurridos tres años.</li>
+              <li><span class="font-medium">3)</span> Todo nuevo pedido de afiliación de un Club rechazado más de dos veces, no será considerado hasta transcurridos más de cinco años de la última resolución denegatoria.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 42 — Desafiliación, expulsión, morosos</p>
+            <p class="text-xs text-gray-400 italic mb-1">Modificación aprobada por Asamblea 24/09/1975 — Aprobada Inspección de Justicia 07/04/1983.</p>
+            <ul class="list-none space-y-2 pl-4">
+              <li><span class="font-medium">1)</span> Todo pedido de desafiliación será considerado por el Consejo Directivo, previo dictamen de las comisiones internas dentro de los sesenta días de recibida la solicitud y siempre que el Club estuviera al corriente con la Tesorería de la Asociación.</li>
+              <li><span class="font-medium">2)</span> La falta de pago a cualquier contribución periódica o extraordinaria, de inscripción, etc. podrá motivar, después de los noventa días de notificada por telegrama colacionado, la desafiliación del Club que haya incurrido en ella.</li>
+              <li><span class="font-medium">3)</span> Cuando un club se haya desafiliado a su pedido o por resolución del Consejo Directivo o por dos o más veces, no podrá formular una nueva solicitud de ingreso hasta transcurridos cinco años de la última resolución adoptada por el Consejo Directivo.</li>
+              <li><span class="font-medium">4)</span> El Club que no cumpliera con este Estatuto, los Reglamentos o Disposiciones de la Asociación previo dictamen de las Comisiones Internas, podrá ser amonestado o suspendido por el voto de siete consejeros como mínimo.</li>
+              <li><span class="font-medium">5)</span> El Club que fuera expulsado no podrá solicitar su reafiliación hasta transcurrido dos años de su sanción.</li>
+              <li><span class="font-medium">6)</span> Cuando un Club fuera expulsado por segunda vez, no podrá solicitar su nuevo ingreso hasta transcurridos cinco años de la resolución adoptada.</li>
+              <li><span class="font-medium">7)</span> Si la expulsión se hiciera efectiva por tercera vez no podrá acordarse nueva afiliación.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 43 — Obligaciones</p>
+            <p class="text-xs text-gray-400 italic mb-1">Aprobado Asamblea 24/09/1975 — Aprobado Inspección de Justicia 07/04/1983.</p>
+            <ul class="list-none space-y-1 pl-4">
+              <li><span class="font-medium">1)</span> Cumplir con el Estatuto y Reglamento de la Asociación Argentina de Remeros Aficionados.</li>
+              <li><span class="font-medium">2)</span> Acatar las resoluciones de las Asambleas del Consejo Directivo.</li>
+              <li><span class="font-medium">3)</span> Remitir anualmente su Memoria y Balance, Cuadro y nómina del movimiento de ingreso y egreso de socios, constitución de autoridades, y dar cuenta inmediata de las modificaciones que hubiera sancionado en sus Estatutos y Reglamentos.</li>
+              <li><span class="font-medium">4)</span> Abonar las cuotas que establezca la Asociación dentro de los plazos fijados.</li>
+              <li><span class="font-medium">5)</span> Prohibir que sus socios tomen parte en regatas no autorizadas debiendo informar detalladamente a la Asociación Argentina de Remeros Aficionados dentro de los diez días de producida la transgresión, a los efectos disciplinarios correspondientes.</li>
+              <li><span class="font-medium">6)</span> Hacer cumplir en las Regatas Internas los Reglamentos de la Asociación Argentina de Remeros Aficionados. Cuando las regatas se organicen, previo permiso de la Asociación con fines de beneficencia, se destinará a ese objeto el saldo total. En su balance deberá figurar las entradas y salidas correspondientes.</li>
+              <li><span class="font-medium">7)</span> Impedir que se proporcione a sus socios que toman parte en Regatas, subsidios o beneficios de cualquier índole; los clubes sólo podrán proporcionarles alojamiento, comida y los gastos de transporte indispensables para ellos y sus botes.</li>
+              <li><span class="font-medium">8)</span> Abstenerse de hacer publicaciones sobre asuntos y divergencias que tengan con otro club, con Comisiones o jueces de Regatas o con la AARA.</li>
+              <li><span class="font-medium">9)</span> Tener en sus locales a disposición de sus socios el Estatuto y Reglamento de la AARA.</li>
+              <li><span class="font-medium">10)</span> Velar por el estricto cumplimiento del Código de Regatas.</li>
+              <li><span class="font-medium">11)</span> Podrán optar por la consulta a la AARA, previo a la admisión de socios, por el informe relativo a si los mismos se encuentran en condiciones de ser aceptados.</li>
+              <li><span class="font-medium">12)</span> Comunicar las expulsiones, eliminaciones y cesantías de sus socios, dentro de los diez días de resueltas por el Consejo Directivo.</li>
+              <li><span class="font-medium">13)</span> Comunicar de inmediato cuando haya desaparecido las causas de expulsión, eliminación o cesantías de sus socios.</li>
+              <li><span class="font-medium">14)</span> Declarar cesante a todo socio que posteriormente a su ingreso se comprobara que ha sido expulsado, eliminado, dejado cesante por deudas de otro Club afiliado, hasta tanto desaparezcan las causas que motivaron dicha medida.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 44 — Derechos</p>
+            <ul class="list-none space-y-1 pl-4">
+              <li><span class="font-medium">1)</span> Las Instituciones afiliadas que se consideren afectadas por resoluciones del Consejo Directivo, podrán apelar de las mismas ante la primera Asamblea General Ordinaria que se realice, sin recurrir previamente a organismos ajenos a la AARA.</li>
+              <li><span class="font-medium">2)</span> Los Clubes y Asociaciones afiliados podrán solicitar al Consejo Directivo de la Asociación, el estudio, consideración y resolución de la Comisión Directiva de la Entidad peticionante y dirigirse por escrito al efecto, al Consejo Directivo de la AARA, el cual deberá expedirse y contestar al pedido dentro de los sesenta días de recibido.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CAPÍTULO X ─── -->
+      <section id="cap-x" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo X — Clasificación de los remeros aficionados
+        </h2>
+        <p class="text-xs text-gray-400 italic mb-4">Aprobado Asamblea 28/08/1957; 31/08/1960; 28/08/1963.</p>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 45</p>
+            <p>Se considera remero aficionado la persona que se dedica por gusto o distracción a la práctica del remo, sin obtener ningún beneficio pecuniario o indirecto y que sea reconocido como tal por la Federación de su país.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 46</p>
+            <p>Todo dirigente de la AARA o de Instituciones afiliadas y adherentes, está obligado a denunciar inmediatamente ante el Consejo Directivo, violatorio del Artículo 45; caso contrario el Consejo Directivo le aplicará la sanción dispuesta en el Artículo 47.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 47 — No aficionado</p>
+            <p class="mb-2">No serán en caso alguno reconocidos como remeros aficionados:</p>
+            <ul class="list-none space-y-1 pl-4">
+              <li><span class="font-medium">1)</span> Los que son o han sido profesionales, aún en otro deporte y los remeros que han participado en regatas abiertas a profesionales.</li>
+              <li><span class="font-medium">2)</span> Los entrenadores, instructores, profesores o maestros que enseñen el deporte con un fin de lucro o de provecho pecuniario directo o indirecto.</li>
+              <li><span class="font-medium">3)</span> El que abandone sus actividades habituales remuneradas provisoria o definitivamente para dedicarse al remo, sin poder subsistir por sí o sus necesidades.</li>
+              <li><span class="font-medium">4)</span> El que por lucro, aunque sea disimulado en cualquier forma se haya ocupado de la organización de regatas o torneos atléticos de cualquier naturaleza.</li>
+              <li><span class="font-medium">5)</span> El que tenga o haya tenido una ocupación en la que el uso del remo forme parte de sus obligaciones: botero, guardián de fondeadero, etc.</li>
+              <li><span class="font-medium">6)</span> El que haya sido descalificado en cualquier deporte.</li>
+              <li><span class="font-medium">7)</span> El que haya contribuido a sabiendas, personalmente o como miembro de una Comisión a que un aficionado pierda su carácter de tal.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 48</p>
+            <p>Los profesores o maestros que en la instrucción escolar enseñen remo conjuntamente con otras materias, no pierden su carácter de aficionado.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 49</p>
+            <p>La condición de no aficionado es de carácter perpetuo.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CAPÍTULO XI ─── -->
+      <section id="cap-xi" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo XI — Del ejercicio social
+        </h2>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 50</p>
+            <p>El año social a los efectos de la administración y la Memoria, el Balance y Presupuesto que debe presentar el Consejo Directivo, comienza el 1° de junio de cada año y termina el 31 de mayo del año siguiente.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CAPÍTULO XII ─── -->
+      <section id="cap-xii" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo XII — De la reforma del estatuto
+        </h2>
+        <p class="text-xs text-gray-400 italic mb-4">Aprobada Asamblea Extraordinaria 28/08/1957; 31/08/1960; 28/08/1963 — Aprobada Inspección de Justicia 14/04/1965.</p>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 51</p>
+            <p>La reforma de este Estatuto deberá sancionarse en Asamblea General Extraordinaria convocada al efecto y siempre que la misma sea aprobada por las dos terceras partes de los votos presentes. Todo proyecto de reformas al Estatuto deberá ser auspiciado por el Consejo Directivo o presentado por escrito y por no menos de quince Delegados y entrará a consideración previo dictamen de la Comisión Interna pertinente, que deberá expedirse en un plazo no superior a los noventa días.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CAPÍTULO XIII ─── -->
+      <section id="cap-xiii" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo XIII — De las prescripciones del estatuto, sus alcances e interpretación
+        </h2>
+        <p class="text-xs text-gray-400 italic mb-4">Aprobada Asambleas 28/08/1957; 31/08/1960; 28/08/1963 — Aprobada Inspección de Justicia 14/04/1965.</p>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 52</p>
+            <p>Las prescripciones de este Estatuto son normas que obligan a las entidades afiliadas y adherentes y que éstos reconocen y aceptan por el solo hecho de solicitar su afiliación o adhesión. En los casos excepcionales y no previstos o cuando se susciten dudas sobre el alcance de aquellas, corresponderá su interpretación al Consejo Directivo, con cargo de dar cuenta a la Asamblea General más próxima. Por el hecho de su ingreso a la Asociación, las entidades afiliadas y adherentes delegan en la misma las facultades y autoridad propias que sean necesarias para que la AARA pueda alcanzar y ejercer los fines establecidos en el Artículo 2°, comprometiéndose igualmente a no realizar actos que interfieran con dichos fines.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CAPÍTULO XIV ─── -->
+      <section id="cap-xiv" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo XIV — El reglamento general y reglamentos internos
+        </h2>
+        <p class="text-xs text-gray-400 italic mb-4">Aprobada Asambleas Extraordinarias 28/08/1957; 31/08/1960; 28/08/1963 — Aprobada Inspección de Justicia 14/04/1965.</p>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 53</p>
+            <p>La Asociación estará regida además de este Estatuto por el Reglamento General que apruebe el Consejo Directivo dentro de los ciento veinte días de aprobado el Estatuto, el cual no podrá contener disposiciones contrarias a éste y en el que se establecerán los derechos y obligaciones de las entidades afiliadas y adherentes y se reglamentarán todos aquellos puntos de la actividad de la Asociación que se consideren convenientes. El Consejo Directivo podrá dictar además todos los reglamentos internos que estime necesarios para organizar y reglamentar las actividades de la Asociación en todas aquellas cuestiones no especificadas en este Estatuto y en el Reglamento General. El Consejo Directivo podrá modificar el Reglamento General o Reglamento de Remo mediante resolución aprobada por siete votos escritos como mínimo. Toda modificación al Código de Regatas deberá ser sometida a consideración de una Asamblea General Extraordinaria y quedará aprobada por el voto de simple mayoría.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CAPÍTULO XV ─── -->
+      <section id="cap-xv" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo XV — De la disolución de la AARA
+        </h2>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 54</p>
+            <ul class="list-none space-y-2 pl-4">
+              <li><span class="font-medium">1)</span> La AARA no podrá disponer su disolución, mientras existan tres Clubes dispuestos a sostenerla, quienes en tal caso se comprometen a perseverar en el cumplimiento de los objetivos sociales.</li>
+              <li><span class="font-medium">2)</span> De hacerse efectiva la disolución se designarán los liquidadores que podrán ser el Consejo Directivo o cualquier otro afiliado que la Asamblea resuelva.</li>
+              <li><span class="font-medium">3)</span> Los fondos provenientes de la liquidación, salvo disposición legal en contrario, serán transferidos al Asilo Naval.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CAPÍTULO XVI ─── -->
+      <section id="cap-xvi" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo XVI — De los juegos de azar
+        </h2>
+
+        <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div>
+            <p class="font-semibold text-[#0B2545] mb-1">Artículo 55</p>
+            <p>Queda terminantemente prohibido dentro del local social la práctica de todo juego de azar y, en particular, los denominados bancadas. Quienes infrinjan esta disposición, se harán pasibles de la pena de expulsión.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CAPÍTULO XVII ─── -->
+      <section id="cap-xvii" class="scroll-mt-24 p-8">
+        <h2 class="text-lg font-bold text-[#0B2545] mb-6 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          Capítulo XVII — Disposición transitoria
+        </h2>
+
+        <div class="text-sm text-gray-700 leading-relaxed">
+          <p>Este estatuto entrará en vigencia inmediatamente después de aprobado por la Asamblea General Extraordinaria de la AARA expresamente convocada al efecto y por la Inspección General de Personas Jurídicas. Su texto se remitirá a los Clubes afiliados a los treinta días de su aprobación, para su conocimiento.</p>
+        </div>
+      </section>
+
     </div>
   </div>
 </Layout>

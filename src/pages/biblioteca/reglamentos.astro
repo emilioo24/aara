@@ -2,12 +2,18 @@
 import Layout from '../../layouts/Layout.astro';
 
 const reglamentos = [
-  { titulo: "Reglamento General", desc: "Normas generales de la asociación y sus actividades.", fecha: "2024" },
-  { titulo: "Reglamento de Competencias", desc: "Reglas y procedimientos para la organización de regatas oficiales.", fecha: "2024" },
-  { titulo: "Reglamento de Árbitros", desc: "Requisitos, funciones y responsabilidades del cuerpo arbitral.", fecha: "2023" },
-  { titulo: "Reglamento de Técnicos", desc: "Habilitación, categorías y obligaciones de los técnicos.", fecha: "2023" },
-  { titulo: "Reglamento Antidopaje", desc: "Política de control antidopaje adoptada por AARA.", fecha: "2024" },
-  { titulo: "Reglamento de Remo Costero", desc: "Normas específicas para la disciplina de remo costero.", fecha: "2024" },
+  { titulo: "Reglamento General de la A.A.R.A",                                             revision: "Aprobado el 1º de noviembre del 2012" },
+  { titulo: "Reglamento General de Regatas Oficiales, Promocionales y Master",              revision: "Revisión 12/2025" },
+  { titulo: "Participación de Remeros Extranjeros No Residentes",                           revision: "Aprobado el 1° de noviembre del 2014 — Acta N°1534" },
+  { titulo: "Normas de Funcionamiento del Tribunal de Disciplina de la A.A.R.A.",           revision: "Revisión agosto de 2011" },
+  { titulo: "Código en Referencia a la Manipulación de Competencias",                       revision: "Revisión diciembre 2023" },
+  { titulo: "Jurisdicciones de las Comisiones de Regatas de la A.A.R.A",                   revision: "Junio 2018" },
+  { titulo: "Reglamento Máster y Campeonato Argentino Máster",                              revision: "Enero 2025" },
+  { titulo: "Reglamento de Regatas de Travesía A.A.R.A",                                   revision: "Febrero 2025" },
+  { titulo: "Reglamento de Guardas de Botes y Uso del Predio y del Galpón de la A.A.R.A.", revision: "Octubre 2014" },
+  { titulo: "Reglamento Comisión de Atletas",                                               revision: "Revisión 2020" },
+  { titulo: "Reglamento de Administración y Funcionamiento de la Pista Nacional de Remo y Canotaje", revision: "Revisión 2015" },
+  { titulo: "Reglamento Comisión de Árbitros A.A.R.A.",                                    revision: "Diciembre 2017" },
 ];
 ---
 <Layout title="Reglamentos — AARA">
@@ -29,11 +35,10 @@ const reglamentos = [
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
             </div>
           <div class="flex-1">
-            <div class="font-semibold text-[#0B2545]">{r.titulo}</div>
-            <p class="text-xs text-gray-500 mt-0.5 mb-3">{r.desc}</p>
-            <div class="flex items-center justify-between">
-              <span class="text-xs text-gray-400">Ed. {r.fecha}</span>
-              <a href="#" class="text-xs text-[#13A8D4] hover:text-[#0B2545] font-medium transition-colors flex items-center gap-1">
+            <div class="font-semibold text-[#0B2545] leading-snug">{r.titulo}</div>
+            <div class="flex items-center justify-between mt-2">
+              <span class="text-xs text-gray-400">{r.revision}</span>
+              <a href="#" class="text-xs text-[#13A8D4] hover:text-[#0B2545] font-medium transition-colors flex items-center gap-1 shrink-0 ml-3">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                 </svg>

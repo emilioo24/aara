@@ -9,6 +9,7 @@ const noticias = [
     titulo: "Nuevos aranceles a partir de Enero del 2026",
     resumen: "Se actualizó el cuadro de aranceles para clubes, atletas y árbitros vigente a partir del 1° de enero de 2026. Descargá el documento oficial con todos los valores.",
     href: "/noticias/aranceles-2026",
+    imagen: "",
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ const noticias = [
     titulo: "Ya está disponible el calendario de regatas 2026",
     resumen: "El calendario oficial de regatas para la temporada 2026 ya está publicado. Consultá todas las fechas, sedes y modalidades de cada competencia.",
     href: "/biblioteca/calendario",
+    imagen: "",
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ const noticias = [
     titulo: "El remo costero, a un paso del olimpismo",
     resumen: "La disciplina de remo costero avanza en su proceso de reconocimiento olímpico para los Juegos de Los Ángeles 2028. La AARA apoya activamente esta iniciativa.",
     href: "/noticias/remo-costero-olimpico",
+    imagen: "",
   },
   {
     id: 4,
@@ -33,6 +36,7 @@ const noticias = [
     titulo: "Resultados del CAR 2024 — Campeones nacionales",
     resumen: "Se disputó el Campeonato Argentino de Remo 2024 en Tigre. Conocé todos los resultados y los campeones nacionales en cada categoría.",
     href: "/resultados",
+    imagen: "",
   },
   {
     id: 5,
@@ -41,6 +45,7 @@ const noticias = [
     titulo: "Curso de capacitación para árbitros — Inscripciones abiertas",
     resumen: "AARA abre inscripciones para el curso de formación y actualización de árbitros. El curso se dictará de forma presencial y virtual.",
     href: "/noticias/curso-arbitros-2024",
+    imagen: "",
   },
   {
     id: 6,
@@ -49,6 +54,7 @@ const noticias = [
     titulo: "Delegación argentina en el Campeonato Mundial de Remo",
     resumen: "La delegación argentina participó del Mundial de Remo con destacadas actuaciones en las categorías juvenil y senior.",
     href: "/noticias/mundial-2024",
+    imagen: "",
   },
 ];
 
@@ -78,7 +84,8 @@ const colorMap: Record<string, string> = {
     <div class="flex flex-wrap gap-2 mb-8">
       {categorias.map((cat, i) => (
         <button
-          class={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors border ${
+          data-filter={cat}
+          class={`cursor-pointer px-4 py-1.5 rounded-full text-sm font-medium transition-colors border ${
             i === 0
               ? "bg-[#0B2545] text-white border-[#0B2545]"
               : "bg-white text-gray-600 border-gray-200 hover:border-[#0B2545] hover:text-[#0B2545]"
@@ -92,13 +99,23 @@ const colorMap: Record<string, string> = {
     <!-- News grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {noticias.map(n => (
-        <article class="bg-white rounded-xl shadow hover:shadow-md transition-shadow overflow-hidden group flex flex-col">
-          <div class="h-1.5 bg-gradient-to-r from-[#0B2545] to-[#13A8D4]"></div>
+        <article data-categoria={n.categoria} class="bg-white rounded-xl shadow hover:shadow-md transition-shadow overflow-hidden group flex flex-col">
+          <!-- Image / placeholder -->
+          <a href={n.href} class="block aspect-video overflow-hidden relative bg-gradient-to-br from-[#0B2545] to-[#134074]">
+            {n.imagen
+              ? <img src={n.imagen} alt={n.titulo} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              : <div class="absolute inset-0 flex items-center justify-center opacity-20">
+                  <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+                  </svg>
+                </div>
+            }
+            <span class={`absolute top-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-full ${colorMap[n.categoria] ?? "bg-gray-100 text-gray-600"}`}>
+              {n.categoria}
+            </span>
+          </a>
           <div class="p-6 flex flex-col flex-1">
             <div class="flex items-center gap-2 mb-3">
-              <span class={`text-xs font-semibold px-2 py-1 rounded-full ${colorMap[n.categoria] ?? "bg-gray-100 text-gray-600"}`}>
-                {n.categoria}
-              </span>
               <span class="text-xs text-gray-400">{n.fecha}</span>
             </div>
             <h2 class="font-bold text-[#0B2545] mb-2 group-hover:text-[#134074] transition-colors leading-snug flex-1">
@@ -114,3 +131,25 @@ const colorMap: Record<string, string> = {
     </div>
   </div>
 </Layout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+  const articles = document.querySelectorAll<HTMLElement>('[data-categoria]');
+
+  const activeClass   = 'cursor-pointer px-4 py-1.5 rounded-full text-sm font-medium transition-colors border bg-[#0B2545] text-white border-[#0B2545]';
+  const inactiveClass = 'cursor-pointer px-4 py-1.5 rounded-full text-sm font-medium transition-colors border bg-white text-gray-600 border-gray-200 hover:border-[#0B2545] hover:text-[#0B2545]';
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter!;
+
+      buttons.forEach(b => b.className = inactiveClass);
+      btn.className = activeClass;
+
+      articles.forEach(a => {
+        const show = filter === 'Todos' || a.dataset.categoria === filter;
+        a.classList.toggle('hidden', !show);
+      });
+    });
+  });
+</script>
