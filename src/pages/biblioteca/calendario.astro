@@ -1,37 +1,199 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-const regatas = [
-  { mes: "Enero", fecha: "18–19 Ene", nombre: "Regata de Verano", sede: "Tigre, Buenos Aires" },
-  { mes: "Febrero", fecha: "15–16 Feb", nombre: "Copa AARA — Etapa 1", sede: "Rosario, Santa Fe" },
-  { mes: "Marzo", fecha: "08–09 Mar", nombre: "Campeonato Argentino Juvenil", sede: "Corrientes" },
-  { mes: "Abril", fecha: "05–06 Abr", nombre: "Copa AARA — Etapa 2", sede: "Mendoza" },
-  { mes: "Mayo", fecha: "24–25 May", nombre: "Campeonato Argentino de Remo Costero", sede: "Mar del Plata" },
-  { mes: "Junio", fecha: "14–15 Jun", nombre: "Copa AARA — Etapa 3", sede: "Paraná, Entre Ríos" },
-  { mes: "Agosto", fecha: "16–17 Ago", nombre: "Copa AARA — Etapa 4", sede: "Posadas, Misiones" },
-  { mes: "Septiembre", fecha: "13–14 Sep", nombre: "Campeonato Argentino Master", sede: "Tigre, Buenos Aires" },
-  { mes: "Octubre", fecha: "11–12 Oct", nombre: "Copa AARA — Final", sede: "Rosario, Santa Fe" },
-  { mes: "Noviembre", fecha: "21–22 Nov", nombre: "Campeonato Argentino de Remo — CAR 2026", sede: "Tigre, Buenos Aires" },
+type Evento = {
+  fecha: string;
+  nombre: string;
+  sede: string;
+  pais: string;
+  organiza?: string;
+  obs?: string;
+  tag?: 'aara' | 'int' | 'nota';
+};
+
+type MesData = { nombre: string; id: string; eventos: Evento[] };
+
+const meses: MesData[] = [
+  {
+    nombre: "Enero", id: "enero",
+    eventos: [
+      { fecha: "30–31", nombre: "Evaluación cerrada", sede: "Tigre", pais: "Bs. As.", organiza: "AARA", obs: "Matrix race grupo, Sub 19 y Sub 23 preselec, 1500m", tag: "aara" },
+    ],
+  },
+  {
+    nombre: "Febrero", id: "febrero",
+    eventos: [
+      { fecha: "1",     nombre: "Evaluación cerrada",           sede: "Tigre",      pais: "Bs. As.",    organiza: "AARA", obs: "Matrix race grupo, Sub 19 y Sub 23 preselec, 1500m", tag: "aara" },
+      { fecha: "6–26",  nombre: "Concentración",                sede: "Tigre",      pais: "Bs. As.",    organiza: "AARA", obs: "Sub 19 y Sub 23 grupo preseleccionado", tag: "aara" },
+      { fecha: "15",    nombre: "Coastal – Beach Sprint – Velocidad", sede: "Corrientes", pais: "Corrientes", organiza: "CRC" },
+      { fecha: "21",    nombre: "Especial",                     sede: "Tigre",      pais: "Bs. As.",    organiza: "RCA",  obs: "Festival de ochos" },
+      { fecha: "27–28", nombre: "Evaluación cerrada",           sede: "Tigre",      pais: "Bs. As.",    organiza: "AARA", obs: "Definición botes chicos U19 y U23, evaluación abierta grupo senior", tag: "aara" },
+      { fecha: "28",    nombre: "Travesía Doble Vuelta del Ocho", sede: "Paraná",   pais: "Entre Ríos", organiza: "PRC",  obs: "Doble par c/timonel" },
+    ],
+  },
+  {
+    nombre: "Marzo", id: "marzo",
+    eventos: [
+      { fecha: "1",     nombre: "Evaluación cerrada",           sede: "Tigre",           pais: "Bs. As.",    organiza: "AARA",  obs: "Definición botes chicos U19 y U23, evaluación abierta", tag: "aara" },
+      { fecha: "1–14",  nombre: "Concentración",                sede: "Tigre",           pais: "Bs. As.",    organiza: "AARA",  obs: "Concentración Terminal, Senior, Junior, Sub 23", tag: "aara" },
+      { fecha: "6",     nombre: "Oficial",                      sede: "Carrizal",        pais: "Mendoza",    organiza: "CRICO" },
+      { fecha: "7",     nombre: "Vendimia Master y Menores",    sede: "Lago Parque San Martín", pais: "Mendoza", organiza: "CRICO" },
+      { fecha: "8",     nombre: "Vendimia OFICIAL",             sede: "Lago Parque San Martín", pais: "Mendoza", organiza: "CRICO" },
+      { fecha: "8",     nombre: "Travesía",                     sede: "Tigre",           pais: "Bs. As.",    organiza: "CRE" },
+      { fecha: "9–29",  nombre: "Concentración",                sede: "Tigre",           pais: "Bs. As.",    organiza: "AARA",  obs: "Concentración terminal grupo sudamericano", tag: "aara" },
+      { fecha: "13–15", nombre: "Oficial / Velocidad",          sede: "Villa Constitución", pais: "Santa Fe", organiza: "CRIL" },
+      { fecha: "14",    nombre: "Promocional",                  sede: "Villa Constitución", pais: "Santa Fe", organiza: "CNVC" },
+      { fecha: "21",    nombre: "Selectivo Beach Sprint",       sede: "Zárate",          pais: "Bs. As.",    organiza: "AARA",  tag: "aara" },
+      { fecha: "21",    nombre: "Promocional / Indoor",         sede: "Bariloche",       pais: "Río Negro",  organiza: "CRB" },
+      { fecha: "21–22", nombre: "Promocional",                  sede: "Tigre",           pais: "Bs. As.",    organiza: "CCI" },
+      { fecha: "22",    nombre: "Travesía / Beach Sprint",      sede: "Bariloche",       pais: "Río Negro",  organiza: "CRB" },
+      { fecha: "23",    nombre: "Velocidad",                    sede: "Bariloche",       pais: "Río Negro",  organiza: "CRB" },
+      { fecha: "26–29", nombre: "Sudamericano de Remo U19 y U23", sede: "Porto Alegre", pais: "Brasil",     organiza: "CSAR",  tag: "int" },
+    ],
+  },
+  {
+    nombre: "Abril", id: "abril",
+    eventos: [
+      { fecha: "3–4",      nombre: "Promocional",                        sede: "Laguna de los Padres", pais: "Bs. As.",  organiza: "CNMP" },
+      { fecha: "4",        nombre: "Travesía",                           sede: "Rosario",               pais: "Santa Fe", organiza: "CNMA", obs: "Doble par c/timonel" },
+      { fecha: "5",        nombre: "Beach Sprint",                       sede: "Mar del Plata",         pais: "Bs. As.",  organiza: "CNMP" },
+      { fecha: "9–12",     nombre: "Sudamericano por Clubes Master",     sede: "Asunción",              pais: "Paraguay", organiza: "FPR",  tag: "int" },
+      { fecha: "11",       nombre: "Día Nacional del Remero",            sede: "—",                     pais: "—",        obs: "Conmemoración del natalicio de Dn. Alberto Demiddi (1944–2000)", tag: "nota" },
+      { fecha: "12",       nombre: "Travesía",                           sede: "Tigre",                 pais: "Bs. As.",  organiza: "CRA",  obs: "Un par c/timonel" },
+      { fecha: "14–18",    nombre: "Copa Sudamericana Junior y Senior",  sede: "Asunción",              pais: "Paraguay", organiza: "FPR",  tag: "int" },
+      { fecha: "20–26",    nombre: "Copa América Remo Coastal",          sede: "Lima",                  pais: "Perú",                       tag: "int" },
+      { fecha: "24–3/05",  nombre: "Concentración",                      sede: "Tigre",                 pais: "Bs. As.",  organiza: "AARA", obs: "Concentración grupo ODESUR", tag: "aara" },
+      { fecha: "26",       nombre: "Travesía",                           sede: "Rosario",               pais: "Santa Fe", organiza: "PNBE", obs: "Doble par c/timonel" },
+      { fecha: "30",       nombre: "Evaluación cerrada",                 sede: "Tigre",                 pais: "Bs. As.",  organiza: "AARA", obs: "Matrix race grupo senior preseleccionado", tag: "aara" },
+    ],
+  },
+  {
+    nombre: "Mayo", id: "mayo",
+    eventos: [
+      { fecha: "1–3",   nombre: "Evaluación cerrada",                        sede: "Tigre",          pais: "Bs. As.",    organiza: "AARA",  obs: "Matrix race grupo senior preseleccionado", tag: "aara" },
+      { fecha: "2",     nombre: "Regata Especial / Indoor",                  sede: "Paraná",         pais: "Entre Ríos", organiza: "PRC" },
+      { fecha: "8–10",  nombre: "Oficial / Velocidad",                       sede: "Villa Carlos Paz", pais: "Córdoba",  organiza: "CRIL" },
+      { fecha: "9",     nombre: "Promocional",                               sede: "Villa Carlos Paz", pais: "Córdoba",  organiza: "ACR" },
+      { fecha: "10",    nombre: "Travesía",                                  sede: "Tigre",          pais: "Bs. As.",    organiza: "BARC" },
+      { fecha: "13–17", nombre: "IV Campeonato Americano de Beach Sprint",   sede: "Punta Leona",    pais: "Costa Rica", organiza: "FCRR",  tag: "int" },
+      { fecha: "17",    nombre: "Travesía",                                  sede: "Rosario",        pais: "Santa Fe",   organiza: "RRC",   obs: "Doble par c/timonel" },
+      { fecha: "24",    nombre: "Promocional",                               sede: "Campana",        pais: "Bs. As.",    organiza: "CBC",   obs: "Día Nacional del Remero — Conmemoración del natalicio de Dn. Alberto Demiddi (1944–2000)" },
+      { fecha: "29–31", nombre: "Concentración / Control",                   sede: "Tigre",          pais: "Bs. As.",    organiza: "AARA",  obs: "Grupo senior ODESUR 2000m", tag: "aara" },
+      { fecha: "30–31", nombre: "World Rowing Cup I",                        sede: "Sevilla",        pais: "España",     organiza: "FISA",  tag: "int" },
+    ],
+  },
+  {
+    nombre: "Junio", id: "junio",
+    eventos: [
+      { fecha: "7",     nombre: "Travesía",                                    sede: "Tigre",               pais: "Bs. As.",  organiza: "TBC" },
+      { fecha: "11–14", nombre: "US Rowing Youth National Championships",      sede: "Sarasota",            pais: "EE.UU.",   tag: "int" },
+      { fecha: "14",    nombre: "Indoor",                                      sede: "Tigre",               pais: "Bs. As.",  organiza: "CNH" },
+      { fecha: "19–21", nombre: "Campeonato Panamericano Coastal",             sede: "Pto. Progreso-Mérida", pais: "México",  organiza: "COPARE", tag: "int" },
+      { fecha: "20–21", nombre: "Oficial",                                     sede: "Laguna de los Padres", pais: "Bs. As.", organiza: "CRIT" },
+      { fecha: "26–28", nombre: "Concentración / Control",                     sede: "Tigre",               pais: "Bs. As.",  organiza: "AARA", obs: "Grupo senior ODESUR 2000m", tag: "aara" },
+      { fecha: "27",    nombre: "Travesía",                                    sede: "Rosario",             pais: "Santa Fe", organiza: "CARC", obs: "Doble par c/timonel" },
+    ],
+  },
+  {
+    nombre: "Julio", id: "julio",
+    eventos: [
+      { fecha: "5",     nombre: "Travesía",                          sede: "Tigre",      pais: "Bs. As.",   organiza: "CRHA", obs: "Un par c/timonel" },
+      { fecha: "10–12", nombre: "Sudamericano por Clubes Menores",   sede: "Asunción",   pais: "Paraguay",  organiza: "FPR",  obs: "3ra. Copa", tag: "int" },
+      { fecha: "18–19", nombre: "Oficial – Promocional",             sede: "Valle María", pais: "Entre Ríos", organiza: "CRICO" },
+      { fecha: "25",    nombre: "Travesía",                          sede: "Rosario",    pais: "Santa Fe",  organiza: "CRR",  obs: "Doble par c/timonel" },
+      { fecha: "25–26", nombre: "World Rowing Championship Sub 23",  sede: "Duisburg",   pais: "Alemania",  organiza: "FISA", tag: "int" },
+      { fecha: "25–27", nombre: "Boston Beach Sprint (HOCR)",        sede: "Boston",     pais: "EE.UU.",    tag: "int" },
+      { fecha: "26",    nombre: "Indoor",                            sede: "Zárate",     pais: "Bs. As.",   organiza: "CNZ" },
+      { fecha: "29–31", nombre: "Concentración / Control",           sede: "Tigre",      pais: "Bs. As.",   organiza: "AARA", obs: "Grupo senior ODESUR 2000m", tag: "aara" },
+    ],
+  },
+  {
+    nombre: "Agosto", id: "agosto",
+    eventos: [
+      { fecha: "8–9",   nombre: "World Rowing Championship Sub 19",     sede: "Plovdiv",       pais: "Bulgaria",      organiza: "FISA", tag: "int" },
+      { fecha: "9",     nombre: "Travesía",                             sede: "Tigre",         pais: "Bs. As.",       organiza: "CRLM" },
+      { fecha: "15",    nombre: "CAR Indoor – Evaluación Nacional",     sede: "San Fernando",  pais: "Bs. As.",       organiza: "AARA", tag: "aara" },
+      { fecha: "21–23", nombre: "Oficial / Promocional",                sede: "Valle María",   pais: "Entre Ríos",   organiza: "CRIL" },
+      { fecha: "22–30", nombre: "World Rowing Championship Senior",     sede: "Amsterdam",     pais: "Países Bajos",  organiza: "FISA", tag: "int" },
+      { fecha: "30",    nombre: "Travesía",                             sede: "Villa Carlos Paz", pais: "Córdoba",    organiza: "ACR",  obs: "Doble par c/timonel" },
+    ],
+  },
+  {
+    nombre: "Septiembre", id: "septiembre",
+    eventos: [
+      { fecha: "1–12",  nombre: "Concentración",                   sede: "Tigre",      pais: "Bs. As.",  organiza: "AARA", obs: "Concentración terminal grupo ODESUR", tag: "aara" },
+      { fecha: "6",     nombre: "Travesía",                        sede: "Tigre",      pais: "Bs. As.",  organiza: "CNH" },
+      { fecha: "12–18", nombre: "Juegos ODESUR",                   sede: "Santa Fe",   pais: "Santa Fe", organiza: "CSAR", tag: "int" },
+      { fecha: "13",    nombre: "Promocional",                     sede: "A definir",  pais: "Bs. As.",  organiza: "CRT" },
+      { fecha: "19–22", nombre: "Juegos ODESUR (Beach Sprint)",    sede: "Rosario",    pais: "Santa Fe", tag: "int" },
+      { fecha: "20",    nombre: "Travesía",                        sede: "Tigre",      pais: "Bs. As.",  organiza: "CRT" },
+      { fecha: "25–27", nombre: "Oficial – Promocional",           sede: "Tigre",      pais: "Bs. As.",  organiza: "CRIT" },
+      { fecha: "27",    nombre: "Travesía",                        sede: "San Nicolás", pais: "Bs. As.", organiza: "CRSN", obs: "Doble par c/timonel" },
+    ],
+  },
+  {
+    nombre: "Octubre", id: "octubre",
+    eventos: [
+      { fecha: "4",        nombre: "Travesía",                         sede: "Tigre",               pais: "Bs. As.",    organiza: "CCI" },
+      { fecha: "11",       nombre: "Regata Andino Patagónica",         sede: "Lago Parque San Martín", pais: "Mendoza", organiza: "CMR" },
+      { fecha: "17–18",    nombre: "Promocional",                      sede: "Tigre",               pais: "Bs. As.",    organiza: "TBC" },
+      { fecha: "23–25",    nombre: "Oficial / Promocional / Velocidad", sede: "Villa Constitución", pais: "Santa Fe",   organiza: "CRIL" },
+      { fecha: "23–26",    nombre: "World Rowing Beach Sprint Finals", sede: "Qingdao",             pais: "China",      organiza: "FISA", tag: "int" },
+      { fecha: "29–1/11",  nombre: "CARM",                            sede: "Valle María",          pais: "Entre Ríos", organiza: "AARA", tag: "aara" },
+      { fecha: "31–13/11", nombre: "YOG",                             sede: "Dakar",               pais: "Senegal",    tag: "int" },
+    ],
+  },
+  {
+    nombre: "Noviembre", id: "noviembre",
+    eventos: [
+      { fecha: "8",     nombre: "Travesía",              sede: "Tigre",   pais: "Bs. As.",  organiza: "CSF" },
+      { fecha: "8",     nombre: "Especial",              sede: "Santa Fe", pais: "Santa Fe", organiza: "CRSF" },
+      { fecha: "14",    nombre: "Coastal – Beach Sprint", sede: "Zárate", pais: "Bs. As.",  organiza: "CNZ" },
+      { fecha: "15",    nombre: "Promocional",           sede: "Zárate",  pais: "Bs. As.",  organiza: "CNZ" },
+      { fecha: "19–22", nombre: "CAR",                  sede: "Tigre",   pais: "Bs. As.",  organiza: "AARA", tag: "aara" },
+    ],
+  },
+  {
+    nombre: "Diciembre", id: "diciembre",
+    eventos: [
+      { fecha: "A def.", nombre: "Especial Cabecera de Río",          sede: "Tigre",      pais: "Bs. As.",  organiza: "TBC" },
+      { fecha: "6",      nombre: "Travesía",                          sede: "Rosario",    pais: "Santa Fe", organiza: "CRAl." },
+      { fecha: "13",     nombre: "Encuentro Nacional de Travesía",    sede: "Tigre",      pais: "Bs. As.",  organiza: "CIRT/AARA", tag: "aara" },
+      { fecha: "A def.", nombre: "Primer Mar del Plata Beach Sprint", sede: "Mar del Plata", pais: "Bs. As.", organiza: "AARA/CNMP", tag: "aara" },
+    ],
+  },
 ];
+
+const tagStyle = {
+  aara: { bg: "bg-[#EFC050]/20 text-[#7A5A00]", dot: "bg-[#EFC050]", label: "AARA" },
+  int:  { bg: "bg-emerald-100 text-emerald-800", dot: "bg-emerald-500", label: "Internacional" },
+  nota: { bg: "bg-blue-100 text-blue-800",       dot: "bg-blue-400",   label: "Especial" },
+};
+
+const totalEventos = meses.reduce((n, m) => n + m.eventos.length, 0);
+const B = import.meta.env.BASE_URL.replace(/\/$/, '');
+const url = (path: string) => B + path;
 ---
 
 <Layout title="Calendario 2026 — AARA">
   <div class="bg-[#0B2545] text-white py-12">
     <div class="max-w-7xl mx-auto px-4">
       <nav class="text-sm text-gray-400 mb-3">
-        <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/biblioteca`} class="hover:text-[#EFC050] transition-colors">Biblioteca</a>
+        <a href={url('/biblioteca')} class="hover:text-[#EFC050] transition-colors">Biblioteca</a>
         <span class="mx-2">/</span>
         <span class="text-white">Calendario 2026</span>
       </nav>
       <h1 class="text-3xl md:text-4xl font-bold">Calendario de regatas 2026</h1>
-      <p class="text-gray-300 mt-2">Actualizado al 19/12/2025</p>
+      <p class="text-gray-300 mt-2">Actualizado al 19/12/2025 · {totalEventos} eventos</p>
     </div>
   </div>
 
-  <div class="max-w-4xl mx-auto px-4 py-12">
-    <div class="flex items-center justify-between mb-6">
+  <div class="max-w-5xl mx-auto px-4 py-10">
+
+    <!-- Top bar -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6">
       <p class="text-sm text-gray-500">Todas las fechas son provisorias y sujetas a confirmación.</p>
-      <a href="#" class="flex items-center gap-2 text-sm bg-[#0B2545] hover:bg-[#134074] text-white font-medium px-4 py-2 rounded-lg transition-colors">
+      <a href="#" class="shrink-0 flex items-center gap-2 text-sm bg-[#0B2545] hover:bg-[#134074] text-white font-medium px-4 py-2 rounded-lg transition-colors">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
         </svg>
@@ -39,24 +201,92 @@ const regatas = [
       </a>
     </div>
 
-    <div class="space-y-3">
-      {regatas.map(r => (
-        <div class="bg-white rounded-xl shadow p-5 flex items-center gap-5">
-          <div class="w-20 shrink-0 text-center bg-[#0B2545] text-white rounded-lg py-2.5">
-            <div class="text-xs text-[#EFC050] font-medium">{r.mes}</div>
-            <div class="text-sm font-bold mt-0.5">{r.fecha.split("–")[0]} – {r.fecha.split("–")[1]}</div>
-          </div>
-          <div class="flex-1">
-            <div class="font-semibold text-[#0B2545]">{r.nombre}</div>
-            <div class="text-xs text-gray-400 mt-0.5 flex items-center gap-1">
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-              </svg>
-              {r.sede}
-            </div>
-          </div>
-        </div>
+    <!-- Legend -->
+    <div class="flex flex-wrap items-center gap-3 mb-6 text-xs">
+      <span class="text-gray-400 font-medium">Referencias:</span>
+      {Object.values(tagStyle).map(t => (
+        <span class={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-medium ${t.bg}`}>
+          <span class={`w-1.5 h-1.5 rounded-full ${t.dot}`}></span>
+          {t.label}
+        </span>
+      ))}
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-medium bg-gray-100 text-gray-600">
+        <span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+        Club / Local
+      </span>
+    </div>
+
+    <!-- Quick nav -->
+    <div class="flex flex-wrap gap-1.5 mb-8">
+      {meses.map(m => (
+        <a href={`#${m.id}`}
+          class="px-3 py-1 bg-white rounded-lg shadow-sm text-xs font-semibold text-[#0B2545] hover:bg-[#EFC050] transition-colors border border-gray-100">
+          {m.nombre}
+        </a>
       ))}
     </div>
+
+    <!-- Month sections -->
+    <div class="space-y-8">
+      {meses.map(mes => (
+        <section id={mes.id} class="scroll-mt-24">
+          <div class="flex items-center gap-3 mb-3">
+            <h2 class="text-base font-bold text-[#0B2545] uppercase tracking-wider">{mes.nombre}</h2>
+            <div class="flex-1 h-px bg-gray-200"></div>
+            <span class="text-xs text-gray-400">{mes.eventos.length} eventos</span>
+          </div>
+
+          <div class="bg-white rounded-xl shadow overflow-hidden divide-y divide-gray-50">
+            {mes.eventos.map(e => {
+              const ts = e.tag ? tagStyle[e.tag] : null;
+              return (
+                <div class={`flex items-start gap-3 px-4 py-3 ${e.tag === 'nota' ? 'bg-blue-50/50' : ''}`}>
+                  <!-- Date -->
+                  <div class={`w-20 shrink-0 text-center rounded-lg py-1.5 text-[#0B2545] ${e.tag === 'aara' ? 'bg-[#EFC050]/20' : e.tag === 'int' ? 'bg-emerald-50' : e.tag === 'nota' ? 'bg-blue-100' : 'bg-gray-100'}`}>
+                    <div class="text-[11px] font-bold">{e.fecha}</div>
+                  </div>
+
+                  <!-- Content -->
+                  <div class="flex-1 min-w-0">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <span class={`font-semibold text-sm leading-tight ${e.tag === 'nota' ? 'text-blue-700' : 'text-[#0B2545]'}`}>
+                        {e.nombre}
+                      </span>
+                      {ts && (
+                        <span class={`inline-flex items-center gap-1 text-[10px] font-bold px-1.5 py-0.5 rounded-full ${ts.bg}`}>
+                          {ts.label}
+                        </span>
+                      )}
+                    </div>
+
+                    {e.tag !== 'nota' && (
+                      <div class="text-xs text-gray-500 mt-0.5 flex flex-wrap items-center gap-x-2">
+                        <span class="flex items-center gap-1">
+                          <svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                          </svg>
+                          {e.sede}, {e.pais}
+                        </span>
+                        {e.organiza && <span class="text-gray-400">· {e.organiza}</span>}
+                      </div>
+                    )}
+
+                    {e.obs && (
+                      <div class={`text-xs mt-0.5 ${e.tag === 'nota' ? 'text-blue-600 font-medium' : 'text-gray-400 italic'}`}>
+                        {e.obs}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+    </div>
+
+    <p class="text-xs text-gray-400 mt-8 text-center">
+      Calendario de Regatas 2026 · Comisión Técnica AARA · Sujeto a modificaciones
+    </p>
   </div>
 </Layout>

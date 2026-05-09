@@ -1,59 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const clubes = [
-  { nombre: "Asociación Civil Tupá Remo y Triatlón", provincia: "Santa Fe", ciudad: "Santa Fe de la Vera Cruz" },
-  { nombre: "Asociación Cordobesa de Remo", provincia: "Córdoba", ciudad: "Villa Carlos Paz" },
-  { nombre: "Bigornia Club", provincia: "Chubut", ciudad: "Rawson" },
-  { nombre: "Buenos Aires Rowing Club", provincia: "Buenos Aires", ciudad: "Tigre" },
-  { nombre: "Campana Boat Club", provincia: "Buenos Aires", ciudad: "Campana" },
-  { nombre: "Club Atlético Rosario Central", provincia: "Santa Fe", ciudad: "Rosario" },
-  { nombre: "Club Canotieri Italiani", provincia: "Buenos Aires", ciudad: "Tigre" },
-  { nombre: "Club de Actividades Acuáticas Atlantis", provincia: "Buenos Aires", ciudad: "Mar del Plata" },
-  { nombre: "Club de Regatas Almirante Brown", provincia: "Buenos Aires", ciudad: "CABA" },
-  { nombre: "Club de Regatas América", provincia: "Buenos Aires", ciudad: "Tigre" },
-  { nombre: "Club de Regatas Bariloche", provincia: "Río Negro", ciudad: "San Carlos de Bariloche" },
-  { nombre: "Club de Regatas Concordia", provincia: "Entre Ríos", ciudad: "Concordia" },
-  { nombre: "Club de Regatas Corrientes", provincia: "Corrientes", ciudad: "Corrientes" },
-  { nombre: "Club de Regatas Hispano Argentino", provincia: "Buenos Aires", ciudad: "Tigre" },
-  { nombre: "Club de Regatas La Marina", provincia: "Buenos Aires", ciudad: "Tigre" },
-  { nombre: "Club de Regatas La Plata", provincia: "Buenos Aires", ciudad: "La Plata" },
-  { nombre: "Club de Regatas L'Aviron", provincia: "Buenos Aires", ciudad: "Tigre" },
-  { nombre: "Club de Regatas Rosario", provincia: "Santa Fe", ciudad: "Rosario" },
-  { nombre: "Club de Regatas San Nicolás", provincia: "Buenos Aires", ciudad: "San Nicolás" },
-  { nombre: "Club de Regatas Santa Fé", provincia: "Santa Fe", ciudad: "Santa Fe de la Vera Cruz" },
-  { nombre: "Club de Remo Teutonia", provincia: "Buenos Aires", ciudad: "Dique Luján" },
-  { nombre: "Club Mendoza de Regatas", provincia: "Mendoza", ciudad: "Mendoza" },
-  { nombre: "Club Náutico El Timón", provincia: "Buenos Aires", ciudad: "Luján" },
-  { nombre: "Club Náutico Hacoaj", provincia: "Buenos Aires", ciudad: "Tigre" },
-  { nombre: "Club Náutico Malvinas Argentinas", provincia: "Santa Fe", ciudad: "Rosario" },
-  { nombre: "Club Náutico Mar Del Plata", provincia: "Buenos Aires", ciudad: "Mar del Plata" },
-  { nombre: "Club Náutico Paraná", provincia: "Entre Ríos", ciudad: "Paraná" },
-  { nombre: "Club Náutico Pergamino", provincia: "Buenos Aires", ciudad: "Pergamino" },
-  { nombre: "Club Náutico Posadas", provincia: "Misiones", ciudad: "Posadas" },
-  { nombre: "Club Náutico Resistencia", provincia: "Chaco", ciudad: "Resistencia" },
-  { nombre: "Club Náutico Villa Constitución", provincia: "Santa Fe", ciudad: "Villa Constitución" },
-  { nombre: "Club Náutico y de Pesca El Yacaré", provincia: "Corrientes", ciudad: "Corrientes" },
-  { nombre: "Club Náutico Zárate", provincia: "Buenos Aires", ciudad: "Zárate" },
-  { nombre: "Club Nordelta", provincia: "Buenos Aires", ciudad: "Nordelta" },
-  { nombre: "Club Peña Náutica Bajada España", provincia: "Santa Fe", ciudad: "Rosario" },
-  { nombre: "Club Remeros Alberdi", provincia: "Santa Fe", ciudad: "Rosario" },
-  { nombre: "Club Remeros Escandinavos", provincia: "Buenos Aires", ciudad: "Tigre" },
-  { nombre: "Club San Fernando", provincia: "Buenos Aires", ciudad: "San Fernando" },
-  { nombre: "Club Suizo Buenos Aires", provincia: "Buenos Aires", ciudad: "Tigre" },
-  { nombre: "Escuela Municipal de Remo Tigre", provincia: "Buenos Aires", ciudad: "Tigre" },
-  { nombre: "Escuela Naval Militar", provincia: "Buenos Aires", ciudad: "Ensenada" },
-  { nombre: "Escuelas Técnicas Raggio", provincia: "Buenos Aires", ciudad: "CABA" },
-  { nombre: "Nahuel Rowing Club", provincia: "Buenos Aires", ciudad: "Tigre" },
-  { nombre: "Náutico Escobar Country Club", provincia: "Buenos Aires", ciudad: "Escobar" },
-  { nombre: "Paraná Rowing Club", provincia: "Entre Ríos", ciudad: "Paraná" },
-  { nombre: "Prefectura Naval Argentina", provincia: "Buenos Aires", ciudad: "Tigre" },
-  { nombre: "Rosario Rowing Club", provincia: "Santa Fe", ciudad: "Rosario" },
-  { nombre: "Rowing Club Argentino", provincia: "Buenos Aires", ciudad: "Tigre" },
-  { nombre: "Tigre Boat Club", provincia: "Buenos Aires", ciudad: "Tigre" },
-];
+import { clubes, toSlug } from '../data/clubes';
 
 const provincias = [...new Set(clubes.map(c => c.provincia))].sort();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title="Clubes — AARA">
@@ -81,34 +31,108 @@ const provincias = [...new Set(clubes.map(c => c.provincia))].sort();
       ))}
     </div>
 
-    <!-- Filter hint -->
-    <div class="flex items-center gap-3 mb-6">
-      <h2 class="text-xl font-bold text-[#0B2545]">Listado de clubes</h2>
+    <!-- Search + Filter -->
+    <div class="flex flex-col sm:flex-row gap-3 mb-4">
+      <div class="relative flex-1">
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+        <input
+          id="search"
+          type="text"
+          placeholder="Buscar club..."
+          class="w-full pl-9 pr-4 py-2.5 border border-gray-200 rounded-lg text-sm bg-white focus:outline-none focus:border-[#0B2545] focus:ring-1 focus:ring-[#0B2545]/20"
+        />
+      </div>
+      <select
+        id="filtro-provincia"
+        class="border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-[#0B2545] focus:ring-1 focus:ring-[#0B2545]/20 min-w-[180px]"
+      >
+        <option value="">Todas las provincias</option>
+        {provincias.map(p => <option value={p}>{p}</option>)}
+      </select>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-xl font-bold text-[#0B2545]">Listado de clubes</h2>
+      <p class="text-sm text-gray-400">
+        <span id="count">{clubes.length}</span> de {clubes.length} clubes
+      </p>
+    </div>
+
+    <!-- Empty state -->
+    <p id="empty" class="hidden text-center text-gray-400 py-16 text-sm">
+      No se encontraron clubes con ese criterio.
+    </p>
+
+    <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {clubes.map(club => (
-        <div class="bg-white rounded-xl shadow hover:shadow-md transition-shadow p-5 flex items-start gap-4">
-          <div class="w-10 h-10 bg-[#0B2545]/10 rounded-full flex items-center justify-center shrink-0">
-            <svg class="w-5 h-5 text-[#0B2545]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <a
+          href={`${base}/clubes/${toSlug(club.nombre)}`}
+          data-nombre={club.nombre.toLowerCase()}
+          data-provincia={club.provincia}
+          data-card
+          class="group bg-white rounded-xl shadow hover:shadow-md transition-all p-5 flex items-start gap-4"
+        >
+          <div class="w-10 h-10 rounded-full shrink-0 flex items-center justify-center border-2"
+            style={`background-color: ${club.colores.primario}22; border-color: ${club.colores.primario}55`}>
+            <svg class="w-5 h-5" style={`color: ${club.colores.primario}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
             </svg>
           </div>
-          <div>
-            <div class="font-semibold text-[#0B2545] leading-snug">{club.nombre}</div>
+          <div class="flex-1 min-w-0">
+            <div class="font-semibold text-[#0B2545] leading-snug group-hover:text-[#13A8D4] transition-colors">
+              {club.nombre}
+            </div>
             <div class="text-xs text-gray-500 mt-1 flex items-center gap-1">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
               </svg>
               {club.ciudad}, {club.provincia}
             </div>
+            <div class="flex items-center gap-1.5 mt-2">
+              <span class="w-3.5 h-3.5 rounded-full border border-white/50 shadow-sm" style={`background: ${club.colores.primario}`}></span>
+              <span class="w-3.5 h-3.5 rounded-full border border-gray-200 shadow-sm" style={`background: ${club.colores.secundario}`}></span>
+            </div>
           </div>
-        </div>
+          <svg class="w-4 h-4 text-gray-300 group-hover:text-[#13A8D4] transition-colors shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
       ))}
     </div>
 
     <p class="text-sm text-gray-400 mt-8 text-center">
-      ¿Tu club no figura? <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/contacto`} class="text-[#13A8D4] hover:underline">Contactanos</a> para gestionar la afiliación.
+      ¿Tu club no figura? <a href={`${base}/contacto`} class="text-[#13A8D4] hover:underline">Contactanos</a> para gestionar la afiliación.
     </p>
   </div>
 </Layout>
+
+<script>
+  const search = document.getElementById('search') as HTMLInputElement;
+  const select = document.getElementById('filtro-provincia') as HTMLSelectElement;
+  const countEl = document.getElementById('count')!;
+  const emptyEl = document.getElementById('empty')!;
+  const cards = document.querySelectorAll<HTMLElement>('[data-card]');
+  const total = cards.length;
+
+  function filter() {
+    const q = search.value.toLowerCase().trim();
+    const prov = select.value;
+    let visible = 0;
+
+    cards.forEach(card => {
+      const matchNombre = !q || card.dataset.nombre!.includes(q);
+      const matchProv = !prov || card.dataset.provincia === prov;
+      const show = matchNombre && matchProv;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    countEl.textContent = String(visible);
+    emptyEl.classList.toggle('hidden', visible > 0);
+  }
+
+  search.addEventListener('input', filter);
+  select.addEventListener('change', filter);
+</script>

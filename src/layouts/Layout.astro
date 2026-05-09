@@ -34,5 +34,33 @@ const {
       <slot />
     </main>
     <Footer />
+
+    <!-- Back to top button -->
+    <button
+      id="back-to-top"
+      aria-label="Volver arriba"
+      class="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-[#0B2545] text-[#EFC050] shadow-lg
+             flex items-center justify-center
+             opacity-0 pointer-events-none cursor-pointer
+             transition-all duration-300 hover:bg-[#134074] hover:scale-110"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/>
+      </svg>
+    </button>
+
+    <script>
+      const btn = document.getElementById('back-to-top')!;
+
+      window.addEventListener('scroll', () => {
+        const show = window.scrollY > 320;
+        btn.classList.toggle('opacity-0', !show);
+        btn.classList.toggle('pointer-events-none', !show);
+      }, { passive: true });
+
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
   </body>
 </html>
