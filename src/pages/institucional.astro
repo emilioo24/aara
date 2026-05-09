@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+const B = import.meta.env.BASE_URL;
+const url = (path: string) => B + path.slice(1);
+---
+
+<Layout title="Institucional — AARA">
+  <!-- Page header -->
+  <div class="bg-[#0B2545] text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-[#EFC050] text-sm font-medium mb-2">AARA</div>
+      <h1 class="text-3xl md:text-4xl font-bold">Institucional</h1>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <!-- Main content -->
+      <div class="lg:col-span-2 space-y-8">
+        <section class="bg-white rounded-xl shadow p-8">
+          <h2 class="text-xl font-bold text-[#0B2545] mb-4">¿Qué es la AARA?</h2>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            La Asociación Argentina de Remeros Aficionados (AARA) es el organismo rector del remo en la República Argentina. Fue fundada con el objetivo de promover, organizar y regular la práctica del remo en todas sus disciplinas a lo largo y ancho del país.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Nuclea a clubes, atletas, árbitros y técnicos de todo el territorio nacional, y representa al remo argentino ante organismos internacionales como FISA (World Rowing) y la Confederación Panamericana de Remo.
+          </p>
+        </section>
+
+        <section class="bg-white rounded-xl shadow p-8">
+          <h2 class="text-xl font-bold text-[#0B2545] mb-4">Misión y valores</h2>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-4">
+                <div class="w-9 h-9 rounded-lg bg-[#EFC050]/15 flex items-center justify-center text-[#0B2545] shrink-0 mt-0.5">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                </div>
+                <div><div class="font-semibold text-[#0B2545]">Promover el deporte</div><p class="text-sm text-gray-600 mt-0.5">Fomentar la práctica del remo en todas las categorías etarias y disciplinas.</p></div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-9 h-9 rounded-lg bg-[#EFC050]/15 flex items-center justify-center text-[#0B2545] shrink-0 mt-0.5">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                </div>
+                <div><div class="font-semibold text-[#0B2545]">Integración nacional</div><p class="text-sm text-gray-600 mt-0.5">Articular la actividad remera entre las distintas provincias y regiones del país.</p></div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-9 h-9 rounded-lg bg-[#EFC050]/15 flex items-center justify-center text-[#0B2545] shrink-0 mt-0.5">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                </div>
+                <div><div class="font-semibold text-[#0B2545]">Formación</div><p class="text-sm text-gray-600 mt-0.5">Capacitar árbitros, técnicos y dirigentes para el desarrollo institucional.</p></div>
+              </li>
+              <li class="flex items-start gap-4">
+                <div class="w-9 h-9 rounded-lg bg-[#EFC050]/15 flex items-center justify-center text-[#0B2545] shrink-0 mt-0.5">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div><div class="font-semibold text-[#0B2545]">Representación internacional</div><p class="text-sm text-gray-600 mt-0.5">Representar a la Argentina en los organismos internacionales del remo.</p></div>
+              </li>
+          </ul>
+        </section>
+
+        <section class="bg-white rounded-xl shadow p-8">
+          <h2 class="text-xl font-bold text-[#0B2545] mb-4">Autoridades</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { cargo: "Presidente", nombre: "—" },
+              { cargo: "Vicepresidente", nombre: "—" },
+              { cargo: "Secretario", nombre: "—" },
+              { cargo: "Tesorero", nombre: "—" },
+            ].map(a => (
+              <div class="border border-gray-100 rounded-lg p-4 bg-gray-50">
+                <div class="text-xs font-semibold text-[#13A8D4] uppercase tracking-wider mb-1">{a.cargo}</div>
+                <div class="font-medium text-[#0B2545]">{a.nombre}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-4">
+        <div class="bg-white rounded-xl shadow p-6">
+          <h3 class="font-bold text-[#0B2545] mb-4">Documentos institucionales</h3>
+          <ul class="space-y-3">
+            {[
+              { label: "Estatuto", href: "/biblioteca/estatuto" },
+              { label: "Reglamento general", href: "/biblioteca/reglamentos" },
+              { label: "Reglamento de competencias", href: "/biblioteca/reglamentos" },
+              { label: "Reglamento de árbitros", href: "/biblioteca/reglamentos" },
+            ].map(d => (
+              <li>
+                <a href={d.href} class="flex items-center gap-2 text-sm text-[#134074] hover:text-[#0B2545] transition-colors font-medium">
+                  <svg class="w-4 h-4 text-[#EFC050] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                  {d.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="bg-[#0B2545] text-white rounded-xl p-6">
+          <h3 class="font-bold mb-3">¿Tenés consultas?</h3>
+          <p class="text-sm text-gray-300 mb-4">Comunicate con la secretaría de AARA.</p>
+          <a href={url('/contacto')} class="block text-center bg-[#EFC050] hover:bg-[#d4a017] text-[#0B2545] font-semibold py-2.5 rounded-lg transition-colors text-sm">
+            Contactar
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

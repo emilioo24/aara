@@ -1,0 +1,116 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const noticias = [
+  {
+    id: 1,
+    fecha: "15 Abr 2025",
+    categoria: "Administrativo",
+    titulo: "Nuevos aranceles a partir de Enero del 2026",
+    resumen: "Se actualizó el cuadro de aranceles para clubes, atletas y árbitros vigente a partir del 1° de enero de 2026. Descargá el documento oficial con todos los valores.",
+    href: "/noticias/aranceles-2026",
+  },
+  {
+    id: 2,
+    fecha: "19 Dic 2024",
+    categoria: "Calendario",
+    titulo: "Ya está disponible el calendario de regatas 2026",
+    resumen: "El calendario oficial de regatas para la temporada 2026 ya está publicado. Consultá todas las fechas, sedes y modalidades de cada competencia.",
+    href: "/biblioteca/calendario",
+  },
+  {
+    id: 3,
+    fecha: "10 Dic 2024",
+    categoria: "Institucional",
+    titulo: "El remo costero, a un paso del olimpismo",
+    resumen: "La disciplina de remo costero avanza en su proceso de reconocimiento olímpico para los Juegos de Los Ángeles 2028. La AARA apoya activamente esta iniciativa.",
+    href: "/noticias/remo-costero-olimpico",
+  },
+  {
+    id: 4,
+    fecha: "28 Nov 2024",
+    categoria: "Competencia",
+    titulo: "Resultados del CAR 2024 — Campeones nacionales",
+    resumen: "Se disputó el Campeonato Argentino de Remo 2024 en Tigre. Conocé todos los resultados y los campeones nacionales en cada categoría.",
+    href: "/resultados",
+  },
+  {
+    id: 5,
+    fecha: "15 Oct 2024",
+    categoria: "Formación",
+    titulo: "Curso de capacitación para árbitros — Inscripciones abiertas",
+    resumen: "AARA abre inscripciones para el curso de formación y actualización de árbitros. El curso se dictará de forma presencial y virtual.",
+    href: "/noticias/curso-arbitros-2024",
+  },
+  {
+    id: 6,
+    fecha: "03 Sep 2024",
+    categoria: "Internacional",
+    titulo: "Delegación argentina en el Campeonato Mundial de Remo",
+    resumen: "La delegación argentina participó del Mundial de Remo con destacadas actuaciones en las categorías juvenil y senior.",
+    href: "/noticias/mundial-2024",
+  },
+];
+
+const categorias = ["Todos", ...new Set(noticias.map(n => n.categoria))];
+
+const colorMap: Record<string, string> = {
+  Administrativo: "bg-blue-100 text-blue-700",
+  Calendario: "bg-amber-100 text-amber-700",
+  Institucional: "bg-purple-100 text-purple-700",
+  Competencia: "bg-green-100 text-green-700",
+  Formación: "bg-orange-100 text-orange-700",
+  Internacional: "bg-red-100 text-red-700",
+};
+---
+
+<Layout title="Noticias — AARA">
+  <div class="bg-[#0B2545] text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-[#EFC050] text-sm font-medium mb-2">AARA</div>
+      <h1 class="text-3xl md:text-4xl font-bold">Noticias</h1>
+      <p class="text-gray-300 mt-2">Novedades e información oficial de la Asociación</p>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <!-- Category filter -->
+    <div class="flex flex-wrap gap-2 mb-8">
+      {categorias.map((cat, i) => (
+        <button
+          class={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors border ${
+            i === 0
+              ? "bg-[#0B2545] text-white border-[#0B2545]"
+              : "bg-white text-gray-600 border-gray-200 hover:border-[#0B2545] hover:text-[#0B2545]"
+          }`}
+        >
+          {cat}
+        </button>
+      ))}
+    </div>
+
+    <!-- News grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {noticias.map(n => (
+        <article class="bg-white rounded-xl shadow hover:shadow-md transition-shadow overflow-hidden group flex flex-col">
+          <div class="h-1.5 bg-gradient-to-r from-[#0B2545] to-[#13A8D4]"></div>
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center gap-2 mb-3">
+              <span class={`text-xs font-semibold px-2 py-1 rounded-full ${colorMap[n.categoria] ?? "bg-gray-100 text-gray-600"}`}>
+                {n.categoria}
+              </span>
+              <span class="text-xs text-gray-400">{n.fecha}</span>
+            </div>
+            <h2 class="font-bold text-[#0B2545] mb-2 group-hover:text-[#134074] transition-colors leading-snug flex-1">
+              <a href={n.href}>{n.titulo}</a>
+            </h2>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">{n.resumen}</p>
+            <a href={n.href} class="inline-flex items-center gap-1 text-sm text-[#13A8D4] font-medium hover:text-[#0B2545] transition-colors mt-auto">
+              Leer más <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</Layout>

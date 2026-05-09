@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0B2545;
+  --color-navy-700: #134074;
+  --color-navy-600: #1a5276;
+  --color-sky: #13A8D4;
+  --color-gold: #EFC050;
+  --color-gold-dark: #d4a017;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}

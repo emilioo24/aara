@@ -1,0 +1,148 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { atletas, toSlug } from '../../data/atletas';
+
+export function getStaticPaths() {
+  return atletas.map(atleta => ({
+    params: { slug: toSlug(atleta.nombre) },
+    props: { atleta },
+  }));
+}
+
+const { atleta } = Astro.props;
+
+const categoriaBadge: Record<string, string> = {
+  "Senior":   "bg-blue-100 text-blue-800",
+  "Sub-23":   "bg-purple-100 text-purple-800",
+  "Juvenil":  "bg-green-100 text-green-800",
+  "Cadete":   "bg-orange-100 text-orange-800",
+  "Infantil": "bg-red-100 text-red-800",
+};
+
+const initials = atleta.nombre.split(' ').filter(Boolean).slice(0, 2).map((n: string) => n[0].toUpperCase()).join('');
+---
+
+<Layout title={`${atleta.nombre} — AARA`}>
+  <!-- Hero -->
+  <div class="bg-gradient-to-r from-[#0B2545] to-[#134074] text-white py-12">
+    <div class="max-w-4xl mx-auto px-4">
+      <a href={`${import.meta.env.BASE_URL}atletas`} class="inline-flex items-center gap-1.5 text-sm text-gray-300 hover:text-white mb-6 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        Volver al padrón
+      </a>
+
+      <div class="flex items-center gap-6">
+        <div class="w-20 h-20 rounded-full bg-[#EFC050]/20 border-2 border-[#EFC050]/40 flex items-center justify-center shrink-0 text-2xl font-bold text-[#EFC050]">
+          {initials}
+        </div>
+        <div>
+          <h1 class="text-2xl md:text-3xl font-bold">{atleta.nombre}</h1>
+          <div class="flex flex-wrap items-center gap-2 mt-2">
+            <span class={`text-xs font-semibold px-2 py-1 rounded-full ${categoriaBadge[atleta.categoria] ?? 'bg-gray-100 text-gray-700'}`}>
+              {atleta.categoria}
+            </span>
+            <span class="text-gray-300 text-sm">{atleta.genero}</span>
+          </div>
+          <div class="flex items-center gap-1.5 mt-2 text-gray-300 text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            </svg>
+            {atleta.club} — {atleta.provincia}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 py-10 flex flex-col gap-6">
+
+    <!-- Physical stats -->
+    {(atleta.edad || atleta.altura || atleta.peso) && (
+      <div class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Datos físicos</h2>
+        <div class="grid grid-cols-3 gap-4">
+          {atleta.edad && (
+            <div class="bg-gray-50 rounded-xl p-4 text-center">
+              <div class="text-2xl font-bold text-[#0B2545]">{atleta.edad}</div>
+              <div class="text-xs text-gray-400 mt-1">años</div>
+            </div>
+          )}
+          {atleta.altura && (
+            <div class="bg-gray-50 rounded-xl p-4 text-center">
+              <div class="text-2xl font-bold text-[#0B2545]">{atleta.altura}</div>
+              <div class="text-xs text-gray-400 mt-1">cm</div>
+            </div>
+          )}
+          {atleta.peso && (
+            <div class="bg-gray-50 rounded-xl p-4 text-center">
+              <div class="text-2xl font-bold text-[#0B2545]">{atleta.peso}</div>
+              <div class="text-xs text-gray-400 mt-1">kg</div>
+            </div>
+          )}
+        </div>
+      </div>
+    )}
+
+    <!-- Performance -->
+    {(atleta.mejorErgo2k !== undefined || atleta.regatasCorridas !== undefined || atleta.internacionales !== undefined) && (
+      <div class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Rendimiento</h2>
+        <div class="space-y-3">
+          {atleta.mejorErgo2k && (
+            <div class="flex items-center justify-between bg-[#0B2545]/5 rounded-xl px-4 py-3">
+              <span class="text-sm text-gray-500 flex items-center gap-2">
+                <svg class="w-4 h-4 text-[#EFC050]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+                Mejor ergo 2000m
+              </span>
+              <span class="font-mono font-bold text-[#0B2545] text-lg">{atleta.mejorErgo2k}</span>
+            </div>
+          )}
+          {atleta.regatasCorridas !== undefined && (
+            <div class="flex items-center justify-between bg-[#0B2545]/5 rounded-xl px-4 py-3">
+              <span class="text-sm text-gray-500 flex items-center gap-2">
+                <svg class="w-4 h-4 text-[#EFC050]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/>
+                </svg>
+                Regatas corridas
+              </span>
+              <span class="font-bold text-[#0B2545] text-lg">{atleta.regatasCorridas}</span>
+            </div>
+          )}
+          {atleta.internacionales !== undefined && (
+            <div class="flex items-center justify-between bg-[#0B2545]/5 rounded-xl px-4 py-3">
+              <span class="text-sm text-gray-500 flex items-center gap-2">
+                <svg class="w-4 h-4 text-[#EFC050]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+                </svg>
+                Participaciones internacionales
+              </span>
+              <span class="font-bold text-[#0B2545] text-lg">{atleta.internacionales}</span>
+            </div>
+          )}
+        </div>
+      </div>
+    )}
+
+    <!-- Achievements -->
+    {atleta.logros && atleta.logros.length > 0 && (
+      <div class="bg-white rounded-2xl shadow p-6">
+        <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Logros</h2>
+        <ul class="space-y-2">
+          {atleta.logros.map((logro: string) => (
+            <li class="flex items-start gap-3 text-sm text-gray-700">
+              <svg class="w-4 h-4 text-[#EFC050] shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+              {logro}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+  </div>
+</Layout>

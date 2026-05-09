@@ -1,0 +1,726 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const regatas = [
+  { id: "r1", nombre: "Copa AARA 2026 — Etapa 1",           fecha: "15–16 Feb 2026", sede: "Rosario, Santa Fe",    cierre: "2026-02-08" },
+  { id: "r2", nombre: "Campeonato Argentino Juvenil 2026",   fecha: "08–09 Mar 2026", sede: "Corrientes",           cierre: "2026-03-01" },
+  { id: "r3", nombre: "Copa AARA 2026 — Etapa 2",           fecha: "05–06 Abr 2026", sede: "Mendoza",              cierre: "2026-03-29" },
+];
+
+const categorias = [
+  "Sub 12 Masculino","Sub 12 Femenino",
+  "Sub 14 Masculino","Sub 14 Femenino",
+  "Sub 16 Masculino","Sub 16 Femenino",
+  "Juvenil Masculino","Juvenil Femenino",
+  "Sub 23 Masculino","Sub 23 Femenino",
+  "Senior Masculino","Senior Femenino",
+  "Master A Masculino","Master A Femenino",
+  "Master B Masculino","Master B Femenino",
+  "Master C Masculino","Master C Femenino",
+  "Master D Masculino","Master D Femenino",
+];
+
+const embarcaciones = ["1x","2x","2-","4x","4-","4+","8+"];
+const pruebas       = ["500m – Velocidad","1000m","2000m","Coastal 250m","Travesía 10km","Indoor 500m","Indoor 1000m"];
+---
+
+<Layout title="Inscripciones GIADe — AARA">
+  <!-- Auth guard (runs before paint) -->
+  <script is:inline>
+    (function(){
+      var raw = localStorage.getItem('aara_session');
+      if(!raw){ window.location.replace('/inscripciones/login'); return; }
+      try{ window.__session = JSON.parse(raw); }
+      catch(e){ window.location.replace('/inscripciones/login'); }
+    })();
+  </script>
+
+  <div class="min-h-[calc(100vh-4rem)] bg-gray-100 flex flex-col">
+
+    <!-- Top bar -->
+    <div class="bg-[#0B2545] text-white shrink-0">
+      <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 bg-[#EFC050] rounded-full flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 32 32" fill="none" class="w-4 h-4">
+              <path d="M4 20c4-4 8-6 12-4s8 0 12-4" stroke="#0B2545" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="font-semibold text-sm hidden sm:block">Sistema GIADe</span>
+          <span class="text-gray-500 text-xs hidden sm:block">·</span>
+          <span id="club-topbar" class="text-gray-300 text-xs"></span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span id="user-topbar" class="text-sm text-gray-300 hidden md:block"></span>
+          <button id="logout-btn" class="text-xs text-[#EFC050] hover:text-white transition-colors font-medium">Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-nav tabs -->
+    <div class="bg-white border-b border-gray-200 shrink-0">
+      <div class="max-w-7xl mx-auto px-4">
+        <nav class="flex gap-1">
+          {[
+            { id:"tab-atletas",       label:"Mis Atletas",       svgPath:"M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" },
+            { id:"tab-nueva",         label:"Nueva Inscripción",  svgPath:"M12 4v16m8-8H4" },
+            { id:"tab-inscripciones", label:"Mis Inscripciones",  svgPath:"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" },
+          ].map((t,i) => (
+            <button
+              id={t.id}
+              data-tab={t.id.replace('tab-','')}
+              class={`tab-btn flex items-center gap-2 px-5 py-3.5 text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${i===0 ? 'border-[#0B2545] text-[#0B2545]' : 'border-transparent text-gray-500 hover:text-[#0B2545]'}`}
+            >
+              <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={t.svgPath}/></svg>
+              {t.label}
+            </button>
+          ))}
+        </nav>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 py-8 w-full flex-1">
+
+      <!-- ══════════════════════════════════════════════════════
+           TAB 1 — MIS ATLETAS
+      ══════════════════════════════════════════════════════ -->
+      <div id="panel-atletas" class="panel">
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <div>
+            <h1 class="text-xl font-bold text-[#0B2545]">Mis Atletas</h1>
+            <p class="text-sm text-gray-500 mt-0.5">Verificá el estado administrativo antes de inscribir</p>
+          </div>
+          <button id="open-add-atleta" class="flex items-center gap-2 bg-[#0B2545] hover:bg-[#134074] text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+            Agregar atleta
+          </button>
+        </div>
+
+        <!-- Legend -->
+        <div class="flex flex-wrap gap-4 mb-4 text-xs text-gray-500">
+          <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-green-500 inline-block"></span>Vigente</span>
+          <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-red-500 inline-block"></span>Vencido / No registrado</span>
+          <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-amber-400 inline-block"></span>Por vencer (≤ 30 días)</span>
+        </div>
+
+        <div class="bg-white rounded-xl shadow overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-[#0B2545] text-white text-left text-xs">
+                  <th class="px-4 py-3 font-semibold">Atleta</th>
+                  <th class="px-4 py-3 font-semibold hidden sm:table-cell">DNI</th>
+                  <th class="px-4 py-3 font-semibold hidden md:table-cell">Categoría</th>
+                  <th class="px-4 py-3 font-semibold text-center">Reg. Anual</th>
+                  <th class="px-4 py-3 font-semibold text-center">Cert. Médico</th>
+                  <th class="px-4 py-3 font-semibold text-center hidden lg:table-cell">Licencia</th>
+                  <th class="px-4 py-3 font-semibold text-center">Estado</th>
+                  <th class="px-4 py-3"></th>
+                </tr>
+              </thead>
+              <tbody id="atletas-body">
+                <tr id="atletas-empty">
+                  <td colspan="8" class="px-4 py-12 text-center text-gray-400 text-sm">
+                    No hay atletas registrados. Agregá el primero con el botón de arriba.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Add athlete form (hidden by default) -->
+        <div id="add-atleta-form" class="hidden mt-6 bg-white rounded-xl shadow p-6">
+          <h2 class="font-bold text-[#0B2545] mb-5">Nuevo atleta</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div>
+              <label class="field-label">Apellido *</label>
+              <input id="a-apellido" type="text" placeholder="Apellido" class="field-input"/>
+            </div>
+            <div>
+              <label class="field-label">Nombre *</label>
+              <input id="a-nombre" type="text" placeholder="Nombre" class="field-input"/>
+            </div>
+            <div>
+              <label class="field-label">DNI *</label>
+              <input id="a-dni" type="text" placeholder="00.000.000" class="field-input"/>
+            </div>
+            <div>
+              <label class="field-label">Fecha de nacimiento *</label>
+              <input id="a-fnac" type="date" class="field-input"/>
+            </div>
+            <div>
+              <label class="field-label">Categoría *</label>
+              <select id="a-categoria" class="field-input">
+                <option value="">Seleccionar…</option>
+                {categorias.map(c => <option value={c}>{c}</option>)}
+              </select>
+            </div>
+            <div>
+              <label class="field-label">Licencia AARA</label>
+              <input id="a-licencia" type="text" placeholder="AAR-000000" class="field-input"/>
+            </div>
+            <div>
+              <label class="field-label">Vto. Registro Anual *</label>
+              <input id="a-reg-anual" type="date" class="field-input"/>
+            </div>
+            <div>
+              <label class="field-label">Vto. Certificado Médico *</label>
+              <input id="a-cert-med" type="date" class="field-input"/>
+            </div>
+            <div>
+              <label class="field-label">Peso (kg)</label>
+              <input id="a-peso" type="number" placeholder="75" class="field-input"/>
+            </div>
+          </div>
+          <div id="atleta-form-error" class="hidden mt-3 text-xs text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2"></div>
+          <div class="flex gap-3 mt-5">
+            <button id="save-atleta-btn" class="bg-[#0B2545] hover:bg-[#134074] text-white font-semibold px-5 py-2.5 rounded-lg text-sm transition-colors">Guardar atleta</button>
+            <button id="cancel-atleta-btn" type="button" class="border border-gray-200 text-gray-600 hover:bg-gray-50 px-5 py-2.5 rounded-lg text-sm transition-colors">Cancelar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════
+           TAB 2 — NUEVA INSCRIPCIÓN
+      ══════════════════════════════════════════════════════ -->
+      <div id="panel-nueva" class="panel hidden">
+
+        <div class="mb-6">
+          <h1 class="text-xl font-bold text-[#0B2545]">Nueva Inscripción</h1>
+          <p class="text-sm text-gray-500 mt-0.5">Solo podés inscribir atletas con Registro Anual y Certificado Médico vigentes</p>
+        </div>
+
+        <!-- Step 1: select regatta -->
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+          <h2 class="font-semibold text-[#0B2545] mb-1 text-sm uppercase tracking-wide">1 — Seleccioná la regata</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
+            {regatas.map(r => (
+              <label class="relative cursor-pointer select-none">
+                <input type="radio" name="regata-sel" value={r.id} data-nombre={r.nombre} class="peer sr-only"/>
+                <div class="border-2 border-gray-200 peer-checked:border-[#0B2545] peer-checked:bg-[#0B2545]/5 rounded-xl p-4 transition-all h-full">
+                  <div class="font-semibold text-sm text-[#0B2545] leading-snug mb-1">{r.nombre}</div>
+                  <div class="text-xs text-gray-500">{r.fecha}</div>
+                  <div class="text-xs text-gray-400">{r.sede}</div>
+                  <div class="mt-2 text-xs font-medium text-amber-600">Cierre: {r.cierre}</div>
+                </div>
+                <div class="absolute top-3 right-3 w-5 h-5 rounded-full border-2 border-gray-300 peer-checked:border-[#0B2545] peer-checked:bg-[#0B2545] flex items-center justify-center">
+                  <svg class="w-3 h-3 text-white hidden peer-checked:block" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+              </label>
+            ))}
+          </div>
+        </div>
+
+        <!-- Step 2: add athlete to inscription -->
+        <div class="bg-white rounded-xl shadow p-6 mb-6">
+          <h2 class="font-semibold text-[#0B2545] mb-4 text-sm uppercase tracking-wide">2 — Agregá los remeros a la prueba</h2>
+          <div id="no-atletas-warning" class="hidden mb-4 bg-amber-50 border border-amber-200 text-amber-700 text-sm rounded-lg px-4 py-3">
+            No tenés atletas habilitados. Verificá que tengan el Registro Anual y Certificado Médico vigentes en la solapa <strong>Mis Atletas</strong>.
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+            <div class="lg:col-span-2">
+              <label class="field-label">Atleta *</label>
+              <select id="ins-atleta" class="field-input">
+                <option value="">Seleccionar atleta habilitado…</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label">Embarcación *</label>
+              <select id="ins-emb" class="field-input">
+                <option value="">Seleccionar…</option>
+                {embarcaciones.map(e => <option value={e}>{e}</option>)}
+              </select>
+            </div>
+            <div>
+              <label class="field-label">Prueba *</label>
+              <select id="ins-prueba" class="field-input">
+                <option value="">Seleccionar…</option>
+                {pruebas.map(p => <option value={p}>{p}</option>)}
+              </select>
+            </div>
+          </div>
+          <div id="ins-form-error" class="hidden mb-3 text-xs text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2"></div>
+          <button id="add-ins-btn" class="flex items-center gap-2 bg-[#0B2545] hover:bg-[#134074] text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+            Agregar a la lista
+          </button>
+        </div>
+
+        <!-- Step 3: review and submit -->
+        <div class="bg-white rounded-xl shadow overflow-hidden">
+          <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
+            <h2 class="font-semibold text-[#0B2545] text-sm uppercase tracking-wide">3 — Revisá y enviá el borrador</h2>
+            <span id="borrador-count" class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">0 remeros</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-gray-50 text-left border-b border-gray-100 text-xs">
+                  <th class="px-4 py-3 font-semibold text-gray-500 uppercase tracking-wide">Atleta</th>
+                  <th class="px-4 py-3 font-semibold text-gray-500 uppercase tracking-wide hidden sm:table-cell">Categoría</th>
+                  <th class="px-4 py-3 font-semibold text-gray-500 uppercase tracking-wide">Embarcación</th>
+                  <th class="px-4 py-3 font-semibold text-gray-500 uppercase tracking-wide">Prueba</th>
+                  <th class="px-4 py-3"></th>
+                </tr>
+              </thead>
+              <tbody id="borrador-body">
+                <tr id="borrador-empty">
+                  <td colspan="5" class="px-4 py-8 text-center text-gray-400 text-sm">
+                    Todavía no agregaste remeros a esta inscripción.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="px-6 py-4 border-t border-gray-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <p class="text-xs text-gray-500">
+              Al enviar, la inscripción quedará en estado <strong class="text-[#0B2545]">Borrador</strong> y podrás modificarla hasta el cierre de la regata.
+            </p>
+            <button id="submit-ins-btn" class="shrink-0 bg-green-600 hover:bg-green-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-semibold px-6 py-2.5 rounded-lg text-sm transition-colors" disabled>
+              Enviar inscripción
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════
+           TAB 3 — MIS INSCRIPCIONES
+      ══════════════════════════════════════════════════════ -->
+      <div id="panel-inscripciones" class="panel hidden">
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <div>
+            <h1 class="text-xl font-bold text-[#0B2545]">Mis Inscripciones Activas</h1>
+            <p class="text-sm text-gray-500 mt-0.5">Las inscripciones en estado <strong>Borrador</strong> se pueden modificar hasta el cierre de la regata</p>
+          </div>
+          <button id="export-btn" class="flex items-center gap-2 border border-gray-200 hover:border-[#0B2545] text-gray-600 hover:text-[#0B2545] text-sm font-medium px-4 py-2.5 rounded-lg transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Exportar CSV
+          </button>
+        </div>
+
+        <div id="inscripciones-list" class="space-y-4">
+          <div id="inscripciones-empty" class="bg-white rounded-xl shadow p-10 text-center text-gray-400 text-sm">
+            No tenés inscripciones registradas todavía.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</Layout>
+
+<style>
+  @reference "tailwindcss";
+  .field-label { @apply block text-xs font-medium text-gray-600 mb-1; }
+  .field-input { @apply w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#13A8D4] focus:border-transparent transition-shadow bg-white; }
+</style>
+
+<script>
+// ── Types ────────────────────────────────────────────────────────────────────
+type Atleta = {
+  id: string;
+  apellido: string;
+  nombre: string;
+  dni: string;
+  fnac: string;
+  categoria: string;
+  licencia: string;
+  regAnual: string;   // ISO date vto
+  certMed: string;    // ISO date vto
+  peso: string;
+};
+
+type InsRow = {
+  atletaId: string;
+  atletaNombre: string;
+  atletaCategoria: string;
+  embarcacion: string;
+  prueba: string;
+};
+
+type Inscripcion = {
+  id: string;
+  regataId: string;
+  regataNombre: string;
+  estado: 'Borrador' | 'Confirmada';
+  rows: InsRow[];
+  createdAt: string;
+};
+
+// ── Session ──────────────────────────────────────────────────────────────────
+const session: { email: string; club: string; delegado: string } =
+  JSON.parse(localStorage.getItem('aara_session') || '{}');
+
+document.getElementById('club-topbar')!.textContent = session.club ?? '';
+document.getElementById('user-topbar')!.textContent = session.delegado ?? '';
+document.getElementById('logout-btn')!.addEventListener('click', () => {
+  localStorage.removeItem('aara_session');
+  window.location.href = '/inscripciones/login';
+});
+
+// ── Storage helpers ───────────────────────────────────────────────────────────
+const keyAtletas      = `gia_atletas_${session.email}`;
+const keyInscripciones = `gia_ins_${session.email}`;
+const loadAtletas      = (): Atleta[]      => { try { return JSON.parse(localStorage.getItem(keyAtletas) || '[]'); } catch { return []; } };
+const loadInscripciones = (): Inscripcion[] => { try { return JSON.parse(localStorage.getItem(keyInscripciones) || '[]'); } catch { return []; } };
+const saveAtletas      = (d: Atleta[])      => localStorage.setItem(keyAtletas, JSON.stringify(d));
+const saveInscripciones = (d: Inscripcion[]) => localStorage.setItem(keyInscripciones, JSON.stringify(d));
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function statusOf(dateStr: string): 'vigente' | 'por-vencer' | 'vencido' {
+  if (!dateStr) return 'vencido';
+  const diff = (new Date(dateStr).getTime() - Date.now()) / 86400000;
+  if (diff < 0)  return 'vencido';
+  if (diff <= 30) return 'por-vencer';
+  return 'vigente';
+}
+function statusDot(s: ReturnType<typeof statusOf>) {
+  const map = { vigente: 'bg-green-500', 'por-vencer': 'bg-amber-400', vencido: 'bg-red-500' };
+  return `<span class="inline-flex w-2.5 h-2.5 rounded-full ${map[s]}"></span>`;
+}
+function statusLabel(s: ReturnType<typeof statusOf>) {
+  const map = { vigente: 'Vigente', 'por-vencer': 'Por vencer', vencido: 'Vencido' };
+  return map[s];
+}
+function isHabilitado(a: Atleta) {
+  return statusOf(a.regAnual) !== 'vencido' && statusOf(a.certMed) !== 'vencido';
+}
+function fmtDate(d: string) {
+  if (!d) return '—';
+  const [y,m,day] = d.split('-');
+  return `${day}/${m}/${y}`;
+}
+function getField(id: string): string {
+  return ((document.getElementById(id) as HTMLInputElement | HTMLSelectElement)?.value ?? '').trim();
+}
+function showError(id: string, msg: string) {
+  const el = document.getElementById(id)!;
+  el.textContent = msg;
+  el.classList.remove('hidden');
+}
+function hideError(id: string) {
+  document.getElementById(id)?.classList.add('hidden');
+}
+
+// ── Tabs ─────────────────────────────────────────────────────────────────────
+const panels = ['atletas','nueva','inscripciones'];
+function switchTab(name: string) {
+  panels.forEach(p => {
+    document.getElementById(`panel-${p}`)!.classList.toggle('hidden', p !== name);
+    const btn = document.getElementById(`tab-${p}`)!;
+    if (p === name) {
+      btn.classList.add('border-[#0B2545]','text-[#0B2545]');
+      btn.classList.remove('border-transparent','text-gray-500');
+    } else {
+      btn.classList.remove('border-[#0B2545]','text-[#0B2545]');
+      btn.classList.add('border-transparent','text-gray-500');
+    }
+  });
+  if (name === 'nueva')         refreshAtletaSelect();
+  if (name === 'inscripciones') renderInscripciones();
+}
+document.querySelectorAll<HTMLButtonElement>('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => switchTab(btn.dataset.tab!));
+});
+
+// ══════════════════════════════════════════════════════════════════════════════
+// PANEL ATLETAS
+// ══════════════════════════════════════════════════════════════════════════════
+function renderAtletas() {
+  const list = loadAtletas();
+  const tbody = document.getElementById('atletas-body')!;
+  const empty = document.getElementById('atletas-empty')!;
+  tbody.querySelectorAll('tr:not(#atletas-empty)').forEach(r => r.remove());
+
+  if (!list.length) { empty.classList.remove('hidden'); return; }
+  empty.classList.add('hidden');
+
+  list.forEach(a => {
+    const ra = statusOf(a.regAnual);
+    const cm = statusOf(a.certMed);
+    const hab = isHabilitado(a);
+    const tr = document.createElement('tr');
+    tr.className = 'border-b border-gray-50 hover:bg-gray-50 transition-colors';
+    tr.innerHTML = `
+      <td class="px-4 py-3">
+        <div class="font-medium text-[#0B2545]">${a.apellido}, ${a.nombre}</div>
+        <div class="text-xs text-gray-400">${fmtDate(a.fnac)}</div>
+      </td>
+      <td class="px-4 py-3 text-gray-500 text-xs hidden sm:table-cell">${a.dni}</td>
+      <td class="px-4 py-3 text-gray-600 text-xs hidden md:table-cell">${a.categoria}</td>
+      <td class="px-4 py-3 text-center">
+        <div class="flex flex-col items-center gap-0.5">
+          ${statusDot(ra)}
+          <span class="text-xs text-gray-400">${fmtDate(a.regAnual)}</span>
+        </div>
+      </td>
+      <td class="px-4 py-3 text-center">
+        <div class="flex flex-col items-center gap-0.5">
+          ${statusDot(cm)}
+          <span class="text-xs text-gray-400">${fmtDate(a.certMed)}</span>
+        </div>
+      </td>
+      <td class="px-4 py-3 text-center hidden lg:table-cell">
+        <span class="text-xs text-gray-500">${a.licencia || '—'}</span>
+      </td>
+      <td class="px-4 py-3 text-center">
+        <span class="text-xs font-semibold px-2 py-1 rounded-full ${hab ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-600'}">
+          ${hab ? '✓ Habilitado' : '✗ No habilitado'}
+        </span>
+      </td>
+      <td class="px-4 py-3 text-right">
+        <button data-del="${a.id}" class="del-atleta text-gray-300 hover:text-red-500 transition-colors" aria-label="Eliminar">
+          <svg class="w-4 h-4 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+          </svg>
+        </button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  tbody.querySelectorAll<HTMLButtonElement>('.del-atleta').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (!confirm('¿Eliminás este atleta del club?')) return;
+      saveAtletas(loadAtletas().filter(a => a.id !== btn.dataset.del));
+      renderAtletas();
+    });
+  });
+}
+
+// Toggle add-atleta form
+document.getElementById('open-add-atleta')!.addEventListener('click', () => {
+  document.getElementById('add-atleta-form')!.classList.toggle('hidden');
+});
+document.getElementById('cancel-atleta-btn')!.addEventListener('click', () => {
+  document.getElementById('add-atleta-form')!.classList.add('hidden');
+});
+
+document.getElementById('save-atleta-btn')!.addEventListener('click', () => {
+  hideError('atleta-form-error');
+  const apellido  = getField('a-apellido');
+  const nombre    = getField('a-nombre');
+  const dni       = getField('a-dni');
+  const fnac      = getField('a-fnac');
+  const categoria = getField('a-categoria');
+  const regAnual  = getField('a-reg-anual');
+  const certMed   = getField('a-cert-med');
+
+  if (!apellido || !nombre)    { showError('atleta-form-error','Apellido y nombre son obligatorios.'); return; }
+  if (!dni)                    { showError('atleta-form-error','El DNI es obligatorio.'); return; }
+  if (!fnac)                   { showError('atleta-form-error','La fecha de nacimiento es obligatoria.'); return; }
+  if (!categoria)              { showError('atleta-form-error','Seleccioná una categoría.'); return; }
+  if (!regAnual)               { showError('atleta-form-error','Ingresá la fecha de vencimiento del Registro Anual.'); return; }
+  if (!certMed)                { showError('atleta-form-error','Ingresá la fecha de vencimiento del Certificado Médico.'); return; }
+
+  const atleta: Atleta = {
+    id: crypto.randomUUID(), apellido, nombre, dni, fnac, categoria,
+    licencia: getField('a-licencia'),
+    regAnual, certMed,
+    peso: getField('a-peso'),
+  };
+  saveAtletas([...loadAtletas(), atleta]);
+  renderAtletas();
+  document.getElementById('add-atleta-form')!.classList.add('hidden');
+  // reset fields
+  ['a-apellido','a-nombre','a-dni','a-fnac','a-categoria','a-licencia','a-reg-anual','a-cert-med','a-peso']
+    .forEach(id => { (document.getElementById(id) as HTMLInputElement).value = ''; });
+});
+
+// ══════════════════════════════════════════════════════════════════════════════
+// PANEL NUEVA INSCRIPCIÓN — borrador local
+// ══════════════════════════════════════════════════════════════════════════════
+let borradorRows: InsRow[] = [];
+
+function refreshAtletaSelect() {
+  const sel = document.getElementById('ins-atleta') as HTMLSelectElement;
+  const habilitados = loadAtletas().filter(isHabilitado);
+  sel.innerHTML = '<option value="">Seleccionar atleta habilitado…</option>';
+  habilitados.forEach(a => {
+    const opt = document.createElement('option');
+    opt.value = a.id;
+    opt.textContent = `${a.apellido}, ${a.nombre} — ${a.categoria}`;
+    sel.appendChild(opt);
+  });
+  const warn = document.getElementById('no-atletas-warning')!;
+  warn.classList.toggle('hidden', habilitados.length > 0);
+}
+
+function renderBorrador() {
+  const tbody = document.getElementById('borrador-body')!;
+  const empty = document.getElementById('borrador-empty')!;
+  const counter = document.getElementById('borrador-count')!;
+  const submitBtn = document.getElementById('submit-ins-btn') as HTMLButtonElement;
+  tbody.querySelectorAll('tr:not(#borrador-empty)').forEach(r => r.remove());
+
+  counter.textContent = `${borradorRows.length} remero${borradorRows.length !== 1 ? 's' : ''}`;
+  submitBtn.disabled = borradorRows.length === 0;
+
+  if (!borradorRows.length) { empty.classList.remove('hidden'); return; }
+  empty.classList.add('hidden');
+
+  borradorRows.forEach((row, idx) => {
+    const tr = document.createElement('tr');
+    tr.className = idx % 2 === 0 ? 'bg-white' : 'bg-gray-50';
+    tr.innerHTML = `
+      <td class="px-4 py-3 font-medium text-[#0B2545] text-sm">${row.atletaNombre}</td>
+      <td class="px-4 py-3 text-gray-500 text-xs hidden sm:table-cell">${row.atletaCategoria}</td>
+      <td class="px-4 py-3 text-gray-600 text-sm">${row.embarcacion}</td>
+      <td class="px-4 py-3 text-gray-600 text-sm">${row.prueba}</td>
+      <td class="px-4 py-3 text-right">
+        <button data-idx="${idx}" class="del-borrador text-gray-300 hover:text-red-500 transition-colors">
+          <svg class="w-4 h-4 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  tbody.querySelectorAll<HTMLButtonElement>('.del-borrador').forEach(btn => {
+    btn.addEventListener('click', () => {
+      borradorRows.splice(Number(btn.dataset.idx), 1);
+      renderBorrador();
+    });
+  });
+}
+
+document.getElementById('add-ins-btn')!.addEventListener('click', () => {
+  hideError('ins-form-error');
+  const regataRadio = document.querySelector<HTMLInputElement>('input[name="regata-sel"]:checked');
+  const atletaId    = getField('ins-atleta');
+  const emb         = getField('ins-emb');
+  const prueba      = getField('ins-prueba');
+
+  if (!regataRadio)  { showError('ins-form-error','Seleccioná una regata primero.'); return; }
+  if (!atletaId)     { showError('ins-form-error','Seleccioná un atleta.'); return; }
+  if (!emb)          { showError('ins-form-error','Seleccioná una embarcación.'); return; }
+  if (!prueba)       { showError('ins-form-error','Seleccioná una prueba.'); return; }
+
+  const atleta = loadAtletas().find(a => a.id === atletaId)!;
+  borradorRows.push({
+    atletaId,
+    atletaNombre:    `${atleta.apellido}, ${atleta.nombre}`,
+    atletaCategoria: atleta.categoria,
+    embarcacion: emb,
+    prueba,
+  });
+  renderBorrador();
+  (document.getElementById('ins-atleta') as HTMLSelectElement).value = '';
+  (document.getElementById('ins-emb')    as HTMLSelectElement).value = '';
+  (document.getElementById('ins-prueba') as HTMLSelectElement).value = '';
+});
+
+document.getElementById('submit-ins-btn')!.addEventListener('click', () => {
+  const regataRadio = document.querySelector<HTMLInputElement>('input[name="regata-sel"]:checked');
+  if (!regataRadio || !borradorRows.length) return;
+
+  const ins: Inscripcion = {
+    id: crypto.randomUUID(),
+    regataId: regataRadio.value,
+    regataNombre: regataRadio.dataset.nombre ?? '',
+    estado: 'Borrador',
+    rows: [...borradorRows],
+    createdAt: new Date().toISOString(),
+  };
+  saveInscripciones([...loadInscripciones(), ins]);
+  borradorRows = [];
+  renderBorrador();
+  regataRadio.checked = false;
+  switchTab('inscripciones');
+});
+
+// ══════════════════════════════════════════════════════════════════════════════
+// PANEL MIS INSCRIPCIONES
+// ══════════════════════════════════════════════════════════════════════════════
+function renderInscripciones() {
+  const list  = loadInscripciones();
+  const cont  = document.getElementById('inscripciones-list')!;
+  const empty = document.getElementById('inscripciones-empty')!;
+  cont.querySelectorAll('.ins-card').forEach(c => c.remove());
+
+  if (!list.length) { empty.classList.remove('hidden'); return; }
+  empty.classList.add('hidden');
+
+  list.forEach(ins => {
+    const card = document.createElement('div');
+    card.className = 'ins-card bg-white rounded-xl shadow overflow-hidden';
+
+    const rowsHtml = ins.rows.map((r, i) => `
+      <tr class="${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}">
+        <td class="px-4 py-2.5 font-medium text-[#0B2545] text-sm">${r.atletaNombre}</td>
+        <td class="px-4 py-2.5 text-gray-500 text-xs hidden sm:table-cell">${r.atletaCategoria}</td>
+        <td class="px-4 py-2.5 text-gray-600 text-sm">${r.embarcacion}</td>
+        <td class="px-4 py-2.5 text-gray-600 text-sm">${r.prueba}</td>
+      </tr>
+    `).join('');
+
+    card.innerHTML = `
+      <div class="px-5 py-4 border-b border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <div class="font-bold text-[#0B2545]">${ins.regataNombre}</div>
+          <div class="text-xs text-gray-400 mt-0.5">Enviada: ${new Date(ins.createdAt).toLocaleDateString('es-AR')} · ${ins.rows.length} remero${ins.rows.length !== 1 ? 's' : ''}</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-bold px-3 py-1 rounded-full ${ins.estado === 'Borrador' ? 'bg-amber-100 text-amber-700' : 'bg-green-100 text-green-700'}">
+            ${ins.estado}
+          </span>
+          ${ins.estado === 'Borrador' ? `<button data-del="${ins.id}" class="del-ins text-xs text-red-400 hover:text-red-600 transition-colors font-medium">Eliminar</button>` : ''}
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead><tr class="bg-gray-50 text-left border-b border-gray-100 text-xs">
+            <th class="px-4 py-2 text-gray-400 uppercase tracking-wide font-semibold">Atleta</th>
+            <th class="px-4 py-2 text-gray-400 uppercase tracking-wide font-semibold hidden sm:table-cell">Categoría</th>
+            <th class="px-4 py-2 text-gray-400 uppercase tracking-wide font-semibold">Emb.</th>
+            <th class="px-4 py-2 text-gray-400 uppercase tracking-wide font-semibold">Prueba</th>
+          </tr></thead>
+          <tbody>${rowsHtml}</tbody>
+        </table>
+      </div>
+    `;
+    cont.appendChild(card);
+  });
+
+  cont.querySelectorAll<HTMLButtonElement>('.del-ins').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (!confirm('¿Eliminás esta inscripción?')) return;
+      saveInscripciones(loadInscripciones().filter(i => i.id !== btn.dataset.del));
+      renderInscripciones();
+    });
+  });
+}
+
+// ── Export CSV ────────────────────────────────────────────────────────────────
+document.getElementById('export-btn')!.addEventListener('click', () => {
+  const list = loadInscripciones();
+  if (!list.length) { alert('No hay inscripciones para exportar.'); return; }
+  const headers = ['Regata','Estado','Atleta','Categoría','Embarcación','Prueba','Fecha inscripción'];
+  const rows: string[] = [];
+  list.forEach(ins => {
+    ins.rows.forEach(r => {
+      rows.push([ins.regataNombre, ins.estado, r.atletaNombre, r.atletaCategoria,
+                 r.embarcacion, r.prueba, new Date(ins.createdAt).toLocaleDateString('es-AR')]
+        .map(v => `"${v}"`).join(','));
+    });
+  });
+  const csv  = [headers.join(','), ...rows].join('\n');
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href = url;
+  a.download = `giade_${session.club.replace(/\s+/g,'_')}_${new Date().toISOString().slice(0,10)}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+renderAtletas();
+</script>

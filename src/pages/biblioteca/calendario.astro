@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const regatas = [
+  { mes: "Enero", fecha: "18–19 Ene", nombre: "Regata de Verano", sede: "Tigre, Buenos Aires" },
+  { mes: "Febrero", fecha: "15–16 Feb", nombre: "Copa AARA — Etapa 1", sede: "Rosario, Santa Fe" },
+  { mes: "Marzo", fecha: "08–09 Mar", nombre: "Campeonato Argentino Juvenil", sede: "Corrientes" },
+  { mes: "Abril", fecha: "05–06 Abr", nombre: "Copa AARA — Etapa 2", sede: "Mendoza" },
+  { mes: "Mayo", fecha: "24–25 May", nombre: "Campeonato Argentino de Remo Costero", sede: "Mar del Plata" },
+  { mes: "Junio", fecha: "14–15 Jun", nombre: "Copa AARA — Etapa 3", sede: "Paraná, Entre Ríos" },
+  { mes: "Agosto", fecha: "16–17 Ago", nombre: "Copa AARA — Etapa 4", sede: "Posadas, Misiones" },
+  { mes: "Septiembre", fecha: "13–14 Sep", nombre: "Campeonato Argentino Master", sede: "Tigre, Buenos Aires" },
+  { mes: "Octubre", fecha: "11–12 Oct", nombre: "Copa AARA — Final", sede: "Rosario, Santa Fe" },
+  { mes: "Noviembre", fecha: "21–22 Nov", nombre: "Campeonato Argentino de Remo — CAR 2026", sede: "Tigre, Buenos Aires" },
+];
+---
+
+<Layout title="Calendario 2026 — AARA">
+  <div class="bg-[#0B2545] text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <nav class="text-sm text-gray-400 mb-3">
+        <a href={`${import.meta.env.BASE_URL}biblioteca`} class="hover:text-[#EFC050] transition-colors">Biblioteca</a>
+        <span class="mx-2">/</span>
+        <span class="text-white">Calendario 2026</span>
+      </nav>
+      <h1 class="text-3xl md:text-4xl font-bold">Calendario de regatas 2026</h1>
+      <p class="text-gray-300 mt-2">Actualizado al 19/12/2025</p>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="flex items-center justify-between mb-6">
+      <p class="text-sm text-gray-500">Todas las fechas son provisorias y sujetas a confirmación.</p>
+      <a href="#" class="flex items-center gap-2 text-sm bg-[#0B2545] hover:bg-[#134074] text-white font-medium px-4 py-2 rounded-lg transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+        </svg>
+        Descargar PDF
+      </a>
+    </div>
+
+    <div class="space-y-3">
+      {regatas.map(r => (
+        <div class="bg-white rounded-xl shadow p-5 flex items-center gap-5">
+          <div class="w-20 shrink-0 text-center bg-[#0B2545] text-white rounded-lg py-2.5">
+            <div class="text-xs text-[#EFC050] font-medium">{r.mes}</div>
+            <div class="text-sm font-bold mt-0.5">{r.fecha.split("–")[0]} – {r.fecha.split("–")[1]}</div>
+          </div>
+          <div class="flex-1">
+            <div class="font-semibold text-[#0B2545]">{r.nombre}</div>
+            <div class="text-xs text-gray-400 mt-0.5 flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              {r.sede}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>

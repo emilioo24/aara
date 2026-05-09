@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const resultados = [
+  {
+    evento: "Campeonato Argentino de Remo — CAR 2025",
+    fecha: "Nov 2025",
+    sede: "Tigre, Buenos Aires",
+    href: "/car-2025",
+  },
+  {
+    evento: "Copa AARA 2025 — Etapa Final",
+    fecha: "Oct 2025",
+    sede: "Rosario, Santa Fe",
+    href: "#",
+  },
+  {
+    evento: "Campeonato Argentino Juvenil 2025",
+    fecha: "Sep 2025",
+    sede: "Corrientes",
+    href: "#",
+  },
+  {
+    evento: "Copa AARA 2025 — Etapa 3",
+    fecha: "Ago 2025",
+    sede: "Mendoza",
+    href: "#",
+  },
+  {
+    evento: "Copa AARA 2025 — Etapa 2",
+    fecha: "Jun 2025",
+    sede: "Paraná, Entre Ríos",
+    href: "#",
+  },
+  {
+    evento: "Copa AARA 2025 — Etapa 1",
+    fecha: "Mar 2025",
+    sede: "Tigre, Buenos Aires",
+    href: "#",
+  },
+];
+---
+
+<Layout title="Resultados — AARA">
+  <div class="bg-[#0B2545] text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-[#EFC050] text-sm font-medium mb-2">AARA</div>
+      <h1 class="text-3xl md:text-4xl font-bold">Resultados</h1>
+      <p class="text-gray-300 mt-2">Resultados oficiales de competencias AARA</p>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="space-y-3">
+      {resultados.map(r => (
+        <a href={r.href} class="flex items-center justify-between bg-white rounded-xl shadow hover:shadow-md transition-shadow p-5 group">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-[#0B2545]/10 rounded-full flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-[#0B2545]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-[#0B2545] group-hover:text-[#134074] transition-colors">{r.evento}</div>
+              <div class="text-xs text-gray-400 mt-0.5 flex items-center gap-3">
+                <span>{r.fecha}</span>
+                <span class="flex items-center gap-1">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  </svg>
+                  {r.sede}
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="text-[#13A8D4] text-sm font-medium group-hover:text-[#0B2545] transition-colors shrink-0 ml-4">
+            Ver resultados →
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>

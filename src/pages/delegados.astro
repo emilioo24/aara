@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const delegados = [
+  { provincia: "Buenos Aires", nombre: "—", email: "bsas@remoargentina.org" },
+  { provincia: "Santa Fe", nombre: "—", email: "santafe@remoargentina.org" },
+  { provincia: "Corrientes", nombre: "—", email: "corrientes@remoargentina.org" },
+  { provincia: "Entre Ríos", nombre: "—", email: "entrerios@remoargentina.org" },
+  { provincia: "Córdoba", nombre: "—", email: "cordoba@remoargentina.org" },
+  { provincia: "Misiones", nombre: "—", email: "misiones@remoargentina.org" },
+  { provincia: "Chaco", nombre: "—", email: "chaco@remoargentina.org" },
+  { provincia: "Mendoza", nombre: "—", email: "mendoza@remoargentina.org" },
+];
+
+const B = import.meta.env.BASE_URL;
+const url = (path: string) => B + path.slice(1);
+---
+
+<Layout title="Delegados — AARA">
+  <div class="bg-[#0B2545] text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-[#EFC050] text-sm font-medium mb-2">AARA</div>
+      <h1 class="text-3xl md:text-4xl font-bold">Delegados provinciales</h1>
+      <p class="text-gray-300 mt-2">Representantes de AARA en cada provincia</p>
+    </div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-4 py-12">
+    <div class="bg-white rounded-xl shadow overflow-hidden">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-[#0B2545] text-white text-left">
+            <th class="px-6 py-4 font-semibold">Provincia</th>
+            <th class="px-6 py-4 font-semibold">Delegado</th>
+            <th class="px-6 py-4 font-semibold">Contacto</th>
+          </tr>
+        </thead>
+        <tbody>
+          {delegados.map((d, i) => (
+            <tr class={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+              <td class="px-6 py-4 font-medium text-[#0B2545]">{d.provincia}</td>
+              <td class="px-6 py-4 text-gray-600">{d.nombre}</td>
+              <td class="px-6 py-4">
+                <a href={`mailto:${d.email}`} class="text-[#13A8D4] hover:underline">{d.email}</a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-8 bg-[#EFC050]/10 border border-[#EFC050]/30 rounded-xl p-6">
+      <p class="text-sm text-gray-700">
+        <strong>¿Querés ser delegado de tu provincia?</strong> Si tu provincia no tiene representante o querés postularte, <a href={url('/contacto')} class="text-[#13A8D4] hover:underline">contactanos</a>.
+      </p>
+    </div>
+  </div>
+</Layout>

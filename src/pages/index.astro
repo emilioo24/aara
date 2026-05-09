@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const B = import.meta.env.BASE_URL;
+const url = (path: string) => B + path.slice(1);
+
+const noticias = [
+  {
+    fecha: "15 Abr 2025",
+    categoria: "Administrativo",
+    titulo: "Nuevos aranceles a partir de Enero del 2026",
+    resumen: "Se actualizó el cuadro de aranceles para clubes, atletas y árbitros vigente a partir del 1° de enero de 2026.",
+    href: "noticias/aranceles-2026",
+  },
+  {
+    fecha: "19 Dic 2024",
+    categoria: "Calendario",
+    titulo: "Ya está disponible el calendario de regatas 2026",
+    resumen: "El calendario oficial de regatas para la temporada 2026 ya está publicado. Consultá todas las fechas y sedes.",
+    href: "biblioteca/calendario",
+  },
+  {
+    fecha: "10 Dic 2024",
+    categoria: "Institucional",
+    titulo: "El remo costero, a un paso del olimpismo",
+    resumen: "La disciplina de remo costero avanza en su proceso de reconocimiento olímpico para los Juegos de Los Ángeles 2028.",
+    href: "noticias/remo-costero-olimpico",
+  },
+];
+
+const proximasRegatas = [
+  { fecha: "18–19 Ene", nombre: "Regata de Verano — Tigre", sede: "Tigre, Buenos Aires" },
+  { fecha: "15–16 Feb", nombre: "Copa AARA — Etapa 1", sede: "Rosario, Santa Fe" },
+  { fecha: "08–09 Mar", nombre: "Campeonato Argentino Juvenil", sede: "Corrientes" },
+  { fecha: "05–06 Abr", nombre: "Copa AARA — Etapa 2", sede: "Mendoza" },
+];
+---
+
+<Layout>
+  <!-- Hero -->
+  <section class="relative bg-[#0B2545] text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <svg class="w-full h-full" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+        <path d="M0 300 Q200 200 400 280 T800 260 V400 H0Z" fill="#13A8D4"/>
+        <path d="M0 340 Q200 260 400 320 T800 300 V400 H0Z" fill="#EFC050" opacity="0.5"/>
+      </svg>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 py-20 md:py-28">
+      <div class="max-w-2xl">
+        <div class="inline-block bg-[#EFC050]/20 border border-[#EFC050]/40 text-[#EFC050] text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-6">
+          Temporada 2025 / 2026
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+          Asociación Argentina<br/>de Remeros Aficionados
+        </h1>
+        <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+          Organismo rector del remo en la República Argentina. Promovemos la práctica del remo, la competencia y los valores del deporte en todo el país.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href={url('/biblioteca/calendario')} class="bg-[#EFC050] hover:bg-[#d4a017] text-[#0B2545] font-semibold px-6 py-3 rounded-lg transition-colors">
+            Ver calendario 2026
+          </a>
+          <a href={url('/institucional')} class="border border-white/30 hover:bg-white/10 text-white font-medium px-6 py-3 rounded-lg transition-colors">
+            Conocer AARA
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accesos rápidos -->
+  <section class="max-w-7xl mx-auto px-4 -mt-6 relative z-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <a href={url('/biblioteca/calendario')} class="bg-white border-l-4 border-[#13A8D4] rounded-lg shadow p-5 flex items-center gap-4 hover:shadow-md transition-shadow group">
+          <div class="w-10 h-10 rounded-lg bg-[#13A8D4]/10 flex items-center justify-center text-[#13A8D4] shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div><div class="font-semibold text-[#0B2545] group-hover:text-[#134074] transition-colors">Calendario 2026</div><div class="text-xs text-gray-500 mt-0.5">Actualizado 19/12/2025</div></div>
+        </a>
+        <a href="#" class="bg-white border-l-4 border-[#EFC050] rounded-lg shadow p-5 flex items-center gap-4 hover:shadow-md transition-shadow group">
+          <div class="w-10 h-10 rounded-lg bg-[#EFC050]/10 flex items-center justify-center text-[#EFC050] shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div><div class="font-semibold text-[#0B2545] group-hover:text-[#134074] transition-colors">Aranceles 2026</div><div class="text-xs text-gray-500 mt-0.5">Vigente desde enero 2026</div></div>
+        </a>
+        <a href={url('/biblioteca/reglamentos')} class="bg-white border-l-4 border-[#0B2545] rounded-lg shadow p-5 flex items-center gap-4 hover:shadow-md transition-shadow group">
+          <div class="w-10 h-10 rounded-lg bg-[#0B2545]/8 flex items-center justify-center text-[#0B2545] shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+          </div>
+          <div><div class="font-semibold text-[#0B2545] group-hover:text-[#134074] transition-colors">Reglamentos</div><div class="text-xs text-gray-500 mt-0.5">Reglamentos vigentes</div></div>
+        </a>
+        <a href={url('/biblioteca/formularios')} class="bg-white border-l-4 border-green-500 rounded-lg shadow p-5 flex items-center gap-4 hover:shadow-md transition-shadow group">
+          <div class="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center text-green-600 shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          </div>
+          <div><div class="font-semibold text-[#0B2545] group-hover:text-[#134074] transition-colors">Formularios</div><div class="text-xs text-gray-500 mt-0.5">Descargá los formularios</div></div>
+        </a>
+    </div>
+  </section>
+
+  <!-- Noticias -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-2xl font-bold text-[#0B2545]">Últimas noticias</h2>
+      <a href={url('/noticias')} class="text-sm text-[#13A8D4] hover:text-[#0B2545] font-medium transition-colors">Ver todas →</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {noticias.map(n => (
+        <article class="bg-white rounded-xl shadow hover:shadow-md transition-shadow overflow-hidden group">
+          <div class="h-2 bg-gradient-to-r from-[#0B2545] to-[#13A8D4]"></div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-xs font-semibold bg-[#EFC050]/20 text-[#0B2545] px-2 py-1 rounded-full">{n.categoria}</span>
+              <span class="text-xs text-gray-400">{n.fecha}</span>
+            </div>
+            <h3 class="font-bold text-[#0B2545] mb-2 group-hover:text-[#134074] transition-colors leading-snug">
+              <a href={B + n.href}>{n.titulo}</a>
+            </h3>
+            <p class="text-sm text-gray-600 leading-relaxed">{n.resumen}</p>
+            <a href={B + n.href} class="inline-flex items-center gap-1 mt-4 text-sm text-[#13A8D4] font-medium hover:text-[#0B2545] transition-colors">
+              Leer más <span>→</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Próximas regatas -->
+  <section class="bg-[#0B2545] text-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-2xl font-bold">Próximas regatas</h2>
+        <a href={url('/biblioteca/calendario')} class="text-sm text-[#EFC050] hover:text-white font-medium transition-colors">Calendario completo →</a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {proximasRegatas.map(r => (
+          <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:bg-white/10 transition-colors">
+            <div class="text-[#EFC050] font-bold text-sm mb-2">{r.fecha}</div>
+            <div class="font-semibold text-white mb-1 leading-snug">{r.nombre}</div>
+            <div class="text-xs text-gray-400 flex items-center gap-1">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              {r.sede}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CAR 2025 Banner -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <div class="bg-gradient-to-r from-[#134074] to-[#0B2545] rounded-2xl p-8 md:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <div class="text-[#EFC050] font-semibold text-sm uppercase tracking-wider mb-2">Campeonato Argentino de Remo</div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-2">CAR 2025</h2>
+        <p class="text-gray-300 max-w-md">
+          Toda la información sobre el Campeonato Argentino de Remo 2025: inscripciones, programas, resultados y más.
+        </p>
+      </div>
+      <a href={url('/car-2025')} class="shrink-0 bg-[#EFC050] hover:bg-[#d4a017] text-[#0B2545] font-bold px-8 py-4 rounded-xl transition-colors text-center">
+        Ver CAR 2025
+      </a>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,149 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const fotos = [
+  { titulo: "CAR 2024 — Finales", fecha: "Nov 2024", sede: "Tigre, Buenos Aires" },
+  { titulo: "Copa AARA 2024 — Etapa Final", fecha: "Oct 2024", sede: "Rosario, Santa Fe" },
+  { titulo: "Campeonato Juvenil 2024", fecha: "Sep 2024", sede: "Corrientes" },
+  { titulo: "Copa AARA 2024 — Etapa 3", fecha: "Ago 2024", sede: "Mendoza" },
+  { titulo: "Copa AARA 2024 — Etapa 2", fecha: "Jun 2024", sede: "Paraná, Entre Ríos" },
+  { titulo: "Regata de Verano 2024", fecha: "Ene 2024", sede: "Tigre, Buenos Aires" },
+];
+
+const videos = [
+  { titulo: "Resumen CAR 2024", duracion: "4:32", fecha: "Nov 2024", tipo: "Resumen" },
+  { titulo: "Finales Copa AARA 2024", duracion: "12:15", fecha: "Oct 2024", tipo: "Competencia" },
+  { titulo: "Campeonato Juvenil 2024 — Highlights", duracion: "6:48", fecha: "Sep 2024", tipo: "Resumen" },
+  { titulo: "Entrevista — Campeones nacionales 2024", duracion: "8:05", fecha: "Nov 2024", tipo: "Entrevista" },
+  { titulo: "Copa AARA 2024 — Etapa Mendoza", duracion: "5:21", fecha: "Abr 2024", tipo: "Competencia" },
+  { titulo: "Historia del remo en Argentina", duracion: "15:40", fecha: "Mar 2024", tipo: "Documental" },
+];
+
+const tipoColor: Record<string, string> = {
+  Resumen: "bg-blue-100 text-blue-700",
+  Competencia: "bg-green-100 text-green-700",
+  Entrevista: "bg-purple-100 text-purple-700",
+  Documental: "bg-amber-100 text-amber-700",
+};
+---
+
+<Layout title="Galería — AARA">
+  <div class="bg-[#0B2545] text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <nav class="text-sm text-gray-400 mb-3">
+        <a href={`${import.meta.env.BASE_URL}biblioteca`} class="hover:text-[#EFC050] transition-colors">Biblioteca</a>
+        <span class="mx-2">/</span>
+        <span class="text-white">Galería</span>
+      </nav>
+      <h1 class="text-3xl md:text-4xl font-bold">Galería</h1>
+      <p class="text-gray-300 mt-2">Fotos y videos de competencias y eventos AARA</p>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 py-12">
+
+    <!-- Tabs -->
+    <div class="flex gap-1 bg-gray-100 p-1 rounded-xl w-fit mb-10">
+      <button
+        id="tab-fotos"
+        class="flex items-center gap-2 px-6 py-2 rounded-lg text-sm font-semibold transition-colors bg-white text-[#0B2545] shadow"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Fotos
+      </button>
+      <button
+        id="tab-videos"
+        class="flex items-center gap-2 px-6 py-2 rounded-lg text-sm font-semibold transition-colors text-gray-500 hover:text-[#0B2545]"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+        Videos
+      </button>
+    </div>
+
+    <!-- Fotos -->
+    <div id="panel-fotos">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {fotos.map(f => (
+          <div class="bg-white rounded-xl shadow hover:shadow-md transition-shadow overflow-hidden group cursor-pointer">
+            <!-- Placeholder image area -->
+            <div class="aspect-video bg-gradient-to-br from-[#0B2545] to-[#13A8D4] flex items-center justify-center relative overflow-hidden">
+              <svg class="w-12 h-12 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                <svg class="w-10 h-10 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                </svg>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="font-semibold text-[#0B2545] text-sm">{f.titulo}</div>
+              <div class="text-xs text-gray-400 mt-1 flex items-center gap-3">
+                <span>{f.fecha}</span>
+                <span class="flex items-center gap-1">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  </svg>
+                  {f.sede}
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div id="panel-videos" class="hidden">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {videos.map(v => (
+          <div class="bg-white rounded-xl shadow hover:shadow-md transition-shadow overflow-hidden group cursor-pointer">
+            <!-- Placeholder video thumbnail -->
+            <div class="aspect-video bg-gradient-to-br from-[#134074] to-[#0B2545] flex items-center justify-center relative">
+              <div class="w-14 h-14 bg-white/20 group-hover:bg-[#EFC050] rounded-full flex items-center justify-center transition-colors">
+                <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <div class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded">
+                {v.duracion}
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-start justify-between gap-2">
+                <div class="font-semibold text-[#0B2545] text-sm leading-snug">{v.titulo}</div>
+                <span class={`text-xs font-semibold px-2 py-0.5 rounded-full shrink-0 ${tipoColor[v.tipo]}`}>{v.tipo}</span>
+              </div>
+              <div class="text-xs text-gray-400 mt-1">{v.fecha}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</Layout>
+
+<script>
+  const panelFotos = document.getElementById('panel-fotos')!;
+  const panelVideos = document.getElementById('panel-videos')!;
+  const tabFotos = document.getElementById('tab-fotos')!;
+  const tabVideos = document.getElementById('tab-videos')!;
+
+  const activeClass = 'px-6 py-2 rounded-lg text-sm font-semibold transition-colors bg-white text-[#0B2545] shadow';
+  const inactiveClass = 'px-6 py-2 rounded-lg text-sm font-semibold transition-colors text-gray-500 hover:text-[#0B2545]';
+
+  tabFotos.addEventListener('click', () => {
+    panelFotos.classList.remove('hidden');
+    panelVideos.classList.add('hidden');
+    tabFotos.className = activeClass;
+    tabVideos.className = inactiveClass;
+  });
+
+  tabVideos.addEventListener('click', () => {
+    panelVideos.classList.remove('hidden');
+    panelFotos.classList.add('hidden');
+    tabVideos.className = activeClass;
+    tabFotos.className = inactiveClass;
+  });
+</script>

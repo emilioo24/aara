@@ -1,0 +1,203 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+type Record = {
+  nombre: string;
+  club: string;
+  tiempo: string;
+  watts?: number;
+  fecha: string;
+};
+
+type DistanciaRecords = {
+  distancia: string;
+  masculino: Record;
+  femenino: Record;
+};
+
+const records: DistanciaRecords[] = [
+  {
+    distancia: "500m",
+    masculino: { nombre: "—", club: "—", tiempo: "1:18.4", watts: 420, fecha: "2024" },
+    femenino:  { nombre: "—", club: "—", tiempo: "1:34.2", watts: 290, fecha: "2024" },
+  },
+  {
+    distancia: "1000m",
+    masculino: { nombre: "—", club: "—", tiempo: "2:58.7", watts: 385, fecha: "2024" },
+    femenino:  { nombre: "—", club: "—", tiempo: "3:28.1", watts: 256, fecha: "2023" },
+  },
+  {
+    distancia: "2000m",
+    masculino: { nombre: "", club: "—", tiempo: "6:24.3", watts: 358, fecha: "2024" },
+    femenino:  { nombre: "—", club: "—", tiempo: "7:28.9", watts: 235, fecha: "2024" },
+  },
+  {
+    distancia: "5000m",
+    masculino: { nombre: "—", club: "—", tiempo: "17:02.4", watts: 312, fecha: "2023" },
+    femenino:  { nombre: "—", club: "—", tiempo: "20:14.6", watts: 201, fecha: "2023" },
+  },
+  {
+    distancia: "10000m",
+    masculino: { nombre: "—", club: "—", tiempo: "36:10.8", watts: 284, fecha: "2024" },
+    femenino:  { nombre: "—", club: "—", tiempo: "42:38.2", watts: 184, fecha: "2022" },
+  },
+  {
+    distancia: "30 min",
+    masculino: { nombre: "—", club: "—", tiempo: "8.342 m", watts: 298, fecha: "2023" },
+    femenino:  { nombre: "—", club: "—", tiempo: "7.016 m", watts: 192, fecha: "2023" },
+  },
+  {
+    distancia: "60 min",
+    masculino: { nombre: "—", club: "—", tiempo: "15.924 m", watts: 276, fecha: "2024" },
+    femenino:  { nombre: "—", club: "—", tiempo: "13.201 m", watts: 178, fecha: "2022" },
+  },
+];
+
+type CatRecord = { distancia: string; nombre: string; club: string; tiempo: string; fecha: string };
+
+const categorias: { label: string; color: string; records: CatRecord[] }[] = [
+  {
+    label: "Sub-23 Masculino",
+    color: "from-blue-600 to-blue-800",
+    records: [
+      { distancia: "2000m", nombre: "—", club: "—", tiempo: "6:38.1", fecha: "2024" },
+      { distancia: "5000m", nombre: "—", club: "—", tiempo: "17:55.2", fecha: "2024" },
+    ],
+  },
+  {
+    label: "Sub-23 Femenino",
+    color: "from-pink-500 to-pink-700",
+    records: [
+      { distancia: "2000m", nombre: "—", club: "—", tiempo: "7:52.4", fecha: "2024" },
+      { distancia: "5000m", nombre: "—", club: "—", tiempo: "21:30.0", fecha: "2023" },
+    ],
+  },
+  {
+    label: "Juvenil Masculino",
+    color: "from-emerald-600 to-emerald-800",
+    records: [
+      { distancia: "2000m", nombre: "—", club: "—", tiempo: "6:55.8", fecha: "2024" },
+      { distancia: "5000m", nombre: "—", club: "—", tiempo: "18:40.3", fecha: "2023" },
+    ],
+  },
+  {
+    label: "Juvenil Femenino",
+    color: "from-violet-500 to-violet-700",
+    records: [
+      { distancia: "2000m", nombre: "—", club: "—", tiempo: "8:10.5", fecha: "2024" },
+      { distancia: "5000m", nombre: "—", club: "—", tiempo: "22:15.7", fecha: "2024" },
+    ],
+  },
+];
+
+const B = import.meta.env.BASE_URL;
+const url = (path: string) => B + path.slice(1);
+---
+
+<Layout title="Records Argentinos de Ergo — AARA">
+  <div class="bg-[#0B2545] text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-[#EFC050] text-sm font-medium mb-2">AARA</div>
+      <h1 class="text-3xl md:text-4xl font-bold">Records Argentinos de Ergo</h1>
+      <p class="text-gray-300 mt-2">Marcas oficiales en ergómetro Concept2 reconocidas por AARA</p>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 py-12 space-y-12">
+
+    <!-- Senior records table -->
+    <section>
+      <h2 class="text-xl font-bold text-[#0B2545] mb-5 flex items-center gap-2">
+        <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+        Categoría Senior
+      </h2>
+      <div class="overflow-x-auto rounded-xl shadow">
+        <table class="w-full text-sm bg-white">
+          <thead>
+            <tr class="bg-[#0B2545] text-white text-left">
+              <th class="px-5 py-4 font-semibold">Distancia</th>
+              <th class="px-5 py-4 font-semibold">Masculino — Tiempo</th>
+              <th class="px-5 py-4 font-semibold hidden sm:table-cell">Watts</th>
+              <th class="px-5 py-4 font-semibold hidden md:table-cell">Atleta</th>
+              <th class="px-5 py-4 font-semibold hidden lg:table-cell">Club</th>
+              <th class="px-5 py-4 font-semibold hidden md:table-cell">Año</th>
+              <th class="px-5 py-4 font-semibold border-l border-white/20">Femenino — Tiempo</th>
+              <th class="px-5 py-4 font-semibold hidden sm:table-cell">Watts</th>
+              <th class="px-5 py-4 font-semibold hidden md:table-cell">Atleta</th>
+              <th class="px-5 py-4 font-semibold hidden lg:table-cell">Club</th>
+              <th class="px-5 py-4 font-semibold hidden md:table-cell">Año</th>
+            </tr>
+          </thead>
+          <tbody>
+            {records.map((r, i) => (
+              <tr class={i % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+                <td class="px-5 py-3.5 font-bold text-[#0B2545]">{r.distancia}</td>
+                <!-- Masculino -->
+                <td class="px-5 py-3.5 font-mono font-bold text-[#134074]">{r.masculino.tiempo}</td>
+                <td class="px-5 py-3.5 text-gray-500 hidden sm:table-cell">{r.masculino.watts ?? "—"} W</td>
+                <td class="px-5 py-3.5 text-gray-600 hidden md:table-cell">{r.masculino.nombre}</td>
+                <td class="px-5 py-3.5 text-gray-400 text-xs hidden lg:table-cell">{r.masculino.club}</td>
+                <td class="px-5 py-3.5 text-gray-400 text-xs hidden md:table-cell">{r.masculino.fecha}</td>
+                <!-- Femenino -->
+                <td class="px-5 py-3.5 font-mono font-bold text-[#134074] border-l border-gray-100">{r.femenino.tiempo}</td>
+                <td class="px-5 py-3.5 text-gray-500 hidden sm:table-cell">{r.femenino.watts ?? "—"} W</td>
+                <td class="px-5 py-3.5 text-gray-600 hidden md:table-cell">{r.femenino.nombre}</td>
+                <td class="px-5 py-3.5 text-gray-400 text-xs hidden lg:table-cell">{r.femenino.club}</td>
+                <td class="px-5 py-3.5 text-gray-400 text-xs hidden md:table-cell">{r.femenino.fecha}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-400 mt-2 ml-1">Ergómetro Concept2 · Remo indoor · Peso libre</p>
+    </section>
+
+    <!-- Other categories -->
+    <section>
+      <h2 class="text-xl font-bold text-[#0B2545] mb-5 flex items-center gap-2">
+        <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+        Otras categorías
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        {categorias.map(cat => (
+          <div class="bg-white rounded-xl shadow overflow-hidden">
+            <div class={`bg-gradient-to-r ${cat.color} text-white px-5 py-3`}>
+              <span class="font-bold text-sm">{cat.label}</span>
+            </div>
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-gray-50 text-left border-b border-gray-100">
+                  <th class="px-4 py-2.5 font-semibold text-gray-500 text-xs uppercase tracking-wide">Dist.</th>
+                  <th class="px-4 py-2.5 font-semibold text-gray-500 text-xs uppercase tracking-wide">Tiempo</th>
+                  <th class="px-4 py-2.5 font-semibold text-gray-500 text-xs uppercase tracking-wide">Atleta</th>
+                  <th class="px-4 py-2.5 font-semibold text-gray-500 text-xs uppercase tracking-wide">Año</th>
+                </tr>
+              </thead>
+              <tbody>
+                {cat.records.map((r, i) => (
+                  <tr class={i % 2 === 0 ? "" : "bg-gray-50"}>
+                    <td class="px-4 py-3 font-bold text-[#0B2545]">{r.distancia}</td>
+                    <td class="px-4 py-3 font-mono font-bold text-[#134074]">{r.tiempo}</td>
+                    <td class="px-4 py-3 text-gray-500">{r.nombre}</td>
+                    <td class="px-4 py-3 text-gray-400 text-xs">{r.fecha}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Submit record CTA -->
+    <div class="bg-[#EFC050]/10 border border-[#EFC050]/30 rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div>
+        <p class="font-semibold text-[#0B2545]">¿Tenés una marca para homologar?</p>
+        <p class="text-sm text-gray-600 mt-1">Enviá el video y el archivo .erg de Concept2 a la secretaría de AARA para solicitar la homologación del record.</p>
+      </div>
+      <a href={url('/contacto')} class="shrink-0 bg-[#0B2545] hover:bg-[#134074] text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm">
+        Contactar secretaría
+      </a>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contacto — AARA">
+  <div class="bg-[#0B2545] text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-[#EFC050] text-sm font-medium mb-2">AARA</div>
+      <h1 class="text-3xl md:text-4xl font-bold">Contacto</h1>
+    </div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <!-- Contact form -->
+      <div class="bg-white rounded-xl shadow p-8">
+        <h2 class="text-xl font-bold text-[#0B2545] mb-6">Envianos un mensaje</h2>
+        <form class="space-y-5">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5">Nombre completo</label>
+            <input type="text" placeholder="Tu nombre" class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#13A8D4] focus:border-transparent transition-shadow"/>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5">Correo electrónico</label>
+            <input type="email" placeholder="tu@email.com" class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#13A8D4] focus:border-transparent transition-shadow"/>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5">Asunto</label>
+            <input type="text" placeholder="Asunto" class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#13A8D4] focus:border-transparent transition-shadow"/>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1.5">Mensaje</label>
+            <textarea rows="5" placeholder="Escribí tu consulta aquí..." class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#13A8D4] focus:border-transparent transition-shadow resize-none"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-[#0B2545] hover:bg-[#134074] text-white font-semibold py-3 rounded-lg transition-colors">
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact info -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl shadow p-6">
+          <h3 class="font-bold text-[#0B2545] mb-4">Información de contacto</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-[#0B2545]/8 flex items-center justify-center text-[#0B2545] shrink-0 mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div><div class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Email general</div><div class="text-sm text-[#134074] font-medium mt-0.5">contacto@remoargentina.org</div></div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-[#0B2545]/8 flex items-center justify-center text-[#0B2545] shrink-0 mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+                </div>
+                <div><div class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Secretaría</div><div class="text-sm text-[#134074] font-medium mt-0.5">secretaria@remoargentina.org</div></div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-[#0B2545]/8 flex items-center justify-center text-[#0B2545] shrink-0 mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+                </div>
+                <div><div class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Asuntos deportivos</div><div class="text-sm text-[#134074] font-medium mt-0.5">deporte@remoargentina.org</div></div>
+              </li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl shadow p-6">
+          <h3 class="font-bold text-[#0B2545] mb-4">Seguinos</h3>
+          <div class="flex gap-3">
+            {[
+              { label: "Facebook", icon: "f", href: "#" },
+              { label: "Instagram", icon: "ig", href: "#" },
+              { label: "YouTube", icon: "yt", href: "#" },
+            ].map(s => (
+              <a href={s.href} class="flex-1 border border-gray-200 hover:border-[#0B2545] hover:bg-[#0B2545] hover:text-white text-gray-600 rounded-lg py-2.5 text-xs font-medium text-center transition-colors">
+                {s.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-[#EFC050]/10 border border-[#EFC050]/30 rounded-xl p-6">
+          <p class="text-sm text-gray-700 leading-relaxed">
+            <strong>Horario de atención:</strong><br/>
+            Lunes a viernes de 9:00 a 17:00 hs.<br/>
+            Las consultas son respondidas dentro de las 48 horas hábiles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

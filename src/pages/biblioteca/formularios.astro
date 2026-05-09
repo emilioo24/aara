@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const formularios = [
+  { categoria: "Atletas", items: [
+    { titulo: "Habilitación de atleta", desc: "Solicitud de habilitación para competir en eventos AARA." },
+    { titulo: "Transferencia de club", desc: "Formulario para transferencia entre clubes afiliados." },
+    { titulo: "Licencia internacional", desc: "Solicitud de licencia para competencias internacionales." },
+  ]},
+  { categoria: "Clubes", items: [
+    { titulo: "Afiliación de club", desc: "Formulario para afiliación de nuevos clubes." },
+    { titulo: "Inscripción a regata", desc: "Planilla de inscripción a competencias oficiales." },
+    { titulo: "Autorización de embarcaciones", desc: "Autorización para uso de embarcaciones en competencia." },
+  ]},
+  { categoria: "Árbitros y Técnicos", items: [
+    { titulo: "Habilitación de árbitro", desc: "Solicitud de habilitación o renovación arbitral." },
+    { titulo: "Habilitación de técnico", desc: "Solicitud de habilitación de técnico nacional." },
+  ]},
+];
+---
+<Layout title="Formularios — AARA">
+  <div class="bg-[#0B2545] text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <nav class="text-sm text-gray-400 mb-3">
+        <a href={`${import.meta.env.BASE_URL}biblioteca`} class="hover:text-[#EFC050] transition-colors">Biblioteca</a>
+        <span class="mx-2">/</span>
+        <span class="text-white">Formularios</span>
+      </nav>
+      <h1 class="text-3xl md:text-4xl font-bold">Formularios</h1>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto px-4 py-12 space-y-10">
+    {formularios.map(cat => (
+      <section>
+        <h2 class="text-lg font-bold text-[#0B2545] mb-4 flex items-center gap-2">
+          <span class="w-1 h-6 bg-[#EFC050] rounded-full inline-block"></span>
+          {cat.categoria}
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {cat.items.map(f => (
+            <a href="#" class="bg-white rounded-xl shadow hover:shadow-md transition-shadow p-5 flex items-center gap-4 group">
+              <div class="w-9 h-9 rounded-lg bg-[#0B2545]/8 flex items-center justify-center text-[#0B2545] shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              </div>
+              <div class="flex-1">
+                <div class="font-semibold text-[#0B2545] group-hover:text-[#134074] transition-colors text-sm">{f.titulo}</div>
+                <div class="text-xs text-gray-500 mt-0.5">{f.desc}</div>
+              </div>
+              <svg class="w-4 h-4 text-gray-300 group-hover:text-[#EFC050] transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+              </svg>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</Layout>
