@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import { atletas, toSlug } from '../../data/atletas';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const categorias = ["Senior", "Sub-23", "Juvenil", "Cadete", "Infantil"] as const;
 const clubesList = [...new Set(atletas.map(a => a.club))].sort((a, b) => a.localeCompare(b, 'es'));
 const provinciasList = [...new Set(atletas.map(a => a.provincia))].sort((a, b) => a.localeCompare(b, 'es'));
@@ -91,7 +93,7 @@ const categoriaBadge: Record<string, string> = {
         const initials = atleta.nombre.split(' ').filter(Boolean).slice(0, 2).map(n => n[0].toUpperCase()).join('');
         return (
           <a
-            href={`/atletas/${toSlug(atleta.nombre)}`}
+            href={`${base}/atletas/${toSlug(atleta.nombre)}`}
             class="atleta-card bg-white rounded-xl shadow hover:shadow-md hover:-translate-y-0.5 transition-all p-4 flex items-start gap-3"
             data-nombre={atleta.nombre.toLowerCase()}
             data-categoria={atleta.categoria}
@@ -140,7 +142,7 @@ const categoriaBadge: Record<string, string> = {
         <p class="font-semibold text-[#0B2545]">¿Sos atleta y querés figurar en el padrón?</p>
         <p class="text-sm text-gray-600 mt-1">Contactá a tu delegado provincial o enviá tus datos a la secretaría de AARA.</p>
       </div>
-      <a href={`${import.meta.env.BASE_URL}contacto`} class="shrink-0 bg-[#0B2545] hover:bg-[#134074] text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm">
+      <a href={`${base}/contacto`} class="shrink-0 bg-[#0B2545] hover:bg-[#134074] text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm">
         Contactar
       </a>
     </div>

@@ -1,7 +1,7 @@
 ---
-const B = import.meta.env.BASE_URL; // '/aara/'
-const url = (path: string) => path === '/' ? B : B + path.slice(1);
-const localPath = '/' + Astro.url.pathname.slice(B.length);
+const B = import.meta.env.BASE_URL.replace(/\/$/, ''); // '/aara'
+const url = (path: string) => B + path; // url('/atletas') = '/aara/atletas'
+const localPath = Astro.url.pathname.slice(B.length) || '/'; // '/institucional'
 const isActive = (path: string) =>
   path === '/' ? localPath === '/' : localPath === path || localPath.startsWith(path + '/');
 
@@ -41,7 +41,7 @@ const navItems = [
   <div class="max-w-7xl mx-auto px-4">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href={B} class="flex items-center gap-3 shrink-0">
+      <a href={B + '/'} class="flex items-center gap-3 shrink-0">
         <img src={url('/aara-logo.png')} alt="AARA" class="h-14 w-auto" />
         <div class="leading-tight">
           <div class="font-bold text-base tracking-wide">AARA</div>

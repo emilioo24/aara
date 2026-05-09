@@ -78,7 +78,7 @@ import Layout from '../../layouts/Layout.astro';
         </form>
 
         <div class="mt-5 text-center">
-          <a href={`${import.meta.env.BASE_URL}contacto`} class="text-xs text-[#13A8D4] hover:text-[#0B2545] transition-colors">
+          <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/contacto`} class="text-xs text-[#13A8D4] hover:text-[#0B2545] transition-colors">
             ¿Olvidaste tu contraseña? Contactá a AARA
           </a>
         </div>

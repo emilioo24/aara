@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const B = import.meta.env.BASE_URL;
-const url = (path: string) => B + path.slice(1);
+const B = import.meta.env.BASE_URL.replace(/\/$/, '');
+const url = (path: string) => B + path;
 ---
 
 <Layout title="Institucional — AARA">
