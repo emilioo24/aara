@@ -49,6 +49,11 @@ const programa = [
   { dia: 'Dom',  fecha: '2 Nov',  actividad: 'Finales — Junior, Sub 23 PL, Menor Fem., Intermedia Masc.' },
 ];
 
+const boatCapacity: Record<string, number> = {
+  'Single': 1, 'Dos Sin': 2, 'Doble par': 2,
+  'Cuatro Sin': 4, 'Cuádruple par': 4, 'Ocho': 9,
+};
+
 const genLabel: Record<string, string> = { F: 'Femenino', M: 'Masculino', X: 'Mixto' };
 const catLabel: Record<string, string> = { 'PL': 'Peso Ligero', 'Sub 23 PL': 'Sub 23 Peso Ligero' };
 
@@ -197,7 +202,7 @@ function phaseStyle(label: string) {
                                         </div>
                                       </summary>
                                       <div class="border-t border-gray-100">
-                                        <ResultTable results={fase.resultados} />
+                                        <ResultTable results={fase.resultados} capacity={boatCapacity[prueba.tipo]} />
                                       </div>
                                     </details>
                                   ))
@@ -206,7 +211,7 @@ function phaseStyle(label: string) {
                                     <span class={`inline-block text-xs px-2.5 py-1 rounded-full mb-3 ${phaseStyle(displayLabel(prueba.fases[0].label, true))}`}>
                                       {displayLabel(prueba.fases[0].label, true)}
                                     </span>
-                                    <ResultTable results={prueba.fases[0].resultados} />
+                                    <ResultTable results={prueba.fases[0].resultados} capacity={boatCapacity[prueba.tipo]} />
                                   </div>
                                 )}
                               </div>

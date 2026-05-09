@@ -1,7 +1,7 @@
 ---
 type R = { pos: number; club: string; atletas: string; tiempo: string };
-interface Props { results: R[] }
-const { results } = Astro.props;
+interface Props { results: R[]; capacity?: number }
+const { results, capacity } = Astro.props;
 ---
 
 <div class="rounded-lg overflow-hidden border border-gray-200">
@@ -24,7 +24,23 @@ const { results } = Astro.props;
             {r.pos>3 && <span class="text-gray-400 text-xs font-medium">{r.pos}</span>}
           </td>
           <td class="px-3 py-2.5 font-semibold text-[#0B2545] text-xs">{r.club}</td>
-          <td class="px-3 py-2.5 text-gray-600 text-xs leading-snug max-w-xs">{r.atletas}</td>
+          <td class="px-3 py-2.5 text-gray-600 text-xs leading-snug max-w-xs">
+            {(() => {
+              const names = r.atletas.split(' / ');
+              const main = capacity ? names.slice(0, capacity) : names;
+              const subs = capacity ? names.slice(capacity) : [];
+              return (
+                <>
+                  <span>{main.join(' / ')}</span>
+                  {subs.length > 0 && (
+                    <span class="text-gray-400 italic block mt-0.5">
+                      Suplentes: {subs.join(' / ')}
+                    </span>
+                  )}
+                </>
+              );
+            })()}
+          </td>
           <td class="px-3 py-2.5 text-right font-mono text-sm font-semibold text-[#134074]">{r.tiempo}</td>
         </tr>
       ))}
