@@ -26,12 +26,12 @@ const pruebas       = ["500m – Velocidad","1000m","2000m","Coastal 250m","Trav
 
 <Layout title="Inscripciones GIADe — AARA">
   <!-- Auth guard (runs before paint) -->
-  <script is:inline>
+  <script is:inline define:vars={{ loginUrl: import.meta.env.BASE_URL.replace(/\/$/, '') + '/inscripciones/login' }}>
     (function(){
       var raw = localStorage.getItem('aara_session');
-      if(!raw){ window.location.replace('/inscripciones/login'); return; }
+      if(!raw){ window.location.replace(loginUrl); return; }
       try{ window.__session = JSON.parse(raw); }
-      catch(e){ window.location.replace('/inscripciones/login'); }
+      catch(e){ window.location.replace(loginUrl); }
     })();
   </script>
 
@@ -358,9 +358,11 @@ const session: { email: string; club: string; delegado: string } =
 
 document.getElementById('club-topbar')!.textContent = session.club ?? '';
 document.getElementById('user-topbar')!.textContent = session.delegado ?? '';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 document.getElementById('logout-btn')!.addEventListener('click', () => {
   localStorage.removeItem('aara_session');
-  window.location.href = '/inscripciones/login';
+  window.location.href = base + '/inscripciones/login';
 });
 
 // ── Storage helpers ───────────────────────────────────────────────────────────
