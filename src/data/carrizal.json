@@ -1,0 +1,2075 @@
+{
+  "events": [
+    {
+      "number": 1,
+      "start_time": "2026-03-06 09:00:00",
+      "description": "Single Junior Femenino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3022,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31050,
+      "entries": [
+        {
+          "lane": 2,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60793,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Palavecino, Jazmín Alejandra",
+              "last_name": "Palavecino",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PALAVECINOJAZMIN.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "start_time": "2026-03-06 09:07:00",
+      "description": "Doble par Junior Femenino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3023,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31051,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Mendoza de Regatas",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cmr.gif",
+          "position": 3,
+          "time": "8.33.14",
+          "entryId": 60744,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Canals, Delfina",
+              "last_name": "Canals",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DelfinaCanalsCMR.jpeg"
+            },
+            {
+              "name": "Santos, Lucía",
+              "last_name": "Santos",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/LuciaSantos.jpeg"
+            }
+          ]
+        },
+        {
+          "lane": 2,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": "7.58.33",
+          "entryId": 60841,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Mancino, Camila",
+              "last_name": "Mancino",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOCAMILA.jpg"
+            },
+            {
+              "name": "Soloaga, Maitena",
+              "last_name": "Soloaga",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SoloagaMaitena.jpeg"
+            }
+          ]
+        },
+        {
+          "lane": 3,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 2,
+          "time": "8.26.01",
+          "entryId": 60840,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Vera, Virginia",
+              "last_name": "Vera",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/VERAVIRGINIA.jpg"
+            },
+            {
+              "name": "Paredes, Julieta",
+              "last_name": "Paredes",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/JulietaParedes.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "start_time": "2026-03-06 09:14:00",
+      "description": "Single Junior Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3025,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31053,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60795,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Guerrero, Ramiro Marcos",
+              "last_name": "Guerrero",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/RamiroGuerrero.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "start_time": "2026-03-06 09:21:00",
+      "description": "Doble par Junior Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3026,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31054,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 2,
+          "time": "7.36.14",
+          "entryId": 60796,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Guzman, Pedro Antonio",
+              "last_name": "Guzman",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PedroAntonioGuzman.jpeg"
+            },
+            {
+              "name": "Guzman, Juan José",
+              "last_name": "Guzman",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/JuanJoseGuzman.jpeg"
+            }
+          ]
+        },
+        {
+          "lane": 2,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": "7.27.33",
+          "entryId": 60800,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Magalú, Felipe Nicolás",
+              "last_name": "Magalú",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MAGALUFELIPE.jpg"
+            },
+            {
+              "name": "Cabrera, Alexis Misael",
+              "last_name": "Cabrera",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/CabreraAlexis.jpeg"
+            },
+            {
+              "name": "Coali, Marcos",
+              "last_name": "Coali",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MarcosCoali.jpeg"
+            }
+          ]
+        },
+        {
+          "lane": 3,
+          "club": "Club Mendoza de Regatas",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cmr.gif",
+          "position": 3,
+          "time": "7.41.01",
+          "entryId": 60745,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Escalante, Marco",
+              "last_name": "Escalante",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MarcoEscalante.jpg"
+            },
+            {
+              "name": "Ghiretti, Franco",
+              "last_name": "Ghiretti",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/FrancoGhiretti.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "start_time": "2026-03-06 09:28:00",
+      "description": "Single Menor Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3027,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31055,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60801,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Galeano, Lisandro Benjamin",
+              "last_name": "Galeano",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/GALEANOLISANDRO.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "start_time": "2026-03-06 09:35:00",
+      "description": "Doble par Menor Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3028,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31056,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Mendoza de Regatas",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cmr.gif",
+          "position": 1,
+          "time": "7.25.12",
+          "entryId": 60746,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Gomez, Matías",
+              "last_name": "Gomez",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MatiasGomezCMR.jpeg"
+            },
+            {
+              "name": "Berrios, Leandro",
+              "last_name": "Berrios",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/LeandroBerriosCMR.jpeg"
+            }
+          ]
+        },
+        {
+          "lane": 2,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 2,
+          "time": "7.27.20",
+          "entryId": 60803,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Mc Nally, José Ignacio",
+              "last_name": "Mc Nally",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MCNALLYJUANIGNACIO.jpg"
+            },
+            {
+              "name": "Sosa, Pedro",
+              "last_name": "Sosa",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PEDROSOSA.jpeg"
+            },
+            {
+              "name": "Pinardi, Dionel",
+              "last_name": "Pinardi",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DIONELPINARDI.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "start_time": "2026-03-06 09:42:00",
+      "description": "Dos Sin Senior Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3029,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31057,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Mendoza de Regatas",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cmr.gif",
+          "position": 1,
+          "time": "7.23.29",
+          "entryId": 60754,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Tibaldi, Tomás",
+              "last_name": "Tibaldi",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/TomasTibaldi.jpeg"
+            },
+            {
+              "name": "Mansilla, Martín",
+              "last_name": "Mansilla",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/Mansilla_Martin2.jpg"
+            }
+          ]
+        },
+        {
+          "lane": 2,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 2,
+          "time": "7.29.61",
+          "entryId": 60804,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "De Luz, Santino",
+              "last_name": "De Luz",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SantinoDeLuz.jpg"
+            },
+            {
+              "name": "Rojas, Marcos Ivan",
+              "last_name": "Rojas",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/ROJAS.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "start_time": "2026-03-06 09:49:00",
+      "description": "Dos Sin Senior Femenino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3030,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31058,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60805,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Surueta, Valentina Luján",
+              "last_name": "Surueta",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SuruetaValentina.jpeg"
+            },
+            {
+              "name": "Mongelot, Luna Nicole",
+              "last_name": "Mongelot",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/LUNA-MONGELOT.jpg"
+            },
+            {
+              "name": "Soloaga, Maitena",
+              "last_name": "Soloaga",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SoloagaMaitena.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "start_time": "2026-03-06 09:56:00",
+      "description": "Doble par Senior Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3031,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31059,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60806,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Mancino, Juan Martín",
+              "last_name": "Mancino",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOJUANMARTIN.jpg"
+            },
+            {
+              "name": "Paredes, Tomás",
+              "last_name": "Paredes",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PAREDESTOMAS.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "start_time": "2026-03-06 10:03:00",
+      "description": "Single Menor Femenino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3034,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31062,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Mendoza de Regatas",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cmr.gif",
+          "position": 2,
+          "time": "9.10",
+          "entryId": 60749,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Gulin, Alma",
+              "last_name": "Gulin",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/AlmaGulinCMR.jpeg"
+            }
+          ]
+        },
+        {
+          "lane": 2,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": "9.06",
+          "entryId": 60807,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Weber Fuentes, Michelle",
+              "last_name": "Weber Fuentes",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/WeberFuentesMichelle.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "start_time": "2026-03-06 10:10:00",
+      "description": "Doble par Menor Femenino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3035,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31063,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60809,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Roggi, Zaira Nicole",
+              "last_name": "Roggi",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/ROGGIZAIRA.jpeg"
+            },
+            {
+              "name": "Gomez, Victoria",
+              "last_name": "Gomez",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/GOMEZVICTORIA.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "start_time": "2026-03-06 10:17:00",
+      "description": "Cuadruple par Menor Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3036,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31064,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 2,
+          "time": "6.41.12",
+          "entryId": 60810,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Galeano, Lisandro Benjamin",
+              "last_name": "Galeano",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/GALEANOLISANDRO.jpeg"
+            },
+            {
+              "name": "Pinardi, Dionel",
+              "last_name": "Pinardi",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DIONELPINARDI.jpeg"
+            },
+            {
+              "name": "Mc Nally, José Ignacio",
+              "last_name": "Mc Nally",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MCNALLYJUANIGNACIO.jpg"
+            },
+            {
+              "name": "Sosa, Pedro",
+              "last_name": "Sosa",
+              "position": 4,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PEDROSOSA.jpeg"
+            }
+          ]
+        },
+        {
+          "lane": 2,
+          "club": "Club Mendoza de Regatas",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cmr.gif",
+          "position": 1,
+          "time": "6.23.33",
+          "entryId": 60750,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Villa, Matías",
+              "last_name": "Villa",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MatiasVilla.jpg"
+            },
+            {
+              "name": "Villa, Federico",
+              "last_name": "Villa",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/FedericoVilla.jpg"
+            },
+            {
+              "name": "Gomez, Matías",
+              "last_name": "Gomez",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MatiasGomezCMR.jpeg"
+            },
+            {
+              "name": "Berrios, Leandro",
+              "last_name": "Berrios",
+              "position": 4,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/LeandroBerriosCMR.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "start_time": "2026-03-06 10:24:00",
+      "description": "Dos Sin Sub 23 Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3037,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31065,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60811,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Núñez, Alejandro Daniel",
+              "last_name": "Núñez",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/nunez_alejandro.jpg"
+            },
+            {
+              "name": "Peralta, Nicolás Gustavo",
+              "last_name": "Peralta",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/peralta_nicolas.png"
+            },
+            {
+              "name": "De Luz, Santino",
+              "last_name": "De Luz",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SantinoDeLuz.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "start_time": "2026-03-06 10:31:00",
+      "description": "Dos Sin Sub 23 Femenino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3038,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31066,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60812,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Surueta, Valentina Luján",
+              "last_name": "Surueta",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SuruetaValentina.jpeg"
+            },
+            {
+              "name": "Mongelot, Luna Nicole",
+              "last_name": "Mongelot",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/LUNA-MONGELOT.jpg"
+            },
+            {
+              "name": "Soloaga, Maitena",
+              "last_name": "Soloaga",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SoloagaMaitena.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "start_time": "2026-03-06 10:38:00",
+      "description": "Doble par Sub 23 Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3039,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31067,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60813,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Donamari, Juan Bautista",
+              "last_name": "Donamari",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DONAMARI-BAUTISTA.jpg"
+            },
+            {
+              "name": "Weber Fuentes, Anthony",
+              "last_name": "Weber Fuentes",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/Anthony.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "start_time": "2026-03-06 10:45:00",
+      "description": "Doble par Sub 23 Femenino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3040,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31068,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60814,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Palavecino, Jazmín Alejandra",
+              "last_name": "Palavecino",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PALAVECINOJAZMIN.jpg"
+            },
+            {
+              "name": "Pinardi, Delfina",
+              "last_name": "Pinardi",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DelfinaPinardi.jpeg"
+            },
+            {
+              "name": "Gomez, Victoria",
+              "last_name": "Gomez",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/GOMEZVICTORIA.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "start_time": "2026-03-06 10:52:00",
+      "description": "Cuadruple par Senior Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3045,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31073,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60815,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Butuz, Gabriel Martín",
+              "last_name": "Butuz",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/butuz_gabriel.jpg"
+            },
+            {
+              "name": "Mancino, Juan Martín",
+              "last_name": "Mancino",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOJUANMARTIN.jpg"
+            },
+            {
+              "name": "De Luz, Santino",
+              "last_name": "De Luz",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SantinoDeLuz.jpg"
+            },
+            {
+              "name": "Rojas, Marcos Ivan",
+              "last_name": "Rojas",
+              "position": 4,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/ROJAS.jpg"
+            },
+            {
+              "name": "Paredes, Tomás",
+              "last_name": "Paredes",
+              "position": 5,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PAREDESTOMAS.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "start_time": "2026-03-06 10:59:00",
+      "description": "Cuadruple par Senior Femenino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3046,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31074,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60816,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Mancino, Camila",
+              "last_name": "Mancino",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOCAMILA.jpg"
+            },
+            {
+              "name": "Pinardi, Delfina",
+              "last_name": "Pinardi",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DelfinaPinardi.jpeg"
+            },
+            {
+              "name": "Palavecino, Jazmín Alejandra",
+              "last_name": "Palavecino",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PALAVECINOJAZMIN.jpg"
+            },
+            {
+              "name": "Silvestro, Evelyn Maricel",
+              "last_name": "Silvestro",
+              "position": 4,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_1378.png"
+            },
+            {
+              "name": "Soloaga, Maitena",
+              "last_name": "Soloaga",
+              "position": 5,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SoloagaMaitena.jpeg"
+            },
+            {
+              "name": "Paredes, Julieta",
+              "last_name": "Paredes",
+              "position": 6,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/JulietaParedes.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "start_time": "2026-03-06 11:06:00",
+      "description": "Doble par Adaptados PR3 Mixto - Serie 1",
+      "distance": "1000m",
+      "state": "Resultado Oficial",
+      "event_id": 3047,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31075,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60817,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Pavía, Sol Nahir",
+              "last_name": "Pavía",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PAVIASOL.jpg"
+            },
+            {
+              "name": "Salas, Luis Alberto",
+              "last_name": "Salas",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/salas_luis.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "start_time": "2026-03-06 11:13:00",
+      "description": "Ocho Junior Mixto - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3049,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31077,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60818,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Gomez, Victoria",
+              "last_name": "Gomez",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/GOMEZVICTORIA.jpg"
+            },
+            {
+              "name": "Vera, Virginia",
+              "last_name": "Vera",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/VERAVIRGINIA.jpg"
+            },
+            {
+              "name": "Magalú, Felipe Nicolás",
+              "last_name": "Magalú",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MAGALUFELIPE.jpg"
+            },
+            {
+              "name": "Coali, Marcos",
+              "last_name": "Coali",
+              "position": 4,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MarcosCoali.jpeg"
+            },
+            {
+              "name": "Guerrero, Ramiro Marcos",
+              "last_name": "Guerrero",
+              "position": 5,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/RamiroGuerrero.jpeg"
+            },
+            {
+              "name": "Cabrera, Alexis Misael",
+              "last_name": "Cabrera",
+              "position": 6,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/CabreraAlexis.jpeg"
+            },
+            {
+              "name": "Paredes, Julieta",
+              "last_name": "Paredes",
+              "position": 7,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/JulietaParedes.jpg"
+            },
+            {
+              "name": "Soloaga, Maitena",
+              "last_name": "Soloaga",
+              "position": 8,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SoloagaMaitena.jpeg"
+            },
+            {
+              "name": "Mc Nally, José Ignacio",
+              "last_name": "Mc Nally",
+              "position": 9,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MCNALLYJUANIGNACIO.jpg"
+            },
+            {
+              "name": "Roggi, Zaira Nicole",
+              "last_name": "Roggi",
+              "position": 10,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/ROGGIZAIRA.jpeg"
+            },
+            {
+              "name": "Guzman, Juan José",
+              "last_name": "Guzman",
+              "position": 11,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/JuanJoseGuzman.jpeg"
+            },
+            {
+              "name": "Guzman, Pedro Antonio",
+              "last_name": "Guzman",
+              "position": 12,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PedroAntonioGuzman.jpeg"
+            },
+            {
+              "name": "Galeano, Lisandro Benjamin",
+              "last_name": "Galeano",
+              "position": 90,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/GALEANOLISANDRO.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "start_time": "2026-03-06 11:20:00",
+      "description": "Doble par Peso Ligero Femenino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3051,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31079,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60819,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Mancino, Camila",
+              "last_name": "Mancino",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOCAMILA.jpg"
+            },
+            {
+              "name": "Pinardi, Delfina",
+              "last_name": "Pinardi",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DelfinaPinardi.jpeg"
+            },
+            {
+              "name": "Weber Fuentes, Michelle",
+              "last_name": "Weber Fuentes",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/WeberFuentesMichelle.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "start_time": "2026-03-06 11:27:00",
+      "description": "Doble par Peso Ligero Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3052,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31080,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": "7.16.12",
+          "entryId": 60820,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Donamari, Juan Bautista",
+              "last_name": "Donamari",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DONAMARI-BAUTISTA.jpg"
+            },
+            {
+              "name": "Weber Fuentes, Anthony",
+              "last_name": "Weber Fuentes",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/Anthony.jpeg"
+            },
+            {
+              "name": "Mancino, Juan Martín",
+              "last_name": "Mancino",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOJUANMARTIN.jpg"
+            }
+          ]
+        },
+        {
+          "lane": 2,
+          "club": "Club Mendoza de Regatas",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cmr.gif",
+          "position": 2,
+          "time": "7.17.33",
+          "entryId": 60752,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Cusimano, Santiago",
+              "last_name": "Cusimano",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/CusimanoSantiago.jpg"
+            },
+            {
+              "name": "Sendra, Juan Cruz",
+              "last_name": "Sendra",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SendraJuanCruz.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "start_time": "2026-03-06 11:34:00",
+      "description": "Cuadruple par Junior Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3057,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31085,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60821,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Coali, Marcos",
+              "last_name": "Coali",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MarcosCoali.jpeg"
+            },
+            {
+              "name": "Magalú, Felipe Nicolás",
+              "last_name": "Magalú",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MAGALUFELIPE.jpg"
+            },
+            {
+              "name": "Guerrero, Ramiro Marcos",
+              "last_name": "Guerrero",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/RamiroGuerrero.jpeg"
+            },
+            {
+              "name": "Cabrera, Alexis Misael",
+              "last_name": "Cabrera",
+              "position": 4,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/CabreraAlexis.jpeg"
+            },
+            {
+              "name": "Guzman, Pedro Antonio",
+              "last_name": "Guzman",
+              "position": 5,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PedroAntonioGuzman.jpeg"
+            },
+            {
+              "name": "Guzman, Juan José",
+              "last_name": "Guzman",
+              "position": 6,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/JuanJoseGuzman.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "start_time": "2026-03-06 11:41:00",
+      "description": "Single Peso Ligero Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3058,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31086,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60822,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Mancino, Juan Martín",
+              "last_name": "Mancino",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOJUANMARTIN.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "start_time": "2026-03-06 11:48:00",
+      "description": "Single Peso Ligero Femenino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3059,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31087,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 4,
+          "time": "9.34.71",
+          "entryId": 60826,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Mancino, Camila",
+              "last_name": "Mancino",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOCAMILA.jpg"
+            }
+          ]
+        },
+        {
+          "lane": 2,
+          "club": "Club Mendoza de Regatas",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cmr.gif",
+          "position": 1,
+          "time": "8.59.35",
+          "entryId": 60753,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Moralez, Evangelina",
+              "last_name": "Moralez",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/EvangelinaMorales.jpg"
+            }
+          ]
+        },
+        {
+          "lane": 3,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 2,
+          "time": "9.14.96",
+          "entryId": 60824,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Weber Fuentes, Michelle",
+              "last_name": "Weber Fuentes",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/WeberFuentesMichelle.jpg"
+            }
+          ]
+        },
+        {
+          "lane": 4,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 3,
+          "time": "9.20.46",
+          "entryId": 60823,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Pinardi, Delfina",
+              "last_name": "Pinardi",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DelfinaPinardi.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "start_time": "2026-03-06 11:55:00",
+      "description": "Dos Sin Junior Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3061,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31089,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Mendoza de Regatas",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cmr.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60755,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Hidalgo, Germán Imanol",
+              "last_name": "Hidalgo",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/GermanHidalgoCMR.jpeg"
+            },
+            {
+              "name": "Marques, Danilo",
+              "last_name": "Marques",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DaniloMarques.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "start_time": "2026-03-06 12:02:00",
+      "description": "Dos Sin Junior Femenino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3062,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31090,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60830,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Paredes, Julieta",
+              "last_name": "Paredes",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/JulietaParedes.jpg"
+            },
+            {
+              "name": "Soloaga, Maitena",
+              "last_name": "Soloaga",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SoloagaMaitena.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "start_time": "2026-03-06 12:09:00",
+      "description": "Single Senior Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3063,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31091,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60828,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Rojas, Marcos Ivan",
+              "last_name": "Rojas",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/ROJAS.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "start_time": "2026-03-06 12:16:00",
+      "description": "Ocho Senior Femenino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3064,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31092,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60829,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Weber Fuentes, Michelle",
+              "last_name": "Weber Fuentes",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/WeberFuentesMichelle.jpg"
+            },
+            {
+              "name": "Gomez, Victoria",
+              "last_name": "Gomez",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/GOMEZVICTORIA.jpg"
+            },
+            {
+              "name": "Vera, Virginia",
+              "last_name": "Vera",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/VERAVIRGINIA.jpg"
+            },
+            {
+              "name": "Pinardi, Delfina",
+              "last_name": "Pinardi",
+              "position": 4,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DelfinaPinardi.jpeg"
+            },
+            {
+              "name": "Surueta, Valentina Luján",
+              "last_name": "Surueta",
+              "position": 5,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SuruetaValentina.jpeg"
+            },
+            {
+              "name": "Mongelot, Luna Nicole",
+              "last_name": "Mongelot",
+              "position": 6,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/LUNA-MONGELOT.jpg"
+            },
+            {
+              "name": "Palavecino, Jazmín Alejandra",
+              "last_name": "Palavecino",
+              "position": 7,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PALAVECINOJAZMIN.jpg"
+            },
+            {
+              "name": "Silvestro, Evelyn Maricel",
+              "last_name": "Silvestro",
+              "position": 8,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_1378.png"
+            },
+            {
+              "name": "Mancino, Camila",
+              "last_name": "Mancino",
+              "position": 90,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOCAMILA.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "start_time": "2026-03-06 12:23:00",
+      "description": "Single Sub 23 Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3065,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31093,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Mendoza de Regatas",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cmr.gif",
+          "position": 3,
+          "time": "8.00.49",
+          "entryId": 60758,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Balasch, Franco",
+              "last_name": "Balasch",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/BalaschFranco.jpg"
+            }
+          ]
+        },
+        {
+          "lane": 2,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 2,
+          "time": "7.43.84",
+          "entryId": 60833,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Mancino, Juan Martín",
+              "last_name": "Mancino",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOJUANMARTIN.jpg"
+            }
+          ]
+        },
+        {
+          "lane": 3,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": "7.42.96",
+          "entryId": 60832,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Paredes, Tomás",
+              "last_name": "Paredes",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PAREDESTOMAS.jpg"
+            }
+          ]
+        },
+        {
+          "lane": 4,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 4,
+          "time": "8.13.79",
+          "entryId": 60831,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Santórsola, Joaquín Sebastián",
+              "last_name": "Santórsola",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SantorsolaJoaquin.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "start_time": "2026-03-06 12:30:00",
+      "description": "Dos Sin Peso Ligero Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3068,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31096,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60834,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Donamari, Juan Bautista",
+              "last_name": "Donamari",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DONAMARI-BAUTISTA.jpg"
+            },
+            {
+              "name": "Weber Fuentes, Anthony",
+              "last_name": "Weber Fuentes",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/Anthony.jpeg"
+            },
+            {
+              "name": "Peralta, Nicolás",
+              "last_name": "Peralta",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PERALTANICOLAS.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "start_time": "2026-03-06 12:37:00",
+      "description": "Ocho Junior Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3069,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31097,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Mendoza de Regatas",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cmr.gif",
+          "position": 1,
+          "time": "6.22.22",
+          "entryId": 60756,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Gomez, Matías",
+              "last_name": "Gomez",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MatiasGomezCMR.jpeg"
+            },
+            {
+              "name": "Berrios, Leandro",
+              "last_name": "Berrios",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/LeandroBerriosCMR.jpeg"
+            },
+            {
+              "name": "Caviasso, Santino",
+              "last_name": "Caviasso",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SantinoCaviassoCMR.jpeg"
+            },
+            {
+              "name": "Marques, Danilo",
+              "last_name": "Marques",
+              "position": 4,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DaniloMarques.jpg"
+            },
+            {
+              "name": "Hidalgo, Germán Imanol",
+              "last_name": "Hidalgo",
+              "position": 5,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/GermanHidalgoCMR.jpeg"
+            },
+            {
+              "name": "Tibaldi, Tomás",
+              "last_name": "Tibaldi",
+              "position": 6,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/TomasTibaldi.jpeg"
+            },
+            {
+              "name": "Escalante, Marco",
+              "last_name": "Escalante",
+              "position": 7,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MarcoEscalante.jpg"
+            },
+            {
+              "name": "Ghiretti, Franco",
+              "last_name": "Ghiretti",
+              "position": 8,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/FrancoGhiretti.jpeg"
+            },
+            {
+              "name": "Cabrera, Bautista",
+              "last_name": "Cabrera",
+              "position": 9,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/BautistaCabreraCMR.jpg"
+            },
+            {
+              "name": "Villa, Federico",
+              "last_name": "Villa",
+              "position": 10,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/FedericoVilla.jpg"
+            },
+            {
+              "name": "Villa, Matías",
+              "last_name": "Villa",
+              "position": 11,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MatiasVilla.jpg"
+            },
+            {
+              "name": "Kohn, Joaquin",
+              "last_name": "Kohn",
+              "position": 90,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/JoaquinKohnCMR.jpeg"
+            }
+          ]
+        },
+        {
+          "lane": 2,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 2,
+          "time": "6.26.7",
+          "entryId": 60835,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Mc Nally, José Ignacio",
+              "last_name": "Mc Nally",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MCNALLYJUANIGNACIO.jpg"
+            },
+            {
+              "name": "Sosa, Pedro",
+              "last_name": "Sosa",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PEDROSOSA.jpeg"
+            },
+            {
+              "name": "Guzman, Pedro Antonio",
+              "last_name": "Guzman",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PedroAntonioGuzman.jpeg"
+            },
+            {
+              "name": "Guzman, Juan José",
+              "last_name": "Guzman",
+              "position": 4,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/JuanJoseGuzman.jpeg"
+            },
+            {
+              "name": "Magalú, Felipe Nicolás",
+              "last_name": "Magalú",
+              "position": 5,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MAGALUFELIPE.jpg"
+            },
+            {
+              "name": "Coali, Marcos",
+              "last_name": "Coali",
+              "position": 6,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MarcosCoali.jpeg"
+            },
+            {
+              "name": "Guerrero, Ramiro Marcos",
+              "last_name": "Guerrero",
+              "position": 7,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/RamiroGuerrero.jpeg"
+            },
+            {
+              "name": "Cabrera, Alexis Misael",
+              "last_name": "Cabrera",
+              "position": 8,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/CabreraAlexis.jpeg"
+            },
+            {
+              "name": "Galeano, Lisandro Benjamin",
+              "last_name": "Galeano",
+              "position": 9,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/GALEANOLISANDRO.jpeg"
+            },
+            {
+              "name": "Pinardi, Dionel",
+              "last_name": "Pinardi",
+              "position": 10,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DIONELPINARDI.jpeg"
+            },
+            {
+              "name": "Mancino, Camila",
+              "last_name": "Mancino",
+              "position": 90,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOCAMILA.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "start_time": "2026-03-06 12:44:00",
+      "description": "Cuadruple par Junior Femenino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3070,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31098,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60836,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Paredes, Julieta",
+              "last_name": "Paredes",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/JulietaParedes.jpg"
+            },
+            {
+              "name": "Soloaga, Maitena",
+              "last_name": "Soloaga",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SoloagaMaitena.jpeg"
+            },
+            {
+              "name": "Vera, Virginia",
+              "last_name": "Vera",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/VERAVIRGINIA.jpg"
+            },
+            {
+              "name": "Palavecino, Jazmín Alejandra",
+              "last_name": "Palavecino",
+              "position": 4,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PALAVECINOJAZMIN.jpg"
+            },
+            {
+              "name": "Weber Fuentes, Michelle",
+              "last_name": "Weber Fuentes",
+              "position": 5,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/WeberFuentesMichelle.jpg"
+            },
+            {
+              "name": "Gomez, Victoria",
+              "last_name": "Gomez",
+              "position": 6,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/GOMEZVICTORIA.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 52,
+      "start_time": "2026-03-06 12:51:00",
+      "description": "Single Senior Femenino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3073,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31101,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": null,
+          "entryId": 60837,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Silvestro, Evelyn Maricel",
+              "last_name": "Silvestro",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_1378.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 53,
+      "start_time": "2026-03-06 12:58:00",
+      "description": "Ocho Senior Masculino - Serie 1",
+      "distance": "2000m",
+      "state": "Resultado Oficial",
+      "event_id": 3074,
+      "split": 0,
+      "type": "N/A",
+      "scheduleId": 31102,
+      "entries": [
+        {
+          "lane": 1,
+          "club": "Club Mendoza de Regatas",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cmr.gif",
+          "position": 2,
+          "time": "6.33.84",
+          "entryId": 60759,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Hidalgo, Germán Imanol",
+              "last_name": "Hidalgo",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/GermanHidalgoCMR.jpeg"
+            },
+            {
+              "name": "Marques, Danilo",
+              "last_name": "Marques",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DaniloMarques.jpg"
+            },
+            {
+              "name": "Cusimano, Santiago",
+              "last_name": "Cusimano",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/CusimanoSantiago.jpg"
+            },
+            {
+              "name": "Ghiretti, Franco",
+              "last_name": "Ghiretti",
+              "position": 4,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/FrancoGhiretti.jpeg"
+            },
+            {
+              "name": "Balasch, Franco",
+              "last_name": "Balasch",
+              "position": 5,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/BalaschFranco.jpg"
+            },
+            {
+              "name": "Sendra, Juan Cruz",
+              "last_name": "Sendra",
+              "position": 6,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SendraJuanCruz.jpg"
+            },
+            {
+              "name": "Mansilla, Martín",
+              "last_name": "Mansilla",
+              "position": 7,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/Mansilla_Martin2.jpg"
+            },
+            {
+              "name": "Tibaldi, Tomás",
+              "last_name": "Tibaldi",
+              "position": 8,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/TomasTibaldi.jpeg"
+            },
+            {
+              "name": "Escalante, Marco",
+              "last_name": "Escalante",
+              "position": 9,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MarcoEscalante.jpg"
+            },
+            {
+              "name": "Berrios, Leandro",
+              "last_name": "Berrios",
+              "position": 10,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/LeandroBerriosCMR.jpeg"
+            },
+            {
+              "name": "Gomez, Matías",
+              "last_name": "Gomez",
+              "position": 11,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MatiasGomezCMR.jpeg"
+            },
+            {
+              "name": "Kohn, Joaquin",
+              "last_name": "Kohn",
+              "position": 90,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/JoaquinKohnCMR.jpeg"
+            }
+          ]
+        },
+        {
+          "lane": 2,
+          "club": "Club Náutico Zárate",
+          "club_oar": "https://s3.amazonaws.com/aara-images/uploads/institution/oars/rem-cnz.gif",
+          "position": 1,
+          "time": "6.29.92",
+          "entryId": 60839,
+          "boat_number": null,
+          "crew": [
+            {
+              "name": "Butuz, Gabriel Martín",
+              "last_name": "Butuz",
+              "position": 1,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/butuz_gabriel.jpg"
+            },
+            {
+              "name": "Donamari, Juan Bautista",
+              "last_name": "Donamari",
+              "position": 2,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/DONAMARI-BAUTISTA.jpg"
+            },
+            {
+              "name": "Mancino, Juan Martín",
+              "last_name": "Mancino",
+              "position": 3,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOJUANMARTIN.jpg"
+            },
+            {
+              "name": "Paredes, Tomás",
+              "last_name": "Paredes",
+              "position": 4,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/PAREDESTOMAS.jpg"
+            },
+            {
+              "name": "Peralta, Nicolás Gustavo",
+              "last_name": "Peralta",
+              "position": 5,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/peralta_nicolas.png"
+            },
+            {
+              "name": "Núñez, Alejandro Daniel",
+              "last_name": "Núñez",
+              "position": 6,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/nunez_alejandro.jpg"
+            },
+            {
+              "name": "De Luz, Santino",
+              "last_name": "De Luz",
+              "position": 7,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/SantinoDeLuz.jpg"
+            },
+            {
+              "name": "Rojas, Marcos Ivan",
+              "last_name": "Rojas",
+              "position": 8,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/ROJAS.jpg"
+            },
+            {
+              "name": "Weber Fuentes, Anthony",
+              "last_name": "Weber Fuentes",
+              "position": 9,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/Anthony.jpeg"
+            },
+            {
+              "name": "Cabrera, Alexis Misael",
+              "last_name": "Cabrera",
+              "position": 10,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/CabreraAlexis.jpeg"
+            },
+            {
+              "name": "Guerrero, Ramiro Marcos",
+              "last_name": "Guerrero",
+              "position": 11,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/RamiroGuerrero.jpeg"
+            },
+            {
+              "name": "Magalú, Felipe Nicolás",
+              "last_name": "Magalú",
+              "position": 12,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MAGALUFELIPE.jpg"
+            },
+            {
+              "name": "Mancino, Camila",
+              "last_name": "Mancino",
+              "position": 90,
+              "avatar": "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOCAMILA.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

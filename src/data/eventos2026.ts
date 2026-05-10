@@ -53,7 +53,7 @@ export const meses: MesData[] = [
     eventos: [
       { fecha: "1",     nombre: "Evaluación cerrada",           sede: "Tigre",                  pais: "Bs. As.",   organiza: "AARA",  obs: "Definición botes chicos U19 y U23, evaluación abierta", tag: "aara" },
       { fecha: "1–14",  nombre: "Concentración",                sede: "Tigre",                  pais: "Bs. As.",   organiza: "AARA",  obs: "Concentración Terminal, Senior, Junior, Sub 23", tag: "aara" },
-      { fecha: "6",     nombre: "Oficial",                      sede: "Carrizal",               pais: "Mendoza",   organiza: "CRICO" },
+      { fecha: "6",     nombre: "Oficial",                      sede: "Carrizal",               pais: "Mendoza",   organiza: "CRICO", urlResultados: "/carrizal-2026" },
       { fecha: "7",     nombre: "Vendimia Master y Menores",    sede: "Lago Parque San Martín", pais: "Mendoza",   organiza: "CRICO" },
       { fecha: "8",     nombre: "Vendimia OFICIAL",             sede: "Lago Parque San Martín", pais: "Mendoza",   organiza: "CRICO" },
       { fecha: "8",     nombre: "Travesía",                     sede: "Tigre",                  pais: "Bs. As.",   organiza: "CRE" },

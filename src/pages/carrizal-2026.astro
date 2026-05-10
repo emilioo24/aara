@@ -1,0 +1,297 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ResultTable from '../components/ResultTable.astro';
+import rawJson from '../data/carrizal.json';
+
+// ── Source types ──────────────────────────────────────────────────────────────
+type CrewMember = { name: string; last_name: string; position: number };
+type EntryRaw   = { lane: number; club: string; position: number; time: string | null; crew: CrewMember[] };
+type EventRaw   = { number: number; description: string; distance: string; entries: EntryRaw[] };
+
+// ── Display types ─────────────────────────────────────────────────────────────
+type Resultado = { pos: number; club: string; atletas: string; tiempo: string };
+type Prueba    = { nombre: string; tipo: string; cat: string; gen: string; resultados: Resultado[] };
+
+// ── Parsing ───────────────────────────────────────────────────────────────────
+const TIPOS     = ['Cuadruple par','Cuatro Sin','Doble par','Dos Sin','Ocho','Single'];
+const GEN_MAP   = { Masculino: 'M', Femenino: 'F', Mixto: 'X' } as Record<string, string>;
+const TIPO_NORM = { 'Cuadruple par': 'Cuádruple par' } as Record<string, string>;
+
+function parseDesc(desc: string): { tipo: string; cat: string; gen: string } {
+  const main = desc.split(' - ')[0];
+  let tipo = '';
+  let rest = main;
+  for (const t of TIPOS) {
+    if (main.startsWith(t + ' ')) {
+      tipo = TIPO_NORM[t] ?? t;
+      rest = main.slice(t.length + 1);
+      break;
+    }
+  }
+  let gen = 'M';
+  let cat = rest;
+  for (const [label, code] of Object.entries(GEN_MAP)) {
+    if (rest.endsWith(' ' + label)) {
+      gen = code;
+      cat = rest.slice(0, -(label.length + 1));
+      break;
+    }
+  }
+  return { tipo, cat, gen };
+}
+
+// ── Process events ────────────────────────────────────────────────────────────
+const eventos = (rawJson as { events: EventRaw[] }).events;
+
+const pruebas: Prueba[] = eventos.map(ev => {
+  const { tipo, cat, gen } = parseDesc(ev.description);
+
+  const resultados: Resultado[] = ev.entries
+    .sort((a, b) => a.position - b.position)
+    .map(e => {
+      const main = e.crew.filter(c => c.position !== 90).sort((a, b) => a.position - b.position);
+      const subs = e.crew.filter(c => c.position === 90);
+      return {
+        pos:     e.position,
+        club:    e.club,
+        atletas: [...main, ...subs].map(c => c.name).join(' / '),
+        tiempo:  e.time ?? '—',
+      };
+    });
+
+  return { nombre: ev.description.split(' - ')[0], tipo, cat, gen, resultados };
+});
+
+// ── Sort & group ──────────────────────────────────────────────────────────────
+const tipoOrder = ['Single','Dos Sin','Doble par','Cuatro Sin','Cuádruple par','Ocho'];
+const catOrder  = ['Menor','Junior','Sub 23','Senior','Peso Ligero','Adaptados PR3'];
+const genOrder  = ['F','M','X'];
+
+const grupos = tipoOrder.map(tipo => {
+  const ps = pruebas
+    .filter(p => p.tipo === tipo)
+    .sort((a, b) => {
+      const gi = genOrder.indexOf(a.gen) - genOrder.indexOf(b.gen);
+      return gi !== 0 ? gi : catOrder.indexOf(a.cat) - catOrder.indexOf(b.cat);
+    });
+  return { titulo: tipo, pruebas: ps };
+}).filter(g => g.pruebas.length > 0);
+
+// ── Medals ────────────────────────────────────────────────────────────────────
+const medallasMap = new Map<string, { oros: number; platas: number; bronces: number }>();
+for (const p of pruebas) {
+  for (const r of p.resultados) {
+    if (r.pos > 3) continue;
+    if (!medallasMap.has(r.club)) medallasMap.set(r.club, { oros: 0, platas: 0, bronces: 0 });
+    const m = medallasMap.get(r.club)!;
+    if (r.pos === 1) m.oros++;
+    else if (r.pos === 2) m.platas++;
+    else m.bronces++;
+  }
+}
+const rankingClubes = [...medallasMap.entries()]
+  .map(([club, m]) => ({ club, ...m }))
+  .sort((a, b) => b.oros - a.oros || b.platas - a.platas || b.bronces - a.bronces)
+  .map((r, i) => ({ posicion: i + 1, ...r }));
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+const boatCapacity: Record<string, number> = {
+  'Single': 1, 'Dos Sin': 2, 'Doble par': 2,
+  'Cuatro Sin': 4, 'Cuádruple par': 4, 'Ocho': 9,
+};
+const genLabel: Record<string, string> = { F: 'Femenino', M: 'Masculino', X: 'Mixto' };
+---
+
+<Layout title="Regata Oficial Carrizal 2026 — AARA">
+  <!-- Hero -->
+  <div class="bg-gradient-to-r from-[#0B2545] to-[#134074] text-white py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-[#EFC050] text-sm font-semibold uppercase tracking-widest mb-3">Regata Oficial</div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-3">Carrizal 2026</h1>
+      <p class="text-gray-300 text-lg mb-6">Lago del Parque Carrizal, Mendoza — 6 de marzo 2026</p>
+      <div class="flex flex-wrap gap-4">
+        <div class="bg-white/10 rounded-lg px-4 py-3 text-center">
+          <div class="text-2xl font-bold text-[#EFC050]">1</div>
+          <div class="text-xs text-gray-300 mt-0.5">Día de competencia</div>
+        </div>
+        <div class="bg-white/10 rounded-lg px-4 py-3 text-center">
+          <div class="text-2xl font-bold text-[#EFC050]">{pruebas.length}</div>
+          <div class="text-xs text-gray-300 mt-0.5">Pruebas disputadas</div>
+        </div>
+        <div class="bg-white/10 rounded-lg px-4 py-3 text-center">
+          <div class="text-2xl font-bold text-[#EFC050]">{rankingClubes.length}</div>
+          <div class="text-xs text-gray-300 mt-0.5">Clubes participantes</div>
+        </div>
+        <div class="bg-white/10 rounded-lg px-4 py-3 text-center">
+          <div class="text-2xl font-bold text-[#EFC050]">2000m</div>
+          <div class="text-xs text-gray-300 mt-0.5">Distancia oficial</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div class="lg:col-span-2 space-y-8">
+
+        <!-- Resultados -->
+        <section class="space-y-4">
+          <div>
+            <h2 class="text-xl font-bold text-[#0B2545]">Resultados por prueba</h2>
+            <p class="text-sm text-gray-500 mt-1">Todas las pruebas disputadas. Desplegá cada sección para ver los resultados.</p>
+          </div>
+
+          {grupos.map(grupo => {
+            const gens = genOrder.filter(g => grupo.pruebas.some(p => p.gen === g));
+            return (
+              <details class="group/grupo bg-white rounded-xl shadow overflow-hidden">
+                <summary class="flex items-center justify-between bg-[#0B2545] px-6 py-4 cursor-pointer list-none hover:bg-[#134074] transition-colors">
+                  <h3 class="text-white font-bold text-lg">{grupo.titulo}</h3>
+                  <div class="flex items-center gap-3">
+                    <span class="text-xs text-white/60">{grupo.pruebas.length} pruebas</span>
+                    <svg class="w-5 h-5 text-white/70 shrink-0 transition-transform group-open/grupo:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                  </div>
+                </summary>
+
+                <div class="divide-y divide-gray-100">
+                  {gens.map(gen => {
+                    const ps = grupo.pruebas.filter(p => p.gen === gen);
+                    return (
+                      <details class="group/gen border-b border-gray-100 last:border-0">
+                        <summary class="flex items-center justify-between px-6 py-3 bg-gray-50 cursor-pointer list-none hover:bg-gray-100 transition-colors">
+                          <span class="text-xs font-bold uppercase tracking-wider text-gray-500">{genLabel[gen]}</span>
+                          <div class="flex items-center gap-2">
+                            <span class="text-xs text-gray-400">{ps.length} {ps.length === 1 ? 'prueba' : 'pruebas'}</span>
+                            <svg class="w-3.5 h-3.5 text-gray-400 shrink-0 transition-transform group-open/gen:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                          </div>
+                        </summary>
+
+                        {ps.map(prueba => {
+                          const winner = prueba.resultados[0];
+                          return (
+                            <details class="group/prueba border-b border-gray-100 last:border-0">
+                              <summary class="flex items-center gap-3 px-6 py-4 cursor-pointer hover:bg-blue-50 transition-colors list-none">
+                                <svg class="w-4 h-4 text-gray-400 shrink-0 transition-transform group-open/prueba:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                <div class="flex-1 min-w-0">
+                                  <div class="font-semibold text-[#0B2545] text-sm">{prueba.cat}</div>
+                                  {winner && (
+                                    <div class="text-xs text-gray-500 mt-0.5 truncate">
+                                      <span style="background:#EFC050" class="inline-flex items-center justify-center w-4 h-4 rounded-full text-white text-[9px] font-bold mr-1">1</span>
+                                      {winner.club} &mdash; {winner.tiempo}
+                                    </div>
+                                  )}
+                                </div>
+                                <span class="text-xs text-gray-400 shrink-0">{prueba.resultados.length} {prueba.resultados.length === 1 ? 'bote' : 'botes'}</span>
+                              </summary>
+
+                              <div class="px-6 pb-5 pt-2">
+                                <span class="inline-block text-xs px-2.5 py-1 rounded-full mb-3 bg-[#EFC050] text-[#0B2545] font-bold">
+                                  Final directa
+                                </span>
+                                <ResultTable results={prueba.resultados} capacity={boatCapacity[prueba.tipo]} />
+                              </div>
+                            </details>
+                          );
+                        })}
+                      </details>
+                    );
+                  })}
+                </div>
+              </details>
+            );
+          })}
+        </section>
+
+        <!-- Medallas por club -->
+        <details class="group/medallas bg-white rounded-xl shadow overflow-hidden">
+          <summary class="flex items-center justify-between px-8 py-5 border-b border-gray-100 cursor-pointer list-none hover:bg-gray-50 transition-colors">
+            <h2 class="text-xl font-bold text-[#0B2545]">Medallas por club</h2>
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-gray-400">{rankingClubes.length} clubes</span>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 transition-transform group-open/medallas:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+          </summary>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead class="bg-gray-50 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                <tr>
+                  <th class="px-6 py-3 text-left w-12">#</th>
+                  <th class="px-6 py-3 text-left">Club</th>
+                  <th class="px-4 py-3 text-center text-yellow-500">Oro</th>
+                  <th class="px-4 py-3 text-center text-gray-400">Plata</th>
+                  <th class="px-4 py-3 text-center text-amber-700">Bronce</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-50">
+                {rankingClubes.map(r => (
+                  <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="px-6 py-4">
+                      {r.posicion === 1 && <span class="inline-flex items-center justify-center w-7 h-7 rounded-full text-white text-xs font-bold shadow-sm" style="background:#EFC050">1</span>}
+                      {r.posicion === 2 && <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-gray-400 text-white text-xs font-bold shadow-sm">2</span>}
+                      {r.posicion === 3 && <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-700 text-white text-xs font-bold shadow-sm">3</span>}
+                      {r.posicion > 3 && <span class="text-gray-400 text-sm pl-2">{r.posicion}</span>}
+                    </td>
+                    <td class="px-6 py-4 font-semibold text-[#0B2545]">{r.club}</td>
+                    <td class="px-4 py-4 text-center font-bold text-yellow-500">{r.oros || '—'}</td>
+                    <td class="px-4 py-4 text-center font-bold text-gray-400">{r.platas || '—'}</td>
+                    <td class="px-4 py-4 text-center font-bold text-amber-700">{r.bronces || '—'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div class="px-8 py-4 bg-gray-50 border-t border-gray-100">
+            <p class="text-xs text-gray-400">Contabiliza posiciones 1°, 2° y 3° de cada prueba (final directa).</p>
+          </div>
+        </details>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-4">
+        <div class="bg-white rounded-xl shadow p-6">
+          <h3 class="font-bold text-[#0B2545] mb-4">Documentos</h3>
+          <ul class="space-y-3">
+            {[
+              { label: "Resultados oficiales completos", href: "http://resultados.remoargentina.org" },
+              { label: "Reglamento de competencia",      href: "/biblioteca/reglamentos" },
+              { label: "Formulario de inscripción",      href: "/biblioteca/formularios" },
+            ].map(d => (
+              <li>
+                <a href={d.href} target="_blank" rel="noopener" class="flex items-center gap-2 text-sm text-[#134074] hover:text-[#0B2545] transition-colors font-medium">
+                  <svg class="w-4 h-4 text-[#EFC050] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                  {d.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="bg-[#0B2545] text-white rounded-xl p-6">
+          <h3 class="font-bold mb-2">Sede</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Lago del Parque Carrizal<br/>
+            Mendoza, Argentina
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow p-6">
+          <h3 class="font-bold text-[#0B2545] mb-4">Organizador</h3>
+          <p class="text-sm text-gray-600">
+            Campeonato organizado por el <strong class="text-[#0B2545]">Consejo Regional Interior Centro (CRICO)</strong> con la fiscalización de AARA.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
