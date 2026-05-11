@@ -1,33 +1,45 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import carrizalData from '../data/carrizal.json';
+import { clubes } from '../data/clubes';
 
 const B = import.meta.env.BASE_URL.replace(/\/$/, '');
 
-type ClubRanking = {
-  posicion: number;
-  club: string;
-  provincia: string;
-  puntos: number;
-  oros: number;
-  platas: number;
-  bronces: number;
-};
-
 const temporada = "2026";
 
-const ranking: ClubRanking[] = [
-  { posicion: 1,  club: "Club de Remo Corrientes",      provincia: "Corrientes",   puntos: 0, oros: 0, platas: 0, bronces: 0 },
-  { posicion: 2,  club: "Regatas y Pelota Vasca",        provincia: "Corrientes",   puntos: 0, oros: 0, platas: 0, bronces: 0 },
-  { posicion: 3,  club: "Club Náutico Hacoaj",           provincia: "Buenos Aires", puntos: 0, oros: 0, platas: 0, bronces: 0 },
-  { posicion: 4,  club: "Club de Regatas La Marina",     provincia: "Santa Fe",     puntos: 0, oros: 0, platas: 0, bronces: 0 },
-  { posicion: 5,  club: "Club Regatas Resistencia",      provincia: "Chaco",        puntos: 0, oros: 0, platas: 0, bronces: 0 },
-  { posicion: 6,  club: "Rowing Club Argentino",         provincia: "Buenos Aires", puntos: 0, oros: 0, platas: 0, bronces: 0 },
-  { posicion: 7,  club: "Club Atlético San Isidro",      provincia: "Buenos Aires", puntos: 0, oros: 0, platas: 0, bronces: 0 },
-  { posicion: 8,  club: "Club Náutico Concordia",        provincia: "Entre Ríos",   puntos: 0, oros: 0, platas: 0, bronces: 0 },
-  { posicion: 9,  club: "Club de Regatas Rosario",       provincia: "Santa Fe",     puntos: 0, oros: 0, platas: 0, bronces: 0 },
-  { posicion: 10, club: "Club Náutico Zárate",           provincia: "Buenos Aires", puntos: 0, oros: 0, platas: 0, bronces: 0 },
-];
+// Build province map from clubes
+const provinciaMap: Record<string, string> = Object.fromEntries(
+  clubes.map(c => [c.nombre, c.provincia])
+);
 
+// Tally medals from carrizal
+const tally: Record<string, { oros: number; platas: number; bronces: number }> = {};
+
+for (const ev of carrizalData.events) {
+  for (const entry of (ev.entries ?? [])) {
+    const club = entry.club as string;
+    const pos  = entry.position as number | null;
+    if (!pos || pos > 3) continue;
+    if (!tally[club]) tally[club] = { oros: 0, platas: 0, bronces: 0 };
+    if (pos === 1) tally[club].oros++;
+    else if (pos === 2) tally[club].platas++;
+    else tally[club].bronces++;
+  }
+}
+
+const ranking = Object.entries(tally)
+  .map(([club, m]) => ({
+    club,
+    provincia: provinciaMap[club] ?? '—',
+    oros:    m.oros,
+    platas:  m.platas,
+    bronces: m.bronces,
+    puntos:  m.oros * 3 + m.platas * 2 + m.bronces,
+  }))
+  .sort((a, b) =>
+    b.oros - a.oros || b.platas - a.platas || b.bronces - a.bronces
+  )
+  .map((r, i) => ({ ...r, posicion: i + 1 }));
 ---
 
 <Layout title="Ranking de Clubes — AARA">
@@ -49,7 +61,7 @@ const ranking: ClubRanking[] = [
     <div class="bg-white rounded-xl shadow overflow-hidden">
       <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
         <h2 class="font-bold text-[#0B2545] text-sm uppercase tracking-wider">Temporada {temporada}</h2>
-        <span class="text-xs text-gray-400">Puntuación acumulada</span>
+        <span class="text-xs text-gray-400">Regata El Carrizal 2026</span>
       </div>
 
       <div class="overflow-x-auto">
@@ -102,8 +114,8 @@ const ranking: ClubRanking[] = [
 
       <div class="px-6 py-4 bg-gray-50 border-t border-gray-100">
         <p class="text-xs text-gray-400">
-          El ranking se actualiza tras cada regata oficial del calendario AARA.
-          Los puntos se asignan según el sistema de puntuación aprobado por la Comisión Técnica.
+          Medallas acumuladas en la Regata El Carrizal 2026. Puntos: Oro = 3 · Plata = 2 · Bronce = 1.
+          El ranking se actualizará al incorporar nuevas competencias de la temporada.
         </p>
       </div>
     </div>
