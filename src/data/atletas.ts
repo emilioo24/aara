@@ -11,6 +11,7 @@ export type Atleta = {
   regatasCorridas?: number;
   internacionales?: number;
   logros?: string[];
+  avatar?: string;
 };
 
 export function toSlug(nombre: string): string {
@@ -25,6 +26,7 @@ export function toSlug(nombre: string): string {
 const _atletas: Atleta[] = [
   {
     nombre: "Abade, Lola",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AbadeGi.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Náutico Mar Del Plata",
@@ -32,6 +34,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Aciar, Alejandro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ACIAR-Alejandro.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Plata",
@@ -39,6 +42,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Acosta, Valentin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ValentinAcosta.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Mar Del Plata",
@@ -46,6 +50,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Aguiar Mallio, Matías",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AGUIARMALLIOMatias.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas La Plata",
@@ -53,6 +58,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Aguirre, Abigail Irina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AGUIRREAbigail.jpg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club de Regatas Rosario",
@@ -60,6 +66,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Alarcón, Sabrina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ALARCONSabrina.jpg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Club de Regatas Concordia",
@@ -67,6 +74,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Alberico, Luciana Francesca",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/CRTAlbericoLuciana2023.jpeg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Club de Remo Teutonia",
@@ -74,6 +82,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Albert, Úrsula",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AlbertUrsula.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -82,6 +91,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Albornoz, Santiago",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SANTIAGOALBORNOZ.jpg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Asociación Civil Tupa Remo y Triatlón",
@@ -89,6 +99,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Almeyda, Ulises",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ALMEYDAUlises.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas La Plata",
@@ -96,6 +107,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Altamirano, Azul Mariel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ALTAMIRANOAzul.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -103,6 +115,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Alvarez, Bautista",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/bautista.png",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Buenos Aires Rowing Club",
@@ -110,6 +123,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Alvarez, Fernando Gabriel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/alvarezfernando.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Plata",
@@ -118,6 +132,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Amar, Malena",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/amarmalena.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -125,6 +140,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Amer, Bruno Gabriel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Amer.Bruno.jpg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club de Regatas Santa Fe",
@@ -132,6 +148,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Amer, Germán",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Amer_German.jpg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club de Regatas Santa Fe",
@@ -139,6 +156,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Annese, Agustín Elías",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ANNESE_Agustin.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Plata",
@@ -147,6 +165,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Apuzzo Ortiz, Cipriano",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/APUZZOORTIZCIPRIANO.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas La Plata",
@@ -154,6 +173,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Apuzzo Ortiz, Domingo Felipe",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/APUZZOORTIZDOMINGO.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas La Plata",
@@ -161,6 +181,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Aquino, Josefina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Aquino_Josefina.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Náutico Mar Del Plata",
@@ -168,6 +189,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Arango, Francesca",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ARANGOFrancesca.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club de Regatas América",
@@ -176,6 +198,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Arrausi, Felipe Manuel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FelipeArrausi.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Náutico El Timón",
@@ -183,6 +206,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Arrecegor, Mateo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ArrecegorMateo.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Remo Teutonia",
@@ -190,6 +214,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Arriola, Agustín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AgustinArriola.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Náutico Mar Del Plata",
@@ -197,6 +222,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Arriola, Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/IgnacioArriola.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club Náutico Mar Del Plata",
@@ -204,6 +230,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Avero, Santiago Leonel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AveroSantiago.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -212,6 +239,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Aversso, Valentino",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ValentinoAversso.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -220,6 +248,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Ayala, Angeles",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AyalaANgeles.jpeg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Club de Regatas Corrientes",
@@ -227,6 +256,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Balasch, Franco",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BalaschFranco.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -235,6 +265,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Baluzzo Chiaruzzo, Katia",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/baluzzo_katia.png",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Club de Regatas América",
@@ -242,6 +273,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Baluzzo, Alan",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BaluzzoAlan.jpg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club de Regatas América",
@@ -249,6 +281,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Balzaretti, Giorgina Maria",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BalzarettiGiorgina.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club de Regatas Rosario",
@@ -256,6 +289,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Balzarini Jara, Valentino",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BALZARINIJARAValentino.JPG",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -263,6 +297,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Battilana, Emilio Genaro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BATTILANAEmilio.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Rosario",
@@ -271,6 +306,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Bazan, Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/IgnacioBazan.jpg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Campana Boat Club",
@@ -279,6 +315,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Bazan, Thiago",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BAZANTHIAGO.jpg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Buenos Aires Rowing Club",
@@ -287,6 +324,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Bellingeri, Oriana Vanina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BELLINGERIORIANA.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club de Regatas La Plata",
@@ -294,6 +332,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Benitez, Tiziano Tomás",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BenitezTiziano.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Canottieri Italiani",
@@ -301,6 +340,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Berisso, Mikaela",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BERISSOMIKAELA.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club de Regatas América",
@@ -308,6 +348,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Berrios, Leandro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LeandroBerriosCMR.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Mendoza de Regatas",
@@ -315,6 +356,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Bessonart, Joaquin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/JOAQUINBESONART.jpg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Asociación Civil Tupa Remo y Triatlón",
@@ -322,6 +364,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Bethular, Luisina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LuisinaBethular.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club Náutico Mar Del Plata",
@@ -329,6 +372,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Biaggini, Valentina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ValentinaBiaggini.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Paraná Rowing Club",
@@ -336,6 +380,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Bilbao, Charo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BILBAO,Charo.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club de Regatas América",
@@ -343,6 +388,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Bogado, Nicolas Andres",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/bogadonicolas.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas San Nicolás",
@@ -351,6 +397,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Boismoreau, Marcos",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BoismoreauMarcos.jpg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club de Remo Teutonia",
@@ -358,6 +405,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Bonadé, Maximiliano",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MaximilianoBonade.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -366,6 +414,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Bonelli, Salvador",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/fotoBonellSalvador.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -373,6 +422,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Borches Rosemberg, Luciano",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BORCHESROSEMBERGLuciano.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Tigre Boat Club",
@@ -380,6 +430,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Borovachi, Paula",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/paulaborovahci.jpg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Asociación Civil Tupa Remo y Triatlón",
@@ -387,6 +438,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Botto, Victoria",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BOTTOVictoria.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club de Regatas Rosario",
@@ -394,6 +446,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Brasesco, Hipólito",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/HipolitoBrasesco.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Paraná Rowing Club",
@@ -401,6 +454,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Broda, Marcos",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BrodaMarcosNRC.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -409,6 +463,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Buso, Gonzalo Armando",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_580.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -417,6 +472,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Bustelo, Cristian Nahuel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FOTOBUSTELONAHUEL.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -425,6 +481,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Bustos Segabache, Antonio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AntonioBustosSegabache.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -432,6 +489,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Bustos, Mercedes",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BustosMercedes.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -440,6 +498,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Butuz, Gabriel Martín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/butuz_gabriel.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -447,6 +506,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Cabanay, Candelaria",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/cabanay_candelaria.png",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -454,6 +514,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Cabeleira, Pedro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PedroCabeleira.jpeg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club Canottieri Italiani",
@@ -461,6 +522,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Cabrera, Alexis Misael",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/CabreraAlexis.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -469,6 +531,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Cadaa Lalinde, Lola",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/CADAALALINDELOLA.jpg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Club de Regatas La Plata",
@@ -476,6 +539,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Calderon, Emiliano Oscar",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Calderon_Emiliano.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Rosario",
@@ -484,6 +548,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Canals, Delfina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/DelfinaCanalsCMR.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club Mendoza de Regatas",
@@ -491,6 +556,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Cano Murga, Diego",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/DiegoCanofoto.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Rowing Club Argentino",
@@ -498,6 +564,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Cantú, Alejo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/CANTuALEJO.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas La Plata",
@@ -505,6 +572,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Carballo, Ilén Micaela",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/carballo_ilen.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Bigornia Club",
@@ -512,6 +580,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Carballo, Ramiro Nahuel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/carballoramiro.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Bigornia Club",
@@ -519,6 +588,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Carmona Fredes, Andrés",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/CarmonaFredesAndres.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Remeros Escandinavos",
@@ -526,6 +596,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Carmona Fredes, Lola",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/CarmonaFredesLola.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Remeros Escandinavos",
@@ -533,6 +604,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Carrasco, Thiago Leonel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/thiagocarrasco.jpg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Tigre Boat Club",
@@ -540,6 +612,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Castelli, Martina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/CastelliMartina.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Remeros Escandinavos",
@@ -548,6 +621,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Catacora, Rocío",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/RocioCatacora.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club de Regatas Bariloche",
@@ -555,6 +629,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Caviasso, Santino",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SantinoCaviassoCMR.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club Mendoza de Regatas",
@@ -562,6 +637,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Ciutto, Candela",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/CiuttoCandela.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club de Regatas San Nicolás",
@@ -569,6 +645,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Coali, Marcos",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MarcosCoali.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -577,6 +654,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Colombo, Carmela",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ColomboCarmea.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -584,6 +662,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Cortenova, Santino",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SantinoCortenova.jpeg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club Canottieri Italiani",
@@ -591,6 +670,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Cota Da Costa, Marcos",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MarcosCotaDaCosta.jpeg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club de Regatas Rosario",
@@ -598,6 +678,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Cuenca, Lara Julieta",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/CuencaLara.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club Canottieri Italiani",
@@ -605,6 +686,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Curti, Nicolás Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Curti.jpg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club de Regatas América",
@@ -612,6 +694,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Cusimano, Santiago",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/CusimanoSantiago.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -619,6 +702,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Dal Vecchio, Lucas Agustin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/dal_vecchio.png",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Buenos Aires Rowing Club",
@@ -627,6 +711,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "De Armas, Augusto",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AugustoDeArmas.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Náutico El Timón",
@@ -634,6 +719,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "De La Cruz Gutierrez, Lucero Ariadna",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/DeLaCruzGutierrez.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club de Regatas Hispano Argentino",
@@ -641,6 +727,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "De La Gama, Agustín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AgustindelaGarma.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Mar Del Plata",
@@ -648,6 +735,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "De Luz, Santino",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SantinoDeLuz.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -656,6 +744,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "De Santis, Rómulo Alejandro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_2525.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas San Nicolás",
@@ -663,6 +752,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Deandrea, Catalina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Deandrea_Catalina.png",
     genero: "Femenino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -671,6 +761,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Deandrea, Santiago",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/DeAndrea_Santiago.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -678,6 +769,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Delucchi, Juana",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/JuanaDelucchi.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club Náutico Mar Del Plata",
@@ -685,6 +777,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "DeLucci, Catalina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/CatalinaDelucci.jpeg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Club Náutico Mar Del Plata",
@@ -692,6 +785,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Delzart, Juan Cruz",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/DELZARTJuanCruz.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Concordia",
@@ -699,6 +793,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Dickson, Pedro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_1914.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -707,6 +802,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Dodorico, Galo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Dodorico.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Asociación Civil Tupa Remo y Triatlón",
@@ -714,6 +810,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Dolberg, Ana Selene",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Dolberg_Ana_Selene.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Remeros Escandinavos",
@@ -721,6 +818,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Doldán, Franco Bautista",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FOTODOLDANFRANCOBAUTISTA.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Tigre Boat Club",
@@ -728,6 +826,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Donamari, Juan Bautista",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/DONAMARI-BAUTISTA.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -736,6 +835,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Drewmiak, Amadeo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Drewmiak.png",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Asociación Civil Tupa Remo y Triatlón",
@@ -743,6 +843,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Duarte, Florencia",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FlorenciaDuarte.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -751,6 +852,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Echeverria Marchessi, Lola",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LOLAECHEVERRIAMARCHESSI.jpeg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Club San Fernando",
@@ -758,6 +860,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Enneuy, Astor",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ENNEUYAstorAli.jfif",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club de Regatas San Nicolás",
@@ -765,6 +868,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Enriquez Andresson, Rodrigo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/enriquezandreson.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -773,6 +877,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Erriquenz Berardi, María Rosario",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MariaRosarioErriquenzBerardi.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Náutico Mar Del Plata",
@@ -780,6 +885,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Escalante, Marco",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MarcoEscalante.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -788,6 +894,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Escalante, Maria Belen",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Escalante-Maria.jpg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Club Mendoza de Regatas",
@@ -795,6 +902,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Escudero, Santino",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ESCUDEROSANTINO.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas La Marina",
@@ -802,6 +910,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Escurra Escobar, Felipe Mateo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ESCURRAESCOBARFelipeMateo.jpg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club de Regatas América",
@@ -809,6 +918,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Fainstein, Uma",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/umafainstein.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Náutico Hacoaj",
@@ -816,6 +926,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Falzetti, Maria Florencia",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/falzetti_maria_florencia.png",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club de Regatas Corrientes",
@@ -823,6 +934,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Farias, Lisa",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LisaFarIas.jpeg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Paraná Rowing Club",
@@ -831,6 +943,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Farragut, Martina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FarragutMartina.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club de Regatas Rosario",
@@ -838,6 +951,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Fernandez Bustos, Ignacio Lucas",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ignaciolucasfernadezbustos.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Tigre Boat Club",
@@ -845,6 +959,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Fernandez, Abigail",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FERNANDEZABIGAIL.jpg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Club de Regatas La Plata",
@@ -852,6 +967,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Fernandez, Ana",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AnaFernandez.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -860,6 +976,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Fernandez, Emilio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/emilio_fernandez.png",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Náutico Mar Del Plata",
@@ -867,6 +984,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Fernandez, Eugenio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Fernandez.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Mar Del Plata",
@@ -874,6 +992,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Fernandez, Matheo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FERNANDEZMATHEO.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Buenos Aires Rowing Club",
@@ -882,6 +1001,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Ferrari, Renzo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FERRARIRenzo.jfif",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas San Nicolás",
@@ -890,6 +1010,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Ferrer Ferrero, Lucía",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LuciaFerrerFerrero.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club Náutico Mar Del Plata",
@@ -897,6 +1018,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Ferrer Ferrero, Santiago",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ferre_ferrero_santiago.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Náutico Mar Del Plata",
@@ -904,6 +1026,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Fischer, Lucía",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FISCHERLUCIA.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -911,6 +1034,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Fois, Catterina SImona",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/fotocaterinfois.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -918,6 +1042,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Fornara, Lorenzo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Fornara_Lorenzo.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Asociación Cordobesa de Remo",
@@ -925,6 +1050,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Fornoni, Lucio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LucioFornoni.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Mendoza de Regatas",
@@ -932,6 +1058,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Fritz, Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FritzIgnacio.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -939,6 +1066,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Fucile, Anika",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/anika_fucile.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -947,6 +1075,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Fusco, Gregorio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FuscoGregorio.jpeg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Tigre Boat Club",
@@ -954,6 +1083,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Galarza, Julián",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/galarza_julianCRC.jpg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club de Regatas Corrientes",
@@ -961,6 +1091,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Galarza, Mateo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GalarzaMateoNRC.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -968,6 +1099,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Galdeano, Lautaro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GaldeanoLautaro.jpeg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Buenos Aires Rowing Club",
@@ -976,6 +1108,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Galeano, Lisandro Benjamin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GALEANOLISANDRO.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
@@ -984,6 +1117,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Galfre, Clara",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/9790_galfre.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Náutico Mar Del Plata",
@@ -992,6 +1126,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Galiana, Ramón",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/galiana.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -999,6 +1134,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Galisteo, Franco",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GalisteoFranco.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Buenos Aires Rowing Club",
@@ -1007,6 +1143,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gallina, Renato Andres",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GALLINRenato.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Rosario Rowing Club",
@@ -1014,6 +1151,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gallini, Francisco",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GALLINIFRANCISCO.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas La Plata",
@@ -1021,6 +1159,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gallo Mahler, María Felicitas",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GalloFelicitas.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -1029,6 +1168,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Galloni, Guido",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GALLONIGuido.jpeg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Rosario Rowing Club",
@@ -1036,6 +1176,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Garcia Valdivieso, Maya Eleni",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/mayavaldiverso.JPG",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Club de Remo Teutonia",
@@ -1043,6 +1184,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "García, Juan Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/garciafoto.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Remeros Alberdi",
@@ -1050,6 +1192,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "García, Melany Valentina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GARCIAValentina.jpg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Club de Regatas Concordia",
@@ -1057,6 +1200,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Garzón Vaccarezza, Santino Raúl",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SANTINORAULGARZONVACCARREZZA.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Tigre Boat Club",
@@ -1064,6 +1208,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gatti Moreira, Bautista",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BautistaGattiMoreira.jpg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club San Fernando",
@@ -1072,6 +1217,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Ghiretti, Franco",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FrancoGhiretti.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -1080,6 +1226,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gianakis, Olimpia",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GianakisOlimpia.jpeg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Club de Remo Teutonia",
@@ -1087,6 +1234,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Glasberg, Emma",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/emma.jpg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Club de Regatas América",
@@ -1094,6 +1242,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gomez Enriquez, Alejandro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_1565.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Corrientes",
@@ -1101,6 +1250,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gomez Enriquez, Gaston",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GomezEnriquezGaston.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Corrientes",
@@ -1108,6 +1258,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gomez, Matías",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MatiasGomezCMR.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Mendoza de Regatas",
@@ -1115,6 +1266,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gomez, Natalia Lucia",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GOMEZ_NATALIA_FOTO.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Bigornia Club",
@@ -1122,6 +1274,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gomez, Sebastián",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SebastianGomez.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club Canottieri Italiani",
@@ -1129,6 +1282,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gomez, Victoria",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GOMEZVICTORIA.jpg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
@@ -1137,6 +1291,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "González Ricciuti, Julieta",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Ricciutti.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Campana Boat Club",
@@ -1144,6 +1299,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gonzalez Videla, Tomás",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GONZALEZVIDELAFOTOFRENTE.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -1151,6 +1307,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gonzalez, Facundo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FacundoGonzalez.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Mar Del Plata",
@@ -1158,6 +1315,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gonzalia, Tiziana",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GONZALIATIZIANA.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club de Regatas La Plata",
@@ -1165,6 +1323,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gonzalo, Morena",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GONZALOMorena.jpg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club de Regatas América",
@@ -1172,6 +1331,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Goudeau, Sebastián",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SebastianGoudeau.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas Bariloche",
@@ -1179,6 +1339,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Grillo, Bautista",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Grillo.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Buenos Aires Rowing Club",
@@ -1186,6 +1347,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Guereta, Geremias",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/guereta_geremias.png",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club de Regatas San Nicolás",
@@ -1193,6 +1355,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Guerrero, Ramiro Marcos",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/RamiroGuerrero.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -1201,6 +1364,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Guerrina, Lautaro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GUERRINALautaro.jfif",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas San Nicolás",
@@ -1208,6 +1372,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gularte, Federico Agustín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/gularte.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Concordia",
@@ -1215,6 +1380,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gulin, Alma",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AlmaGulinCMR.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club Mendoza de Regatas",
@@ -1222,6 +1388,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Gulluni, Agustin Santino",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/gulluni_agustin.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -1229,6 +1396,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Guzman, Juan José",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/JuanJoseGuzman.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Campana Boat Club",
@@ -1236,6 +1404,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Guzman, Pedro Antonio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PedroAntonioGuzman.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Campana Boat Club",
@@ -1243,6 +1412,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Haack, Axel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Haack_axel.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -1251,6 +1421,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Hammar, Marcos",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/HAMMARMarcos.JPG",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -1258,6 +1429,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Hawryczszuk, Michel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Hawryczszuk.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico El Timón",
@@ -1265,6 +1437,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Heidenreich, Felipe Nicolás",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FelipeHeidenreich.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Remeros Escandinavos",
@@ -1272,6 +1445,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Hidalgo, Germán Imanol",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GermanHidalgoCMR.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Mendoza de Regatas",
@@ -1279,6 +1453,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Holler, Andres",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/HOLLERANDRES.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -1286,6 +1461,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Infante, Joel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_932.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -1294,6 +1470,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Isach, Bautista",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ISACHbautista.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Rosario Rowing Club",
@@ -1301,6 +1478,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Isach, Juan Cruz",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ISACHJuanCruz.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Rosario Rowing Club",
@@ -1308,6 +1486,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Jijon, Juan Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/juan-ignacio-jijon.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Rosario Rowing Club",
@@ -1315,6 +1494,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Kaless, Gabriel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Kaless.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Bigornia Club",
@@ -1322,6 +1502,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Kohn, Joaquin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/JoaquinKohnCMR.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Mendoza de Regatas",
@@ -1329,6 +1510,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Kohn, Sofía",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SofiaKohnCMR.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club Mendoza de Regatas",
@@ -1336,6 +1518,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Konstantinides, Athina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Konstantinides.jpeg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Asociación Cordobesa de Remo",
@@ -1343,6 +1526,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Kraitman, Martín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Kraitman.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas América",
@@ -1350,6 +1534,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "La Torre, Martina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/latorremartina1.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -1358,6 +1543,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Lacava, Lautaro Luis",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LACAVALautaroluis.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -1365,6 +1551,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Laesprella, Andrés",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/laesprella_andres.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Bigornia Club",
@@ -1372,6 +1559,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Lanusse Tunstall, Joaquin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/lanusse_joaquin.png",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club de Remo Teutonia",
@@ -1379,6 +1567,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Lasserre, Martín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/lasserre.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Plata",
@@ -1386,6 +1575,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Ledesma, Ulises",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LEDEZMAULISES.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club San Fernando",
@@ -1393,6 +1583,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Leguizamon, Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LEGUIZAMONIgnacio.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas América",
@@ -1400,6 +1591,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Leverone, Marcos Federico",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_1741.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -1408,6 +1600,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Linaro, Valentina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LINAROValentina.jpeg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Rosario Rowing Club",
@@ -1415,6 +1608,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Lingenfelder, Erica",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LINGENFELDERErica.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club de Regatas Rosario",
@@ -1422,6 +1616,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Lirussi Brandan, Thiago",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LirussiThiago.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club San Fernando",
@@ -1429,6 +1624,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Llover, Cristian Leonardo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/llover_cristian.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas San Nicolás",
@@ -1437,6 +1633,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Loayza, Camilo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/loayzacamilo.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Plata",
@@ -1444,6 +1641,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Locino, Julieta",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LOCINOJULIETA.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club de Regatas La Plata",
@@ -1451,6 +1649,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Loitegui, Benjamin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LoiteguiBenjamin.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Buenos Aires Rowing Club",
@@ -1459,6 +1658,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Lopez Galastro, Augusto",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AugustoLopezGalastro.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas La Plata",
@@ -1466,6 +1666,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Lopez Rivadeneira, Lorenzo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LorenzoLopez.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club de Regatas Corrientes",
@@ -1473,6 +1674,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Lopez, Agustín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AgustinLopezIi.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Mar Del Plata",
@@ -1480,6 +1682,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Louzao, Guadalupe",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/louzaoguadalupe.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -1487,6 +1690,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Luján, Enzo Julian",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LujanEnzo.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Corrientes",
@@ -1494,6 +1698,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Lupo, Bruno Francisco",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LupoBruno.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -1501,6 +1706,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Lupo, Nicolas Valentin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/NicolasLupo.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -1509,6 +1715,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Mac Yntire, Yuliana Belén",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/YulianaMacYntire.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Paraná Rowing Club",
@@ -1516,6 +1723,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Magalú, Felipe Nicolás",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MAGALUFELIPE.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
@@ -1524,6 +1732,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Maguna, Maria Sol",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/maguna_maria.png",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Peña Nautica Bajada España",
@@ -1531,6 +1740,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Maia, Lola",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MaiaLola.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club de Regatas América",
@@ -1539,6 +1749,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Maisterra, Juan María",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MAISTERRAFOTONRC.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Nahuel Rowing Club",
@@ -1546,6 +1757,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Mamani, Leandro Nicolas",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MamaniLeandroNicolas.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Asociación Cordobesa de Remo",
@@ -1553,6 +1765,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Mamani, Nestor Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Mamani_N_I.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -1561,6 +1774,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Mancino, Camila",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOCAMILA.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -1569,6 +1783,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Mancino, Juan Martín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MANCINOJUANMARTIN.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -1577,6 +1792,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Mansilla, Martín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Mansilla_Martin2.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -1585,6 +1801,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Manzo Majirena, Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/maijirena.png",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club Náutico Mar Del Plata",
@@ -1592,6 +1809,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Manzotti, Agostina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/agostinamanzotti.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -1600,6 +1818,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Maquiavelo, Salvador",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MAQUIAVELO_FOTO.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -1607,6 +1826,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Marchet, Eva",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MARCHETEVA.jpeg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Club de Regatas La Plata",
@@ -1614,6 +1834,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Marcipar, Agustin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/agustinmarcipar.jpg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club de Regatas Santa Fe",
@@ -1621,6 +1842,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Marques, Danilo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/DaniloMarques.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -1628,6 +1850,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Marsili, Santiago",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Marsili.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -1636,6 +1859,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Martin, Estanislao Alec",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/CRTEstanislaoMartin.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Remo Teutonia",
@@ -1643,6 +1867,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Martinez, Gonzalo Nicolás",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MartinezGonzalo.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -1651,6 +1876,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Masino, Enzo Lisandro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MASINOENZO.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Campana Boat Club",
@@ -1658,6 +1884,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Massa Andreotti, Máximo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MaximoMassa.jpg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club San Fernando",
@@ -1666,6 +1893,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Mata Carmona, José Ramón",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/JoseRamonMataCarmonafoto.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Rowing Club Argentino",
@@ -1673,6 +1901,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Maull, Lorenzo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MAULLULISES.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas La Plata",
@@ -1680,6 +1909,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Maureira, Tobías Lautaro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MaureiraTobias.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -1687,6 +1917,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Mazzoni, Lara",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MazzoniLara.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -1695,6 +1926,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Mc Nally, José Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MCNALLYJUANIGNACIO.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
@@ -1703,6 +1935,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Medina, Vicente",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MedinaVicente.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Tigre Boat Club",
@@ -1710,6 +1943,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Mendez, Antonio Daniel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AntonioMendez.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Corrientes",
@@ -1717,6 +1951,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Mendez, Fiorella",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/fiorella_mendez.png",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Club de Regatas Corrientes",
@@ -1724,6 +1959,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Menin, Santino",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Menin_Santino.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Hacoaj",
@@ -1732,6 +1968,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Merkel, Máximo Germán",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Merkel.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Bigornia Club",
@@ -1739,6 +1976,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Merlo, Caetano",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Merlo_caetano.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Rosario",
@@ -1747,6 +1985,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Micheletto, Mateo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/micheletto_mateo.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas América",
@@ -1754,6 +1993,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Migueles, Joaquin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/miguelesjoaquin.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -1762,6 +2002,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Molina, Carmela Pilar",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/molina_carmela.png",
     genero: "Femenino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -1770,6 +2011,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Molina, Carola",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MolinaCarola.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -1778,6 +2020,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Monetta, Santino",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MONETASANTINO.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
@@ -1786,6 +2029,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Mongelot, Luna Nicole",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LUNA-MONGELOT.jpg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
@@ -1793,6 +2037,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Monteferrante, Manuel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ManuelMonteferrante.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club Remeros Alberdi",
@@ -1800,6 +2045,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Montemurro, Guadalupe Celeste",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/montemurro_guadalupe.png",
     genero: "Femenino",
     categoria: "Senior",
     club: "Asociación Cordobesa de Remo",
@@ -1807,6 +2053,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Monzon, Lucas",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MonsonLucas.jpeg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Asociación Cordobesa de Remo",
@@ -1814,6 +2061,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Monzón, Piuque Nahuel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PiuqueMonzon.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Náutico El Timón",
@@ -1821,6 +2069,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Moralez, Evangelina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/EvangelinaMorales.jpg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Club Mendoza de Regatas",
@@ -1828,6 +2077,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Moran, Victoria",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/NRCMORANVictoria.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Nahuel Rowing Club",
@@ -1835,6 +2085,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Moreira Rosas, Francisco Miguel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Moreira.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -1843,6 +2094,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Moreno Andreoni, Amy Nerea",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MorenoAmyETR.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -1851,6 +2103,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Moreyra, Luciano",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Luciano_moreyra.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Paraná Rowing Club",
@@ -1858,6 +2111,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Muñiz, Teo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/TeoMuniz.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Náutico Mar Del Plata",
@@ -1865,6 +2119,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Nadal, Juan Cruz",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_557.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -1873,6 +2128,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Nani, Carla",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Nani_Carla.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Campana Boat Club",
@@ -1880,6 +2136,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Navarro, Franco",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/NavarroFranco.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -1887,6 +2144,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Navarro, Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/navarro.png",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club de Regatas Bariloche",
@@ -1894,6 +2152,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Navarro, Nicolas Alberto",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/NAVARRO.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -1901,6 +2160,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Navarro, Walter Damián",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Navarro.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -1908,6 +2168,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Neuwirt, Ramiro Valentín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/NeuwirtRamiro.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Remo Teutonia",
@@ -1915,6 +2176,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Noseda, Guillermina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Guillermina_Noseda.jpg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Asociación Civil Tupa Remo y Triatlón",
@@ -1922,6 +2184,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Novello Winderholler, Ghislaine",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ghislaine.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club de Regatas Rosario",
@@ -1929,6 +2192,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Nuñez, Milo Iván",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MiloNunez.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas Bariloche",
@@ -1936,6 +2200,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Ochoa Sperle, Joaquin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/JoaquinOchoa.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Remeros Escandinavos",
@@ -1943,6 +2208,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Olmedo, Martina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MartinaOlmedo.jpg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club Mendoza de Regatas",
@@ -1950,6 +2216,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Orellana, Marco Gonzalo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AB.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Rowing Club Argentino",
@@ -1957,6 +2224,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Orellano, Santino",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SANTINOORELLANO.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Remeros Alberdi",
@@ -1964,6 +2232,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Orlandini, Delfina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FOTOORLANDINIDELFINA.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -1972,6 +2241,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Otero Delbue, Martín Emiliano",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/OTEROMartin.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Tigre Boat Club",
@@ -1979,6 +2249,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pablovich, Nahuel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PablovichNahuel.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Mar Del Plata",
@@ -1986,6 +2257,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pacheco, Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/pacheco_ignacio.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Rosario",
@@ -1994,6 +2266,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pacheco, Maximo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/pacheco_maximo.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Rosario",
@@ -2002,6 +2275,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pacheco, Patricio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Patricio-Pacheco.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Rosario",
@@ -2010,6 +2284,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Palavecino, Jazmín Alejandra",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PALAVECINOJAZMIN.jpg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
@@ -2017,6 +2292,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Palomar, Gonzalo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PalomarGonzalo.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas La Marina",
@@ -2024,6 +2300,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Papazian, Juan Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PapazianJuanIgnacio.jpeg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Buenos Aires Rowing Club",
@@ -2032,6 +2309,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Paré, Joaquín Ezequiel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/joaquin_pare.jfif",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -2039,6 +2317,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Paredes, Julieta",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/JulietaParedes.jpg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
@@ -2046,6 +2325,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Paredes, Tomás",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PAREDESTOMAS.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -2054,6 +2334,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Parodi, Facundo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ParodiFacundo.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Buenos Aires Rowing Club",
@@ -2062,6 +2343,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Partenni, Giovanna",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ParteniGiovana.jpeg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Rosario Rowing Club",
@@ -2069,6 +2351,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Partenni, Gregorio Gunther",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PartenniGregorio.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Rosario Rowing Club",
@@ -2076,6 +2359,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pastorino, Alex",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/pastorino_alex.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Peña Nautica Bajada España",
@@ -2083,6 +2367,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pastorino, Joan",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PASTORINOJoan.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Peña Nautica Bajada España",
@@ -2090,6 +2375,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Patorniti, Franco Esteban",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PatornitiFranco.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Rowing Club Argentino",
@@ -2097,6 +2383,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pavía, Sol Nahir",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PAVIASOL.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -2104,6 +2391,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pavon, Lautaro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PAVONLautaro.jpg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club de Regatas Concordia",
@@ -2111,6 +2399,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Paz, Franco",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/francopaz.jpeg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Tigre Boat Club",
@@ -2118,6 +2407,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pedrini, María Lucila",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PedriniMariaLucila.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club de Regatas Hispano Argentino",
@@ -2125,6 +2415,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Peisker, Pedro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PeiskerPedro.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Buenos Aires Rowing Club",
@@ -2133,6 +2424,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pellicer, Martina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PELLICERMARTINA.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -2141,6 +2433,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pena, Valentín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ValentinPena.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Mendoza de Regatas",
@@ -2148,6 +2441,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Peña Pracht, Thiago",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PENATHIAGO.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club de Regatas Rosario",
@@ -2155,6 +2449,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Peña Solar, Ronald Alexis",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/RondalPena.jpg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club de Remo Canottieri Italiano",
@@ -2162,6 +2457,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Peralta Martinez, Olivia",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/peraltamartinez_olivia.png",
     genero: "Femenino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -2170,6 +2466,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Peralta, Nicolás",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PERALTANICOLAS.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -2178,6 +2475,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pereira, Juan Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/JuanPereira.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -2185,6 +2483,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Perez Croce, Andres",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Perezcroce.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -2192,6 +2491,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Piccini Lopez, Juan José",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/JUANJOSEPICCINI.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club de Regatas América",
@@ -2199,6 +2499,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Piedra Buena, Alejandro José",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_1114.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Concordia",
@@ -2206,6 +2507,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pinardi, Delfina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/DelfinaPinardi.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -2213,6 +2515,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pinardi, Dionel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/DIONELPINARDI.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Campana Boat Club",
@@ -2220,6 +2523,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Pomilio, Joan Francisco",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/POMILIOJOAN.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
@@ -2228,6 +2532,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Ponce De León, Nicolás",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FOTOPONCEDELEONNICOLAS.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Campana Boat Club",
@@ -2235,6 +2540,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Prados, Felicitas",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PradosFelicitas.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -2243,6 +2549,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Prados, Lila",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PradosLila.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club Canottieri Italiani",
@@ -2250,6 +2557,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Quevedo, Mateo  Valentín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ValentinQuevedo.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -2257,6 +2565,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Radyna, Noelia",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/RadynaNoelia.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Peña Nautica Bajada España",
@@ -2264,6 +2573,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Ravera, Francisco Ravacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FRANCISCORAVACIORAVERA.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -2271,6 +2581,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Regolta, Gastón Francisco",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/RegoltaGastonNRC.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -2278,6 +2589,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Ríos, Benjamin Nehuen",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/benjaminrios.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -2286,6 +2598,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Rivero, Alex Uriel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/RIVEROAlex.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas Rosario",
@@ -2293,6 +2606,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Riveros, Joaquin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Riveros.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -2301,6 +2615,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Riveros, Victoria",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/riveros.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -2309,6 +2624,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Rodriguez, Facundo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FacundoRodriguez.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Concordia",
@@ -2316,6 +2632,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Roggi, Zaira Nicole",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ROGGIZAIRA.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club Náutico Zárate",
@@ -2324,6 +2641,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Rojas, Marcos Ivan",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ROJAS.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -2331,6 +2649,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Romera, Paula Sofía",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PaulaSOfiaROmera.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -2339,6 +2658,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Romero, Joel Alejandro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_2289.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -2347,6 +2667,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Romero, Juan Segundo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/JUANROMERO.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Rosario Rowing Club",
@@ -2354,6 +2675,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Romero, Tomás Daniel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/tomasromero.jpeg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Asociación Civil Tupa Remo y Triatlón",
@@ -2361,6 +2683,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Rosa, Paulo Máximo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Paulo-Rosa.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Rosario",
@@ -2368,6 +2691,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Rossi, Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Rossiignacio.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Rosario",
@@ -2375,6 +2699,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Ruberto Fernandez, Santino Exequiel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/santinofernandez.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -2382,6 +2707,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Ruizdiaz, Bautista Matías",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/RuizDiasBAutirsta.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Corrientes",
@@ -2389,6 +2715,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Salas, Luis Alberto",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/salas_luis.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -2396,6 +2723,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Salas, Maria Guadalupe",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/GuadalupeSalas.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Náutico Mar Del Plata",
@@ -2403,6 +2731,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Salice Mc Lean, Joaquin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SALICEJOAQUINFOTOCARA.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Buenos Aires Rowing Club",
@@ -2410,6 +2739,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Salud, Valentino Maximo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SALUDValentino.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas Concordia",
@@ -2417,6 +2747,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Sanchez, Emanuel Gonzalo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SanchezEmanuelGonzalo.jpg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club de Regatas América",
@@ -2424,6 +2755,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Sandoval Alarcon, Juan Cruz",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SandovalJuanCruz.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club de Regatas Corrientes",
@@ -2431,6 +2763,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Sanguinetti Velasco, Adriana María",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Sanguine.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club De Regatas Lima",
@@ -2438,6 +2771,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Sans Muñoz, Nicolás Joaquín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/sans_nicolas.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -2446,6 +2780,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Santolaria, Martina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SantolariaMartina.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -2454,6 +2789,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Santórsola, Joaquín Sebastián",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SantorsolaJoaquin.jpeg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club Náutico Zárate",
@@ -2461,6 +2797,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Santos, Geronimo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Santos-Geronimo.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -2468,6 +2805,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Scenna, Agustín Matías",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/agustinscenna.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -2476,6 +2814,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Scheffer, Agustín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SchefferAgustin.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -2484,6 +2823,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Scheffer, María Giuliana",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MariaGiulianaScheffer.jpeg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Club Canottieri Italiani",
@@ -2491,6 +2831,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Scheffer, María Sofía",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SofiaScheffer.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club Canottieri Italiani",
@@ -2498,6 +2839,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Scheffer, María Sol",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/MariaSolScheffer.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -2505,6 +2847,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Schell, Francisco",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/scheell.png",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Buenos Aires Rowing Club",
@@ -2512,6 +2855,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Schwidt Delucchi, Sofía",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SofiaDelucchi.jpeg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Club Náutico Mar Del Plata",
@@ -2519,6 +2863,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Segui, Manuel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SeguiManuelETR.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -2527,6 +2872,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Sendra, Juan Cruz",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SendraJuanCruz.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -2534,6 +2880,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Silvestro, Evelyn Maricel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_1378.png",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -2541,6 +2888,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Simón, Lucas",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/LUCASSIMON.jpg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club Remeros Alberdi",
@@ -2548,6 +2896,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Simonitti, Iara",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/simonitti_iara.png",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Club de Regatas América",
@@ -2556,6 +2905,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Soloaga, Maitena",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SoloagaMaitena.jpeg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
@@ -2563,6 +2913,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Sosa, Pedro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/PEDROSOSA.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
@@ -2571,6 +2922,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Sousa, Bautista",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SOUSA-BAUTISTA.jpg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club Náutico Zárate",
@@ -2578,6 +2930,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Surueta, Valentina Luján",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/SuruetaValentina.jpeg",
     genero: "Femenino",
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
@@ -2585,6 +2938,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Tersoglio, Facundo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/tersoglio_facundo.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -2593,6 +2947,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Tibaldi, Tomás",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/TomasTibaldi.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -2601,6 +2956,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Tiburzi, Tobías Leonardo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FOTO_TIBURZI_Tobias.jpg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club de Regatas Santa Fe",
@@ -2608,6 +2964,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Tobes, Demian",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/TOBES.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas La Plata",
@@ -2615,6 +2972,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Tolosana, Lucila",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/TolosanaLucila.jpg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club de Regatas América",
@@ -2622,6 +2980,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Tomas Falcon, Jesús Nahuel",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/TOMASFALCONesusNahuel.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -2629,6 +2988,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Torrilla, Paloma",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/TorrillaurmanPalom.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club de Regatas América",
@@ -2636,6 +2996,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Toscanini, Luca",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ToscaniniLucas.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -2643,6 +3004,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Trejo, Felipe Tomas",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/TrejoFelipeTomas.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -2651,6 +3013,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Trolli, Ignacio Agustín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/TROLLIAGUSTIN.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Náutico El Timón",
@@ -2658,6 +3021,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Trotta, Bautista",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/TROTTABautista.jpeg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club de Regatas Rosario",
@@ -2665,6 +3029,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Turri, Santiago",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/TURRIFOTONRC.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Nahuel Rowing Club",
@@ -2672,6 +3037,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Van Lacke Campesi, Ghalia",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FOTOVANLACKEGHALIAETR.jpeg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Tigre Boat Club",
@@ -2679,6 +3045,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Varela, Juliana",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/JulianaVarela.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -2687,6 +3054,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Vega, Valentina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ValentinaVega.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Canottieri Italiani",
@@ -2694,6 +3062,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Veiga, Emilia",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/VEIGaEmilia.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club de Regatas América",
@@ -2701,6 +3070,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Venza, Ramiro",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/VENZARamiro.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club de Regatas La Plata",
@@ -2708,6 +3078,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Vera, Virginia",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/VERAVIRGINIA.jpg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Club Náutico Zárate",
@@ -2716,6 +3087,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Videla Nati, Nicolás",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/VIDELANATINICOLAS.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -2724,6 +3096,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Viel, Xiomara Jazmin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/VIEL_Xiomara.jpeg",
     genero: "Femenino",
     categoria: "Cadete",
     club: "Bigornia Club",
@@ -2731,6 +3104,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Villa, Federico",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FedericoVilla.jpg",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Club Mendoza de Regatas",
@@ -2738,6 +3112,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Villalba, Rodrigo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Villabarodrigo.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas Concordia",
@@ -2745,6 +3120,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Villar, Gonzalo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_726.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club de Regatas La Marina",
@@ -2752,6 +3128,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Vineis Trippel, Azul",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/AzulVineis.jpg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Tigre Boat Club",
@@ -2759,6 +3136,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Vineis Trippel, Marcos",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/VINEISTRIPPELMarcos.jpeg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Tigre Boat Club",
@@ -2766,6 +3144,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Viola De Negri, Francisco",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FRANCISCOVIOLADENEGRI.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Tigre Boat Club",
@@ -2774,6 +3153,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Vitar, Benjamín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/BenjaminVitar.jpg",
     genero: "Masculino",
     categoria: "Juvenil",
     club: "Club Mendoza de Regatas",
@@ -2781,6 +3161,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Weber Fuentes, Anthony",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Anthony.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -2789,6 +3170,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Weber Fuentes, Michelle",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/WeberFuentesMichelle.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club Náutico Zárate",
@@ -2797,6 +3179,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Wingord, Mateo",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/wingord_mateo.jpg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
@@ -2805,6 +3188,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Zanardi, Ignacio",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ZanardiIgnacio.jpeg",
     genero: "Masculino",
     categoria: "Sub-23",
     club: "Club de Regatas Rosario",
@@ -2812,6 +3196,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Zanghi, Francisco",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/persona_569.png",
     genero: "Masculino",
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
@@ -2820,6 +3205,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Zapata, Liam Joaquin",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/ZapataLiam.jpeg",
     genero: "Masculino",
     categoria: "Senior",
     club: "Asociación Cordobesa de Remo",
@@ -2828,6 +3214,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Zarate Bosco, Carmen",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/Zarate.jpg",
     genero: "Femenino",
     categoria: "Sub-23",
     club: "Paraná Rowing Club",
@@ -2836,6 +3223,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Zavalla, Federico Martín",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/FedericoZavalla.JPG",
     genero: "Masculino",
     categoria: "Cadete",
     club: "Paraná Rowing Club",
@@ -2843,6 +3231,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Zibelman, Irina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/irinazibelman.jpg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club de Regatas Corrientes",
@@ -2850,6 +3239,7 @@ const _atletas: Atleta[] = [
   },
   {
     nombre: "Zibelman, Sabrina",
+    avatar: "https://s3.amazonaws.com/aara-images/uploads/people/photos/sabrinazibelman.jpeg",
     genero: "Femenino",
     categoria: "Senior",
     club: "Club de Regatas Corrientes",

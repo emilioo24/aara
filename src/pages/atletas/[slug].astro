@@ -94,8 +94,11 @@ const clubHref = `${base}/clubes/${clubSlug(atleta.club)}`;
       </a>
 
       <div class="flex items-center gap-6">
-        <div class="w-20 h-20 rounded-full bg-[#EFC050]/20 border-2 border-[#EFC050]/40 flex items-center justify-center shrink-0 text-2xl font-bold text-[#EFC050]">
-          {initials}
+        <div class="w-20 h-20 rounded-full bg-[#EFC050]/20 border-2 border-[#EFC050]/40 flex items-center justify-center shrink-0 text-2xl font-bold text-[#EFC050] overflow-hidden">
+          {atleta.avatar
+            ? <img src={atleta.avatar} alt={atleta.nombre} class="w-full h-full object-cover" />
+            : initials
+          }
         </div>
         <div>
           <h1 class="text-2xl md:text-3xl font-bold">{atleta.nombre}</h1>

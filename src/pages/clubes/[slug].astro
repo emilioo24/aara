@@ -202,8 +202,11 @@ const atletasDelClub = atletas.filter(a => a.club === club.nombre);
                 href={`${base}/atletas/${atletaSlug(atleta.nombre)}`}
                 class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
               >
-                <div class="w-9 h-9 rounded-full bg-[#0B2545]/10 flex items-center justify-center text-xs font-bold text-[#0B2545] shrink-0">
-                  {initials}
+                <div class="w-9 h-9 rounded-full bg-[#0B2545]/10 flex items-center justify-center text-xs font-bold text-[#0B2545] shrink-0 overflow-hidden">
+                  {atleta.avatar
+                    ? <img src={atleta.avatar} alt={atleta.nombre} class="w-full h-full object-cover" />
+                    : initials
+                  }
                 </div>
                 <div class="flex-1 min-w-0">
                   <div class="text-sm font-semibold text-[#0B2545] group-hover:text-[#13A8D4] transition-colors">{atleta.nombre}</div>

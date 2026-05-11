@@ -101,7 +101,7 @@ export const clubes: Club[] = [
     coloresPalas: { primario: "#003087", secundario: "#FFD700" },
   },
   {
-    nombre: "Club Canotieri Italiani",
+    nombre: "Club Canottieri Italiani",
     acronimo: "CCI",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
