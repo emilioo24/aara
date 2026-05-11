@@ -1,5 +1,6 @@
 export type Club = {
   nombre: string;
+  acronimo?: string;
   provincia: string;
   ciudad: string;
   urlWeb?: string;
@@ -23,6 +24,7 @@ export function toSlug(nombre: string): string {
 export const clubes: Club[] = [
   {
     nombre: "Asociación Civil Tupá Remo y Triatlón",
+    acronimo: "",
     provincia: "Santa Fe",
     ciudad: "Santa Fe de la Vera Cruz",
     fundacion: 2005,
@@ -33,6 +35,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Asociación Cordobesa de Remo",
+    acronimo: "ACR",
     provincia: "Córdoba",
     ciudad: "Villa Carlos Paz",
     fundacion: 1960,
@@ -43,6 +46,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Bigornia Club",
+    acronimo: "",
     provincia: "Chubut",
     ciudad: "Rawson",
     fundacion: 1985,
@@ -53,6 +57,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Buenos Aires Rowing Club",
+    acronimo: "BARC",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
     urlWeb: "https://www.bsasrowingclub.com.ar",
@@ -71,6 +76,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Campana Boat Club",
+    acronimo: "CBC",
     provincia: "Buenos Aires",
     ciudad: "Campana",
     fundacion: 1903,
@@ -81,6 +87,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Atlético Rosario Central",
+    acronimo: "",
     provincia: "Santa Fe",
     ciudad: "Rosario",
     fundacion: 1914,
@@ -91,6 +98,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Canotieri Italiani",
+    acronimo: "CCI",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
     fundacion: 1898,
@@ -101,6 +109,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Actividades Acuáticas Atlantis",
+    acronimo: "",
     provincia: "Buenos Aires",
     ciudad: "Mar del Plata",
     fundacion: 1992,
@@ -111,6 +120,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Regatas Almirante Brown",
+    acronimo: "",
     provincia: "Buenos Aires",
     ciudad: "CABA",
     fundacion: 1910,
@@ -121,6 +131,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Regatas América",
+    acronimo: "CRA",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
     fundacion: 1926,
@@ -131,6 +142,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Regatas Bariloche",
+    acronimo: "CRB",
     provincia: "Río Negro",
     ciudad: "San Carlos de Bariloche",
     fundacion: 1970,
@@ -141,6 +153,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Regatas Concordia",
+    acronimo: "",
     provincia: "Entre Ríos",
     ciudad: "Concordia",
     fundacion: 1895,
@@ -156,6 +169,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Regatas Corrientes",
+    acronimo: "CRC",
     provincia: "Corrientes",
     ciudad: "Corrientes",
     fundacion: 1929,
@@ -170,6 +184,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Regatas Hispano Argentino",
+    acronimo: "CRHA",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
     fundacion: 1904,
@@ -180,6 +195,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Regatas La Marina",
+    acronimo: "CRLM",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
     fundacion: 1935,
@@ -194,6 +210,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Regatas La Plata",
+    acronimo: "",
     provincia: "Buenos Aires",
     ciudad: "La Plata",
     fundacion: 1900,
@@ -204,6 +221,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Regatas L'Aviron",
+    acronimo: "",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
     fundacion: 1890,
@@ -214,6 +232,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Regatas Rosario",
+    acronimo: "",
     provincia: "Santa Fe",
     ciudad: "Rosario",
     urlWeb: "https://www.regatasrosario.com",
@@ -232,6 +251,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Regatas San Nicolás",
+    acronimo: "CRSN",
     provincia: "Buenos Aires",
     ciudad: "San Nicolás",
     fundacion: 1920,
@@ -242,6 +262,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Regatas Santa Fé",
+    acronimo: "CRSF",
     provincia: "Santa Fe",
     ciudad: "Santa Fe de la Vera Cruz",
     fundacion: 1915,
@@ -252,6 +273,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Remo Teutonia",
+    acronimo: "CRT",
     provincia: "Buenos Aires",
     ciudad: "Dique Luján",
     fundacion: 1912,
@@ -262,6 +284,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Mendoza de Regatas",
+    acronimo: "CMR",
     provincia: "Mendoza",
     ciudad: "Mendoza",
     fundacion: 1945,
@@ -277,6 +300,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Náutico El Timón",
+    acronimo: "",
     provincia: "Buenos Aires",
     ciudad: "Luján",
     fundacion: 1955,
@@ -287,6 +311,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Náutico Hacoaj",
+    acronimo: "CNH",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
     fundacion: 1935,
@@ -301,6 +326,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Náutico Malvinas Argentinas",
+    acronimo: "CNMA",
     provincia: "Santa Fe",
     ciudad: "Rosario",
     fundacion: 1990,
@@ -311,6 +337,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Náutico Mar Del Plata",
+    acronimo: "CNMP",
     provincia: "Buenos Aires",
     ciudad: "Mar del Plata",
     fundacion: 1948,
@@ -321,6 +348,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Náutico Paraná",
+    acronimo: "",
     provincia: "Entre Ríos",
     ciudad: "Paraná",
     fundacion: 1920,
@@ -331,6 +359,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Náutico Pergamino",
+    acronimo: "",
     provincia: "Buenos Aires",
     ciudad: "Pergamino",
     fundacion: 1965,
@@ -341,6 +370,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Náutico Posadas",
+    acronimo: "",
     provincia: "Misiones",
     ciudad: "Posadas",
     fundacion: 1938,
@@ -351,6 +381,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Náutico Resistencia",
+    acronimo: "",
     provincia: "Chaco",
     ciudad: "Resistencia",
     fundacion: 1950,
@@ -361,6 +392,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Náutico Villa Constitución",
+    acronimo: "CNVC",
     provincia: "Santa Fe",
     ciudad: "Villa Constitución",
     fundacion: 1970,
@@ -371,6 +403,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Náutico y de Pesca El Yacaré",
+    acronimo: "",
     provincia: "Corrientes",
     ciudad: "Corrientes",
     fundacion: 1958,
@@ -381,6 +414,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Náutico Zárate",
+    acronimo: "CNZ",
     provincia: "Buenos Aires",
     ciudad: "Zárate",
     fundacion: 1930,
@@ -391,6 +425,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Nordelta",
+    acronimo: "",
     provincia: "Buenos Aires",
     ciudad: "Nordelta",
     fundacion: 1999,
@@ -401,6 +436,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Peña Náutica Bajada España",
+    acronimo: "PNBE",
     provincia: "Santa Fe",
     ciudad: "Rosario",
     fundacion: 1962,
@@ -411,6 +447,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Remeros Alberdi",
+    acronimo: "",
     provincia: "Santa Fe",
     ciudad: "Rosario",
     fundacion: 1955,
@@ -421,6 +458,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Remeros Escandinavos",
+    acronimo: "",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
     fundacion: 1911,
@@ -431,6 +469,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club San Fernando",
+    acronimo: "CSF",
     provincia: "Buenos Aires",
     ciudad: "San Fernando",
     fundacion: 1910,
@@ -441,6 +480,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club Suizo Buenos Aires",
+    acronimo: "",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
     fundacion: 1895,
@@ -451,6 +491,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Escuela Municipal de Remo Tigre",
+    acronimo: "",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
     fundacion: 1985,
@@ -461,6 +502,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Escuela Naval Militar",
+    acronimo: "ENM",
     provincia: "Buenos Aires",
     ciudad: "Ensenada",
     fundacion: 1872,
@@ -475,6 +517,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Escuelas Técnicas Raggio",
+    acronimo: "",
     provincia: "Buenos Aires",
     ciudad: "CABA",
     fundacion: 1940,
@@ -485,6 +528,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Nahuel Rowing Club",
+    acronimo: "NRC",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
     fundacion: 1960,
@@ -495,6 +539,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Náutico Escobar Country Club",
+    acronimo: "",
     provincia: "Buenos Aires",
     ciudad: "Escobar",
     fundacion: 1988,
@@ -505,6 +550,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Paraná Rowing Club",
+    acronimo: "PRC",
     provincia: "Entre Ríos",
     ciudad: "Paraná",
     fundacion: 1948,
@@ -515,6 +561,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Prefectura Naval Argentina",
+    acronimo: "PNA",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
     fundacion: 1896,
@@ -530,6 +577,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Rosario Rowing Club",
+    acronimo: "RRC",
     provincia: "Santa Fe",
     ciudad: "Rosario",
     fundacion: 1901,
@@ -544,6 +592,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Rowing Club Argentino",
+    acronimo: "RCA",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
     urlWeb: "https://www.rowingclubargentino.com.ar",
@@ -562,6 +611,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Tigre Boat Club",
+    acronimo: "TBC",
     provincia: "Buenos Aires",
     ciudad: "Tigre",
     urlWeb: "https://www.tigreboatclub.com",

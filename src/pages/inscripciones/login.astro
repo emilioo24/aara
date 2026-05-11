@@ -6,7 +6,7 @@ import Layout from '../../layouts/Layout.astro';
   <div class="min-h-[calc(100vh-4rem)] bg-gray-50 flex items-center justify-center px-4 py-12">
     <div class="w-full max-w-md">
 
-      <!-- Logo / header -->
+      <!-- Header -->
       <div class="text-center mb-8">
         <div class="w-16 h-16 bg-[#0B2545] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
           <div class="w-10 h-10 bg-[#EFC050] rounded-full flex items-center justify-center">
@@ -47,12 +47,7 @@ import Layout from '../../layouts/Layout.astro';
                 autocomplete="current-password"
                 class="w-full border border-gray-200 rounded-lg px-4 py-2.5 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-[#13A8D4] focus:border-transparent transition-shadow"
               />
-              <button
-                type="button"
-                id="toggle-pw"
-                class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                aria-label="Mostrar contraseña"
-              >
+              <button type="button" id="toggle-pw" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600" aria-label="Mostrar contraseña">
                 <svg id="eye-open" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
@@ -64,11 +59,7 @@ import Layout from '../../layouts/Layout.astro';
             </div>
           </div>
 
-          <button
-            type="submit"
-            id="submit-btn"
-            class="w-full bg-[#0B2545] hover:bg-[#134074] text-white font-semibold py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-          >
+          <button type="submit" id="submit-btn" class="w-full bg-[#0B2545] hover:bg-[#134074] text-white font-semibold py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
             <span id="btn-text">Ingresar</span>
             <svg id="btn-spinner" class="hidden w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
@@ -84,9 +75,21 @@ import Layout from '../../layouts/Layout.astro';
         </div>
       </div>
 
-      <!-- Demo hint -->
-      <div class="mt-4 bg-[#EFC050]/10 border border-[#EFC050]/30 rounded-xl px-4 py-3 text-xs text-gray-600 text-center">
-        <strong>Demo:</strong> cualquier email + contraseña con 6+ caracteres ingresa al sistema
+      <!-- Demo credentials -->
+      <div class="mt-4 bg-[#EFC050]/10 border border-[#EFC050]/30 rounded-xl px-5 py-4 text-xs text-gray-700 space-y-2">
+        <p class="font-bold text-gray-800 mb-1">Cuentas demo disponibles:</p>
+        <div class="flex flex-col gap-1.5">
+          <div class="bg-white rounded-lg px-3 py-2 border border-[#EFC050]/20">
+            <p class="font-semibold text-[#0B2545]">Club de Regatas Rosario</p>
+            <p class="font-mono text-gray-600">delegado@regatasrosario.com</p>
+            <p class="font-mono text-gray-600">rosario2026</p>
+          </div>
+          <div class="bg-white rounded-lg px-3 py-2 border border-[#EFC050]/20">
+            <p class="font-semibold text-[#0B2545]">Buenos Aires Rowing Club</p>
+            <p class="font-mono text-gray-600">delegado@bsasrowingclub.com.ar</p>
+            <p class="font-mono text-gray-600">barc2026</p>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -94,12 +97,22 @@ import Layout from '../../layouts/Layout.astro';
 </Layout>
 
 <script>
-  // Toggle password visibility
-  const toggleBtn = document.getElementById('toggle-pw')!;
-  const pwInput = document.getElementById('password') as HTMLInputElement;
-  const eyeOpen = document.getElementById('eye-open')!;
-  const eyeClosed = document.getElementById('eye-closed')!;
+  const ACCOUNTS = [
+    { email: 'delegado@regatasrosario.com',      password: 'rosario2026', club: 'Club de Regatas Rosario',    delegado: 'Delegado CRR' },
+    { email: 'delegado@bsasrowingclub.com.ar',   password: 'barc2026',    club: 'Buenos Aires Rowing Club',  delegado: 'Delegado BARC' },
+  ];
 
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+  if (localStorage.getItem('aara_session')) {
+    window.location.href = base + '/inscripciones';
+  }
+
+  // Toggle password
+  const toggleBtn = document.getElementById('toggle-pw')!;
+  const pwInput   = document.getElementById('password') as HTMLInputElement;
+  const eyeOpen   = document.getElementById('eye-open')!;
+  const eyeClosed = document.getElementById('eye-closed')!;
   toggleBtn.addEventListener('click', () => {
     const show = pwInput.type === 'password';
     pwInput.type = show ? 'text' : 'password';
@@ -107,50 +120,34 @@ import Layout from '../../layouts/Layout.astro';
     eyeClosed.classList.toggle('hidden', !show);
   });
 
-  // Login form
-  const form = document.getElementById('login-form')!;
-  const errorMsg = document.getElementById('error-msg')!;
-  const btnText = document.getElementById('btn-text')!;
+  // Login
+  const form       = document.getElementById('login-form')!;
+  const errorMsg   = document.getElementById('error-msg')!;
+  const btnText    = document.getElementById('btn-text')!;
   const btnSpinner = document.getElementById('btn-spinner')!;
-  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
-
-  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-
-  // If already logged in, redirect
-  if (localStorage.getItem('aara_session')) {
-    window.location.href = base + '/inscripciones';
-  }
+  const submitBtn  = document.getElementById('submit-btn') as HTMLButtonElement;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const email = (document.getElementById('email') as HTMLInputElement).value.trim();
+    errorMsg.classList.add('hidden');
+    const email    = (document.getElementById('email')    as HTMLInputElement).value.trim().toLowerCase();
     const password = (document.getElementById('password') as HTMLInputElement).value;
 
-    errorMsg.classList.add('hidden');
+    const account = ACCOUNTS.find(a => a.email === email && a.password === password);
+    if (!account) { errorMsg.classList.remove('hidden'); return; }
 
-    if (!email || !email.includes('@') || password.length < 6) {
-      errorMsg.classList.remove('hidden');
-      return;
-    }
-
-    // Simulate loading
     submitBtn.disabled = true;
     btnText.textContent = 'Ingresando...';
     btnSpinner.classList.remove('hidden');
 
     setTimeout(() => {
-      // Extract club name from email domain as demo
-      const domain = email.split('@')[1]?.split('.')[0] ?? 'miclub';
-      const clubName = domain.charAt(0).toUpperCase() + domain.slice(1);
-
-      const session = {
-        email,
-        club: `Club ${clubName}`,
-        delegado: email.split('@')[0].replace(/[._]/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+      localStorage.setItem('aara_session', JSON.stringify({
+        email:    account.email,
+        club:     account.club,
+        delegado: account.delegado,
         loggedAt: new Date().toISOString(),
-      };
-      localStorage.setItem('aara_session', JSON.stringify(session));
+      }));
       window.location.href = base + '/inscripciones';
-    }, 800);
+    }, 700);
   });
 </script>

@@ -94,7 +94,7 @@ export const meses: MesData[] = [
       { fecha: "10",    nombre: "Travesía",                                sede: "Tigre",          pais: "Bs. As.",    organiza: "BARC" },
       { fecha: "13–17", nombre: "IV Campeonato Americano de Beach Sprint", sede: "Punta Leona",    pais: "Costa Rica", organiza: "FCRR",  tag: "int" },
       { fecha: "17",    nombre: "Travesía",                                sede: "Rosario",        pais: "Santa Fe",   organiza: "RRC",   obs: "Doble par c/timonel" },
-      { fecha: "24",    nombre: "Promocional",                             sede: "Campana",        pais: "Bs. As.",    organiza: "CBC",   obs: "Día Nacional del Remero — Conmemoración del natalicio de Dn. Alberto Demiddi (1944–2000)" },
+      { fecha: "24",    nombre: "Promocional",                             sede: "Campana",        pais: "Bs. As.",    organiza: "CBC", },
       { fecha: "29–31", nombre: "Concentración / Control",                 sede: "Tigre",          pais: "Bs. As.",    organiza: "AARA",  obs: "Grupo senior ODESUR 2000m", tag: "aara" },
       { fecha: "30–31", nombre: "World Rowing Cup I",                      sede: "Sevilla",        pais: "España",     organiza: "FISA",  tag: "int" },
     ],

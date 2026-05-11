@@ -1,73 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
-const noticias = [
-  {
-    id: 1,
-    fecha: "15 Abr 2025",
-    categoria: "Administrativo",
-    titulo: "Nuevos aranceles a partir de Enero del 2026",
-    resumen: "Se actualizó el cuadro de aranceles para clubes, atletas y árbitros vigente a partir del 1° de enero de 2026. Descargá el documento oficial con todos los valores.",
-    href: "/noticias/aranceles-2026",
-    imagen: "",
-  },
-  {
-    id: 2,
-    fecha: "19 Dic 2024",
-    categoria: "Calendario",
-    titulo: "Ya está disponible el calendario de regatas 2026",
-    resumen: "El calendario oficial de regatas para la temporada 2026 ya está publicado. Consultá todas las fechas, sedes y modalidades de cada competencia.",
-    href: "/biblioteca/calendario",
-    imagen: "",
-  },
-  {
-    id: 3,
-    fecha: "10 Dic 2024",
-    categoria: "Institucional",
-    titulo: "El remo costero, a un paso del olimpismo",
-    resumen: "La disciplina de remo costero avanza en su proceso de reconocimiento olímpico para los Juegos de Los Ángeles 2028. La AARA apoya activamente esta iniciativa.",
-    href: "/noticias/remo-costero-olimpico",
-    imagen: "",
-  },
-  {
-    id: 4,
-    fecha: "28 Nov 2024",
-    categoria: "Competencia",
-    titulo: "Resultados del CAR 2024 — Campeones nacionales",
-    resumen: "Se disputó el Campeonato Argentino de Remo 2024 en Tigre. Conocé todos los resultados y los campeones nacionales en cada categoría.",
-    href: "/resultados",
-    imagen: "",
-  },
-  {
-    id: 5,
-    fecha: "15 Oct 2024",
-    categoria: "Formación",
-    titulo: "Curso de capacitación para árbitros — Inscripciones abiertas",
-    resumen: "AARA abre inscripciones para el curso de formación y actualización de árbitros. El curso se dictará de forma presencial y virtual.",
-    href: "/noticias/curso-arbitros-2024",
-    imagen: "",
-  },
-  {
-    id: 6,
-    fecha: "03 Sep 2024",
-    categoria: "Internacional",
-    titulo: "Delegación argentina en el Campeonato Mundial de Remo",
-    resumen: "La delegación argentina participó del Mundial de Remo con destacadas actuaciones en las categorías juvenil y senior.",
-    href: "/noticias/mundial-2024",
-    imagen: "",
-  },
-];
+import { noticias, colorMap } from '../../data/noticias';
 
 const categorias = ["Todos", ...new Set(noticias.map(n => n.categoria))];
-
-const colorMap: Record<string, string> = {
-  Administrativo: "bg-blue-100 text-blue-700",
-  Calendario: "bg-amber-100 text-amber-700",
-  Institucional: "bg-purple-100 text-purple-700",
-  Competencia: "bg-green-100 text-green-700",
-  Formación: "bg-orange-100 text-orange-700",
-  Internacional: "bg-red-100 text-red-700",
-};
+const B = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title="Noticias — AARA">
@@ -101,7 +37,7 @@ const colorMap: Record<string, string> = {
       {noticias.map(n => (
         <article data-categoria={n.categoria} class="bg-white rounded-xl shadow hover:shadow-md transition-shadow overflow-hidden group flex flex-col">
           <!-- Image / placeholder -->
-          <a href={n.href} class="block aspect-video overflow-hidden relative bg-gradient-to-br from-[#0B2545] to-[#134074]">
+          <a href={`${B}/noticias/${n.slug}`} class="block aspect-video overflow-hidden relative bg-gradient-to-br from-[#0B2545] to-[#134074]">
             {n.imagen
               ? <img src={n.imagen} alt={n.titulo} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               : <div class="absolute inset-0 flex items-center justify-center opacity-20">
@@ -119,10 +55,10 @@ const colorMap: Record<string, string> = {
               <span class="text-xs text-gray-400">{n.fecha}</span>
             </div>
             <h2 class="font-bold text-[#0B2545] mb-2 group-hover:text-[#134074] transition-colors leading-snug flex-1">
-              <a href={n.href}>{n.titulo}</a>
+              <a href={`${B}/noticias/${n.slug}`}>{n.titulo}</a>
             </h2>
             <p class="text-sm text-gray-600 leading-relaxed mb-4">{n.resumen}</p>
-            <a href={n.href} class="inline-flex items-center gap-1 text-sm text-[#13A8D4] font-medium hover:text-[#0B2545] transition-colors mt-auto">
+            <a href={`${B}/noticias/${n.slug}`} class="inline-flex items-center gap-1 text-sm text-[#13A8D4] font-medium hover:text-[#0B2545] transition-colors mt-auto">
               Leer más <span aria-hidden="true">→</span>
             </a>
           </div>
