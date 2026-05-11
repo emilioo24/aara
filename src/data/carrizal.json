@@ -1045,7 +1045,7 @@
     {
       "number": 30,
       "start_time": "2026-03-06 11:20:00",
-      "description": "Doble par Peso Ligero Femenino - Serie 1",
+      "description": "Doble par Senior Peso Ligero Femenino - Serie 1",
       "distance": "2000m",
       "state": "Resultado Oficial",
       "event_id": 3051,
@@ -1087,7 +1087,7 @@
     {
       "number": 31,
       "start_time": "2026-03-06 11:27:00",
-      "description": "Doble par Peso Ligero Masculino - Serie 1",
+      "description": "Doble par Senior Peso Ligero Masculino - Serie 1",
       "distance": "2000m",
       "state": "Resultado Oficial",
       "event_id": 3052,
@@ -1212,7 +1212,7 @@
     {
       "number": 37,
       "start_time": "2026-03-06 11:41:00",
-      "description": "Single Peso Ligero Masculino - Serie 1",
+      "description": "Single Senior Peso Ligero Masculino - Serie 1",
       "distance": "2000m",
       "state": "Resultado Oficial",
       "event_id": 3058,
@@ -1242,7 +1242,7 @@
     {
       "number": 38,
       "start_time": "2026-03-06 11:48:00",
-      "description": "Single Peso Ligero Femenino - Serie 1",
+      "description": "Single Senior Peso Ligero Femenino - Serie 1",
       "distance": "2000m",
       "state": "Resultado Oficial",
       "event_id": 3059,
@@ -1584,7 +1584,7 @@
     {
       "number": 47,
       "start_time": "2026-03-06 12:30:00",
-      "description": "Dos Sin Peso Ligero Masculino - Serie 1",
+      "description": "Dos Sin Senior Peso Ligero Masculino - Serie 1",
       "distance": "2000m",
       "state": "Resultado Oficial",
       "event_id": 3068,

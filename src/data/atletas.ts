@@ -703,7 +703,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
-    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin PL Masculino", "Campeón Argentino CAR 2025 — Single Peso Ligero Masculino", "Campeón Argentino CAR 2025 — Doble par PL Masculino"],
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin PL Masculino", "Campeón Argentino CAR 2025 — Single Senior Peso Ligero Masculino", "Campeón Argentino CAR 2025 — Doble par PL Masculino"],
   },
   {
     nombre: "Dodorico, Galo",
@@ -988,7 +988,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Náutico Mar Del Plata",
     provincia: "Mar del Plata, Buenos Aires",
-    logros: ["Campeóna Argentina CAR 2025 — Single Senior Femenino", "Campeóna Argentina CAR 2025 — Single Peso Ligero Femenino"],
+    logros: ["Campeóna Argentina CAR 2025 — Single Senior Femenino", "Campeóna Argentina CAR 2025 — Single Senior Peso Ligero Femenino"],
   },
   {
     nombre: "Galiana, Ramón",

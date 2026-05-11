@@ -55,7 +55,7 @@ const boatCapacity: Record<string, number> = {
 };
 
 const genLabel: Record<string, string> = { F: 'Femenino', M: 'Masculino', X: 'Mixto' };
-const catLabel: Record<string, string> = { 'PL': 'Peso Ligero', 'Sub 23 PL': 'Sub 23 Peso Ligero' };
+const catLabel: Record<string, string> = { 'PL': 'Senior Peso Ligero', 'Sub 23 PL': 'Sub 23 Peso Ligero' };
 
 function displayLabel(label: string, isOnly: boolean) {
   if (isOnly && label.startsWith('Eliminatoria')) return 'Final directa';
@@ -321,7 +321,7 @@ function phaseStyle(label: string) {
             </div>
             <div class="border-l-4 border-yellow-400 pl-3">
               <div class="font-semibold text-[#0B2545]">Dickson, Pedro</div>
-              <div class="text-xs text-gray-500">Buenos Aires Rowing Club · Oro Single Peso Ligero Masculino — 07:15.29</div>
+              <div class="text-xs text-gray-500">Buenos Aires Rowing Club · Oro Single Senior Peso Ligero Masculino — 07:15.29</div>
             </div>
             <div class="border-l-4 border-yellow-400 pl-3">
               <div class="font-semibold text-[#0B2545]">Prados, Felicitas</div>

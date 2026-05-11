@@ -7,6 +7,7 @@ export type Club = {
   fundacion?: number;
   descripcion?: string;
   ubicacion?: string;
+  escudo?: string;
   colores: { primario: string; secundario: string };
   coloresPalas: { primario: string; secundario: string };
   campeonatos?: string[];
@@ -41,6 +42,7 @@ export const clubes: Club[] = [
     fundacion: 1960,
     descripcion: "Entidad referente del remo en la provincia de Córdoba.",
     ubicacion: "Lago San Roque, Villa Carlos Paz, Córdoba",
+    escudo: "/logo_clubes/acr-logo.png",
     colores: { primario: "#1B4F72", secundario: "#FFFFFF" },
     coloresPalas: { primario: "#1B4F72", secundario: "#FFFFFF" },
   },
@@ -64,6 +66,7 @@ export const clubes: Club[] = [
     fundacion: 1873,
     descripcion: "Uno de los clubes de remo más antiguos y prestigiosos de Argentina, fundado por inmigrantes ingleses.",
     ubicacion: "Av. Libertador 16.306, Tigre, Buenos Aires",
+    escudo: "/logo_clubes/barc-logo.png",
     colores: { primario: "#0D1B3E", secundario: "#FFFFFF" },
     coloresPalas: { primario: "#0D1B3E", secundario: "#FFFFFF" },
     campeonatos: [
@@ -82,6 +85,7 @@ export const clubes: Club[] = [
     fundacion: 1903,
     descripcion: "Club náutico histórico ubicado a orillas del río Paraná de las Palmas.",
     ubicacion: "Costanera de Campana, Buenos Aires",
+    escudo: "/logo_clubes/cbc-logo.png",
     colores: { primario: "#1F618D", secundario: "#F5CBA7" },
     coloresPalas: { primario: "#1F618D", secundario: "#FFFFFF" },
   },
@@ -104,6 +108,7 @@ export const clubes: Club[] = [
     fundacion: 1898,
     descripcion: "Club fundado por la comunidad italiana, con larga tradición en el remo del Delta.",
     ubicacion: "Arroyo Espera, Delta, Tigre, Buenos Aires",
+    escudo: "/logo_clubes/cci-logo.png",
     colores: { primario: "#008C45", secundario: "#CE2B37" },
     coloresPalas: { primario: "#008C45", secundario: "#CE2B37" },
   },
@@ -201,6 +206,7 @@ export const clubes: Club[] = [
     fundacion: 1935,
     descripcion: "Club de regatas con deportistas destacados en categorías formativas.",
     ubicacion: "Canal San Fernando, Tigre, Buenos Aires",
+    escudo: "/logo_clubes/crlm-logo.png",
     colores: { primario: "#0B2545", secundario: "#5DADE2" },
     coloresPalas: { primario: "#0B2545", secundario: "#5DADE2" },
     campeonatos: [
@@ -210,7 +216,7 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Regatas La Plata",
-    acronimo: "",
+    acronimo: "CRLP",
     provincia: "Buenos Aires",
     ciudad: "La Plata",
     fundacion: 1900,
@@ -232,13 +238,14 @@ export const clubes: Club[] = [
   },
   {
     nombre: "Club de Regatas Rosario",
-    acronimo: "",
+    acronimo: "CRR",
     provincia: "Santa Fe",
     ciudad: "Rosario",
     urlWeb: "https://www.regatasrosario.com",
     fundacion: 1873,
     descripcion: "Uno de los clubes más tradicionales de Argentina, referente del remo rosarino con más de 150 años de historia.",
     ubicacion: "Av. Belgrano 997, Rosario, Santa Fe",
+    escudo: "/logo_clubes/crr-logo.png",
     colores: { primario: "#0B2545", secundario: "#E74C3C" },
     coloresPalas: { primario: "#0B2545", secundario: "#E74C3C" },
     campeonatos: [
@@ -261,13 +268,14 @@ export const clubes: Club[] = [
     coloresPalas: { primario: "#1F618D", secundario: "#FDFEFE" },
   },
   {
-    nombre: "Club de Regatas Santa Fé",
+    nombre: "Club de Regatas Santa Fe",
     acronimo: "CRSF",
     provincia: "Santa Fe",
     ciudad: "Santa Fe de la Vera Cruz",
     fundacion: 1915,
     descripcion: "Club de regatas de la capital de la provincia de Santa Fe.",
     ubicacion: "Costanera Este, Santa Fe de la Vera Cruz, Santa Fe",
+    escudo: "/logo_clubes/crsf-logo.png",
     colores: { primario: "#C0392B", secundario: "#FDFEFE" },
     coloresPalas: { primario: "#C0392B", secundario: "#FDFEFE" },
   },
@@ -343,6 +351,7 @@ export const clubes: Club[] = [
     fundacion: 1948,
     descripcion: "Club náutico de Mar del Plata, activo en remo de aguas tranquilas y abiertas.",
     ubicacion: "Laguna de los Padres, Mar del Plata, Buenos Aires",
+    escudo: "/logo_clubes/cnmp-logo.png",
     colores: { primario: "#2E86C1", secundario: "#FDFEFE" },
     coloresPalas: { primario: "#2E86C1", secundario: "#FDFEFE" },
   },
@@ -475,6 +484,7 @@ export const clubes: Club[] = [
     fundacion: 1910,
     descripcion: "Club polideportivo con sección náutica activa en San Fernando.",
     ubicacion: "Canal San Fernando, San Fernando, Buenos Aires",
+    escudo: "/logo_clubes/csf-logo.png",
     colores: { primario: "#1C2833", secundario: "#E74C3C" },
     coloresPalas: { primario: "#1C2833", secundario: "#F1C40F" },
   },
@@ -556,6 +566,7 @@ export const clubes: Club[] = [
     fundacion: 1948,
     descripcion: "Club de remo de la capital entrerriana a orillas del río Paraná.",
     ubicacion: "Costanera de Paraná, Entre Ríos",
+    escudo: "/logo_clubes/prc-logo.png",
     colores: { primario: "#1A5276", secundario: "#E74C3C" },
     coloresPalas: { primario: "#1A5276", secundario: "#FDFEFE" },
   },
@@ -583,6 +594,7 @@ export const clubes: Club[] = [
     fundacion: 1901,
     descripcion: "Club histórico del remo rosarino con amplia tradición competitiva.",
     ubicacion: "Costanera de Rosario, Santa Fe",
+    escudo: "/logo_clubes/rrc-logo.png",
     colores: { primario: "#8B0000", secundario: "#FFFFFF" },
     coloresPalas: { primario: "#8B0000", secundario: "#FFFFFF" },
     campeonatos: [
@@ -618,6 +630,7 @@ export const clubes: Club[] = [
     fundacion: 1888,
     descripcion: "Uno de los clubs más históricos de Argentina, con tradición en polo, rugby y remo.",
     ubicacion: "Av. Circunvalación Lago, Tigre, Buenos Aires",
+    escudo: "/logo_clubes/tbc-logo.png",
     colores: { primario: "#1C2833", secundario: "#E74C3C" },
     coloresPalas: { primario: "#1C2833", secundario: "#FFFFFF" },
     campeonatos: [
