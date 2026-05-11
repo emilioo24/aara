@@ -78,6 +78,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Senior Mixto", "Campeóna Argentina CAR 2025 — Doble par Sub 23 Femenino"],
   },
   {
     nombre: "Albornoz, Santiago",
@@ -113,6 +114,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club de Regatas La Plata",
     provincia: "La Plata, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Dos Sin Senior Masculino", "Campeón Argentino CAR 2025 — Dos Sin Sub 23 Masculino"],
   },
   {
     nombre: "Amar, Malena",
@@ -141,6 +143,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club de Regatas La Plata",
     provincia: "La Plata, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Dos Sin Senior Masculino", "Campeón Argentino CAR 2025 — Dos Sin Sub 23 Masculino"],
   },
   {
     nombre: "Apuzzo Ortiz, Cipriano",
@@ -169,6 +172,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club de Regatas América",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Doble par PL Femenino"],
   },
   {
     nombre: "Arrausi, Felipe Manuel",
@@ -204,6 +208,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Canottieri Italiani",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Junior Masculino"],
   },
   {
     nombre: "Aversso, Valentino",
@@ -211,7 +216,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Canottieri Italiani",
     provincia: "Tigre, Buenos Aires",
-    logros: ["Campeón Argentino CAR 2025 — Doble par Junior Masculino"],
+    logros: ["Campeón Argentino CAR 2025 — Doble par Junior Masculino", "Campeón Argentino CAR 2025 — Cuádruple par Junior Masculino"],
   },
   {
     nombre: "Ayala, Angeles",
@@ -226,6 +231,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
     provincia: "Mendoza, Mendoza",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Sub 23 Masculino", "Campeón Argentino CAR 2025 — Ocho Senior Masculino"],
   },
   {
     nombre: "Baluzzo Chiaruzzo, Katia",
@@ -261,6 +267,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club de Regatas Rosario",
     provincia: "Rosario, Santa Fe",
+    logros: ["Campeón Argentino CAR 2025 — Doble par Sub 23 Masculino", "Campeón Argentino CAR 2025 — Cuádruple par Senior Masculino"],
   },
   {
     nombre: "Bazan, Ignacio",
@@ -276,6 +283,7 @@ const _atletas: Atleta[] = [
     categoria: "Sub-23",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Sub 23 Masculino"],
   },
   {
     nombre: "Bellingeri, Oriana Vanina",
@@ -354,6 +362,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
     provincia: "Mendoza, Mendoza",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Senior Masculino"],
   },
   {
     nombre: "Bonelli, Salvador",
@@ -396,6 +405,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin PL Masculino", "Campeón Argentino CAR 2025 — Cuádruple par Sub 23 Masculino"],
   },
   {
     nombre: "Buso, Gonzalo Armando",
@@ -403,6 +413,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
     provincia: "Mendoza, Mendoza",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Senior Masculino"],
   },
   {
     nombre: "Bustelo, Cristian Nahuel",
@@ -410,6 +421,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Senior Mixto"],
   },
   {
     nombre: "Bustos Segabache, Antonio",
@@ -424,7 +436,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
-    logros: ["Campeóna Argentina CAR 2025 — Doble par Menor Femenino"],
+    logros: ["Campeóna Argentina CAR 2025 — Cuádruple par Junior Femenino", "Campeóna Argentina CAR 2025 — Doble par Menor Femenino"],
   },
   {
     nombre: "Butuz, Gabriel Martín",
@@ -453,6 +465,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Junior Masculino", "Campeón Argentino CAR 2025 — Ocho Junior Masculino"],
   },
   {
     nombre: "Cadaa Lalinde, Lola",
@@ -467,6 +480,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club de Regatas Rosario",
     provincia: "Rosario, Santa Fe",
+    logros: ["Campeón Argentino CAR 2025 — Doble par Senior Masculino", "Campeón Argentino CAR 2025 — Cuádruple par Senior Masculino"],
   },
   {
     nombre: "Canals, Delfina",
@@ -559,6 +573,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Junior Masculino", "Campeón Argentino CAR 2025 — Ocho Junior Masculino"],
   },
   {
     nombre: "Colombo, Carmela",
@@ -608,6 +623,7 @@ const _atletas: Atleta[] = [
     categoria: "Cadete",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Menor Masculino"],
   },
   {
     nombre: "De Armas, Augusto",
@@ -636,6 +652,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Junior Masculino", "Campeón Argentino CAR 2025 — Ocho Junior Masculino", "Campeón Argentino CAR 2025 — Dos Sin Junior Masculino"],
   },
   {
     nombre: "De Santis, Rómulo Alejandro",
@@ -650,6 +667,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Cuádruple par Senior Femenino"],
   },
   {
     nombre: "Deandrea, Santiago",
@@ -685,7 +703,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
-    logros: ["Campeón Argentino CAR 2025 — Single Peso Ligero Masculino"],
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin PL Masculino", "Campeón Argentino CAR 2025 — Single Peso Ligero Masculino", "Campeón Argentino CAR 2025 — Doble par PL Masculino"],
   },
   {
     nombre: "Dodorico, Galo",
@@ -729,6 +747,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Doble par Senior Femenino", "Campeón Argentino CAR 2025 — Ocho Senior Mixto", "Campeóna Argentina CAR 2025 — Doble par Sub 23 Femenino"],
   },
   {
     nombre: "Echeverria Marchessi, Lola",
@@ -750,6 +769,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin PL Masculino", "Campeón Argentino CAR 2025 — Dos Sin PL Masculino", "Campeón Argentino CAR 2025 — Doble par PL Masculino"],
   },
   {
     nombre: "Erriquenz Berardi, María Rosario",
@@ -764,6 +784,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
     provincia: "Mendoza, Mendoza",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Senior Masculino"],
   },
   {
     nombre: "Escalante, Maria Belen",
@@ -806,6 +827,7 @@ const _atletas: Atleta[] = [
     categoria: "Sub-23",
     club: "Paraná Rowing Club",
     provincia: "Paraná, Entre Ríos",
+    logros: ["Campeóna Argentina CAR 2025 — Doble par Sub 23 PL Femenino"],
   },
   {
     nombre: "Farragut, Martina",
@@ -834,6 +856,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Senior Mixto"],
   },
   {
     nombre: "Fernandez, Emilio",
@@ -855,6 +878,7 @@ const _atletas: Atleta[] = [
     categoria: "Cadete",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Menor Masculino"],
   },
   {
     nombre: "Ferrari, Renzo",
@@ -919,6 +943,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Single Sub 23 PL Femenino", "Campeóna Argentina CAR 2025 — Doble par Junior Femenino", "Campeóna Argentina CAR 2025 — Cuádruple par Junior Femenino", "Campeóna Argentina CAR 2025 — Dos Sin Junior Femenino", "Campeóna Argentina CAR 2025 — Cuatro Sin Junior Femenino"],
   },
   {
     nombre: "Fusco, Gregorio",
@@ -947,6 +972,7 @@ const _atletas: Atleta[] = [
     categoria: "Sub-23",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Sub 23 Masculino"],
   },
   {
     nombre: "Galeano, Lisandro Benjamin",
@@ -954,6 +980,7 @@ const _atletas: Atleta[] = [
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Junior Masculino"],
   },
   {
     nombre: "Galfre, Clara",
@@ -961,6 +988,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Náutico Mar Del Plata",
     provincia: "Mar del Plata, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Single Senior Femenino", "Campeóna Argentina CAR 2025 — Single Peso Ligero Femenino"],
   },
   {
     nombre: "Galiana, Ramón",
@@ -975,6 +1003,7 @@ const _atletas: Atleta[] = [
     categoria: "Juvenil",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Menor Masculino"],
   },
   {
     nombre: "Gallina, Renato Andres",
@@ -1047,6 +1076,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
     provincia: "Mendoza, Mendoza",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Senior Masculino"],
   },
   {
     nombre: "Gianakis, Olimpia",
@@ -1103,6 +1133,7 @@ const _atletas: Atleta[] = [
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Cuádruple par Menor Femenino"],
   },
   {
     nombre: "González Ricciuti, Julieta",
@@ -1166,6 +1197,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Junior Masculino"],
   },
   {
     nombre: "Guerrina, Lautaro",
@@ -1215,6 +1247,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Senior Masculino", "Campeón Argentino CAR 2025 — Ocho Senior Mixto"],
   },
   {
     nombre: "Hammar, Marcos",
@@ -1257,6 +1290,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
     provincia: "Mendoza, Mendoza",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Senior Masculino"],
   },
   {
     nombre: "Isach, Bautista",
@@ -1320,6 +1354,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Dos Sin Sub 23 Femenino", "Campeóna Argentina CAR 2025 — Cuádruple par Junior Femenino", "Campeóna Argentina CAR 2025 — Cuádruple par Senior Femenino", "Campeóna Argentina CAR 2025 — Cuatro Sin Junior Femenino"],
   },
   {
     nombre: "Lacava, Lautaro Luis",
@@ -1369,6 +1404,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Senior Masculino", "Campeón Argentino CAR 2025 — Ocho Senior Mixto"],
   },
   {
     nombre: "Linaro, Valentina",
@@ -1419,6 +1455,7 @@ const _atletas: Atleta[] = [
     categoria: "Cadete",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Menor Masculino"],
   },
   {
     nombre: "Lopez Galastro, Augusto",
@@ -1483,6 +1520,7 @@ const _atletas: Atleta[] = [
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Junior Masculino", "Campeón Argentino CAR 2025 — Ocho Junior Masculino"],
   },
   {
     nombre: "Maguna, Maria Sol",
@@ -1497,6 +1535,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club de Regatas América",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Doble par PL Femenino"],
   },
   {
     nombre: "Maisterra, Juan María",
@@ -1518,6 +1557,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Senior Masculino"],
   },
   {
     nombre: "Mancino, Camila",
@@ -1525,6 +1565,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Cuádruple par Menor Femenino", "Campeón Argentino CAR 2025 — Ocho Junior Masculino"],
   },
   {
     nombre: "Mancino, Juan Martín",
@@ -1540,6 +1581,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
     provincia: "Mendoza, Mendoza",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Sub 23 Masculino", "Campeón Argentino CAR 2025 — Ocho Senior Masculino"],
   },
   {
     nombre: "Manzo Majirena, Ignacio",
@@ -1554,6 +1596,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Cuádruple par Senior Femenino"],
   },
   {
     nombre: "Maquiavelo, Salvador",
@@ -1589,6 +1632,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Canottieri Italiani",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Junior Masculino"],
   },
   {
     nombre: "Martin, Estanislao Alec",
@@ -1603,6 +1647,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Sub 23 Masculino"],
   },
   {
     nombre: "Masino, Enzo Lisandro",
@@ -1646,6 +1691,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Doble par Junior Femenino", "Campeóna Argentina CAR 2025 — Cuádruple par Junior Femenino", "Campeóna Argentina CAR 2025 — Cuádruple par Senior Femenino", "Campeóna Argentina CAR 2025 — Cuatro Sin Junior Femenino"],
   },
   {
     nombre: "Mc Nally, José Ignacio",
@@ -1653,6 +1699,7 @@ const _atletas: Atleta[] = [
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Junior Masculino"],
   },
   {
     nombre: "Medina, Vicente",
@@ -1681,7 +1728,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Náutico Hacoaj",
     provincia: "Tigre, Buenos Aires",
-    logros: ["Campeón Argentino CAR 2025 — Single Sub 23 Masculino", "Campeón Argentino CAR 2025 — Single Sub 23 PL Masculino"],
+    logros: ["Campeón Argentino CAR 2025 — Single Sub 23 PL Masculino", "Campeón Argentino CAR 2025 — Single Sub 23 Masculino"],
   },
   {
     nombre: "Merkel, Máximo Germán",
@@ -1696,6 +1743,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club de Regatas Rosario",
     provincia: "Rosario, Santa Fe",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Senior Masculino"],
   },
   {
     nombre: "Micheletto, Mateo",
@@ -1710,7 +1758,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Canottieri Italiani",
     provincia: "Tigre, Buenos Aires",
-    logros: ["Campeón Argentino CAR 2025 — Doble par Junior Masculino"],
+    logros: ["Campeón Argentino CAR 2025 — Doble par Junior Masculino", "Campeón Argentino CAR 2025 — Cuádruple par Junior Masculino"],
   },
   {
     nombre: "Molina, Carmela Pilar",
@@ -1718,6 +1766,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Dos Sin Sub 23 Femenino", "Campeóna Argentina CAR 2025 — Cuádruple par Senior Femenino"],
   },
   {
     nombre: "Molina, Carola",
@@ -1725,6 +1774,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Doble par Junior Femenino", "Campeóna Argentina CAR 2025 — Cuádruple par Junior Femenino", "Campeóna Argentina CAR 2025 — Dos Sin Junior Femenino", "Campeóna Argentina CAR 2025 — Cuatro Sin Junior Femenino"],
   },
   {
     nombre: "Monetta, Santino",
@@ -1732,6 +1782,7 @@ const _atletas: Atleta[] = [
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Junior Masculino"],
   },
   {
     nombre: "Mongelot, Luna Nicole",
@@ -1796,6 +1847,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Doble par Intermedia Femenino"],
   },
   {
     nombre: "Moreyra, Luciano",
@@ -1817,6 +1869,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
     provincia: "Mendoza, Mendoza",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Senior Masculino"],
   },
   {
     nombre: "Nani, Carla",
@@ -1915,6 +1968,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Doble par Senior Femenino", "Campeón Argentino CAR 2025 — Ocho Senior Mixto"],
   },
   {
     nombre: "Otero Delbue, Martín Emiliano",
@@ -1936,6 +1990,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club de Regatas Rosario",
     provincia: "Rosario, Santa Fe",
+    logros: ["Campeón Argentino CAR 2025 — Doble par Senior Masculino", "Campeón Argentino CAR 2025 — Cuádruple par Senior Masculino"],
   },
   {
     nombre: "Pacheco, Maximo",
@@ -1943,6 +1998,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club de Regatas Rosario",
     provincia: "Rosario, Santa Fe",
+    logros: ["Campeón Argentino CAR 2025 — Doble par Senior Masculino", "Campeón Argentino CAR 2025 — Doble par Sub 23 Masculino", "Campeón Argentino CAR 2025 — Cuádruple par Senior Masculino"],
   },
   {
     nombre: "Pacheco, Patricio",
@@ -1950,6 +2006,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club de Regatas Rosario",
     provincia: "Rosario, Santa Fe",
+    logros: ["Campeón Argentino CAR 2025 — Doble par Sub 23 Masculino", "Campeón Argentino CAR 2025 — Cuádruple par Senior Masculino"],
   },
   {
     nombre: "Palavecino, Jazmín Alejandra",
@@ -1971,6 +2028,7 @@ const _atletas: Atleta[] = [
     categoria: "Sub-23",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Sub 23 Masculino"],
   },
   {
     nombre: "Paré, Joaquín Ezequiel",
@@ -1992,7 +2050,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Canottieri Italiani",
     provincia: "Tigre, Buenos Aires",
-    logros: ["Campeón Argentino CAR 2025 — Doble par Junior Masculino"],
+    logros: ["Campeón Argentino CAR 2025 — Doble par Junior Masculino", "Campeón Argentino CAR 2025 — Cuádruple par Junior Masculino"],
   },
   {
     nombre: "Parodi, Facundo",
@@ -2000,6 +2058,7 @@ const _atletas: Atleta[] = [
     categoria: "Cadete",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Menor Masculino"],
   },
   {
     nombre: "Partenni, Giovanna",
@@ -2070,6 +2129,7 @@ const _atletas: Atleta[] = [
     categoria: "Juvenil",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Menor Masculino"],
   },
   {
     nombre: "Pellicer, Martina",
@@ -2077,6 +2137,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Junior Masculino"],
   },
   {
     nombre: "Pena, Valentín",
@@ -2105,6 +2166,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Cuádruple par Senior Femenino"],
   },
   {
     nombre: "Peralta, Nicolás",
@@ -2112,6 +2174,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Junior Masculino", "Campeón Argentino CAR 2025 — Ocho Junior Masculino", "Campeón Argentino CAR 2025 — Dos Sin Junior Masculino"],
   },
   {
     nombre: "Pereira, Juan Ignacio",
@@ -2161,6 +2224,7 @@ const _atletas: Atleta[] = [
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Junior Masculino"],
   },
   {
     nombre: "Ponce De León, Nicolás",
@@ -2218,6 +2282,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Sub 23 Masculino"],
   },
   {
     nombre: "Rivero, Alex Uriel",
@@ -2232,6 +2297,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Senior Masculino", "Campeón Argentino CAR 2025 — Ocho Senior Mixto"],
   },
   {
     nombre: "Riveros, Victoria",
@@ -2239,6 +2305,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Doble par Senior Femenino", "Campeón Argentino CAR 2025 — Ocho Senior Mixto", "Campeóna Argentina CAR 2025 — Doble par Sub 23 Femenino"],
   },
   {
     nombre: "Rodriguez, Facundo",
@@ -2253,6 +2320,7 @@ const _atletas: Atleta[] = [
     categoria: "Cadete",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Cuádruple par Menor Femenino"],
   },
   {
     nombre: "Rojas, Marcos Ivan",
@@ -2267,6 +2335,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Doble par Intermedia Femenino"],
   },
   {
     nombre: "Romero, Joel Alejandro",
@@ -2274,6 +2343,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Senior Masculino", "Campeón Argentino CAR 2025 — Ocho Senior Mixto"],
   },
   {
     nombre: "Romero, Juan Segundo",
@@ -2372,6 +2442,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Senior Masculino", "Campeón Argentino CAR 2025 — Ocho Senior Mixto"],
   },
   {
     nombre: "Santolaria, Martina",
@@ -2379,7 +2450,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
-    logros: ["Campeóna Argentina CAR 2025 — Doble par Menor Femenino"],
+    logros: ["Campeóna Argentina CAR 2025 — Doble par Menor Femenino", "Campeóna Argentina CAR 2025 — Cuatro Sin Junior Femenino"],
   },
   {
     nombre: "Santórsola, Joaquín Sebastián",
@@ -2401,6 +2472,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Single Senior Masculino"],
   },
   {
     nombre: "Scheffer, Agustín",
@@ -2408,6 +2480,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Canottieri Italiani",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuádruple par Junior Masculino"],
   },
   {
     nombre: "Scheffer, María Giuliana",
@@ -2450,6 +2523,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Senior Mixto"],
   },
   {
     nombre: "Sendra, Juan Cruz",
@@ -2478,6 +2552,7 @@ const _atletas: Atleta[] = [
     categoria: "Sub-23",
     club: "Club de Regatas América",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Single Sub 23 Femenino"],
   },
   {
     nombre: "Soloaga, Maitena",
@@ -2492,6 +2567,7 @@ const _atletas: Atleta[] = [
     categoria: "Juvenil",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Junior Masculino"],
   },
   {
     nombre: "Sousa, Bautista",
@@ -2513,6 +2589,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
     provincia: "Mendoza, Mendoza",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Sub 23 Masculino", "Campeón Argentino CAR 2025 — Ocho Senior Masculino"],
   },
   {
     nombre: "Tibaldi, Tomás",
@@ -2520,6 +2597,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
     provincia: "Mendoza, Mendoza",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Sub 23 Masculino", "Campeón Argentino CAR 2025 — Ocho Senior Masculino"],
   },
   {
     nombre: "Tiburzi, Tobías Leonardo",
@@ -2569,6 +2647,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Senior Mixto"],
   },
   {
     nombre: "Trolli, Ignacio Agustín",
@@ -2604,6 +2683,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Cuádruple par Junior Femenino", "Campeóna Argentina CAR 2025 — Cuatro Sin Junior Femenino"],
   },
   {
     nombre: "Vega, Valentina",
@@ -2632,6 +2712,7 @@ const _atletas: Atleta[] = [
     categoria: "Cadete",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeóna Argentina CAR 2025 — Cuádruple par Menor Femenino"],
   },
   {
     nombre: "Videla Nati, Nicolás",
@@ -2639,6 +2720,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin PL Masculino"],
   },
   {
     nombre: "Viel, Xiomara Jazmin",
@@ -2688,6 +2770,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Tigre Boat Club",
     provincia: "Tigre, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Senior Mixto"],
   },
   {
     nombre: "Vitar, Benjamín",
@@ -2702,6 +2785,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin Junior Masculino", "Campeón Argentino CAR 2025 — Ocho Junior Masculino", "Campeón Argentino CAR 2025 — Dos Sin Junior Masculino"],
   },
   {
     nombre: "Weber Fuentes, Michelle",
@@ -2709,7 +2793,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Náutico Zárate",
     provincia: "Zárate, Buenos Aires",
-    logros: ["Campeóna Argentina CAR 2025 — Single Menor Femenino"],
+    logros: ["Campeóna Argentina CAR 2025 — Single Menor Femenino", "Campeóna Argentina CAR 2025 — Cuádruple par Menor Femenino"],
   },
   {
     nombre: "Wingord, Mateo",
@@ -2717,6 +2801,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Buenos Aires Rowing Club",
     provincia: "Buenos Aires, Buenos Aires",
+    logros: ["Campeón Argentino CAR 2025 — Cuatro Sin PL Masculino", "Campeón Argentino CAR 2025 — Dos Sin PL Masculino", "Campeón Argentino CAR 2025 — Doble par PL Masculino"],
   },
   {
     nombre: "Zanardi, Ignacio",
@@ -2731,6 +2816,7 @@ const _atletas: Atleta[] = [
     categoria: "Senior",
     club: "Club Mendoza de Regatas",
     provincia: "Mendoza, Mendoza",
+    logros: ["Campeón Argentino CAR 2025 — Ocho Senior Masculino"],
   },
   {
     nombre: "Zapata, Liam Joaquin",
@@ -2746,6 +2832,7 @@ const _atletas: Atleta[] = [
     categoria: "Sub-23",
     club: "Paraná Rowing Club",
     provincia: "Paraná, Entre Ríos",
+    logros: ["Campeóna Argentina CAR 2025 — Doble par Sub 23 PL Femenino"],
   },
   {
     nombre: "Zavalla, Federico Martín",

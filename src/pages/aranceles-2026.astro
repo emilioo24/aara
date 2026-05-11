@@ -58,6 +58,73 @@ const aranceles = [
       </div>
     </div>
 
+    <!-- Payment info -->
+    <div class="mt-6 bg-white rounded-xl shadow overflow-hidden">
+      <div class="px-6 py-4 border-b border-gray-100 flex items-center gap-2">
+        <span class="w-1 h-4 bg-[#EFC050] rounded-full shrink-0"></span>
+        <h2 class="font-bold text-[#0B2545] text-sm uppercase tracking-wider">Pagos por transferencia o depósito bancario</h2>
+      </div>
+      <div class="px-6 py-5 space-y-4 text-sm">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-0.5">Banco</div>
+            <div class="font-medium text-[#0B2545]">ICBC</div>
+          </div>
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-0.5">Cuenta</div>
+            <div class="font-medium text-[#0B2545] font-mono">0826-0210178954</div>
+          </div>
+          <div class="sm:col-span-2">
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-0.5">Titular</div>
+            <div class="font-medium text-[#0B2545]">Asociación Argentina de Remeros Aficionados</div>
+            <div class="text-xs text-gray-400 mt-0.5">CUIT 30-52704882-2</div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-100 pt-4 space-y-3">
+          <!-- CBU -->
+          <div class="flex items-center justify-between gap-3 bg-gray-50 rounded-lg px-4 py-3">
+            <div class="min-w-0">
+              <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-0.5">CBU</div>
+              <div class="font-mono font-semibold text-[#0B2545] text-sm tracking-wider break-all">0150826802000101789549</div>
+            </div>
+            <button
+              data-copy="0150826802000101789549"
+              class="copy-btn shrink-0 flex items-center gap-1.5 text-xs font-medium text-[#13A8D4] hover:text-[#0B2545] transition-colors"
+              aria-label="Copiar CBU">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+              </svg>
+              <span class="copy-label">Copiar</span>
+            </button>
+          </div>
+
+          <!-- Alias -->
+          <div class="flex items-center justify-between gap-3 bg-gray-50 rounded-lg px-4 py-3">
+            <div class="min-w-0">
+              <div class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-0.5">Alias</div>
+              <div class="font-mono font-semibold text-[#0B2545] text-sm tracking-wider">AARA.TESORERIA.ADMIN</div>
+            </div>
+            <button
+              data-copy="AARA.TESORERIA.ADMIN"
+              class="copy-btn shrink-0 flex items-center gap-1.5 text-xs font-medium text-[#13A8D4] hover:text-[#0B2545] transition-colors"
+              aria-label="Copiar alias">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+              </svg>
+              <span class="copy-label">Copiar</span>
+            </button>
+          </div>
+        </div>
+
+        <p class="text-xs text-gray-400 pt-1">
+          Ante cualquier consulta sobre pagos escribí a
+          <a href="mailto:info@remoargentina.org" class="text-[#13A8D4] hover:underline">info@remoargentina.org</a>.
+        </p>
+      </div>
+    </div>
+
     <div class="mt-6">
       <a href={`${B}/`}
         class="inline-flex items-center gap-2 text-sm text-[#13A8D4] hover:text-[#0B2545] font-medium transition-colors">
@@ -67,6 +134,24 @@ const aranceles = [
         Volver al inicio
       </a>
     </div>
+
+    <script>
+      document.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const text  = btn.dataset.copy ?? '';
+          const label = btn.querySelector<HTMLElement>('.copy-label')!;
+          await navigator.clipboard.writeText(text);
+          label.textContent = '¡Copiado!';
+          btn.classList.add('text-green-600');
+          btn.classList.remove('text-[#13A8D4]');
+          setTimeout(() => {
+            label.textContent = 'Copiar';
+            btn.classList.remove('text-green-600');
+            btn.classList.add('text-[#13A8D4]');
+          }, 2000);
+        });
+      });
+    </script>
 
   </div>
 </Layout>
