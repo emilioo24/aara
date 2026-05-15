@@ -125,13 +125,13 @@ export const noticias: Noticia[] = [
     fecha: "03 Sep 2024",
     categoria: "Internacional",
     titulo: "Delegación argentina en el Campeonato Mundial de Remo",
-    resumen: "La delegación argentina participó del Mundial de Remo con destacadas actuaciones en las categorías juvenil y senior.",
+    resumen: "La delegación argentina participó del Mundial de Remo con destacadas actuaciones en las categorías junior y senior.",
     imagen: "",
     contenido: `
-      <p>La delegación argentina de remo participó del Campeonato Mundial de Remo organizado por World Rowing en el mes de septiembre de 2024, con representantes en las categorías Juvenil, Sub-23 y Senior.</p>
+      <p>La delegación argentina de remo participó del Campeonato Mundial de Remo organizado por World Rowing en el mes de septiembre de 2024, con representantes en las categorías Junior, Sub-23 y Senior.</p>
       <p>Argentina presentó un total de 12 atletas distribuidos en 8 botes, abarcando modalidades de single, doble par y cuádruple par. La delegación viajó con el apoyo de la AARA y la Secretaría de Deportes de la Nación.</p>
       <h2>Actuaciones destacadas</h2>
-      <p>En la categoría Juvenil, el equipo de cuádruple par masculino alcanzó la final B, obteniendo una destacada actuación considerando el nivel competitivo internacional. En la categoría Senior, el single femenino clasificó a las semifinales, lo que representa uno de los mejores resultados de Argentina en esa prueba en los últimos años.</p>
+      <p>En la categoría Junior, el equipo de cuádruple par masculino alcanzó la final B, obteniendo una destacada actuación considerando el nivel competitivo internacional. En la categoría Senior, el single femenino clasificó a las semifinales, lo que representa uno de los mejores resultados de Argentina en esa prueba en los últimos años.</p>
       <p>El entrenador nacional destacó el crecimiento del equipo y la importancia de la experiencia internacional para la proyección de los atletas de cara a los próximos ciclos olímpicos.</p>
       <h2>Próximos objetivos</h2>
       <p>Con la vista puesta en los Juegos Olímpicos de Los Ángeles 2028, la AARA y la Confederación Argentina de Deportes Acuáticos (CADA) trabajan en conjunto en un plan de desarrollo de alto rendimiento para identificar y potenciar a los talentos nacionales.</p>

@@ -1,7 +1,12 @@
 ---
+import { atletas, toSlug } from '../data/atletas';
+
 type R = { pos: number; club: string; atletas: string; tiempo: string };
 interface Props { results: R[]; capacity?: number }
 const { results, capacity } = Astro.props;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const atletasSlugs = new Set(atletas.map(a => toSlug(a.nombre)));
 ---
 
 <div class="rounded-lg overflow-hidden border border-gray-200">
@@ -29,12 +34,19 @@ const { results, capacity } = Astro.props;
               const names = r.atletas.split(' / ');
               const main = capacity ? names.slice(0, capacity) : names;
               const subs = capacity ? names.slice(capacity) : [];
+              const renderName = (name: string, idx: number, arr: string[]) => {
+                const slug = toSlug(name);
+                const sep = idx < arr.length - 1 ? ' / ' : '';
+                return atletasSlugs.has(slug)
+                  ? <><a href={`${base}/atletas/${slug}`} class="text-[#134074] hover:text-[#0B2545] hover:underline font-medium transition-colors">{name}</a>{sep}</>
+                  : <>{name}{sep}</>;
+              };
               return (
                 <>
-                  <span>{main.join(' / ')}</span>
+                  <span>{main.map((n, i) => renderName(n, i, main))}</span>
                   {subs.length > 0 && (
                     <span class="text-gray-400 italic block mt-0.5">
-                      Suplentes: {subs.join(' / ')}
+                      Suplentes: {subs.map((n, i) => renderName(n, i, subs))}
                     </span>
                   )}
                 </>

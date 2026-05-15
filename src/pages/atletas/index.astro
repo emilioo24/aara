@@ -6,15 +6,15 @@ import { clubes } from '../../data/clubes';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const escudoMap = Object.fromEntries(clubes.filter(c => c.escudo).map(c => [c.nombre, c.escudo!]));
 
-const categorias = ["Senior", "Sub-23", "Juvenil", "Cadete", "Infantil"] as const;
+const categorias = ["Senior", "Sub-23", "Junior", "Menor", "Infantil"] as const;
 const clubesList = [...new Set(atletas.map(a => a.club))].sort((a, b) => a.localeCompare(b, 'es'));
 const provinciasList = [...new Set(atletas.map(a => a.provincia).filter((p): p is string => !!p))].sort((a, b) => a.localeCompare(b, 'es'));
 
 const categoriaBadge: Record<string, string> = {
   "Senior":   "bg-blue-100 text-blue-800",
   "Sub-23":   "bg-purple-100 text-purple-800",
-  "Juvenil":  "bg-green-100 text-green-800",
-  "Cadete":   "bg-orange-100 text-orange-800",
+  "Junior":   "bg-green-100 text-green-800",
+  "Menor":    "bg-orange-100 text-orange-800",
   "Infantil": "bg-red-100 text-red-800",
 };
 ---

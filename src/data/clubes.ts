@@ -183,7 +183,7 @@ export const clubes: Club[] = [
     colores: { primario: "#154360", secundario: "#E74C3C" },
     coloresPalas: { primario: "#154360", secundario: "#E74C3C" },
     campeonatos: [
-      "Campeonato Argentino Juvenil 2024 (equipo)",
+      "Campeonato Argentino Junior 2024 (equipo)",
       "Copa Nordeste 2023",
     ],
   },
@@ -211,7 +211,7 @@ export const clubes: Club[] = [
     coloresPalas: { primario: "#0B2545", secundario: "#5DADE2" },
     campeonatos: [
       "Copa Formativas 2023",
-      "Campeonato Juvenil Sub-Regional 2023",
+      "Campeonato Junior Sub-Regional 2023",
     ],
   },
   {

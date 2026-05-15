@@ -47,8 +47,8 @@ const seniorM  = atletas.filter(a => a.categoria === 'Senior'  && a.genero === '
 const seniorF  = atletas.filter(a => a.categoria === 'Senior'  && a.genero === 'Femenino');
 const sub23M   = atletas.filter(a => a.categoria === 'Sub-23'  && a.genero === 'Masculino');
 const sub23F   = atletas.filter(a => a.categoria === 'Sub-23'  && a.genero === 'Femenino');
-const juvenilM = atletas.filter(a => a.categoria === 'Juvenil' && a.genero === 'Masculino');
-const juvenilF = atletas.filter(a => a.categoria === 'Juvenil' && a.genero === 'Femenino');
+const juvenilM = atletas.filter(a => a.categoria === 'Junior' && a.genero === 'Masculino');
+const juvenilF = atletas.filter(a => a.categoria === 'Junior' && a.genero === 'Femenino');
 
 export const seniorRecords: DistanciaRecord[] = [
   {
